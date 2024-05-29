@@ -1,0 +1,75 @@
+---
+title: "Math Camp"
+subtitle: "Northwestern University -- Social Science -- Summer 2024"
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(pander)
+```
+
+## Welcome
+
+This is Math Camp.
+
+### Instructors
+
+:::: {.columns}
+
+
+::: {.column width="50%"}
+- {{< fa user >}} &nbsp; [Gustavo Diaz](https://gustavodiaz.org/)
+- {{< fa university >}} &nbsp; TBD
+- {{< fa envelope >}} &nbsp; <a href="mailto:diazg2@mcmaster.ca">diazg2@mcmaster.ca</a>
+:::
+
+::: {.column width="50%"}
+- {{< fa user >}} &nbsp; [Teaching Assistant](TBD)
+- {{< fa university >}} &nbsp; TBD
+- {{< fa envelope >}} &nbsp; <a href="mailto:ta@northwestern.edu">ta@northwestern.edu</a>
+:::
+
+::::
+
+
+### Details
+
+- {{< fa calendar >}} &nbsp; TBD
+- {{< fa clock >}} &nbsp; 9:00 AM -- 4:00 PM?
+- {{< fa location-dot >}} &nbsp; TBD
+
+## Schedule
+
+
+```{r schedule, include = FALSE}
+schedule =
+  tribble(
+    ~Day, ~Date, ~Morning, ~Lunch, ~Afternoon,
+    1, "TBD", "Introductions", "Methods in grad school", "R and RStudio",
+    2, "TBD", "Sets, intervals, functions", "Methods in academia", "Tidyverse I",
+    3, "TBD", "Algebra", "Methods in industry?", "Tidyverse II",
+    4, "TBD", "Calculus I", "TBD", "Calculus II",
+    5, "TBD", "Probability", "TBD", "Sampling and simulation"
+)
+```
+
+<div class="centered-table">
+
+```{r show-schedule, echo = FALSE, results = "asis"}
+schedule %>% 
+  pandoc.table(justify = "rllll",
+               col.names = c("{{< fa hashtag >}} Day",
+                             "{{< fa calendar >}} Date",
+                             "Morning",
+                             "Lunch",
+                             "Afternoon"),
+               split.tables = Inf,
+               missing = "")
+```
+
+</div>
+
+
+
+
+

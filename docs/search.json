@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Math Camp",
+    "section": "",
+    "text": "This is Math Camp.\n\n\n\n\n\n   Gustavo Diaz\n   TBD\n   diazg2@mcmaster.ca\n\n\n\n   Teaching Assistant\n   TBD\n   ta@northwestern.edu\n\n\n\n\n\n\n\n   TBD\n   9:00 AM – 4:00 PM?\n   TBD"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Math Camp",
+    "section": "",
+    "text": "This is Math Camp.\n\n\n\n\n\n   Gustavo Diaz\n   TBD\n   diazg2@mcmaster.ca\n\n\n\n   Teaching Assistant\n   TBD\n   ta@northwestern.edu\n\n\n\n\n\n\n\n   TBD\n   9:00 AM – 4:00 PM?\n   TBD"
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Math Camp",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n Day\n Date\nMorning\nLunch\nAfternoon\n\n\n\n\n1\nTBD\nIntroductions\nMethods in grad school\nR and RStudio\n\n\n2\nTBD\nSets, intervals, functions\nMethods in academia\nTidyverse I\n\n\n3\nTBD\nAlgebra\nMethods in industry?\nTidyverse II\n\n\n4\nTBD\nCalculus I\nTBD\nCalculus II\n\n\n5\nTBD\nProbability\nTBD\nSampling and simulation"
+  }
+]

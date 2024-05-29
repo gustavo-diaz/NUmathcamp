@@ -1,0 +1,14 @@
+{
+  "hash": "b21c48afa9bdcc36dd00430cc7354a00",
+  "result": {
+    "markdown": "---\ntitle: \"Math Camp\"\nsubtitle: \"Northwestern University -- Social Science -- Summer 2024\"\n---\n\n\n\n\n## Welcome\n\nThis is Math Camp.\n\n### Instructors\n\n:::: {.columns}\n\n\n::: {.column width=\"50%\"}\n- {{< fa user >}} &nbsp; [Gustavo Diaz](https://gustavodiaz.org/)\n- {{< fa university >}} &nbsp; TBD\n- {{< fa envelope >}} &nbsp; <a href=\"mailto:diazg2@mcmaster.ca\">diazg2@mcmaster.ca</a>\n:::\n\n::: {.column width=\"50%\"}\n- {{< fa user >}} &nbsp; [Teaching Assistant](TBD)\n- {{< fa university >}} &nbsp; TBD\n- {{< fa envelope >}} &nbsp; <a href=\"mailto:ta@northwestern.edu\">ta@northwestern.edu</a>\n:::\n\n::::\n\n\n### Details\n\n- {{< fa calendar >}} &nbsp; TBD\n- {{< fa clock >}} &nbsp; 9:00 AM -- 4:00 PM?\n- {{< fa location-dot >}} &nbsp; TBD\n\n## Schedule\n\n\n\n\n\n\n<div class=\"centered-table\">\n\n\n\n-----------------------------------------------------------------------------------------------------------------------------------\n  {{< fa hashtag >}} Day {{< fa calendar >}} Date   Morning                      Lunch                    Afternoon                \n------------------------ -------------------------- ---------------------------- ------------------------ -------------------------\n                       1 TBD                        Introductions                Methods in grad school   R and RStudio            \n\n                       2 TBD                        Sets, intervals, functions   Methods in academia      Tidyverse I              \n\n                       3 TBD                        Algebra                      Methods in industry?     Tidyverse II             \n\n                       4 TBD                        Calculus I                   TBD                      Calculus II              \n\n                       5 TBD                        Probability                  TBD                      Sampling and simulation  \n-----------------------------------------------------------------------------------------------------------------------------------\n\n\n</div>\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
