@@ -46,7 +46,7 @@ schedule =
   tribble(
     ~Day, ~Date, ~Morning, ~Lunch, ~Afternoon,
     1, "TBD", "Introductions", "Methods in grad school", "R and RStudio",
-    2, "TBD", "Sets, intervals, functions", "Methods in academia", "Tidyverse I",
+    2, "TBD", "Notation, sets, functions", "Methods in academia", "Tidyverse I",
     3, "TBD", "Algebra", "Methods in industry?", "Tidyverse II",
     4, "TBD", "Calculus I", "TBD", "Calculus II",
     5, "TBD", "Probability", "TBD", "Sampling and simulation"
