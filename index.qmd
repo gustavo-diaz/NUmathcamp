@@ -5,7 +5,7 @@ subtitle: "Northwestern University -- Social Science -- Summer 2024"
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
 library(tidyverse)
-library(pander)
+library(tinytable)
 ```
 
 ## Welcome
@@ -45,29 +45,21 @@ This is Math Camp.
 schedule =
   tribble(
     ~Day, ~Date, ~Morning, ~Lunch, ~Afternoon,
-    1, "TBD", "Introductions", "Methods in grad school", "R and RStudio",
-    2, "TBD", "Notation, sets, functions", "Methods in academia", "Tidyverse I",
-    3, "TBD", "Algebra", "Methods in industry?", "Tidyverse II",
-    4, "TBD", "Calculus I", "TBD", "Calculus II",
-    5, "TBD", "Probability", "TBD", "Sampling and simulation"
+    1, "TBD", "Introductions", "Meet rising 2nd year grad students", "R and RStudio",
+    2, "TBD", "Notation, sets, functions", "Meet senior grad students", "Tidyverse I",
+    3, "TBD", "Algebra", "Meet senior faculty", "Tidyverse II",
+    4, "TBD", "Calculus I", "Meet new-ish faculty", "Calculus II",
+    5, "TBD", "Probability", "Methods resources at Northwestern", "Sampling and simulation"
 )
 ```
 
-<div class="centered-table">
 
 ```{r show-schedule, echo = FALSE, results = "asis"}
 schedule %>% 
-  pandoc.table(justify = "rllll",
-               col.names = c("{{< fa hashtag >}} Day",
-                             "{{< fa calendar >}} Date",
-                             "Morning",
-                             "Lunch",
-                             "Afternoon"),
-               split.tables = Inf,
-               missing = "")
+  tt()
 ```
 
-</div>
+
 
 
 
