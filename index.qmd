@@ -58,9 +58,9 @@ schedule =
     ~Day, ~Date, ~Morning, ~Lunch, ~Afternoon,
     1, "September 16", "Notation, sets, functions", "Meet Graduate Students", "R and RStudio",
     2, "September 17", "Matrices", "Meet Senior Faculty", "Tidyverse I",
-    3, "September 18", "Calculus I", "Research Computing and Data Services", "Tidyverse II",
+    3, "September 18", "Calculus I", "Meet Junior Faculty", "Tidyverse II",
     4, "September 19", "NO MEETING", NA, NA,
-    5, "September 20", "Calculus II", "Meet Junior Faculty", "Sampling and simulation"
+    5, "September 20", "Calculus II", "Research Computing and Data Services", "Sampling and simulation"
 )
 ```
 
