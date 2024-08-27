@@ -1,6 +1,9 @@
 ---
 title: "Math Camp"
 subtitle: "Northwestern University -- Social Science -- Summer 2024"
+format: 
+  html:
+    page-layout: full
 ---
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
@@ -10,31 +13,31 @@ library(tinytable)
 
 ## Welcome
 
-This is the website for the 2024 Math Camp hosted by the Department of Political Science at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.
+This is the website for the 2024 Social Science Math Camp, hosted by the Departments of [Political Science](https://polisci.northwestern.edu/) and [Sociology](https://sociology.northwestern.edu/) at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.
 
 Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students from the department and have more informal conversations about the role of methods training in graduate school.
 
-### Instructor
-
-- {{< fa user >}} &nbsp; [Gustavo Diaz](https://gustavodiaz.org/)
-- {{< fa university >}} &nbsp; 103 Scott Hall
-- {{< fa envelope >}} &nbsp; <a href="mailto:gustavo.diaz@northwestern.edu">gustavo.diaz@northwestern.edu</a>
-
-### Teaching Assistants
+### Instructors
 
 :::: {.columns}
 
-
-::: {.column width="50%"}
-- {{< fa user >}} &nbsp; [Teaching Assistant](TBD)
+::: {.column width="33.3%"}
+- {{< fa user >}} &nbsp; [Artur Baranov](https://polisci.northwestern.edu/people/graduate-students/artur-baranov.html)
 - {{< fa university >}} &nbsp; TBD
-- {{< fa envelope >}} &nbsp; <a href="mailto:ta@northwestern.edu">ta@northwestern.edu</a>
+- {{< fa envelope >}} &nbsp; <a href="mailto:artur.baranov@u.northwestern.edu">artur.baranov@u.northwestern.edu</a>
 :::
 
-::: {.column width="50%"}
-- {{< fa user >}} &nbsp; [Teaching Assistant](TBD)
+
+::: {.column width="33.3%"}
+- {{< fa user >}} &nbsp; [Gustavo Diaz](https://gustavodiaz.org/)
+- {{< fa university >}} &nbsp; Scott Hall 103
+- {{< fa envelope >}} &nbsp; <a href="mailto:gustavo.diaz@northwestern.edu">gustavo.diaz@northwestern.edu</a>
+:::
+
+::: {.column width="33.3%"}
+- {{< fa user >}} &nbsp; [Aven Peters](https://sociology.northwestern.edu/people/graduate-students/profiles/aven-peters.html)
 - {{< fa university >}} &nbsp; TBD
-- {{< fa envelope >}} &nbsp; <a href="mailto:ta@northwestern.edu">ta@northwestern.edu</a>
+- {{< fa envelope >}} &nbsp; <a href="mailto:aven.peters@u.northwestern.edu">aven.peters@u.northwestern.edu</a>
 :::
 
 ::::
@@ -44,7 +47,7 @@ Our schedule features math in the morning and statistical programming in the aft
 
 - {{< fa calendar >}} &nbsp; September 16 -- 20
 - {{< fa clock >}} &nbsp; 9:00 AM -- 4:00 PM
-- {{< fa location-dot >}} &nbsp; TBD
+- {{< fa location-dot >}} &nbsp; Scott Hall 212
 
 ## Schedule
 
@@ -53,11 +56,11 @@ Our schedule features math in the morning and statistical programming in the aft
 schedule =
   tribble(
     ~Day, ~Date, ~Morning, ~Lunch, ~Afternoon,
-    1, "September 16", "Notation, sets, functions", "Meet #1", "R and RStudio",
-    2, "September 17", "Matrices", "Meet #2", "Tidyverse I",
-    3, "September 18", "Calculus I", "Meet #3", "Tidyverse II",
+    1, "September 16", "Notation, sets, functions", "Meet Graduate Students", "R and RStudio",
+    2, "September 17", "Matrices", "Meet Senior Faculty", "Tidyverse I",
+    3, "September 18", "Calculus I", "Research Computing and Data Services", "Tidyverse II",
     4, "September 19", "NO MEETING", NA, NA,
-    5, "September 20", "Calculus II", "Meet #4", "Sampling and simulation"
+    5, "September 20", "Calculus II", "Meet Junior Faculty", "Sampling and simulation"
 )
 ```
 
