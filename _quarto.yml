@@ -14,7 +14,7 @@ website:
   title: "Math Camp"
   description: "NU Social Science Math Camp"
   search: true
-  page-navigation: true
+  page-navigation: false
   sidebar:
     pinned: true
     align: center

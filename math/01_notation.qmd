@@ -1,5 +1,15 @@
 ---
-title: "Untitled"
+title: "Notation, Sets, and Functions"
+author: "[Gustavo Diaz](https://gustavodiaz.org)"
+date: last-modified
+date-format: long
+number-sections: true
 ---
 
-This is a placeholder document. Content TBD.
+# Overview
+
+A great deal of quantitive empirical research in the social sciences and statistics textbooks use notation extensively. Notation is useful to write about general concepts or ideas that apply to a broad range of settings. The downside is that notation makes things harder to read. 
+
+This section introduces common notation practices in the social sciences that will help you in both in methods courses and when reading/writing papers. Usage may vary across fields and over time, but becoming familiar with general uses may still help you understand the deviations.
+
+# Set Notation
