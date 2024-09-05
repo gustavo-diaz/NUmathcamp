@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./math/01_notation.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -118,6 +119,76 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Math</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math/01_notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Notations, sets, functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math/02_matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math/03_calc1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Calculus I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math/04_calc2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Calculus II</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Programming</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r/01_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r/02_tidy1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Tidyverse I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r/03_tidy1.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Tidyverse II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r/04_sampling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Sampling and simulation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -158,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="welcome" class="level2">
 <h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
 <p>This is the website for the 2024 Social Science Math Camp, hosted by the Departments of <a href="https://polisci.northwestern.edu/">Political Science</a> and <a href="https://sociology.northwestern.edu/">Sociology</a> at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.</p>
-<p>Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students from the department and have more informal conversations about the role of methods training in graduate school.</p>
+<p>Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.</p>
 <section id="details" class="level3">
 <h3 class="anchored" data-anchor-id="details">Details</h3>
 <ul>
@@ -173,12 +244,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- preamble start -->
 
     <script>
-      function styleCell_pes06nlbw4cilkipqr2x(i, j, css_id) {
-        var table = document.getElementById("tinytable_pes06nlbw4cilkipqr2x");
+      function styleCell_ys0l97c5c9zvcxzs380m(i, j, css_id) {
+        var table = document.getElementById("tinytable_ys0l97c5c9zvcxzs380m");
         table.rows[i].cells[j].classList.add(css_id);
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_pes06nlbw4cilkipqr2x');
+        var table = document.getElementById('tinytable_ys0l97c5c9zvcxzs380m');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -186,8 +257,8 @@ ul.task-list li input[type="checkbox"] {
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_pes06nlbw4cilkipqr2x(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_pes06nlbw4cilkipqr2x");
+      function spanCell_ys0l97c5c9zvcxzs380m(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_ys0l97c5c9zvcxzs380m");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -213,20 +284,20 @@ ul.task-list li input[type="checkbox"] {
         targetCell.rowSpan = rowspan;
         targetCell.colSpan = colspan;
       }
-window.addEventListener('load', function () { spanCell_pes06nlbw4cilkipqr2x(4, 2, 1, 2) })
-window.addEventListener('load', function () { styleCell_pes06nlbw4cilkipqr2x(0, 0, 'tinytable_css_id7oqub6r9gy8wdaxkfxuf') })
-window.addEventListener('load', function () { styleCell_pes06nlbw4cilkipqr2x(0, 1, 'tinytable_css_id7oqub6r9gy8wdaxkfxuf') })
-window.addEventListener('load', function () { styleCell_pes06nlbw4cilkipqr2x(0, 2, 'tinytable_css_id7oqub6r9gy8wdaxkfxuf') })
-window.addEventListener('load', function () { styleCell_pes06nlbw4cilkipqr2x(0, 3, 'tinytable_css_id7oqub6r9gy8wdaxkfxuf') })
-window.addEventListener('load', function () { styleCell_pes06nlbw4cilkipqr2x(4, 2, 'tinytable_css_idvwom8o2jeetdicu9f2ia') })
+window.addEventListener('load', function () { spanCell_ys0l97c5c9zvcxzs380m(4, 2, 1, 2) })
+window.addEventListener('load', function () { styleCell_ys0l97c5c9zvcxzs380m(0, 0, 'tinytable_css_idglv8xfko2v105sxcygr0') })
+window.addEventListener('load', function () { styleCell_ys0l97c5c9zvcxzs380m(0, 1, 'tinytable_css_idglv8xfko2v105sxcygr0') })
+window.addEventListener('load', function () { styleCell_ys0l97c5c9zvcxzs380m(0, 2, 'tinytable_css_idglv8xfko2v105sxcygr0') })
+window.addEventListener('load', function () { styleCell_ys0l97c5c9zvcxzs380m(0, 3, 'tinytable_css_idglv8xfko2v105sxcygr0') })
+window.addEventListener('load', function () { styleCell_ys0l97c5c9zvcxzs380m(4, 2, 'tinytable_css_id0bo6y1o2iy975mptsl5r') })
     </script>
 
     <style>
-    .table td.tinytable_css_id7oqub6r9gy8wdaxkfxuf, .table th.tinytable_css_id7oqub6r9gy8wdaxkfxuf {  border-bottom: solid 0.1em #d3d8dc; }
-    .table td.tinytable_css_idvwom8o2jeetdicu9f2ia, .table th.tinytable_css_idvwom8o2jeetdicu9f2ia {  text-align: left; }
+    .table td.tinytable_css_idglv8xfko2v105sxcygr0, .table th.tinytable_css_idglv8xfko2v105sxcygr0 {  border-bottom: solid 0.1em #d3d8dc; }
+    .table td.tinytable_css_id0bo6y1o2iy975mptsl5r, .table th.tinytable_css_id0bo6y1o2iy975mptsl5r {  text-align: left; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_pes06nlbw4cilkipqr2x" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_ys0l97c5c9zvcxzs380m" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -835,6 +906,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation column-page-right">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./math/01_notation.html" class="pagination-link" aria-label="1. Notations, sets, functions">
+        <span class="nav-page-text">1. Notations, sets, functions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

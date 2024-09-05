@@ -20,7 +20,7 @@ library(markdown)
 
 This is the website for the 2024 Social Science Math Camp, hosted by the Departments of [Political Science](https://polisci.northwestern.edu/) and [Sociology](https://sociology.northwestern.edu/) at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.
 
-Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students from the department and have more informal conversations about the role of methods training in graduate school.
+Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.
 
 ### Details
 

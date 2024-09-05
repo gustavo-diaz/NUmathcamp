@@ -3,10 +3,6 @@ project:
   output-dir: docs
   render: 
     - "*.qmd"
-    # - "!content/labs/"
-    # - "!resources/"
-  # resources:
-  #   - "slides/"
   
 
   
@@ -35,34 +31,26 @@ website:
     contents:
       - href: index.qmd
         text: "Home"
-      # - section: "Content"
-      #   contents: 
-      #       - text: "Content Overview"
-      #         file: content/index.qmd
-      #       - text: "1. Introduction"
-      #         file: content/01_content.qmd
-      #       - text: "2. The MIDA framework"
-      #         file: content/02_content.qmd
-      #       - text: "3. Representative surveys"
-      #         file: content/03_content.qmd
-      #       - text: "4. Sensitive questions"
-      #         file: content/04_content.qmd
-      #       - text: "5. Survey experiments"
-      #         file: content/05_content.qmd
-      #       - text: "6. Convenience samples"
-      #         file: content/06_content.qmd
-      #       - text: "8. Evidence-informed policy"
-      #         file: content/08_content.qmd
-      #       - text: "9. Field experiments I"
-      #         file: content/09_content.qmd
-      #       - text: "10. Field experiments II"
-      #         file: content/10_content.qmd
-      #       - text: "11. Beyond experimentation"
-      #         file: content/11_content.qmd
-      #       - text: "12. Quasi-experiments"
-      #         file: content/12_content.qmd
-      # - href: resources.qmd
-      #   text: "Resources"
+      - section: "Math"
+        contents:
+            - text: "1. Notations, sets, functions"
+              file: math/01_notation.qmd
+            - text: "2. Matrices"
+              file: math/02_matrices.qmd
+            - text: "3. Calculus I"
+              file: math/03_calc1.qmd
+            - text: "4. Calculus II"
+              file: math/04_calc2.qmd
+      - section: "Programming"
+        contents:
+            - text: "1. Getting started"
+              file: r/01_intro.qmd
+            - text: "2. Tidyverse I"
+              file: r/02_tidy1.qmd
+            - text: "3. Tidyverse II"
+              file: r/03_tidy1.qmd
+            - text: "4. Sampling and simulation"
+              file: r/04_sampling.qmd
 
 format:
   html:
