@@ -34,7 +34,7 @@
     "href": "math/01_notation.html",
     "title": "Notation, Sets, and Functions",
     "section": "",
-    "text": "1 Overview\nA great deal of quantitive empirical research in the social sciences and statistics textbooks use notation extensively. Notation is useful to write about general concepts or ideas that apply to a broad range of settings. The downside is that notation makes things harder to read.\nThis section introduces common notation practices in the social sciences that will help you in both in methods courses and when reading/writing papers. Usage may vary across fields and over time, but becoming familiar with general uses may still help you understand the deviations.\n\n\n2 Set Notation",
+    "text": "A great deal of quantitave empirical research in the social sciences and statistics textbooks use notation extensively. Notation is useful to write about general concepts or ideas that apply to a broad range of settings. The downside is that notation makes things harder to read.\nThis section introduces common notation practices in the social sciences that will help you in both in methods courses and when reading/writing papers. Usage may vary across fields and over time, but becoming familiar with general uses may still help you understand the deviations.",
     "crumbs": [
       "Math",
       "1. Notations, sets, functions"
@@ -119,6 +119,116 @@
     "title": "Notation, Sets, and Functions",
     "section": "",
     "text": "SKKRRTSAAAY",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#conditions",
+    "href": "math/01_notation.html#conditions",
+    "title": "Notation, Sets, and Functions",
+    "section": "2.1 Conditions",
+    "text": "2.1 Conditions\nA set is a collection of elements, we use symbols to refer to different parts of the set.\n\n\n\n\n\n\n\n\nNotation\nMeaning\nUse\n\n\n\n\n{\nbracket\nSpecify a set (e.g. {2, 3})\n\n\n\\(\\exists\\)\n“there exists”: true for at least one thing\nSpecify a condition to be satisfied\n\n\n\\(\\forall\\)\n“for all”; true for all elements\nSpecify which elements belong in a set (all that satisfy a criteron)\n\n\n\\(\\exists\\)\n“exists”; there is something true\nSpecify a rule or proposition that is true\n\n\n\\(\\in\\)\n“in” or “element of”\nStates what something / an element is a member of\n\n\n|\nSuch that\nused in set theoretic definitions re: which values satisfy a particular (set of) condition(s)\n\n\n\\(\\notin\\)\nexcluding (element)\nStates that something is not a member of a set\n\n\n\\(\\equiv\\)\nequivalent\nSet theory equal\n\n\n\nFor example, \\(A = \\forall x \\in\\) the set of natural numbers that are divisible by 4 [FIX AND GIVE IS MORE EXAMPLES IN SLIDES]. This is telling us that A is a set of numbers that is comprised of natural numbers that are divisible by 4. We could list out the elements of this set. Note that curly brackets are always used for sets, never parentheses. E.g. {4, 8, 12, …} and not (4, 8, 12, …).",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#operators",
+    "href": "math/01_notation.html#operators",
+    "title": "Notation, Sets, and Functions",
+    "section": "2.2 Operators",
+    "text": "2.2 Operators\nWe can also symbols to denote operations between sets.\n\n\n\nNotation\nMeaning\nUse\n\n\n\n\n\\(\\subset\\)\nSubset\nLess than\n\n\n\\(\\subseteq\\)\nSubset\nLess than equal\n\n\n\\(\\varnothing\\)\nEmpty set\nZero\n\n\n\\(\\cap\\)\nIntersection\nAND\n\n\n\\(\\cup\\)\nUnion\nOR\n\n\n\\(\\setminus\\)\nDifference\nMinus (remove elements from sets)\n\n\n\nFor example, [EXAMPLE].",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#number-sets",
+    "href": "math/01_notation.html#number-sets",
+    "title": "Notation, Sets, and Functions",
+    "section": "2.3 Number sets",
+    "text": "2.3 Number sets\nCertain sets of numbers are so frequent they have their own notation.\n\n\n\n\n\n\n\n\nNotation\nMeaning\nUse\n\n\n\n\n\\(\\mathbb{N}\\)\nNatural numbers\n{(0), 1, 2, 3, 4, 5, …}\n\n\n\\(\\mathbb{Z}\\)\nIntegers (pos and neg)\n{…, -3, -2, -1, 0, 1, 2, 3, …}\n\n\n\\(\\mathbb{Q}\\)\nRational numbers (quotient)\n(all fractions–produced by numbers divided by an integer)\n\n\n\\(\\mathbb{R}\\)\nReal numbers (pos, neg, fractions)\n(any point on a number line)\n\n\n\\(\\mathbb{I}\\)\nImaginary number\ni = \\(\\sqrt(-1)\\)\n\n\n\\(\\mathbb{C}\\)\nComplex numbers\n(a + bi)",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#greek-letters",
+    "href": "math/01_notation.html#greek-letters",
+    "title": "Notation, Sets, and Functions",
+    "section": "2.4 Greek letters",
+    "text": "2.4 Greek letters\nGreek letters are often used to represent parameters or abstract quantities of interest. Below you can find the letter with its corresponding syntax for math mode in markdown languages (e.g. LaTeX, Typst).1\n\n\n\n\n\n\n\n\\(\\alpha\\) \\(A\\) \\alpha A\n\\(\\nu\\) \\(N\\) \\nu N\n\n\n\\(\\beta\\) \\(B\\) \\beta B\n\\(\\xi\\) \\(\\Xi\\) \\xi \\Xi\n\n\n\\(\\gamma\\) \\(\\Gamma\\) \\gamma \\Gamma\n\\(o\\) \\(O\\) o O (omicron)\n\n\n\\(\\delta\\) \\(\\Delta\\) \\delta \\Delta\n\\(\\pi\\) \\(\\Pi\\) \\pi \\Pi\n\n\n\\(\\epsilon\\) \\(\\varepsilon\\) \\epsilon \\varepsilon\n\\(\\rho\\) \\(\\varrho\\) P \\rho \\varrho P\n\n\n\\(\\zeta\\) \\(Z\\) \\zeta Z\n\\(\\sigma\\) \\(\\Sigma\\) \\sigma \\Sigma\n\n\n\\(\\eta\\) \\(H\\) \\eta H\n\\(\\tau\\) \\(T\\) \\tau T\n\n\n\\(\\theta\\) \\(\\vartheta\\) \\(\\Theta\\) \\theta \\vartheta \\Theta\n\\(\\upsilon\\) \\(\\Upsilon\\) \\upsilon \\Upsilon\n\n\n\\(\\iota\\) \\(I\\) \\iota I\n\\(\\phi\\) \\(\\varphi\\) \\(\\Phi\\) \\phi \\varphi \\Phi\n\n\n\\(\\kappa\\) \\(K\\) \\kappa K\n\\(\\chi\\) \\(X\\) \\chi X\n\n\n\\(\\lambda\\) \\(\\Lambda\\) \\lambda \\Lambda\n\\(\\psi\\) \\(\\Psi\\) \\psi \\Psi\n\n\n\\(\\mu\\) \\(M\\) \\mu M\n\\(\\omega\\) \\(\\Omega\\) \\omega \\Omega\n\n\n\nSomme commonly used Greek letters include:\n\n\\(\\delta\\) “delta” (used for integrals and discount factors in game theory)\n\\(\\Delta\\) “delta” (used for difference/change)\n\\(\\beta\\) “beta” (used for coefficients in regression)\n\\(\\mu\\) “mu” (used for means)\n\\(\\sigma\\) “sigma” (used for standard deviation)\n\\(\\lambda\\) “lambda” (used for eigenvalues in linear algebra)\n\\(\\epsilon\\) “epsilon” (used for the error term in regressions)\n\\(\\tau\\) “tau” (used for treatment effects in experiments)\n\nDifferent Greek letters are also used to denote in machine learning and Bayesian statistics.",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#footnotes",
+    "href": "math/01_notation.html#footnotes",
+    "title": "Notation, Sets, and Functions",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSee https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols for details.↩︎",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#greek-vs.-latin-letters",
+    "href": "math/01_notation.html#greek-vs.-latin-letters",
+    "title": "Notation, Sets, and Functions",
+    "section": "2.5 Greek vs. Latin letters",
+    "text": "2.5 Greek vs. Latin letters\nIn papers using statistical methods, you may encounter a combination of Greek and English/Latin letters. Usage may vary depending on the application, but generally:\n\nGreek letters denote the unobserved truth that we want to learn about. For example, \\(\\mu\\) is the average adult height in the United States\nGreek letters with markings are our estimate of the truth based on our data. To calculate the average adult height, we use the mean \\(\\hat{\\mu}\\) (which we read as “mu hat”)\nLatin letters denote actual data in our sample, usually variables. For example, \\(X\\) is a collection of adult heights in a survey we conducted\nLatin letters with markings denote calculations in our data. For example, \\(\\bar{X}\\) (“X bar”) is the sample mean adult height\n\nThis means we use \\(X\\) in our data to calculate \\(\\bar{X}\\), which is our estimate \\(\\hat{\\mu}\\) of the unknown quantity \\(\\mu\\). A good statistical procedure yields a \\(\\hat{\\mu}\\) that approximates \\(\\mu\\), although this is generally hard to assess since \\(\\mu\\) is unobserved. If we knew the unknown quantity of interest, then no statistical analysis would be necessary.",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#proof-terms",
+    "href": "math/01_notation.html#proof-terms",
+    "title": "Notation, Sets, and Functions",
+    "section": "3.1 Proof terms",
+    "text": "3.1 Proof terms\nIn math, probability, statistics, and game theory, proofs often have different parts.\n\nAssumptions are statements taken to be true\nPropositions are statements thought to be true given the assumptions\nTheorems is a proven proposition\nLemmas are intermediary theorems that are not important on their own, but necessary to arrive at more important theorems or conclusions\nCorollaries are propositions that follow directly from the proof of another proposition and do not require further proof",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#necessary-and-sufficient",
+    "href": "math/01_notation.html#necessary-and-sufficient",
+    "title": "Notation, Sets, and Functions",
+    "section": "3.2 Necessary and sufficient",
+    "text": "3.2 Necessary and sufficient",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#logical-operators",
+    "href": "math/01_notation.html#logical-operators",
+    "title": "Notation, Sets, and Functions",
+    "section": "3.3 Logical operators",
+    "text": "3.3 Logical operators",
+    "crumbs": [
+      "Math",
+      "1. Notations, sets, functions"
+    ]
+  },
+  {
+    "objectID": "math/01_notation.html#proofs",
+    "href": "math/01_notation.html#proofs",
+    "title": "Notation, Sets, and Functions",
+    "section": "3.4 Proofs",
+    "text": "3.4 Proofs",
     "crumbs": [
       "Math",
       "1. Notations, sets, functions"

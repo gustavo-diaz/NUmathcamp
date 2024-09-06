@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gustavo Diaz">
-<meta name="dcterms.date" content="2024-09-05">
+<meta name="dcterms.date" content="2024-09-06">
 
 <title>Math Camp - Notation, Sets, and Functions</title>
 <style>
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -216,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 5, 2024</p>
+      <p class="date">September 6, 2024</p>
     </div>
   </div>
   
@@ -230,16 +259,286 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
-<p>A great deal of quantitive empirical research in the social sciences and statistics textbooks use notation extensively. Notation is useful to write about general concepts or ideas that apply to a broad range of settings. The downside is that notation makes things harder to read.</p>
+<p>A great deal of quantitave empirical research in the social sciences and statistics textbooks use notation extensively. Notation is useful to write about general concepts or ideas that apply to a broad range of settings. The downside is that notation makes things harder to read.</p>
 <p>This section introduces common notation practices in the social sciences that will help you in both in methods courses and when reading/writing papers. Usage may vary across fields and over time, but becoming familiar with general uses may still help you understand the deviations.</p>
 </section>
 <section id="set-notation" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Set Notation</h1>
+<section id="conditions" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="conditions"><span class="header-section-number">2.1</span> Conditions</h2>
+<p>A set is a collection of elements, we use symbols to refer to different parts of the set.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 56%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Notation</th>
+<th style="text-align: left;">Meaning</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">{</td>
+<td style="text-align: left;">bracket</td>
+<td>Specify a set (e.g.&nbsp;{2, 3})</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\exists\)</span></td>
+<td style="text-align: left;">“there exists”: true for at least one thing</td>
+<td>Specify a condition to be satisfied</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\forall\)</span></td>
+<td style="text-align: left;">“for all”; true for all elements</td>
+<td>Specify which elements belong in a set (all that satisfy a criteron)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\exists\)</span></td>
+<td style="text-align: left;">“exists”; there is something true</td>
+<td>Specify a rule or proposition that is true</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\in\)</span></td>
+<td style="text-align: left;">“in” or “element of”</td>
+<td>States what something / an element is a member of</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">|</td>
+<td style="text-align: left;">Such that</td>
+<td>used in set theoretic definitions re: which values satisfy a particular (set of) condition(s)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\notin\)</span></td>
+<td style="text-align: left;">excluding (element)</td>
+<td>States that something is not a member of a set</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\equiv\)</span></td>
+<td style="text-align: left;">equivalent</td>
+<td>Set theory equal</td>
+</tr>
+</tbody>
+</table>
+<p>For example, <span class="math inline">\(A = \forall x \in\)</span> the set of natural numbers that are divisible by 4 [FIX AND GIVE IS MORE EXAMPLES IN SLIDES]. This is telling us that A is a set of numbers that is comprised of natural numbers that are divisible by 4. We could list out the elements of this set. Note that curly brackets are always used for sets, never parentheses. E.g. {4, 8, 12, …} and not (4, 8, 12, …).</p>
+</section>
+<section id="operators" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="operators"><span class="header-section-number">2.2</span> Operators</h2>
+<p>We can also symbols to denote operations between sets.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Notation</th>
+<th>Meaning</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\subset\)</span></td>
+<td>Subset</td>
+<td>Less than</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\subseteq\)</span></td>
+<td>Subset</td>
+<td>Less than equal</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\varnothing\)</span></td>
+<td>Empty set</td>
+<td>Zero</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\cap\)</span></td>
+<td>Intersection</td>
+<td>AND</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cup\)</span></td>
+<td>Union</td>
+<td>OR</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\setminus\)</span></td>
+<td>Difference</td>
+<td>Minus (remove elements from sets)</td>
+</tr>
+</tbody>
+</table>
+<p>For example, [EXAMPLE].</p>
+</section>
+<section id="number-sets" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="number-sets"><span class="header-section-number">2.3</span> Number sets</h2>
+<p>Certain sets of numbers are so frequent they have their own notation.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 40%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Notation</th>
+<th>Meaning</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{N}\)</span></td>
+<td>Natural numbers</td>
+<td>{(0), 1, 2, 3, 4, 5, …}</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td>Integers (pos and neg)</td>
+<td>{…, -3, -2, -1, 0, 1, 2, 3, …}</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{Q}\)</span></td>
+<td>Rational numbers (quotient)</td>
+<td>(all fractions–produced by numbers divided by an integer)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>Real numbers (pos, neg, fractions)</td>
+<td>(any point on a number line)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{I}\)</span></td>
+<td>Imaginary number</td>
+<td>i = <span class="math inline">\(\sqrt(-1)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{C}\)</span></td>
+<td>Complex numbers</td>
+<td>(a + bi)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="greek-letters" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="greek-letters"><span class="header-section-number">2.4</span> Greek letters</h2>
+<p>Greek letters are often used to represent parameters or abstract quantities of interest. Below you can find the letter with its corresponding syntax for math mode in markdown languages (e.g.&nbsp;LaTeX, Typst).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 77%">
+<col style="width: 22%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\alpha\)</span> <span class="math inline">\(A\)</span> \alpha A</td>
+<td><span class="math inline">\(\nu\)</span> <span class="math inline">\(N\)</span> \nu N</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta\)</span> <span class="math inline">\(B\)</span> \beta B</td>
+<td><span class="math inline">\(\xi\)</span> <span class="math inline">\(\Xi\)</span> \xi \Xi</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\gamma\)</span> <span class="math inline">\(\Gamma\)</span> \gamma \Gamma</td>
+<td><span class="math inline">\(o\)</span> <span class="math inline">\(O\)</span> o O (omicron)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\delta\)</span> <span class="math inline">\(\Delta\)</span> \delta \Delta</td>
+<td><span class="math inline">\(\pi\)</span> <span class="math inline">\(\Pi\)</span> \pi \Pi</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\epsilon\)</span> <span class="math inline">\(\varepsilon\)</span> \epsilon \varepsilon</td>
+<td><span class="math inline">\(\rho\)</span> <span class="math inline">\(\varrho\)</span> P \rho \varrho P</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\zeta\)</span> <span class="math inline">\(Z\)</span> \zeta Z</td>
+<td><span class="math inline">\(\sigma\)</span> <span class="math inline">\(\Sigma\)</span> \sigma \Sigma</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\eta\)</span> <span class="math inline">\(H\)</span> \eta H</td>
+<td><span class="math inline">\(\tau\)</span> <span class="math inline">\(T\)</span> \tau T</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\theta\)</span> <span class="math inline">\(\vartheta\)</span> <span class="math inline">\(\Theta\)</span> \theta \vartheta \Theta</td>
+<td><span class="math inline">\(\upsilon\)</span> <span class="math inline">\(\Upsilon\)</span> \upsilon \Upsilon</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\iota\)</span> <span class="math inline">\(I\)</span> \iota I</td>
+<td><span class="math inline">\(\phi\)</span> <span class="math inline">\(\varphi\)</span> <span class="math inline">\(\Phi\)</span> \phi \varphi \Phi</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\kappa\)</span> <span class="math inline">\(K\)</span> \kappa K</td>
+<td><span class="math inline">\(\chi\)</span> <span class="math inline">\(X\)</span> \chi X</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\lambda\)</span> <span class="math inline">\(\Lambda\)</span> \lambda \Lambda</td>
+<td><span class="math inline">\(\psi\)</span> <span class="math inline">\(\Psi\)</span> \psi \Psi</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu\)</span> <span class="math inline">\(M\)</span> \mu M</td>
+<td><span class="math inline">\(\omega\)</span> <span class="math inline">\(\Omega\)</span> \omega \Omega</td>
+</tr>
+</tbody>
+</table>
+<p>Somme commonly used Greek letters include:</p>
+<ul>
+<li><span class="math inline">\(\delta\)</span> “delta” (used for integrals and discount factors in game theory)</li>
+<li><span class="math inline">\(\Delta\)</span> “delta” (used for difference/change)</li>
+<li><span class="math inline">\(\beta\)</span> “beta” (used for coefficients in regression)</li>
+<li><span class="math inline">\(\mu\)</span> “mu” (used for means)</li>
+<li><span class="math inline">\(\sigma\)</span> “sigma” (used for standard deviation)</li>
+<li><span class="math inline">\(\lambda\)</span> “lambda” (used for eigenvalues in linear algebra)</li>
+<li><span class="math inline">\(\epsilon\)</span> “epsilon” (used for the error term in regressions)</li>
+<li><span class="math inline">\(\tau\)</span> “tau” (used for treatment effects in experiments)</li>
+</ul>
+<p>Different Greek letters are also used to denote in machine learning and Bayesian statistics.</p>
+</section>
+<section id="greek-vs.-latin-letters" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="greek-vs.-latin-letters"><span class="header-section-number">2.5</span> Greek vs.&nbsp;Latin letters</h2>
+<p>In papers using statistical methods, you may encounter a combination of Greek and English/Latin letters. Usage may vary depending on the application, but generally:</p>
+<ul>
+<li>Greek letters denote the unobserved truth that we want to learn about. For example, <span class="math inline">\(\mu\)</span> is the average adult height in the United States</li>
+<li>Greek letters <em>with markings</em> are our estimate of the truth based on our data. To calculate the average adult height, we use the mean <span class="math inline">\(\hat{\mu}\)</span> (which we read as “mu hat”)</li>
+<li>Latin letters denote actual data in our sample, usually variables. For example, <span class="math inline">\(X\)</span> is a collection of adult heights in a survey we conducted</li>
+<li>Latin letters with markings denote calculations in our data. For example, <span class="math inline">\(\bar{X}\)</span> (“X bar”) is the sample mean adult height</li>
+</ul>
+<p>This means we use <span class="math inline">\(X\)</span> in our data to calculate <span class="math inline">\(\bar{X}\)</span>, which is our estimate <span class="math inline">\(\hat{\mu}\)</span> of the unknown quantity <span class="math inline">\(\mu\)</span>. A good statistical procedure yields a <span class="math inline">\(\hat{\mu}\)</span> that approximates <span class="math inline">\(\mu\)</span>, although this is generally hard to assess since <span class="math inline">\(\mu\)</span> is unobserved. If we knew the unknown quantity of interest, then no statistical analysis would be necessary.</p>
+</section>
+</section>
+<section id="logic-and-proofs" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Logic and Proofs</h1>
+<p>A complete treatment of logic and proofs goes beyond the scope of math camp. Here, we will focus on a few relevant terms and symbol.</p>
+<section id="proof-terms" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="proof-terms"><span class="header-section-number">3.1</span> Proof terms</h2>
+<p>In math, probability, statistics, and game theory, proofs often have different parts.</p>
+<ul>
+<li><strong>Assumptions</strong> are statements taken to be true</li>
+<li><strong>Propositions</strong> are statements thought to be true given the assumptions</li>
+<li><strong>Theorems</strong> is a proven proposition</li>
+<li><strong>Lemmas</strong> are intermediary theorems that are not important on their own, but necessary to arrive at more important theorems or conclusions</li>
+<li><strong>Corollaries</strong> are propositions that follow directly from the proof of another proposition and do not require further proof</li>
+</ul>
+</section>
+<section id="necessary-and-sufficient" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="necessary-and-sufficient"><span class="header-section-number">3.2</span> Necessary and sufficient</h2>
+</section>
+<section id="logical-operators" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="logical-operators"><span class="header-section-number">3.3</span> Logical operators</h2>
+</section>
+<section id="proofs" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="proofs"><span class="header-section-number">3.4</span> Proofs</h2>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>See <a href="https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols" class="uri">https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols</a> for details.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -8,8 +8,119 @@ number-sections: true
 
 # Overview
 
-A great deal of quantitive empirical research in the social sciences and statistics textbooks use notation extensively. Notation is useful to write about general concepts or ideas that apply to a broad range of settings. The downside is that notation makes things harder to read. 
+A great deal of quantitave empirical research in the social sciences and statistics textbooks use notation extensively. Notation is useful to write about general concepts or ideas that apply to a broad range of settings. The downside is that notation makes things harder to read. 
 
 This section introduces common notation practices in the social sciences that will help you in both in methods courses and when reading/writing papers. Usage may vary across fields and over time, but becoming familiar with general uses may still help you understand the deviations.
 
 # Set Notation
+
+## Conditions
+
+A set is a collection of elements, we use symbols to refer to different parts of the set.
+
+| Notation | Meaning                   | Use 
+|:---|:-------------------------|----------------|
+{                  | bracket                   | Specify a set (e.g. {2, 3})
+$\exists$ | "there exists": true for at least one thing | Specify a condition to be satisfied
+$\forall$ |  "for all"; true for all elements  | Specify which elements belong in a set (all that satisfy a criteron)
+$\exists$ |  "exists"; there is something true | Specify a rule or proposition that is true
+$\in$ |  "in" or "element of"                  | States what something / an element is a member of
+\|  | Such that | used in set theoretic definitions re: which values satisfy a particular (set of) condition(s)
+$\notin$ | excluding (element) | States that something is not a member of a set
+$\equiv$ | equivalent | Set theory equal
+
+For example, $A = \forall x \in$ the set of natural numbers that are divisible by 4 [FIX AND GIVE IS MORE EXAMPLES IN SLIDES]. This is telling us that A is a set of numbers that is comprised of natural numbers that are divisible by 4. We could list out the elements of this set. Note that curly brackets are always used for sets, never parentheses. E.g. {4, 8, 12, ...} and not (4, 8, 12, ...). 
+
+
+## Operators
+
+We can also symbols to denote operations between sets.
+
+| Notation | Meaning | Use
+|---|--------|---------|
+$\subset$ |  Subset | Less than
+$\subseteq$ |  Subset |  Less than equal
+$\varnothing$ |  Empty set | Zero
+$\cap$ |  Intersection |  AND
+$\cup$ |  Union | OR
+$\setminus$ |  Difference | Minus (remove elements from sets)
+
+For example, [EXAMPLE].
+
+## Number sets
+
+Certain sets of numbers are so frequent they have their own notation.
+
+| Notation | Meaning | Use
+|---|--------|---------|
+$\mathbb{N}$ | Natural numbers | {(0), 1, 2, 3, 4, 5, ...}
+$\mathbb{Z}$| Integers (pos and neg) | {..., -3, -2, -1, 0, 1, 2, 3, ...}
+$\mathbb{Q}$ | Rational numbers (quotient) | (all fractions--produced by numbers divided by an integer)
+$\mathbb{R}$ | Real numbers (pos, neg, fractions) | (any point on a number line) 
+$\mathbb{I}$ | Imaginary number |  i = $\sqrt(-1)$ | 
+$\mathbb{C}$ | Complex numbers | (a + bi) |
+
+## Greek letters
+
+Greek letters are often used to represent parameters or abstract quantities of interest. Below you can find the letter with its corresponding syntax for math mode in markdown languages (e.g. LaTeX, Typst).^[See <https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols> for details.]
+
+|                               |         |
+|-------------------------------|---------|
+| $\alpha$ $A$ \\alpha A |	$\nu$ $N$ \\nu N |
+|	$\beta$	 $B$  \\beta B |	$\xi$ $\Xi$ \\xi \\Xi |
+|	$\gamma$ $\Gamma$ \\gamma \\Gamma  |	$o$ $O$ o O (omicron) |
+|	$\delta$ $\Delta$	 \\delta \\Delta |	$\pi$ $\Pi$ \\pi \\Pi |
+|	$\epsilon$ $\varepsilon$ \\epsilon \\varepsilon	 |	$\rho$ $\varrho$ P \\rho \\varrho P |
+|	$\zeta$	$Z$  \\zeta Z  |	$\sigma$ $\Sigma$ \\sigma \\Sigma |
+|	$\eta$	$H$  \\eta H |	$\tau$ $T$ \\tau T |
+|	$\theta$ $\vartheta$ $\Theta$ \\theta \\vartheta \\Theta	|	$\upsilon$ $\Upsilon$ \\upsilon \\Upsilon |
+|	$\iota$ $I$	\\iota I |	$\phi$ $\varphi$ $\Phi$ \\phi  \\varphi \\Phi |
+|	$\kappa$ $K$	\\kappa K |	$\chi$ $X$ \\chi X |
+|	$\lambda$ $\Lambda$	 \\lambda \\Lambda |	$\psi$ $\Psi$ \\psi \\Psi | 
+| $\mu$ $M$ \\mu M |	$\omega$ $\Omega$ \\omega \\Omega
+
+Somme commonly used Greek letters include:
+
+- $\delta$ "delta" (used for integrals and discount factors in game theory)
+- $\Delta$ "delta" (used for difference/change)
+- $\beta$ "beta" (used for coefficients in regression)
+- $\mu$ "mu" (used for means)
+- $\sigma$ "sigma" (used for standard deviation)
+- $\lambda$ "lambda" (used for eigenvalues in linear algebra)
+- $\epsilon$ "epsilon" (used for the error term in regressions)
+- $\tau$ "tau" (used for treatment effects in experiments)
+
+Different Greek letters are also used to denote in machine learning and Bayesian statistics.
+
+## Greek vs. Latin letters
+
+In papers using statistical methods, you may encounter a combination of Greek and  English/Latin letters. Usage may vary depending on the application, but generally:
+
+- Greek letters denote the unobserved truth that we want to learn about. For example, $\mu$ is the average adult height in the United States
+- Greek letters *with markings* are our estimate of the truth based on our data. To calculate the average adult height, we use the mean $\hat{\mu}$ (which we read as "mu hat")
+- Latin letters denote actual data in our sample, usually variables. For example, $X$ is a collection of adult heights in a survey we conducted
+- Latin letters with markings denote calculations in our data. For example, $\bar{X}$ ("X bar") is the sample mean adult height
+
+This means we use $X$ in our data to calculate $\bar{X}$, which is our estimate $\hat{\mu}$ of the unknown quantity $\mu$. A good statistical procedure yields a $\hat{\mu}$ that approximates $\mu$, although this is generally hard to assess since $\mu$ is unobserved. If we knew the unknown quantity of interest, then no statistical analysis would be necessary.
+
+# Logic and Proofs
+
+A complete treatment of logic and proofs goes beyond the scope of math camp. Here, we will focus on a few relevant terms and symbol.
+
+## Proof terms
+
+In math, probability, statistics, and game theory, proofs often have different parts.
+
+- **Assumptions** are statements taken to be true
+- **Propositions** are statements thought to be true given the assumptions
+- **Theorems** is a proven proposition
+- **Lemmas** are intermediary theorems that are not important on their own, but necessary to arrive at more important theorems or conclusions
+- **Corollaries** are propositions that follow directly from the proof of another proposition and do not require further proof
+
+## Necessary and sufficient
+
+## Logical operators
+
+## Proofs
+
+
