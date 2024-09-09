@@ -119,8 +119,49 @@ In math, probability, statistics, and game theory, proofs often have different p
 
 ## Necessary and sufficient
 
+Sometimes we want to understand the conditions that determine certain outcomes. To do this, the language of *necessary* and *sufficient* conditions is useful. Consider outcome Y and conditions A and B.
+
+A condition is *sufficient* if it occurs *also* when the outcome occurs. So, if A occurs when Y also occurs, they are sufficient for D to occur. D can happen without A, but we do not see A without D.
+
+A condition is *necessary* if we never see the outcome without it. So, if we observe Y, B must have also occurred. B can happen without Y, but never Y without B.
+
+Sometimes, conditions operate in more complicated ways. We can have an **I**nsufficient but **N**ecessary part of an **U**nnecessary but **S**ufficient set of conditions an outcome to occur (INUS). For example, having unprotected sexual intercourse is *insufficient* for HIV transmission, but it can be *necessary* part of one of the many ways in which HIV is transmitted. Informally, it helps to think about INUS conditions as component causes.
+
+Also, we can have **S**ufficient but **U**nnecessary condition that is part of a condition set that is **I**nsufficient but **N**ecessary for the outcome. For example, fraudulent elections are a *sufficient*  but *unnecessary* condition to erode democracy. In turn, per the democratic peace theory, the absence of democracy is *necessary* but not *sufficient* to cause war. It helps to think of SUIN conditions as precipitating causes.
+
 ## Logical operators
+
+Like regular math operators, logical operators denote operations on sets. Some of these are useful for data analysis work. For example, when subsetting data. Most of these operators exist in R and other statistical computing software, although sometimes with modified syntax.
+
+| Notation | Meaning | Use
+|---|------------------|---------|
+$\wedge$ |  And | Intersection.Discussing elements in both sets
+$\vee$ |  Or | Union. Discussing elements that are in multiple sets
+$\sim$ | Not | Negation
+! | Not | Negation (used in R most often)
+\< | Less than | Inequality(good for specifying conditions when filtering)
+\<= | Less than equal to | Inequality (good for specifying conditions when filtering; include the value)
+\> | Greater than | Inequality (good for specifying conditions when filtering)
+\>= | Greater than equal to| Inequality (good for specifying conditions when filtering; include the value)
+!= | Not equal to | Exclude values when filtering (anything other than the exact value)
+== | Exactly equal | Helpful in R for when a value is exactly satisfied
+%in% |  In | Useful when searching for terms
+
 
 ## Proofs
 
+We won't do proofs in Math Camp, but we'll reference them implicitly throughout the course and in they may come back in your fall coursework. 
+
+### Direct proofs
+Direct proofs work through proof and typically use one of the following methods:
++ **General (deductive) proof**: typically done using definitions, etc. Showing how the outcome logically follows building on rules and assumptions.
++ **Proof by exhaustion**: Break up the outcome into sub cases and show for each case (done often in game theory for possible values)
++ **Proof by construction**: These proofs demonstrate existence (is there a square that is the sum of two squares?).
++ **Proof by induction**: Start small and show it is true for any number (e.g. start with a small n, n=1, then expand to n+1)
+
+### Indirect proofs 
+These show that the outcome must be true because there is no possible alternative.These are typically demonstrated using the following methods:
+
++ Proof by counterexample: using a counterexample (x implies y, yet we observe y without x...x cannot imply y (aka x not necessary for y)).
++ Proof by contradiction: assume that the statement is false and try to prove it wrong, eventually demonstrating that a contradiction emerges. Thus, the statement cannot be false.
 
