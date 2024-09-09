@@ -1,0 +1,181 @@
+"country","iso","region","cpi_2022","cpi_2023"
+"Afghanistan","AFG","AP",24,20
+"Albania","ALB","ECA",36,37
+"Algeria","DZA","MENA",33,36
+"Angola","AGO","SSA",33,33
+"Argentina","ARG","AME",38,37
+"Armenia","ARM","ECA",46,47
+"Australia","AUS","AP",75,75
+"Austria","AUT","WE/EU",71,71
+"Azerbaijan","AZE","ECA",23,23
+"Bahamas","BHS","AME",64,64
+"Bahrain","BHR","MENA",44,42
+"Bangladesh","BGD","AP",25,24
+"Barbados","BRB","AME",65,69
+"Belarus","BLR","ECA",39,37
+"Belgium","BEL","WE/EU",73,73
+"Benin","BEN","SSA",43,43
+"Bhutan","BTN","AP",68,68
+"Bolivia","BOL","AME",31,29
+"Bosnia and Herzegovina","BIH","ECA",34,35
+"Botswana","BWA","SSA",60,59
+"Brazil","BRA","AME",38,36
+"Bulgaria","BGR","WE/EU",43,45
+"Burkina Faso","BFA","SSA",42,41
+"Burundi","BDI","SSA",17,20
+"Cabo Verde","CPV","SSA",60,64
+"Cambodia","KHM","AP",24,22
+"Cameroon","CMR","SSA",26,27
+"Canada","CAN","AME",74,76
+"Central African Republic","CAF","SSA",24,24
+"Chad","TCD","SSA",19,20
+"Chile","CHL","AME",67,66
+"China","CHN","AP",45,42
+"Colombia","COL","AME",39,40
+"Comoros","COM","SSA",19,20
+"Congo","COG","SSA",21,22
+"Costa Rica","CRI","AME",54,55
+"Cote d'Ivoire","CIV","SSA",37,NA
+"Croatia","HRV","WE/EU",50,50
+"Cuba","CUB","AME",45,42
+"Cyprus","CYP","WE/EU",52,53
+"Czechia","CZE","WE/EU",56,57
+"Democratic Republic of the Congo","COD","SSA",20,20
+"Denmark","DNK","WE/EU",90,90
+"Djibouti","DJI","SSA",30,30
+"Dominica","DMA","AME",55,56
+"Dominican Republic","DOM","AME",32,35
+"Ecuador","ECU","AME",36,34
+"Egypt","EGY","MENA",30,35
+"El Salvador","SLV","AME",33,31
+"Equatorial Guinea","GNQ","SSA",17,17
+"Eritrea","ERI","SSA",22,21
+"Estonia","EST","WE/EU",74,76
+"Eswatini","SWZ","SSA",30,30
+"Ethiopia","ETH","SSA",38,37
+"Fiji","FJI","AP",53,52
+"Finland","FIN","WE/EU",87,87
+"France","FRA","WE/EU",72,71
+"Gabon","GAB","SSA",29,28
+"Gambia","GMB","SSA",34,37
+"Georgia","GEO","ECA",56,53
+"Germany","DEU","WE/EU",79,78
+"Ghana","GHA","SSA",43,43
+"Greece","GRC","WE/EU",52,49
+"Grenada","GRD","AME",52,53
+"Guatemala","GTM","AME",24,23
+"Guinea","GIN","SSA",25,26
+"Guinea Bissau","GNB","SSA",21,NA
+"Guyana","GUY","AME",40,40
+"Haiti","HTI","AME",17,17
+"Honduras","HND","AME",23,23
+"Hong Kong","HKG","AP",76,75
+"Hungary","HUN","WE/EU",42,42
+"Iceland","ISL","WE/EU",74,72
+"India","IND","AP",40,39
+"Indonesia","IDN","AP",34,34
+"Iran","IRN","MENA",25,24
+"Iraq","IRQ","MENA",23,23
+"Ireland","IRL","WE/EU",77,77
+"Israel","ISR","MENA",63,62
+"Italy","ITA","WE/EU",56,56
+"Jamaica","JAM","AME",44,44
+"Japan","JPN","AP",73,73
+"Jordan","JOR","MENA",47,46
+"Kazakhstan","KAZ","ECA",36,39
+"Kenya","KEN","SSA",32,31
+"Korea, North","PRK","AP",17,17
+"Korea, South","KOR","AP",63,63
+"Kosovo","KSV","ECA",41,41
+"Kuwait","KWT","MENA",42,46
+"Kyrgyzstan","KGZ","ECA",27,26
+"Laos","LAO","AP",31,28
+"Latvia","LVA","WE/EU",59,60
+"Lebanon","LBN","MENA",24,24
+"Lesotho","LSO","SSA",37,39
+"Liberia","LBR","SSA",26,25
+"Libya","LBY","MENA",17,18
+"Lithuania","LTU","WE/EU",62,61
+"Luxembourg","LUX","WE/EU",77,78
+"Madagascar","MDG","SSA",26,25
+"Malawi","MWI","SSA",34,34
+"Malaysia","MYS","AP",47,50
+"Maldives","MDV","AP",40,39
+"Mali","MLI","SSA",28,28
+"Malta","MLT","WE/EU",51,51
+"Mauritania","MRT","SSA",30,30
+"Mauritius","MUS","SSA",50,51
+"Mexico","MEX","AME",31,31
+"Moldova","MDA","ECA",39,42
+"Mongolia","MNG","AP",33,33
+"Montenegro","MNE","ECA",45,46
+"Morocco","MAR","MENA",38,38
+"Mozambique","MOZ","SSA",26,25
+"Myanmar","MMR","AP",23,20
+"Namibia","NAM","SSA",49,49
+"Nepal","NPL","AP",34,35
+"Netherlands","NLD","WE/EU",80,79
+"New Zealand","NZL","AP",87,85
+"Nicaragua","NIC","AME",19,17
+"Niger","NER","SSA",32,32
+"Nigeria","NGA","SSA",24,25
+"North Macedonia","MKD","ECA",40,42
+"Norway","NOR","WE/EU",84,84
+"Oman","OMN","MENA",44,43
+"Pakistan","PAK","AP",27,29
+"Panama","PAN","AME",36,35
+"Papua New Guinea","PNG","AP",30,29
+"Paraguay","PRY","AME",28,28
+"Peru","PER","AME",36,33
+"Philippines","PHL","AP",33,34
+"Poland","POL","WE/EU",55,54
+"Portugal","PRT","WE/EU",62,61
+"Qatar","QAT","MENA",58,58
+"Romania","ROU","WE/EU",46,46
+"Russia","RUS","ECA",28,26
+"Rwanda","RWA","SSA",51,53
+"Saint Lucia","LCA","AME",55,55
+"Saint Vincent and the Grenadines","VCT","AME",60,60
+"Sao Tome and Principe","STP","SSA",45,45
+"Saudi Arabia","SAU","MENA",51,52
+"Senegal","SEN","SSA",43,43
+"Serbia","SRB","ECA",36,36
+"Seychelles","SYC","SSA",70,71
+"Sierra Leone","SLE","SSA",34,35
+"Singapore","SGP","AP",83,83
+"Slovakia","SVK","WE/EU",53,54
+"Slovenia","SVN","WE/EU",56,56
+"Solomon Islands","SLB","AP",42,43
+"Somalia","SOM","SSA",12,11
+"South Africa","ZAF","SSA",43,41
+"South Sudan","SSD","SSA",13,13
+"Spain","ESP","WE/EU",60,60
+"Sri Lanka","LKA","AP",36,34
+"Sudan","SDN","SSA",22,20
+"Suriname","SUR","AME",40,40
+"Sweden","SWE","WE/EU",83,82
+"Switzerland","CHE","WE/EU",82,82
+"Syria","SYR","MENA",13,13
+"Taiwan","TWN","AP",68,67
+"Tajikistan","TJK","ECA",24,20
+"Tanzania","TZA","SSA",38,40
+"Thailand","THA","AP",36,35
+"Timor-Leste","TLS","AP",42,43
+"Togo","TGO","SSA",30,31
+"Trinidad and Tobago","TTO","AME",42,42
+"Tunisia","TUN","MENA",40,40
+"Turkey","TUR","ECA",36,34
+"Turkmenistan","TKM","ECA",19,18
+"Uganda","UGA","SSA",26,26
+"Ukraine","UKR","ECA",33,36
+"United Arab Emirates","ARE","MENA",67,68
+"United Kingdom","GBR","WE/EU",73,71
+"United States of America","USA","AME",69,NA
+"Uruguay","URY","AME",74,73
+"Uzbekistan","UZB","ECA",31,33
+"Vanuatu","VUT","AP",48,48
+"Venezuela","VEN","AME",14,13
+"Vietnam","VNM","AP",42,41
+"Yemen","YEM","MENA",16,16
+"Zambia","ZMB","SSA",33,37
+"Zimbabwe","ZWE","SSA",23,24
