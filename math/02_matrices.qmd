@@ -4,9 +4,10 @@ author: "[Gustavo Diaz](https://gustavodiaz.org)"
 date: last-modified
 date-format: long
 number-sections: true
+toc: true
 ---
 
-# Matrices
+## Matrices
 
 Matrices are rectangular collections of numbers, meaning they are arranged by rows and columns. Learning about matrices is important because most of the data that social scientists use is rectangular data. The rest, less structured data, is eventually converted to a rectangular format before analysis.
 
@@ -185,8 +186,6 @@ N
 
 ### Structure
 
-[CONTINUE HERE]
-
 How do we refer to specific elements of the matrix? For example, matrix $A$ is an $m\times n$ matrix where $m=n=3$. This is sometimes called a *square matrix*.
 
 More generally, matrix $B$ is an $m\times n$ matrix where the elements look like this: $$B=
@@ -215,31 +214,7 @@ N[4,2]
 When trying to identify a specific element, the first subscript is the element's row and the second subscript is the element's column (*always* in that order).
 :::
 
-::: callout-warning
-In R, indexing is 1-based, meaning that the first element of a vector, matrix, or any other data structure is accessed with index 1. In other programming tools such as Python, indexing is 0-based, meaning that the first element of a list, array, or any other data structure is accessed with index 0.
-```{r}
-# Create a 2x2 matrix in R
-matrix_A = matrix(1:4, nrow = 2, ncol = 2)
 
-# Access the element in the first row, first column
-element = matrix_A[1, 1]  # This will return 1
-```
-
-```python
-# Create a list in Python
-vector = [10, 20, 30, 40]
-
-# Access the first element
-first_element = vector[0]  # This will return 10
-import numpy as np
-
-# Create a 2x2 matrix in Python with NumPy
-matrix_A = np.array([[1, 2], [3, 4]])
-
-# Access the element in the first row, first column
-element = matrix_A[0, 0]  # This will return 1
-```
-:::
 ## Matrix operations
 
 ### Addition and subtraction
@@ -306,35 +281,35 @@ matrix1 + matrix2
 matrix1 - matrix2
 ```
 
-::: callout-note
-## Exercise
+<!-- ::: callout-note -->
+<!-- ## Exercise -->
 
-(Use code for one of these and do the other one by hand!)
+<!-- (Use code for one of these and do the other one by hand!) -->
 
-1\) Calculate $A + B$
+<!-- 1\) Calculate $A + B$ -->
 
-$$A= \begin{bmatrix}
-1 & 0 \\
--2 & -1
-\end{bmatrix}$$
+<!-- $$A= \begin{bmatrix} -->
+<!-- 1 & 0 \\ -->
+<!-- -2 & -1 -->
+<!-- \end{bmatrix}$$ -->
 
-$$B = \begin{bmatrix}
-5 & 1 \\
-2 & -1
-\end{bmatrix}$$\
+<!-- $$B = \begin{bmatrix} -->
+<!-- 5 & 1 \\ -->
+<!-- 2 & -1 -->
+<!-- \end{bmatrix}$$\ -->
 
-2\) Calculate $A - B$
+<!-- 2\) Calculate $A - B$ -->
 
-$$A= \begin{bmatrix}
-6 & -2 & 8 & 12 \\
-4 & 42 & 8 & -6
-\end{bmatrix}$$
+<!-- $$A= \begin{bmatrix} -->
+<!-- 6 & -2 & 8 & 12 \\ -->
+<!-- 4 & 42 & 8 & -6 -->
+<!-- \end{bmatrix}$$ -->
 
-$$B = \begin{bmatrix}
-18 & 42 & 3 & 7 \\
-0 & -42 & 15 & 4
-\end{bmatrix}$$
-:::
+<!-- $$B = \begin{bmatrix} -->
+<!-- 18 & 42 & 3 & 7 \\ -->
+<!-- 0 & -42 & 15 & 4 -->
+<!-- \end{bmatrix}$$ -->
+<!-- ::: -->
 
 ### Scalar multiplication
 
@@ -363,20 +338,20 @@ matrix1
 matrix1 * 3
 ```
 
-::: callout-note
-## Exercise
+<!-- ::: callout-note -->
+<!-- ## Exercise -->
 
-Calculate $2\times A$ and $-3 \times B$. Again, do one by hand and the other one using R.
+<!-- Calculate $2\times A$ and $-3 \times B$. Again, do one by hand and the other one using R. -->
 
-$$A= \begin{bmatrix}
-    1 & 4 & 8 \\
-    0 & -1 & 3
-    \end{bmatrix}$$ $$ B = \begin{bmatrix}
-    -15 & 1 & 5 \\
-    2 & -42 & 0 \\
-    7 & 1 & 6
-    \end{bmatrix}$$
-:::
+<!-- $$A= \begin{bmatrix} -->
+<!--     1 & 4 & 8 \\ -->
+<!--     0 & -1 & 3 -->
+<!--     \end{bmatrix}$$ $$ B = \begin{bmatrix} -->
+<!--     -15 & 1 & 5 \\ -->
+<!--     2 & -42 & 0 \\ -->
+<!--     7 & 1 & 6 -->
+<!--     \end{bmatrix}$$ -->
+<!-- ::: -->
 
 ### Matrix multiplication
 
@@ -386,15 +361,15 @@ $$A= \begin{bmatrix}
 
 -   When multiplying $A \times B$, if $A$ is $m \times n$, $B$ must have $n$ rows.
 
-::: callout-important
-The conformability requirement *never* changes. Before multiplying anything, check to make sure the matrices are indeed conformable.
-:::
+
+- The conformability requirement *never* changes. Before multiplying anything, check to make sure the matrices are indeed conformable.
 
 -   The resulting matrix will have the same number of rows as the first matrix and the number of columns in the second. For example, if $A$ is $i \times k$ and $B$ is $k \times j$, then $A \times B$ will be $i \times j$.
 
-------------------------------------------------------------------------
+For example, which of the following can we multiply? What will be the dimensions of the resulting matrix? 
 
-Which of the following can we multiply? What will be the dimensions of the resulting matrix? $$\begin{aligned}
+$$
+\begin{aligned}
 B_{4 \times 1}=
 \begin{bmatrix}
 2 \\
@@ -413,13 +388,19 @@ L_{2 \times 3} =
 6 & 5 & -1\\
 1 & 4 & 3 
 \end{bmatrix}
-\end{aligned}$$
+\end{aligned}
+$$
 
+
+::: {.callout-note collapse=true}
+## Answer
 The only valid multiplication based on the provided matrices is $L \times M$, which results in a $2 \times 3$ matrix.
+:::
 
 Why can't we multiply in the opposite order?
 
 The non-commutative property of matrix multiplication is a fundamental aspect in matrix algebra. The multiplication of matrices is sensitive to the order in which the matrices are multiplied due to the requirements of dimensional compatibility, the resulting dimensions, and the computation process itself. 
+
 
 ::: callout-warning
 When multiplying matrices, *order matters*. Even if multiplication is possible in both directions, in general $AB \neq BA$.
@@ -427,11 +408,7 @@ When multiplying matrices, *order matters*. Even if multiplication is possible i
 
 #### Multiplication steps {.unnumbered}
 
--   Multiply each row by each column, summing up each pair of multiplied terms.
-
-::: callout-tip
-This is sometimes to referred to as the "dot product," where we multiply matching members, then sum up.
-:::
+-   Multiply each row by each column, summing up each pair of multiplied terms. This is sometimes to referred to as the "dot product," where we multiply matching members, then sum up.
 
 -   The element in position $ij$ is the sum of the products of elements in the $i$th row of the first matrix ($A$) and the corresponding elements in the $j$th column of the second matrix ($B$). $$c_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$$
 
@@ -458,8 +435,6 @@ $$C = \begin{bmatrix}
 \end{bmatrix}$$
 
 Note that each of the three rows of this 3 x 2 matrix represents a material (wood, cloth, or feathers), and each of the two columns represents a product (chair or coach). The elements are the unit cost (in USD).
-
-------------------------------------------------------------------------
 
 Now, suppose that the company will produce 45 chairs and 30 sofas this month. This production quantity can be represented in the following table, and also as a 2 x 1 matrix ($Q$):
 
@@ -531,8 +506,6 @@ C %*% Q
 If you have a missing value or `NA` in one of the matrices you are trying to multiply (something we will discuss in further detail in the next module), you will have `NA`s in your resulting matrix.
 :::
 
-```         
-```
 
 ### Properties of operations
 
@@ -540,7 +513,7 @@ If you have a missing value or `NA` in one of the matrices you are trying to mul
 
     -   Associative: $(A \pm B) \pm C = A \pm (B \pm C)$
 
-    -   Communicative: $A \pm B = B \pm A$
+    -   Commutative: $A \pm B = B \pm A$
 
 -   Multiplication:
 
@@ -549,8 +522,6 @@ If you have a missing value or `NA` in one of the matrices you are trying to mul
     -   $A(BC) = (AB)C$
 
     -   $A(B+C) = AB + AC$
-
-    -   $(A+B)C = AC + BC$
 
 ## Special matrices
 
@@ -654,9 +625,7 @@ $$AA^{-1} = A^{-1}A = I$$
 
 -   Sometimes there is no inverse at all.
 
-::: callout-note
-For now, don't worry about calculating the inverse of a matrix manually. This is the type of task we use R for.
-:::
+In a math of stats course, you would be required to know how to calculate the inverse of a matrix by hand. For math camp purposes, we only need to know how to do it in R.
 
 -   In R, we use the `solve()` function to calculate the inverse of a matrix:
 
@@ -669,30 +638,35 @@ A
 solve(A)
 ```
 
+<!-- Practice: Write up 3 different matrices and see if you can find the inverse in R -->
+
 ## Linear systems and matrices
 
--   A system of equations can be represented by an *augmented matrix*.
+A system of equations can be represented by an *augmented matrix*.
 
--   System of equations: $${\color{red}{3}}x + {\color{green}{6}}y = {\color{blue}{12}}$$ $${\color{red}{5}}x + {\color{green}{10}}y = {\color{blue}{25}}$$
+System of equations: $${\color{red}{3}}x + {\color{green}{6}}y = {\color{blue}{12}}$$ $${\color{red}{5}}x + {\color{green}{10}}y = {\color{blue}{25}}$$
 
--   In an augmented matrix, each row represents one equation in the system and each column represents a variable or the constant terms. $$\begin{bmatrix}
+In an augmented matrix, each row represents one equation in the system and each column represents a variable or the constant terms. $$\begin{bmatrix}
     {\color{red}{3}} & {\color{green}{6}} & {\color{blue}{12}}\\
     {\color{red}{5}} & {\color{green}{10}} & {\color{blue}{25}}
     \end{bmatrix}$$
+    
+    
+Thinking in matrices is helpful on its when you need to solve somewhat complex systems of equations on its own. It turns out that a common social science data analytic tool relies on this principle.
 
 ## OLS and matrices
 
--   We can use the logic above to calculate estimates for our ordinary least squares (OLS) models.
+We can use the logic above to calculate estimates for our ordinary least squares (OLS) models. We may not be able to cover this in person, but we leave it here since it may come up in your regression course.
 
--   OLS is a linear regression technique used to find the best-fitting line for a set of data points (observations) by minimizing the residuals (the differences between the observed and predicted values).
+OLS is a linear regression technique used to find the best-fitting line for a set of data points (observations) by minimizing the residuals (the differences between the observed and predicted values).
 
--   We minimize the *sum of the squared errors*.
+The goal is to minimize the *sum of the squared errors*.
 
-### Dependent variable
+### Outcome variable
 
 -   Suppose, for example, we have a sample consisting of $n$ observations.
 
--   The dependent variable is denoted as an $n \times1$ column vector.
+-   The outcome variable is denoted as an $n \times1$ column vector.
 
 $$Y = \begin{bmatrix}
 y_1 \\
@@ -702,11 +676,11 @@ y_3 \\
 y_n
 \end{bmatrix}$$
 
-### Independent variables
+### Explanatory variables
 
--   Suppose there are $k$ independent variables and a constant term, meaning $k+1$ columns and $n$ rows.
+Suppose there are $k$ explanatory variables and a constant term, meaning $k+1$ columns and $n$ rows.
 
--   We can represent these variables as an $n \times (k+1)$ matrix, expressed as follows:
+We can represent these variables as an $n \times (k+1)$ matrix, expressed as follows:
 
 $$X= \begin{bmatrix}
 1 & x_{11} & \dots & x_{1k} \\
@@ -715,15 +689,15 @@ $$X= \begin{bmatrix}
 1 & x_{n1} & \dots & x_{nk}
 \end{bmatrix}$$
 
--   $x_{ij}$ is the $i$-th observation of the $j$-th independent variable.
+$x_{ij}$ is the $i$-th observation of the $j$-th explanatory variable.
 
 ### Linear regression model
 
--   Let's say we have 173 observations (n = 173) and 2 IVs (k = 3).
+Let's say we have 173 observations (n = 173) and 2 explanatory variabless (k = 3).
 
--   This can be expressed as the following linear equation: $$y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon$$
+This can be expressed as the following linear equation: $$y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon$$
 
--   In matrix form, we have: $$\begin{aligned} \begin{bmatrix}
+In matrix form, we have: $$\begin{aligned} \begin{bmatrix}
     y_1 \\
     y_2 \\
     \vdots \\
@@ -744,38 +718,38 @@ $$X= \begin{bmatrix}
     \epsilon_{173}
     \end{bmatrix}\end{aligned} $$
 
--   All 173 equations can be represented by: $$y=X\beta+\epsilon$$
+All 173 equations can be represented by: $$y=X\beta+\epsilon$$
 
 ### Estimates
 
--   Without getting too much into the mechanics, we can calculate our coefficient estimates with matrix algebra using the following equation:
+Without getting too much into the mechanics, we can calculate our coefficient estimates with matrix algebra using the following equation:
 
 $$\hat{\beta} = (X'X)^{-1}X'Y$$
 
--   Read aloud, we say "X prime X inverse, X prime Y".
+Read aloud, we say "X prime X inverse, X prime Y".
 
--   The little hat on our beta ($\hat{\beta}$) signifies that these are estimates.
+The little hat on our beta ($\hat{\beta}$) signifies that these are estimates.
 
--   Remember, the OLS method is to choose $\hat{\beta}$ such that the sum of squared residuals ("SSR") is minimized.
+Remember, the OLS method is to choose $\hat{\beta}$ such that the sum of squared residuals ("SSR") is minimized.
 
 #### Example in R
 
--   We will load the `mtcars` data set (our favorite) for this example, which contains data about many different car models.
+We will load the `mtcars` data set for this example, which contains data about many different car models.
 
 ```{r}
 cars_df = mtcars
 ```
 
--   Now, we want to estimate the association between `hp` (horsepower) and `wt` (weight), our independent variables, and `mpg` (miles per gallon), our dependent variable.
+Now, we want to estimate the association between `hp` (horsepower) and `wt` (weight), our independent variables, and `mpg` (miles per gallon), our dependent variable.
 
--   First, we transform our dependent variable into a matrix, using the `as.matrix` function and specifying the column of the `mtcars` data set to create a column vector of our observed values for the DV.
+First, we transform our dependent variable into a matrix, using the `as.matrix` function and specifying the column of the `mtcars` data set to create a column vector of our observed values for the DV.
 
 ```{r}
 Y = as.matrix(cars_df$mpg)
 Y
 ```
 
--   Next, we do the same thing for our independent variables of interest, and our constant.
+Next, we do the same thing for our independent variables of interest, and our constant.
 
 ```{r}
 # create two separate matrices for IVs
@@ -790,11 +764,8 @@ X = cbind(constant, X1, X2)
 X
 ```
 
--   Next, we calculate $X'X$, $X'Y$, and $(X'X)^{-1}$.
+Next, we calculate $X'X$, $X'Y$, and $(X'X)^{-1}$. Remember the `%*%` operator for matrix multiplication.
 
-::: callout-reminder
-Don't forget to use `%*%` for matrix multiplication!
-:::
 
 ```{r}
 # X prime X
@@ -810,3 +781,5 @@ XpY = t(X) %*% Y
 bhat = XpXinv %*% XpY
 bhat
 ```
+
+You can come back to this code and corroborate that is correct after you learn how to use the default function to estimate OLS regression in R.

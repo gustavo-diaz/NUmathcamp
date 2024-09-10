@@ -136,7 +136,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -256,7 +256,48 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link active" data-scroll-target="#matrices"><span class="header-section-number">1</span> Matrices</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#scalars" id="toc-scalars" class="nav-link" data-scroll-target="#scalars"><span class="header-section-number">2.1</span> Scalars</a></li>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors"><span class="header-section-number">2.2</span> Vectors</a></li>
+  </ul></li>
+  <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators"><span class="header-section-number">3</span> Operators</a>
+  <ul class="collapse">
+  <li><a href="#summation" id="toc-summation" class="nav-link" data-scroll-target="#summation"><span class="header-section-number">3.1</span> Summation</a></li>
+  <li><a href="#product" id="toc-product" class="nav-link" data-scroll-target="#product"><span class="header-section-number">3.2</span> Product</a></li>
+  </ul></li>
+  <li><a href="#matrices-1" id="toc-matrices-1" class="nav-link" data-scroll-target="#matrices-1"><span class="header-section-number">4</span> Matrices</a>
+  <ul class="collapse">
+  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics"><span class="header-section-number">4.1</span> Basics</a></li>
+  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure"><span class="header-section-number">4.2</span> Structure</a></li>
+  </ul></li>
+  <li><a href="#matrix-operations" id="toc-matrix-operations" class="nav-link" data-scroll-target="#matrix-operations"><span class="header-section-number">5</span> Matrix operations</a>
+  <ul class="collapse">
+  <li><a href="#addition-and-subtraction" id="toc-addition-and-subtraction" class="nav-link" data-scroll-target="#addition-and-subtraction"><span class="header-section-number">5.1</span> Addition and subtraction</a></li>
+  <li><a href="#scalar-multiplication" id="toc-scalar-multiplication" class="nav-link" data-scroll-target="#scalar-multiplication"><span class="header-section-number">5.2</span> Scalar multiplication</a></li>
+  <li><a href="#matrix-multiplication" id="toc-matrix-multiplication" class="nav-link" data-scroll-target="#matrix-multiplication"><span class="header-section-number">5.3</span> Matrix multiplication</a></li>
+  <li><a href="#properties-of-operations" id="toc-properties-of-operations" class="nav-link" data-scroll-target="#properties-of-operations"><span class="header-section-number">5.4</span> Properties of operations</a></li>
+  </ul></li>
+  <li><a href="#special-matrices" id="toc-special-matrices" class="nav-link" data-scroll-target="#special-matrices"><span class="header-section-number">6</span> Special matrices</a></li>
+  <li><a href="#transpose" id="toc-transpose" class="nav-link" data-scroll-target="#transpose"><span class="header-section-number">7</span> Transpose</a></li>
+  <li><a href="#inverse" id="toc-inverse" class="nav-link" data-scroll-target="#inverse"><span class="header-section-number">8</span> Inverse</a></li>
+  <li><a href="#linear-systems-and-matrices" id="toc-linear-systems-and-matrices" class="nav-link" data-scroll-target="#linear-systems-and-matrices"><span class="header-section-number">9</span> Linear systems and matrices</a></li>
+  <li><a href="#ols-and-matrices" id="toc-ols-and-matrices" class="nav-link" data-scroll-target="#ols-and-matrices"><span class="header-section-number">10</span> OLS and matrices</a>
+  <ul class="collapse">
+  <li><a href="#outcome-variable" id="toc-outcome-variable" class="nav-link" data-scroll-target="#outcome-variable"><span class="header-section-number">10.1</span> Outcome variable</a></li>
+  <li><a href="#explanatory-variables" id="toc-explanatory-variables" class="nav-link" data-scroll-target="#explanatory-variables"><span class="header-section-number">10.2</span> Explanatory variables</a></li>
+  <li><a href="#linear-regression-model" id="toc-linear-regression-model" class="nav-link" data-scroll-target="#linear-regression-model"><span class="header-section-number">10.3</span> Linear regression model</a></li>
+  <li><a href="#estimates" id="toc-estimates" class="nav-link" data-scroll-target="#estimates"><span class="header-section-number">10.4</span> Estimates</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -291,21 +332,22 @@ window.Quarto = {
 </header>
 
 
-<section id="matrices" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Matrices</h1>
+<section id="matrices" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="matrices"><span class="header-section-number">1</span> Matrices</h2>
 <p>Matrices are rectangular collections of numbers, meaning they are arranged by rows and columns. Learning about matrices is important because most of the data that social scientists use is rectangular data. The rest, less structured data, is eventually converted to a rectangular format before analysis.</p>
 <p>Moreover, matrix algebra is the working engine behind regression models, a cornerstone tool for data analysis. When R and other software quickly convert rectangular data into a vector of regression coefficient, what goes under the hood is usually a bunch of matrix algebra.</p>
-<section id="introduction" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
-<section id="scalars" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="scalars"><span class="header-section-number">1.1.1</span> Scalars</h3>
+</section>
+<section id="introduction" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2</span> Introduction</h2>
+<section id="scalars" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="scalars"><span class="header-section-number">2.1</span> Scalars</h3>
 <p>A single number (for example, 12) is referred to as a scalar.</p>
 <p><span class="math display">\[
 a = 12
 \]</span></p>
 </section>
-<section id="vectors" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="vectors"><span class="header-section-number">1.1.2</span> Vectors</h3>
+<section id="vectors" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="vectors"><span class="header-section-number">2.2</span> Vectors</h3>
 <p>We can put several scalars together to make a vector. Vectors are usually denoted with an arrow on top, although social scientist tend to forgo this convention. Here is an example:</p>
 <p><span class="math display">\[
 \overrightarrow b =
@@ -345,10 +387,10 @@ a = 12
 </div>
 </section>
 </section>
-<section id="operators" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="operators"><span class="header-section-number">1.2</span> Operators</h2>
-<section id="summation" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="summation"><span class="header-section-number">1.2.1</span> Summation</h3>
+<section id="operators" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="operators"><span class="header-section-number">3</span> Operators</h2>
+<section id="summation" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="summation"><span class="header-section-number">3.1</span> Summation</h3>
 <p>The summation operator <span class="math inline">\(\sum\)</span> (i.e., the uppercase Sigma letter) lets us perform an operation on a sequence of numbers, which is often but not always a vector.</p>
 <p><span class="math display">\[\overrightarrow d = \begin{bmatrix}
 12 &amp; 7 &amp; -2 &amp; 3 &amp; -1
@@ -382,8 +424,8 @@ a = 12
 </div>
 </div>
 </section>
-<section id="product" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="product"><span class="header-section-number">1.2.2</span> Product</h3>
+<section id="product" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="product"><span class="header-section-number">3.2</span> Product</h3>
 <p>The product operator <span class="math inline">\(\prod\)</span> (uppercase Pi) can also perform operations over a sequence of elements in a vector. Recall our previous vector:</p>
 <p><span class="math display">\[\overrightarrow d = \begin{bmatrix}
 12 &amp; 7 &amp; -2 &amp; 3 &amp; 1
@@ -400,10 +442,10 @@ a = 12
 <!-- Get the product of the first three elements of vector $d$. Write the notation by hand and use R to obtain the number. -->
 </section>
 </section>
-<section id="matrices-1" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="matrices-1"><span class="header-section-number">1.3</span> Matrices</h2>
-<section id="basics" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="basics"><span class="header-section-number">1.3.1</span> Basics</h3>
+<section id="matrices-1" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="matrices-1"><span class="header-section-number">4</span> Matrices</h2>
+<section id="basics" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="basics"><span class="header-section-number">4.1</span> Basics</h3>
 <p>We can append vectors together to form a matrix:</p>
 <p><span class="math display">\[A = \begin{bmatrix}
 12 &amp; 14 &amp; 15 \\
@@ -480,9 +522,8 @@ vector4   13   14   15   16</code></pre>
 </div>
 </section>
 </section>
-<section id="structure" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="structure"><span class="header-section-number">1.3.2</span> Structure</h3>
-<p>[CONTINUE HERE]</p>
+<section id="structure" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="structure"><span class="header-section-number">4.2</span> Structure</h3>
 <p>How do we refer to specific elements of the matrix? For example, matrix <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\times n\)</span> matrix where <span class="math inline">\(m=n=3\)</span>. This is sometimes called a <em>square matrix</em>.</p>
 <p>More generally, matrix <span class="math inline">\(B\)</span> is an <span class="math inline">\(m\times n\)</span> matrix where the elements look like this: <span class="math display">\[B=
 \begin{bmatrix}
@@ -520,44 +561,12 @@ Tip
 <p>When trying to identify a specific element, the first subscript is the element’s row and the second subscript is the element’s column (<em>always</em> in that order).</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In R, indexing is 1-based, meaning that the first element of a vector, matrix, or any other data structure is accessed with index 1. In other programming tools such as Python, indexing is 0-based, meaning that the first element of a list, array, or any other data structure is accessed with index 0.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2x2 matrix in R</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>matrix_A <span class="ot">=</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the element in the first row, first column</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>element <span class="ot">=</span> matrix_A[<span class="dv">1</span>, <span class="dv">1</span>]  <span class="co"># This will return 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list in Python</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first element</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>first_element <span class="op">=</span> vector[<span class="dv">0</span>]  <span class="co"># This will return 10</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2x2 matrix in Python with NumPy</span></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>matrix_A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the element in the first row, first column</span></span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>element <span class="op">=</span> matrix_A[<span class="dv">0</span>, <span class="dv">0</span>]  <span class="co"># This will return 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
 </section>
 </section>
-<section id="matrix-operations" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="matrix-operations"><span class="header-section-number">1.4</span> Matrix operations</h2>
-<section id="addition-and-subtraction" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="addition-and-subtraction"><span class="header-section-number">1.4.1</span> Addition and subtraction</h3>
+<section id="matrix-operations" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="matrix-operations"><span class="header-section-number">5</span> Matrix operations</h2>
+<section id="addition-and-subtraction" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="addition-and-subtraction"><span class="header-section-number">5.1</span> Addition and subtraction</h3>
 <ul>
 <li><p>Addition and subtraction are straightforward operations.</p></li>
 <li><p>Matrices must have <em>exactly</em> the same dimensions for both of these operations.</p></li>
@@ -589,9 +598,9 @@ a_{31}\pm b_{31} &amp; a_{32}\pm b_{32} &amp; a_{33}\pm b_{33}
 9 &amp; 4 &amp; 6
 \end{bmatrix}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create two 2x3 matrices.</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">9</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>matrix1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create two 2x3 matrices.</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">9</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>matrix1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    3   -1    2
@@ -603,8 +612,8 @@ a_{31}\pm b_{31} &amp; a_{32}\pm b_{32} &amp; a_{33}\pm b_{33}
 9 &amp; 3 &amp; 4
 \end{bmatrix}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>matrix2 <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>matrix2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>matrix2 <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>matrix2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    5    0    3
@@ -613,7 +622,7 @@ a_{31}\pm b_{31} &amp; a_{32}\pm b_{32} &amp; a_{33}\pm b_{33}
 </div>
 <p>We can simply use the <code>+</code> and <code>-</code> operators for addition and substraction:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="sc">+</span> matrix2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="sc">+</span> matrix2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    8   -1    5
@@ -621,49 +630,39 @@ a_{31}\pm b_{31} &amp; a_{32}\pm b_{32} &amp; a_{33}\pm b_{33}
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="sc">-</span> matrix2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="sc">-</span> matrix2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]   -2   -1   -1
 [2,]    7   -5    2</code></pre>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>(Use code for one of these and do the other one by hand!)</p>
-<p>1) Calculate <span class="math inline">\(A + B\)</span></p>
-<p><span class="math display">\[A= \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; -1
-\end{bmatrix}\]</span></p>
-<p><span class="math display">\[B = \begin{bmatrix}
-5 &amp; 1 \\
-2 &amp; -1
-\end{bmatrix}\]</span><br>
-</p>
-<p>2) Calculate <span class="math inline">\(A - B\)</span></p>
-<p><span class="math display">\[A= \begin{bmatrix}
-6 &amp; -2 &amp; 8 &amp; 12 \\
-4 &amp; 42 &amp; 8 &amp; -6
-\end{bmatrix}\]</span></p>
-<p><span class="math display">\[B = \begin{bmatrix}
-18 &amp; 42 &amp; 3 &amp; 7 \\
-0 &amp; -42 &amp; 15 &amp; 4
-\end{bmatrix}\]</span></p>
-</div>
-</div>
+<!-- ::: callout-note -->
+<!-- ## Exercise -->
+<!-- (Use code for one of these and do the other one by hand!) -->
+<!-- 1\) Calculate $A + B$ -->
+<!-- $$A= \begin{bmatrix} -->
+<!-- 1 & 0 \\ -->
+<!-- -2 & -1 -->
+<!-- \end{bmatrix}$$ -->
+<!-- $$B = \begin{bmatrix} -->
+<!-- 5 & 1 \\ -->
+<!-- 2 & -1 -->
+<!-- \end{bmatrix}$$\ -->
+<!-- 2\) Calculate $A - B$ -->
+<!-- $$A= \begin{bmatrix} -->
+<!-- 6 & -2 & 8 & 12 \\ -->
+<!-- 4 & 42 & 8 & -6 -->
+<!-- \end{bmatrix}$$ -->
+<!-- $$B = \begin{bmatrix} -->
+<!-- 18 & 42 & 3 & 7 \\ -->
+<!-- 0 & -42 & 15 & 4 -->
+<!-- \end{bmatrix}$$ -->
+<!-- ::: -->
 </section>
 </section>
-<section id="scalar-multiplication" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="scalar-multiplication"><span class="header-section-number">1.4.2</span> Scalar multiplication</h3>
+<section id="scalar-multiplication" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="scalar-multiplication"><span class="header-section-number">5.2</span> Scalar multiplication</h3>
 <p>Scalar multiplication is very intuitive. As we know, a scalar is a single number. We multiply each value in the matrix by the scalar to perform this operation.</p>
 <p>Formally, this is expressed as follows: <span class="math display">\[A =
 \begin{bmatrix}
@@ -678,8 +677,8 @@ ca_{31} &amp; ca_{32} &amp; ca_{33}
 \end{bmatrix}\]</span></p>
 <p>In R, all we need to do is take an established matrix and multiply it by some scalar:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># matrix1 from our previous example</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>matrix1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># matrix1 from our previous example</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>matrix1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    3   -1    2
@@ -687,60 +686,38 @@ ca_{31} &amp; ca_{32} &amp; ca_{33}
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>matrix1 <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    9   -3    6
 [2,]   27   12   18</code></pre>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Calculate <span class="math inline">\(2\times A\)</span> and <span class="math inline">\(-3 \times B\)</span>. Again, do one by hand and the other one using R.</p>
-<p><span class="math display">\[A= \begin{bmatrix}
-    1 &amp; 4 &amp; 8 \\
-    0 &amp; -1 &amp; 3
-    \end{bmatrix}\]</span> <span class="math display">\[ B = \begin{bmatrix}
-    -15 &amp; 1 &amp; 5 \\
-    2 &amp; -42 &amp; 0 \\
-    7 &amp; 1 &amp; 6
-    \end{bmatrix}\]</span></p>
-</div>
-</div>
+<!-- ::: callout-note -->
+<!-- ## Exercise -->
+<!-- Calculate $2\times A$ and $-3 \times B$. Again, do one by hand and the other one using R. -->
+<!-- $$A= \begin{bmatrix} -->
+<!--     1 & 4 & 8 \\ -->
+<!--     0 & -1 & 3 -->
+<!--     \end{bmatrix}$$ $$ B = \begin{bmatrix} -->
+<!--     -15 & 1 & 5 \\ -->
+<!--     2 & -42 & 0 \\ -->
+<!--     7 & 1 & 6 -->
+<!--     \end{bmatrix}$$ -->
+<!-- ::: -->
 </section>
-<section id="matrix-multiplication" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" class="anchored" data-anchor-id="matrix-multiplication"><span class="header-section-number">1.4.3</span> Matrix multiplication</h3>
+<section id="matrix-multiplication" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="matrix-multiplication"><span class="header-section-number">5.3</span> Matrix multiplication</h3>
 <ul>
 <li><p>Multiplying matrices is slightly trickier than multiplying scalars.</p></li>
 <li><p>Two matrices must be <em>conformable</em> for them to be multiplied together. This means that the number of columns in the first matrix equals the number of rows in the second.</p></li>
 <li><p>When multiplying <span class="math inline">\(A \times B\)</span>, if <span class="math inline">\(A\)</span> is <span class="math inline">\(m \times n\)</span>, <span class="math inline">\(B\)</span> must have <span class="math inline">\(n\)</span> rows.</p></li>
+<li><p>The conformability requirement <em>never</em> changes. Before multiplying anything, check to make sure the matrices are indeed conformable.</p></li>
+<li><p>The resulting matrix will have the same number of rows as the first matrix and the number of columns in the second. For example, if <span class="math inline">\(A\)</span> is <span class="math inline">\(i \times k\)</span> and <span class="math inline">\(B\)</span> is <span class="math inline">\(k \times j\)</span>, then <span class="math inline">\(A \times B\)</span> will be <span class="math inline">\(i \times j\)</span>.</p></li>
 </ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The conformability requirement <em>never</em> changes. Before multiplying anything, check to make sure the matrices are indeed conformable.</p>
-</div>
-</div>
-<ul>
-<li>The resulting matrix will have the same number of rows as the first matrix and the number of columns in the second. For example, if <span class="math inline">\(A\)</span> is <span class="math inline">\(i \times k\)</span> and <span class="math inline">\(B\)</span> is <span class="math inline">\(k \times j\)</span>, then <span class="math inline">\(A \times B\)</span> will be <span class="math inline">\(i \times j\)</span>.</li>
-</ul>
-<hr>
-<p>Which of the following can we multiply? What will be the dimensions of the resulting matrix? <span class="math display">\[\begin{aligned}
+<p>For example, which of the following can we multiply? What will be the dimensions of the resulting matrix?</p>
+<p><span class="math display">\[
+\begin{aligned}
 B_{4 \times 1}=
 \begin{bmatrix}
 2 \\
@@ -759,8 +736,24 @@ L_{2 \times 3} =
 6 &amp; 5 &amp; -1\\
 1 &amp; 4 &amp; 3
 \end{bmatrix}
-\end{aligned}\]</span></p>
+\end{aligned}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>The only valid multiplication based on the provided matrices is <span class="math inline">\(L \times M\)</span>, which results in a <span class="math inline">\(2 \times 3\)</span> matrix.</p>
+</div>
+</div>
+</div>
 <p>Why can’t we multiply in the opposite order?</p>
 <p>The non-commutative property of matrix multiplication is a fundamental aspect in matrix algebra. The multiplication of matrices is sensitive to the order in which the matrices are multiplied due to the requirements of dimensional compatibility, the resulting dimensions, and the computation process itself.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -779,23 +772,8 @@ Warning
 <section id="multiplication-steps" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="multiplication-steps">Multiplication steps</h4>
 <ul>
-<li>Multiply each row by each column, summing up each pair of multiplied terms.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is sometimes to referred to as the “dot product,” where we multiply matching members, then sum up.</p>
-</div>
-</div>
-<ul>
-<li>The element in position <span class="math inline">\(ij\)</span> is the sum of the products of elements in the <span class="math inline">\(i\)</span>th row of the first matrix (<span class="math inline">\(A\)</span>) and the corresponding elements in the <span class="math inline">\(j\)</span>th column of the second matrix (<span class="math inline">\(B\)</span>). <span class="math display">\[c_{ij}=\sum_{k=1}^n a_{ik}b_{kj}\]</span></li>
+<li><p>Multiply each row by each column, summing up each pair of multiplied terms. This is sometimes to referred to as the “dot product,” where we multiply matching members, then sum up.</p></li>
+<li><p>The element in position <span class="math inline">\(ij\)</span> is the sum of the products of elements in the <span class="math inline">\(i\)</span>th row of the first matrix (<span class="math inline">\(A\)</span>) and the corresponding elements in the <span class="math inline">\(j\)</span>th column of the second matrix (<span class="math inline">\(B\)</span>). <span class="math display">\[c_{ij}=\sum_{k=1}^n a_{ik}b_{kj}\]</span></p></li>
 </ul>
 </section>
 <section id="example" class="level4 unnumbered">
@@ -838,7 +816,6 @@ Tip
 130 &amp; 195
 \end{bmatrix}\]</span></p>
 <p>Note that each of the three rows of this 3 x 2 matrix represents a material (wood, cloth, or feathers), and each of the two columns represents a product (chair or coach). The elements are the unit cost (in USD).</p>
-<hr>
 <p>Now, suppose that the company will produce 45 chairs and 30 sofas this month. This production quantity can be represented in the following table, and also as a 2 x 1 matrix (<span class="math inline">\(Q\)</span>):</p>
 <table class="caption-top table">
 <thead>
@@ -898,8 +875,8 @@ Tip
 <p>Before attempting matrix multiplication, we must make sure the matrices are conformable (as we do for our manual calculations).</p>
 <p>Then we can multiply our matrices together using the <code>%*%</code> operator.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>C <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">270</span>, <span class="dv">130</span>, <span class="dv">150</span>, <span class="dv">420</span>, <span class="dv">195</span>), <span class="at">nrow =</span> <span class="dv">3</span>)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>C <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">270</span>, <span class="dv">130</span>, <span class="dv">150</span>, <span class="dv">420</span>, <span class="dv">195</span>), <span class="at">nrow =</span> <span class="dv">3</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2]
 [1,]  100  150
@@ -908,8 +885,8 @@ Tip
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">30</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>Q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">30</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>Q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1]
 [1,]   45
@@ -917,7 +894,7 @@ Tip
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>C <span class="sc">%*%</span> Q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>C <span class="sc">%*%</span> Q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      [,1]
 [1,]  9000
@@ -938,29 +915,27 @@ Warning
 <p>If you have a missing value or <code>NA</code> in one of the matrices you are trying to multiply (something we will discuss in further detail in the next module), you will have <code>NA</code>s in your resulting matrix.</p>
 </div>
 </div>
-<pre><code></code></pre>
 </section>
 </section>
-<section id="properties-of-operations" class="level3" data-number="1.4.4">
-<h3 data-number="1.4.4" class="anchored" data-anchor-id="properties-of-operations"><span class="header-section-number">1.4.4</span> Properties of operations</h3>
+<section id="properties-of-operations" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="properties-of-operations"><span class="header-section-number">5.4</span> Properties of operations</h3>
 <ul>
 <li><p>Addition and subtraction:</p>
 <ul>
 <li><p>Associative: <span class="math inline">\((A \pm B) \pm C = A \pm (B \pm C)\)</span></p></li>
-<li><p>Communicative: <span class="math inline">\(A \pm B = B \pm A\)</span></p></li>
+<li><p>Commutative: <span class="math inline">\(A \pm B = B \pm A\)</span></p></li>
 </ul></li>
 <li><p>Multiplication:</p>
 <ul>
 <li><p><span class="math inline">\(AB \neq BA\)</span></p></li>
 <li><p><span class="math inline">\(A(BC) = (AB)C\)</span></p></li>
 <li><p><span class="math inline">\(A(B+C) = AB + AC\)</span></p></li>
-<li><p><span class="math inline">\((A+B)C = AC + BC\)</span></p></li>
 </ul></li>
 </ul>
 </section>
 </section>
-<section id="special-matrices" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="special-matrices"><span class="header-section-number">1.5</span> Special matrices</h2>
+<section id="special-matrices" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="special-matrices"><span class="header-section-number">6</span> Special matrices</h2>
 <p><strong>Square matrix</strong></p>
 <p><span class="math display">\[
 A = \begin{bmatrix}
@@ -1009,8 +984,8 @@ I = \begin{bmatrix}
 <li><p>The capital letter <span class="math inline">\(I\)</span> is reserved for the identity matrix. For convenience, a 3x3 identity matrix can be denoted as <span class="math inline">\(I_3\)</span>.</p></li>
 </ul>
 </section>
-<section id="transpose" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="transpose"><span class="header-section-number">1.6</span> Transpose</h2>
+<section id="transpose" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="transpose"><span class="header-section-number">7</span> Transpose</h2>
 <p>The transpose is the original matrix with the rows and the columns interchanged.</p>
 <p>The notation is either <span class="math inline">\(J'\)</span> (“J prime”) or <span class="math inline">\(J^T\)</span> (“J transpose”).</p>
 <p><span class="math display">\[J =
@@ -1026,8 +1001,8 @@ I = \begin{bmatrix}
 \end{bmatrix}\]</span></p>
 <p>In R, we use <code>t()</code> to get the transpose.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>J <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">2</span>), <span class="at">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>J</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>J <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">2</span>), <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>J</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2]
 [1,]    4    5
@@ -1036,7 +1011,7 @@ I = \begin{bmatrix}
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(J)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(J)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    4    3    7
@@ -1044,8 +1019,8 @@ I = \begin{bmatrix}
 </div>
 </div>
 </section>
-<section id="inverse" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="inverse"><span class="header-section-number">1.7</span> Inverse</h2>
+<section id="inverse" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="inverse"><span class="header-section-number">8</span> Inverse</h2>
 <ul>
 <li><p>Just like a number has a reciprocal, a matrix has an inverse.</p></li>
 <li><p>When we multiply a matrix by its inverse we get the identity matrix (which is like “1” for matrices).</p></li>
@@ -1058,25 +1033,13 @@ I = \begin{bmatrix}
 <ul>
 <li>Sometimes there is no inverse at all.</li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For now, don’t worry about calculating the inverse of a matrix manually. This is the type of task we use R for.</p>
-</div>
-</div>
+<p>In a math of stats course, you would be required to know how to calculate the inverse of a matrix by hand. For math camp purposes, we only need to know how to do it in R.</p>
 <ul>
 <li>In R, we use the <code>solve()</code> function to calculate the inverse of a matrix:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>), <span class="at">ncol =</span> <span class="dv">3</span>)</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>), <span class="at">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    3    2    5
@@ -1085,7 +1048,7 @@ Note
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">solve</span>(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">solve</span>(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            [,1]        [,2]       [,3]
 [1,] -0.29629630 -0.07407407  0.4074074
@@ -1093,30 +1056,28 @@ Note
 [3,]  0.40740741 -0.14814815 -0.1851852</code></pre>
 </div>
 </div>
+<!-- Practice: Write up 3 different matrices and see if you can find the inverse in R -->
 </section>
-<section id="linear-systems-and-matrices" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="linear-systems-and-matrices"><span class="header-section-number">1.8</span> Linear systems and matrices</h2>
-<ul>
-<li><p>A system of equations can be represented by an <em>augmented matrix</em>.</p></li>
-<li><p>System of equations: <span class="math display">\[{\color{red}{3}}x + {\color{green}{6}}y = {\color{blue}{12}}\]</span> <span class="math display">\[{\color{red}{5}}x + {\color{green}{10}}y = {\color{blue}{25}}\]</span></p></li>
-<li><p>In an augmented matrix, each row represents one equation in the system and each column represents a variable or the constant terms. <span class="math display">\[\begin{bmatrix}
-{\color{red}{3}} &amp; {\color{green}{6}} &amp; {\color{blue}{12}}\\
-{\color{red}{5}} &amp; {\color{green}{10}} &amp; {\color{blue}{25}}
-\end{bmatrix}\]</span></p></li>
-</ul>
+<section id="linear-systems-and-matrices" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="linear-systems-and-matrices"><span class="header-section-number">9</span> Linear systems and matrices</h2>
+<p>A system of equations can be represented by an <em>augmented matrix</em>.</p>
+<p>System of equations: <span class="math display">\[{\color{red}{3}}x + {\color{green}{6}}y = {\color{blue}{12}}\]</span> <span class="math display">\[{\color{red}{5}}x + {\color{green}{10}}y = {\color{blue}{25}}\]</span></p>
+<p>In an augmented matrix, each row represents one equation in the system and each column represents a variable or the constant terms. <span class="math display">\[\begin{bmatrix}
+    {\color{red}{3}} &amp; {\color{green}{6}} &amp; {\color{blue}{12}}\\
+    {\color{red}{5}} &amp; {\color{green}{10}} &amp; {\color{blue}{25}}
+    \end{bmatrix}\]</span></p>
+<p>Thinking in matrices is helpful on its when you need to solve somewhat complex systems of equations on its own. It turns out that a common social science data analytic tool relies on this principle.</p>
 </section>
-<section id="ols-and-matrices" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="ols-and-matrices"><span class="header-section-number">1.9</span> OLS and matrices</h2>
-<ul>
-<li><p>We can use the logic above to calculate estimates for our ordinary least squares (OLS) models.</p></li>
-<li><p>OLS is a linear regression technique used to find the best-fitting line for a set of data points (observations) by minimizing the residuals (the differences between the observed and predicted values).</p></li>
-<li><p>We minimize the <em>sum of the squared errors</em>.</p></li>
-</ul>
-<section id="dependent-variable" class="level3" data-number="1.9.1">
-<h3 data-number="1.9.1" class="anchored" data-anchor-id="dependent-variable"><span class="header-section-number">1.9.1</span> Dependent variable</h3>
+<section id="ols-and-matrices" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="ols-and-matrices"><span class="header-section-number">10</span> OLS and matrices</h2>
+<p>We can use the logic above to calculate estimates for our ordinary least squares (OLS) models. We may not be able to cover this in person, but we leave it here since it may come up in your regression course.</p>
+<p>OLS is a linear regression technique used to find the best-fitting line for a set of data points (observations) by minimizing the residuals (the differences between the observed and predicted values).</p>
+<p>The goal is to minimize the <em>sum of the squared errors</em>.</p>
+<section id="outcome-variable" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="outcome-variable"><span class="header-section-number">10.1</span> Outcome variable</h3>
 <ul>
 <li><p>Suppose, for example, we have a sample consisting of <span class="math inline">\(n\)</span> observations.</p></li>
-<li><p>The dependent variable is denoted as an <span class="math inline">\(n \times1\)</span> column vector.</p></li>
+<li><p>The outcome variable is denoted as an <span class="math inline">\(n \times1\)</span> column vector.</p></li>
 </ul>
 <p><span class="math display">\[Y = \begin{bmatrix}
 y_1 \\
@@ -1126,76 +1087,62 @@ y_3 \\
 y_n
 \end{bmatrix}\]</span></p>
 </section>
-<section id="independent-variables" class="level3" data-number="1.9.2">
-<h3 data-number="1.9.2" class="anchored" data-anchor-id="independent-variables"><span class="header-section-number">1.9.2</span> Independent variables</h3>
-<ul>
-<li><p>Suppose there are <span class="math inline">\(k\)</span> independent variables and a constant term, meaning <span class="math inline">\(k+1\)</span> columns and <span class="math inline">\(n\)</span> rows.</p></li>
-<li><p>We can represent these variables as an <span class="math inline">\(n \times (k+1)\)</span> matrix, expressed as follows:</p></li>
-</ul>
+<section id="explanatory-variables" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="explanatory-variables"><span class="header-section-number">10.2</span> Explanatory variables</h3>
+<p>Suppose there are <span class="math inline">\(k\)</span> explanatory variables and a constant term, meaning <span class="math inline">\(k+1\)</span> columns and <span class="math inline">\(n\)</span> rows.</p>
+<p>We can represent these variables as an <span class="math inline">\(n \times (k+1)\)</span> matrix, expressed as follows:</p>
 <p><span class="math display">\[X= \begin{bmatrix}
 1 &amp; x_{11} &amp; \dots &amp; x_{1k} \\
 1 &amp; x_{21} &amp; \dots &amp; x_{2k} \\
 \vdots &amp; \vdots &amp; \dots &amp; \vdots \\
 1 &amp; x_{n1} &amp; \dots &amp; x_{nk}
 \end{bmatrix}\]</span></p>
-<ul>
-<li><span class="math inline">\(x_{ij}\)</span> is the <span class="math inline">\(i\)</span>-th observation of the <span class="math inline">\(j\)</span>-th independent variable.</li>
-</ul>
+<p><span class="math inline">\(x_{ij}\)</span> is the <span class="math inline">\(i\)</span>-th observation of the <span class="math inline">\(j\)</span>-th explanatory variable.</p>
 </section>
-<section id="linear-regression-model" class="level3" data-number="1.9.3">
-<h3 data-number="1.9.3" class="anchored" data-anchor-id="linear-regression-model"><span class="header-section-number">1.9.3</span> Linear regression model</h3>
-<ul>
-<li><p>Let’s say we have 173 observations (n = 173) and 2 IVs (k = 3).</p></li>
-<li><p>This can be expressed as the following linear equation: <span class="math display">\[y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon\]</span></p></li>
-<li><p>In matrix form, we have: <span class="math display">\[\begin{aligned} \begin{bmatrix}
-y_1 \\
-y_2 \\
-\vdots \\
-y_n
-\end{bmatrix} = \begin{bmatrix}
-1 &amp; x_{11} &amp; x_{21} \\
-1 &amp; x_{21} &amp; x_{22} \\
-\vdots &amp; \vdots &amp; \vdots \\
-1 &amp; x_{1173} &amp; x_{2173}
-\end{bmatrix} \begin{bmatrix}
-\beta_0 \\
-\beta_1 \\
-\beta_2
-\end{bmatrix} + \begin{bmatrix}
-\epsilon_1 \\
-\epsilon_2 \\
-\vdots \\
-\epsilon_{173}
-\end{bmatrix}\end{aligned} \]</span></p></li>
-<li><p>All 173 equations can be represented by: <span class="math display">\[y=X\beta+\epsilon\]</span></p></li>
-</ul>
+<section id="linear-regression-model" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="linear-regression-model"><span class="header-section-number">10.3</span> Linear regression model</h3>
+<p>Let’s say we have 173 observations (n = 173) and 2 explanatory variabless (k = 3).</p>
+<p>This can be expressed as the following linear equation: <span class="math display">\[y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon\]</span></p>
+<p>In matrix form, we have: <span class="math display">\[\begin{aligned} \begin{bmatrix}
+    y_1 \\
+    y_2 \\
+    \vdots \\
+    y_n
+    \end{bmatrix} = \begin{bmatrix}
+    1 &amp; x_{11} &amp; x_{21} \\
+    1 &amp; x_{21} &amp; x_{22} \\
+    \vdots &amp; \vdots &amp; \vdots \\
+    1 &amp; x_{1173} &amp; x_{2173}
+    \end{bmatrix} \begin{bmatrix}
+    \beta_0 \\
+    \beta_1 \\
+    \beta_2
+    \end{bmatrix} + \begin{bmatrix}
+    \epsilon_1 \\
+    \epsilon_2 \\
+    \vdots \\
+    \epsilon_{173}
+    \end{bmatrix}\end{aligned} \]</span></p>
+<p>All 173 equations can be represented by: <span class="math display">\[y=X\beta+\epsilon\]</span></p>
 </section>
-<section id="estimates" class="level3" data-number="1.9.4">
-<h3 data-number="1.9.4" class="anchored" data-anchor-id="estimates"><span class="header-section-number">1.9.4</span> Estimates</h3>
-<ul>
-<li>Without getting too much into the mechanics, we can calculate our coefficient estimates with matrix algebra using the following equation:</li>
-</ul>
+<section id="estimates" class="level3" data-number="10.4">
+<h3 data-number="10.4" class="anchored" data-anchor-id="estimates"><span class="header-section-number">10.4</span> Estimates</h3>
+<p>Without getting too much into the mechanics, we can calculate our coefficient estimates with matrix algebra using the following equation:</p>
 <p><span class="math display">\[\hat{\beta} = (X'X)^{-1}X'Y\]</span></p>
-<ul>
-<li><p>Read aloud, we say “X prime X inverse, X prime Y”.</p></li>
-<li><p>The little hat on our beta (<span class="math inline">\(\hat{\beta}\)</span>) signifies that these are estimates.</p></li>
-<li><p>Remember, the OLS method is to choose <span class="math inline">\(\hat{\beta}\)</span> such that the sum of squared residuals (“SSR”) is minimized.</p></li>
-</ul>
-<section id="example-in-r" class="level4" data-number="1.9.4.1">
-<h4 data-number="1.9.4.1" class="anchored" data-anchor-id="example-in-r"><span class="header-section-number">1.9.4.1</span> Example in R</h4>
-<ul>
-<li>We will load the <code>mtcars</code> data set (our favorite) for this example, which contains data about many different car models.</li>
-</ul>
+<p>Read aloud, we say “X prime X inverse, X prime Y”.</p>
+<p>The little hat on our beta (<span class="math inline">\(\hat{\beta}\)</span>) signifies that these are estimates.</p>
+<p>Remember, the OLS method is to choose <span class="math inline">\(\hat{\beta}\)</span> such that the sum of squared residuals (“SSR”) is minimized.</p>
+<section id="example-in-r" class="level4" data-number="10.4.1">
+<h4 data-number="10.4.1" class="anchored" data-anchor-id="example-in-r"><span class="header-section-number">10.4.1</span> Example in R</h4>
+<p>We will load the <code>mtcars</code> data set for this example, which contains data about many different car models.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>cars_df <span class="ot">=</span> mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>cars_df <span class="ot">=</span> mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ul>
-<li><p>Now, we want to estimate the association between <code>hp</code> (horsepower) and <code>wt</code> (weight), our independent variables, and <code>mpg</code> (miles per gallon), our dependent variable.</p></li>
-<li><p>First, we transform our dependent variable into a matrix, using the <code>as.matrix</code> function and specifying the column of the <code>mtcars</code> data set to create a column vector of our observed values for the DV.</p></li>
-</ul>
+<p>Now, we want to estimate the association between <code>hp</code> (horsepower) and <code>wt</code> (weight), our independent variables, and <code>mpg</code> (miles per gallon), our dependent variable.</p>
+<p>First, we transform our dependent variable into a matrix, using the <code>as.matrix</code> function and specifying the column of the <code>mtcars</code> data set to create a column vector of our observed values for the DV.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">=</span> <span class="fu">as.matrix</span>(cars_df<span class="sc">$</span>mpg)</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>Y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">=</span> <span class="fu">as.matrix</span>(cars_df<span class="sc">$</span>mpg)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>Y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      [,1]
  [1,] 21.0
@@ -1232,20 +1179,18 @@ y_n
 [32,] 21.4</code></pre>
 </div>
 </div>
-<ul>
-<li>Next, we do the same thing for our independent variables of interest, and our constant.</li>
-</ul>
+<p>Next, we do the same thing for our independent variables of interest, and our constant.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create two separate matrices for IVs</span></span>
-<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>X1 <span class="ot">=</span> <span class="fu">as.matrix</span>(cars_df<span class="sc">$</span>hp)</span>
-<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>X2 <span class="ot">=</span> <span class="fu">as.matrix</span>(cars_df<span class="sc">$</span>wt)</span>
-<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create constant column</span></span>
-<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a><span class="co"># bind them altogether into one matrix</span></span>
-<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>constant <span class="ot">=</span>  <span class="fu">rep</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(cars_df))</span>
-<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">cbind</span>(constant, X1, X2)</span>
-<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a>X</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create two separate matrices for IVs</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>X1 <span class="ot">=</span> <span class="fu">as.matrix</span>(cars_df<span class="sc">$</span>hp)</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>X2 <span class="ot">=</span> <span class="fu">as.matrix</span>(cars_df<span class="sc">$</span>wt)</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create constant column</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="co"># bind them altogether into one matrix</span></span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>constant <span class="ot">=</span>  <span class="fu">rep</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(cars_df))</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">cbind</span>(constant, X1, X2)</span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a>X</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      constant          
  [1,]        1 110 2.620
@@ -1282,25 +1227,20 @@ y_n
 [32,]        1 109 2.780</code></pre>
 </div>
 </div>
-<ul>
-<li>Next, we calculate <span class="math inline">\(X'X\)</span>, <span class="math inline">\(X'Y\)</span>, and <span class="math inline">\((X'X)^{-1}\)</span>.</li>
-</ul>
-<div class="callout-reminder">
-<p>Don’t forget to use <code>%*%</code> for matrix multiplication!</p>
-</div>
+<p>Next, we calculate <span class="math inline">\(X'X\)</span>, <span class="math inline">\(X'Y\)</span>, and <span class="math inline">\((X'X)^{-1}\)</span>. Remember the <code>%*%</code> operator for matrix multiplication.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># X prime X</span></span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>XpX <span class="ot">=</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> X</span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="co"># X prime X inverse</span></span>
-<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>XpXinv <span class="ot">=</span> <span class="fu">solve</span>(XpX)</span>
-<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="co"># X prime Y</span></span>
-<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>XpY <span class="ot">=</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> Y</span>
-<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a><span class="co"># beta coefficient estimates</span></span>
-<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a>bhat <span class="ot">=</span> XpXinv <span class="sc">%*%</span> XpY</span>
-<span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a>bhat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># X prime X</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>XpX <span class="ot">=</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> X</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="co"># X prime X inverse</span></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>XpXinv <span class="ot">=</span> <span class="fu">solve</span>(XpX)</span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="co"># X prime Y</span></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>XpY <span class="ot">=</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> Y</span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="co"># beta coefficient estimates</span></span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>bhat <span class="ot">=</span> XpXinv <span class="sc">%*%</span> XpY</span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>bhat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                [,1]
 constant 37.22727012
@@ -1308,9 +1248,9 @@ constant 37.22727012
          -3.87783074</code></pre>
 </div>
 </div>
+<p>You can come back to this code and corroborate that is correct after you learn how to use the default function to estimate OLS regression in R.</p>
 
 
-</section>
 </section>
 </section>
 </section>
