@@ -35,7 +35,6 @@
 "Comoros","COM","SSA",19,20
 "Congo","COG","SSA",21,22
 "Costa Rica","CRI","AME",54,55
-"Cote d'Ivoire","CIV","SSA",37,NA
 "Croatia","HRV","WE/EU",50,50
 "Cuba","CUB","AME",45,42
 "Cyprus","CYP","WE/EU",52,53
@@ -65,7 +64,6 @@
 "Grenada","GRD","AME",52,53
 "Guatemala","GTM","AME",24,23
 "Guinea","GIN","SSA",25,26
-"Guinea Bissau","GNB","SSA",21,NA
 "Guyana","GUY","AME",40,40
 "Haiti","HTI","AME",17,17
 "Honduras","HND","AME",23,23
@@ -170,7 +168,6 @@
 "Ukraine","UKR","ECA",33,36
 "United Arab Emirates","ARE","MENA",67,68
 "United Kingdom","GBR","WE/EU",73,71
-"United States of America","USA","AME",69,NA
 "Uruguay","URY","AME",74,73
 "Uzbekistan","UZB","ECA",31,33
 "Vanuatu","VUT","AP",48,48
