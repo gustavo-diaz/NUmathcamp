@@ -523,7 +523,9 @@ getwd()
 Then, load the dataset. CPI = 0 is a highly corrupt country, whereas CPI = 100 is very clean.
 
 ```{r}
-cpi <- read.csv("data/cpi.csv")
+#| eval: false
+
+cpi <- read.csv("cpi.csv")
 ```
 
 ::: callout-note
