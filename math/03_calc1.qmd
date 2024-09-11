@@ -78,12 +78,12 @@ $$
 
 A few points on notation:
 
-$\frac{d}{dx} f(x)$ is read "The derivative of $f$ of $x$ with respect to $x$."
+$\frac{d}{dx} f(x)$ is read "The derivative of $f$ of $x$ with respect to $x$." One would be tempted to read $\frac{d}{dx}$ as a fraction, but it is just here for notation.
 
 The variable with respect to which we're differentiating is the one that appears in the bottom (in the case above, this is $x$).
 
 
-$f'(x)$ ("$f$ prime $x$") is the derivative of $f(x)$. This is a more compact form to refer to derivatives when you have defined $f(x)$ elsewhere.
+$f'(x)$ ($f$ prime $x$) is the derivative of $f(x)$. This is a more compact form to refer to derivatives when you have defined $f(x)$ elsewhere.
 
 ### Rules of differentiation
 
@@ -112,24 +112,35 @@ ggplot() +
 The two rules above give us that the derivative is a *linear operator*.
 
 
-[CONTINUE HERE]
-
 **Power rule:** $(x^n)'=nx^{(n-1)}$
 
-Remember when we wanted to calculate the derivative of $y=x^2$ above? We can use the power rule, with $n=2$: $\;nx^{(n-1)} = 2x^{(2-1)}=2x$. Let's try out $\frac{d}{dx}4x^3$ and $\frac{d}{dx}(x^2 + 2x)$ on the board.
+Remember when we wanted to calculate the derivative of $y=x^2$ above? We can use the power rule, with $n=2$
+
+$$
+nx^{(n-1)} = 2x^{(2-1)}=2x
+$$
+
+$\;nx^{(n-1)} = 2x^{(2-1)}=2x$. 
+
+Let's try out $\frac{d}{dx}4x^3$ and $\frac{d}{dx}(x^2 + 2x)$ on the board.
+
+Here are a few functions to practice the differentiation rules:
 
 ::: callout-note
 #### Exercise
 
 Use the differentiation rules we have covered so far to calculate the derivatives of $y$ with respect to $x$ of the following functions:
 
-1)  $y = 2x^2 + 10$
-2)  $y = 5x^4 - \frac{2}{3}x^3$
-3)  $y = 9 \sqrt x$
-4)  $y = \frac{4}{x^2}$
-5)  $y = ax^3 + b$, where $a$ and $b$ are constants.
-6)  $y = \frac{2w}{5}$
+1)  $y= 4x^3$
+2)  $y= x^2 + 2x$
+3)  $y = 2x^2 + 10$
+4)  $y = 5x^4 - \frac{2}{3}x^3$
+5)  $y = 9 \sqrt x$
+6)  $y = \frac{4}{x^2}$
+7)  $y = ax^3 + b$, where $a$ and $b$ are constants.
+8)  $y = \frac{2w}{5}$
 :::
+
 
 **Exponent and logarithm rules:**
 

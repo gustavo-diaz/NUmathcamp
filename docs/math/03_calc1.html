@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gustavo Diaz">
-<meta name="dcterms.date" content="2024-09-10">
+<meta name="dcterms.date" content="2024-09-11">
 
 <title>Math Camp - Calculus I</title>
 <style>
@@ -310,7 +310,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2024</p>
+      <p class="date">September 11, 2024</p>
     </div>
   </div>
   
@@ -396,9 +396,9 @@ m = \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x}
 \lim_{\Delta x\to0} \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x} = \frac{d}{dx} f(x) = \frac{dy}{dx} = f'(x)
 \]</span></p>
 <p>A few points on notation:</p>
-<p><span class="math inline">\(\frac{d}{dx} f(x)\)</span> is read “The derivative of <span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(x\)</span>.”</p>
+<p><span class="math inline">\(\frac{d}{dx} f(x)\)</span> is read “The derivative of <span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(x\)</span>.” One would be tempted to read <span class="math inline">\(\frac{d}{dx}\)</span> as a fraction, but it is just here for notation.</p>
 <p>The variable with respect to which we’re differentiating is the one that appears in the bottom (in the case above, this is <span class="math inline">\(x\)</span>).</p>
-<p><span class="math inline">\(f'(x)\)</span> (“<span class="math inline">\(f\)</span> prime <span class="math inline">\(x\)</span>”) is the derivative of <span class="math inline">\(f(x)\)</span>. This is a more compact form to refer to derivatives when you have defined <span class="math inline">\(f(x)\)</span> elsewhere.</p>
+<p><span class="math inline">\(f'(x)\)</span> (<span class="math inline">\(f\)</span> prime <span class="math inline">\(x\)</span>) is the derivative of <span class="math inline">\(f(x)\)</span>. This is a more compact form to refer to derivatives when you have defined <span class="math inline">\(f(x)\)</span> elsewhere.</p>
 <section id="rules-of-differentiation" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="rules-of-differentiation"><span class="header-section-number">2.1</span> Rules of differentiation</h3>
 <p>How to compute derivatives? Sometimes you can try a bunch of numbers and get at the answer. Sometimes you can use the limit-based formula above, if you know a few properties of limits. But in most cases you will either use software (more on this later) or the <strong>rules of differentiation</strong>, which we will cover now.</p>
@@ -431,9 +431,14 @@ m = \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x}
 </div>
 <p><strong>Sum/difference rule:</strong> <span class="math inline">\((f(x) \pm g(x))' = f'(x) \pm g'(x)\)</span>.</p>
 <p>The two rules above give us that the derivative is a <em>linear operator</em>.</p>
-<p>[CONTINUE HERE]</p>
 <p><strong>Power rule:</strong> <span class="math inline">\((x^n)'=nx^{(n-1)}\)</span></p>
-<p>Remember when we wanted to calculate the derivative of <span class="math inline">\(y=x^2\)</span> above? We can use the power rule, with <span class="math inline">\(n=2\)</span>: <span class="math inline">\(\;nx^{(n-1)} = 2x^{(2-1)}=2x\)</span>. Let’s try out <span class="math inline">\(\frac{d}{dx}4x^3\)</span> and <span class="math inline">\(\frac{d}{dx}(x^2 + 2x)\)</span> on the board.</p>
+<p>Remember when we wanted to calculate the derivative of <span class="math inline">\(y=x^2\)</span> above? We can use the power rule, with <span class="math inline">\(n=2\)</span></p>
+<p><span class="math display">\[
+nx^{(n-1)} = 2x^{(2-1)}=2x
+\]</span></p>
+<p><span class="math inline">\(\;nx^{(n-1)} = 2x^{(2-1)}=2x\)</span>.</p>
+<p>Let’s try out <span class="math inline">\(\frac{d}{dx}4x^3\)</span> and <span class="math inline">\(\frac{d}{dx}(x^2 + 2x)\)</span> on the board.</p>
+<p>Here are a few functions to practice the differentiation rules:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -446,6 +451,8 @@ Exercise
 <div class="callout-body-container callout-body">
 <p>Use the differentiation rules we have covered so far to calculate the derivatives of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> of the following functions:</p>
 <ol type="1">
+<li><span class="math inline">\(y= 4x^3\)</span></li>
+<li><span class="math inline">\(y= x^2 + 2x\)</span></li>
 <li><span class="math inline">\(y = 2x^2 + 10\)</span></li>
 <li><span class="math inline">\(y = 5x^4 - \frac{2}{3}x^3\)</span></li>
 <li><span class="math inline">\(y = 9 \sqrt x\)</span></li>
