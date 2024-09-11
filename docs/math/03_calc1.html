@@ -466,77 +466,53 @@ Exercise
 <p><span class="math display">\[
 \begin{aligned}
 (c^x)' &amp;= c^x \cdot ln(c), &amp; \forall x&gt;0 \\
-(e^x)' &amp;= e^x \\
 \\
 (log_a(x))' &amp;= \frac{1}{x \cdot ln(a)}, &amp; \forall x&gt;0  \\
+\end{aligned}
+\]</span></p>
+<p><a href="https://tinyurl.com/2j4a9ykc">Euler’s number</a> (<span class="math inline">\(e\)</span>) has interesting properties when it comes to derivatives.</p>
+<p><span class="math display">\[
+\begin{aligned}
+(e^x)' &amp;= e^x \\
+\\
 (ln(x))' &amp;= \frac{1}{x}, &amp; \forall x&gt;0
 \end{aligned}
 \]</span></p>
-<p>We saw previously how Euler’s number (<span class="math inline">\(e\)</span>) arises from compound interest. The properties above make it very useful in a lot of calculus applications!</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Compute the following:</p>
-<ol type="1">
-<li><span class="math inline">\(\frac{d}{dx}(10e^x)\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(ln(x) - \frac{e^2}{3})\)</span></li>
-</ol>
-</div>
-</div>
+<!-- #### Exercise -->
+<!-- Compute the following: -->
+<!-- 1)  $\frac{d}{dx}(10e^x)$ -->
+<!-- 2)  $\frac{d}{dx}(ln(x) - \frac{e^2}{3})$ -->
 <p>Now we’ll get to a couple of more advanced (and powerful) rules.</p>
 <ul>
 <li><p><strong>Product rule:</strong> <span class="math inline">\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\)</span></p></li>
 <li><p><strong>Quotient rule:</strong> <span class="math inline">\(\displaystyle(\frac{f(x)}{g(x)})' = \frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\)</span></p></li>
 <li><p><strong>Chain rule:</strong> <span class="math inline">\((f(g(x))' = f'(g(x)) \cdot g'(x)\)</span></p></li>
 </ul>
-<blockquote class="blockquote">
-<p>Let’s calculate <span class="math inline">\(\frac{d}{dx}(3 \cdot ln(x) \cdot x^2)\)</span> on the board.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Let’s compute <span class="math inline">\(\frac{d}{dx}(e^{x^{2}})\)</span> on the board.</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use the differentiation rules we have covered so far to calculate the derivatives of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> of the following functions:</p>
-<ol type="1">
-<li><span class="math inline">\(x^3 \cdot x\)</span></li>
-<li><span class="math inline">\(e^x \cdot x^2\)</span></li>
-<li><span class="math inline">\((3x^4-8)^2\)</span></li>
-</ol>
-</div>
-</div>
+<!-- > Let's calculate $\frac{d}{dx}(3 \cdot ln(x) \cdot x^2)$ on the board. -->
+<!-- > Let's compute $\frac{d}{dx}(e^{x^{2}})$ on the board. -->
+<p>::: callout-note <!-- #### Exercise --></p>
+<!-- Use the differentiation rules we have covered so far to calculate the derivatives of $y$ with respect to $x$ of the following functions: -->
+<!-- 1)  $x^3 \cdot x$ -->
+<!-- 2)  $e^x \cdot x^2$ -->
+<!-- 3)  $(3x^4-8)^2$ -->
+<!-- ::: -->
 </section>
 <section id="higher-order-derivatives" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="higher-order-derivatives"><span class="header-section-number">2.2</span> Higher-order derivatives</h3>
-<p>We saw how politicians can refer to higher-order derivatives. To compute them, you simply “pass the outputs,” starting from the lowest order and going up.</p>
-<p>The second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point <span class="math inline">\(x\)</span> on the function’s domain. For example, when driving a car:</p>
+<p>We saw call <span class="math inline">\(f'(x)\)</span> the first derivative, but we can also calculate higher-order derivatives. These are not common in social science data analysis, but they appear in game theory, complex systems, and agent-based modeling.</p>
+<!-- This explanation is tricky. You may get it, but may not fully get it. Try to visualize in slides -->
+<p>For example, the second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point <span class="math inline">\(x\)</span> on the function’s domain. For example, when driving a car:</p>
 <ul>
 <li><span class="math inline">\(f(x)\)</span> = distance traveled at time <span class="math inline">\(x\)</span></li>
 <li><span class="math inline">\(f'(x)\)</span> = speed at time <span class="math inline">\(x\)</span></li>
 <li><span class="math inline">\(f''(x)\)</span> = acceleration at time <span class="math inline">\(x\)</span></li>
 </ul>
-<p>Let’s compute the following second derivative:</p>
-<p><span class="math display">\[f''(x^4) = \frac{d^2(x^4)}{dx^2}\]</span></p>
-<ul>
-<li><p>First, we take the first derivative: <span class="math inline">\(f'(x^4)=4x^3\)</span></p></li>
-<li><p>Then we use that output to take the second derivative: <span class="math inline">\(f''(x^4)=f'(4x^3)=12x^2\)</span></p></li>
-<li><p>We can keep going… for example, the third derivative: <span class="math display">\[f'''(x^4) = f'(12x^2) = 24x\]</span></p></li>
-</ul>
+<p>To calculate higher-order derivatives, you just calculate the derivative using the usual differentiation rules, then calculate the derivative of the output, and so on for however many orders you have. In a college-level calculus course, these can get very crazy during your midterm. In practice, you will rarely lead anything beyond a second derivative.</p>
+<p>For example, we can calculate the following second derivative:</p>
+<p><span class="math display">\[f''(x) = \frac{d^2(x^4)}{dx^2}\]</span></p>
+<p>First, we take the first derivative <span class="math display">\[f'(x)=4x^3\]</span></p>
+<p>Then we use that output to take the second derivative: <span class="math display">\[f''(x)=f'(4x^3)=12x^2\]</span></p>
+<p>We can keep going… for example, the third derivative: <span class="math display">\[f'''(x^4) = f'(12x^2) = 24x\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

@@ -147,23 +147,28 @@ Use the differentiation rules we have covered so far to calculate the derivative
 $$
 \begin{aligned}
 (c^x)' &= c^x \cdot ln(c), & \forall x>0 \\
-(e^x)' &= e^x \\
 \\
 (log_a(x))' &= \frac{1}{x \cdot ln(a)}, & \forall x>0  \\
+\end{aligned}
+$$
+
+[Euler's number](https://tinyurl.com/2j4a9ykc) ($e$) has interesting properties when it comes to derivatives.
+
+$$
+\begin{aligned}
+(e^x)' &= e^x \\
+\\
 (ln(x))' &= \frac{1}{x}, & \forall x>0 
 \end{aligned}
 $$
 
-We saw previously how Euler's number ($e$) arises from compound interest. The properties above make it very useful in a lot of calculus applications!
+<!-- #### Exercise -->
 
-::: callout-note
-#### Exercise
+<!-- Compute the following: -->
 
-Compute the following:
+<!-- 1)  $\frac{d}{dx}(10e^x)$ -->
+<!-- 2)  $\frac{d}{dx}(ln(x) - \frac{e^2}{3})$ -->
 
-1)  $\frac{d}{dx}(10e^x)$
-2)  $\frac{d}{dx}(ln(x) - \frac{e^2}{3})$
-:::
 
 Now we'll get to a couple of more advanced (and powerful) rules.
 
@@ -173,51 +178,58 @@ Now we'll get to a couple of more advanced (and powerful) rules.
 
 * **Chain rule:** $(f(g(x))' = f'(g(x)) \cdot g'(x)$
 
-> Let's calculate $\frac{d}{dx}(3 \cdot ln(x) \cdot x^2)$ on the board.
+<!-- > Let's calculate $\frac{d}{dx}(3 \cdot ln(x) \cdot x^2)$ on the board. -->
 
-> Let's compute $\frac{d}{dx}(e^{x^{2}})$ on the board.
+<!-- > Let's compute $\frac{d}{dx}(e^{x^{2}})$ on the board. -->
 
 ::: callout-note
-#### Exercise
+<!-- #### Exercise -->
 
-Use the differentiation rules we have covered so far to calculate the derivatives of $y$ with respect to $x$ of the following functions:
+<!-- Use the differentiation rules we have covered so far to calculate the derivatives of $y$ with respect to $x$ of the following functions: -->
 
-1)  $x^3 \cdot x$
-2)  $e^x \cdot x^2$
-3)  $(3x^4-8)^2$
-:::
+<!-- 1)  $x^3 \cdot x$ -->
+<!-- 2)  $e^x \cdot x^2$ -->
+<!-- 3)  $(3x^4-8)^2$ -->
+<!-- ::: -->
 
 ### Higher-order derivatives
 
-We saw how politicians can refer to higher-order derivatives. To compute them, you simply "pass the outputs," starting from the lowest order and going up.
+We saw call $f'(x)$ the first derivative, but we can also calculate higher-order derivatives. These are not common in social science data analysis, but they appear in game theory, complex systems, and agent-based modeling.
 
-The second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point $x$ on the function's domain. For example, when driving a car:
+<!-- This explanation is tricky. You may get it, but may not fully get it. Try to visualize in slides -->
+For example, the second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point $x$ on the function's domain. For example, when driving a car:
 
 -   $f(x)$ = distance traveled at time $x$
 -   $f'(x)$ = speed at time $x$
 -   $f''(x)$ = acceleration at time $x$
 
-Let's compute the following second derivative:
+To calculate higher-order derivatives, you just calculate the derivative using the usual differentiation rules, then calculate the derivative of the output, and so on for however many orders you have. In a college-level calculus course, these can get very crazy during your midterm. In practice, you will rarely lead anything beyond a second derivative.
 
-$$f''(x^4) = \frac{d^2(x^4)}{dx^2}$$
+For example, we can calculate the following second derivative:
 
--   First, we take the first derivative: $f'(x^4)=4x^3$
+$$f''(x) = \frac{d^2(x^4)}{dx^2}$$
 
--   Then we use that output to take the second derivative: $f''(x^4)=f'(4x^3)=12x^2$
+First, we take the first derivative
+$$f'(x)=4x^3$$
 
--   We can keep going... for example, the third derivative: $$f'''(x^4) = f'(12x^2) = 24x$$
+Then we use that output to take the second derivative
+$$f''(x)=f'(4x^3)=12x^2$$
 
-::: callout-note
-#### Exercise
+We can keep going... for example, the third derivative is $$f'''(x) = f'(12x^2) = 24x$$
 
-Compute the following:
+<!-- ::: callout-note -->
+<!-- #### Exercise -->
 
-1)  $\frac{d^3}{dx^3}(x^5)$
-2)  $f''(4x^{3/2})$
-3)  $f''(4 \cdot ln(x))$
-:::
+<!-- Compute the following: -->
+
+<!-- 1)  $\frac{d^3}{dx^3}(x^5)$ -->
+<!-- 2)  $f''(4x^{3/2})$ -->
+<!-- 3)  $f''(4 \cdot ln(x))$ -->
+<!-- ::: -->
 
 ### Partial derivatives
+
+[CONTINUE HERE THIS EXPLANATION IS NOT VERY TRANSPARENT]
 
 For a function $f(x,z)$, we might want to know how the function changes with respect to $x$. We call this a *partial derivative*:
 
