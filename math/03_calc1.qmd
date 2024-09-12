@@ -182,7 +182,7 @@ Now we'll get to a couple of more advanced (and powerful) rules.
 
 <!-- > Let's compute $\frac{d}{dx}(e^{x^{2}})$ on the board. -->
 
-::: callout-note
+<!-- ::: callout-note -->
 <!-- #### Exercise -->
 
 <!-- Use the differentiation rules we have covered so far to calculate the derivatives of $y$ with respect to $x$ of the following functions: -->
@@ -229,9 +229,9 @@ We can keep going... for example, the third derivative is $$f'''(x) = f'(12x^2) 
 
 ### Partial derivatives
 
-[CONTINUE HERE THIS EXPLANATION IS NOT VERY TRANSPARENT]
+So far, we have worked with derivatives of functions with only one variable. What happens when we have more than one variable that is changing?
 
-For a function $f(x,z)$, we might want to know how the function changes with respect to $x$. We call this a *partial derivative*:
+Suppose we have a function $f$ of two (or more) variables and we want to determine the rate of change relative to one of the variables. For a function $f(x,z)$, we call this a *partial derivative*
 
 $$ 
 \frac{\partial}{\partial_x}f(x,z) = \frac{\partial_y}{\partial_x} = \partial_x f
@@ -246,24 +246,24 @@ y = f(x,z) &= xz \\
 \end{aligned}
 $$
 
-What is $\displaystyle\frac{\partial_y}{\partial_z}?$
+You can try to do the same for $\displaystyle\frac{\partial_y}{\partial_z}?$ on your own
 
-Let's solve $\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial x}$ and $\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial y}$ on the board.
+<!-- Let's solve $\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial x}$ and $\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial y}$ on the board. -->
 
-::: callout-tip
-#### Example
+<!-- ::: callout-tip -->
+<!-- #### Example -->
 
-Let's say that $y$ is how much I like a movie, $d$ is how many dogs a movie has, and $e$ is how many explosions a movie has. I claim that how much I like a movie can be expressed by a function of the type $y = f(d, e)$. Evaluate the following situations:
+<!-- Let's say that $y$ is how much I like a movie, $d$ is how many dogs a movie has, and $e$ is how many explosions a movie has. I claim that how much I like a movie can be expressed by a function of the type $y = f(d, e)$. Evaluate the following situations: -->
 
-1.  I like dogs and I don't care about action. So I believe that the true relationship is $y = f(d, e) = 3 \cdot d$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it?
+<!-- 1.  I like dogs and I don't care about action. So I believe that the true relationship is $y = f(d, e) = 3 \cdot d$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it? -->
 
-2.  I like dogs and I like action. So I believe that the true relationship is $y = f(d, e) = 3 \cdot d + 1 \cdot e$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it?
+<!-- 2.  I like dogs and I like action. So I believe that the true relationship is $y = f(d, e) = 3 \cdot d + 1 \cdot e$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it? -->
 
-3.  I like dogs and I like action. *But I definitely don't like them together*---I don't want the dogs to be in danger! So I believe that the true relationship is $y = f(d, e) = 3 \cdot d + 1 \cdot e -10 \cdot d \cdot e$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it?
-:::
+<!-- 3.  I like dogs and I like action. *But I definitely don't like them together*---I don't want the dogs to be in danger! So I believe that the true relationship is $y = f(d, e) = 3 \cdot d + 1 \cdot e -10 \cdot d \cdot e$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it? -->
+<!-- ::: -->
 
 ::: callout-note
-#### Exercise
+#### Practice
 
 Take the partial derivative with respect to $x$ and with respect to $z$ of the following functions. What would the notation for each look like?
 
@@ -297,12 +297,14 @@ ggplot() +
   stat_function(fun = function(x){sqrt(abs(x)) + 1}, xlim = c(-4, 4), 
                 aes(color = "y = √(|x|) + 1")) +
   stat_function(fun = function(x){sign(x) * abs(x)^(1 / 3)}, xlim = c(-4, 4), 
-                aes(color = "y = ₃√x")) +
+                aes(color = "y = x^(1/3)")) +
   scale_colour_manual("Function", values = c("red", "blue", "black")) +
   labs(title = "Examples of functions that are not differentiable at x=0")
 ```
 
 > Informally, functions need to be continuous and reasonably smooth to be differentiable.
+
+[THIS IS A NICE STOPPING POINT. SAVE OPTIMIZATION FOR THE NEXT DAY.]
 
 ### How do computers calculate derivatives?
 
