@@ -168,7 +168,7 @@ judges_renamed %>%
           desc(contacts))
 
 ```
-While there are many other dplyr verbs, these will get you pretty far. Now let's pivot to some basic data visualization.
+While there are many other dplyr verbs, these will get you pretty far. For a more advanced reference, see [this dplyr cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). Now let's pivot to some basic data visualization.
 
 ## Data Visualization
 
