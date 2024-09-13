@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gustavo Diaz">
-<meta name="dcterms.date" content="2024-09-10">
+<meta name="dcterms.date" content="2024-09-13">
 
 <title>Math Camp - Calculus I</title>
 <style>
@@ -268,22 +268,6 @@ window.Quarto = {
   <li><a href="#higher-order-derivatives" id="toc-higher-order-derivatives" class="nav-link" data-scroll-target="#higher-order-derivatives"><span class="header-section-number">2.2</span> Higher-order derivatives</a></li>
   <li><a href="#partial-derivatives" id="toc-partial-derivatives" class="nav-link" data-scroll-target="#partial-derivatives"><span class="header-section-number">2.3</span> Partial derivatives</a></li>
   <li><a href="#differentiability-of-functions" id="toc-differentiability-of-functions" class="nav-link" data-scroll-target="#differentiability-of-functions"><span class="header-section-number">2.4</span> Differentiability of functions</a></li>
-  <li><a href="#how-do-computers-calculate-derivatives" id="toc-how-do-computers-calculate-derivatives" class="nav-link" data-scroll-target="#how-do-computers-calculate-derivatives"><span class="header-section-number">2.5</span> How do computers calculate derivatives?</a></li>
-  </ul></li>
-  <li><a href="#optimization" id="toc-optimization" class="nav-link" data-scroll-target="#optimization"><span class="header-section-number">3</span> Optimization</a>
-  <ul class="collapse">
-  <li><a href="#extrema" id="toc-extrema" class="nav-link" data-scroll-target="#extrema"><span class="header-section-number">3.1</span> Extrema</a></li>
-  <li><a href="#critical-points-and-the-first-order-condition" id="toc-critical-points-and-the-first-order-condition" class="nav-link" data-scroll-target="#critical-points-and-the-first-order-condition"><span class="header-section-number">3.2</span> Critical points and the First-Order Condition</a></li>
-  <li><a href="#second-order-condition" id="toc-second-order-condition" class="nav-link" data-scroll-target="#second-order-condition"><span class="header-section-number">3.3</span> Second-Order Condition</a></li>
-  <li><a href="#local-or-global-extrema" id="toc-local-or-global-extrema" class="nav-link" data-scroll-target="#local-or-global-extrema"><span class="header-section-number">3.4</span> Local or global extrema?</a></li>
-  </ul></li>
-  <li><a href="#integrals" id="toc-integrals" class="nav-link" data-scroll-target="#integrals"><span class="header-section-number">4</span> Integrals</a>
-  <ul class="collapse">
-  <li><a href="#integrals-are-about-infinitesimals-too" id="toc-integrals-are-about-infinitesimals-too" class="nav-link" data-scroll-target="#integrals-are-about-infinitesimals-too"><span class="header-section-number">4.1</span> Integrals are about infinitesimals too</a></li>
-  <li><a href="#indefinite-integrals-as-antiderivatives" id="toc-indefinite-integrals-as-antiderivatives" class="nav-link" data-scroll-target="#indefinite-integrals-as-antiderivatives"><span class="header-section-number">4.2</span> Indefinite integrals as antiderivatives</a></li>
-  <li><a href="#solving-definite-integrals" id="toc-solving-definite-integrals" class="nav-link" data-scroll-target="#solving-definite-integrals"><span class="header-section-number">4.3</span> Solving definite integrals</a></li>
-  <li><a href="#rules-of-integration" id="toc-rules-of-integration" class="nav-link" data-scroll-target="#rules-of-integration"><span class="header-section-number">4.4</span> Rules of integration</a></li>
-  <li><a href="#solving-the-problem" id="toc-solving-the-problem" class="nav-link" data-scroll-target="#solving-the-problem"><span class="header-section-number">4.5</span> Solving the problem</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -310,7 +294,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2024</p>
+      <p class="date">September 13, 2024</p>
     </div>
   </div>
   
@@ -396,9 +380,9 @@ m = \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x}
 \lim_{\Delta x\to0} \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x} = \frac{d}{dx} f(x) = \frac{dy}{dx} = f'(x)
 \]</span></p>
 <p>A few points on notation:</p>
-<p><span class="math inline">\(\frac{d}{dx} f(x)\)</span> is read “The derivative of <span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(x\)</span>.”</p>
+<p><span class="math inline">\(\frac{d}{dx} f(x)\)</span> is read “The derivative of <span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(x\)</span>.” One would be tempted to read <span class="math inline">\(\frac{d}{dx}\)</span> as a fraction, but it is just here for notation.</p>
 <p>The variable with respect to which we’re differentiating is the one that appears in the bottom (in the case above, this is <span class="math inline">\(x\)</span>).</p>
-<p><span class="math inline">\(f'(x)\)</span> (“<span class="math inline">\(f\)</span> prime <span class="math inline">\(x\)</span>”) is the derivative of <span class="math inline">\(f(x)\)</span>. This is a more compact form to refer to derivatives when you have defined <span class="math inline">\(f(x)\)</span> elsewhere.</p>
+<p><span class="math inline">\(f'(x)\)</span> (<span class="math inline">\(f\)</span> prime <span class="math inline">\(x\)</span>) is the derivative of <span class="math inline">\(f(x)\)</span>. This is a more compact form to refer to derivatives when you have defined <span class="math inline">\(f(x)\)</span> elsewhere.</p>
 <section id="rules-of-differentiation" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="rules-of-differentiation"><span class="header-section-number">2.1</span> Rules of differentiation</h3>
 <p>How to compute derivatives? Sometimes you can try a bunch of numbers and get at the answer. Sometimes you can use the limit-based formula above, if you know a few properties of limits. But in most cases you will either use software (more on this later) or the <strong>rules of differentiation</strong>, which we will cover now.</p>
@@ -431,9 +415,14 @@ m = \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x}
 </div>
 <p><strong>Sum/difference rule:</strong> <span class="math inline">\((f(x) \pm g(x))' = f'(x) \pm g'(x)\)</span>.</p>
 <p>The two rules above give us that the derivative is a <em>linear operator</em>.</p>
-<p>[CONTINUE HERE]</p>
 <p><strong>Power rule:</strong> <span class="math inline">\((x^n)'=nx^{(n-1)}\)</span></p>
-<p>Remember when we wanted to calculate the derivative of <span class="math inline">\(y=x^2\)</span> above? We can use the power rule, with <span class="math inline">\(n=2\)</span>: <span class="math inline">\(\;nx^{(n-1)} = 2x^{(2-1)}=2x\)</span>. Let’s try out <span class="math inline">\(\frac{d}{dx}4x^3\)</span> and <span class="math inline">\(\frac{d}{dx}(x^2 + 2x)\)</span> on the board.</p>
+<p>Remember when we wanted to calculate the derivative of <span class="math inline">\(y=x^2\)</span> above? We can use the power rule, with <span class="math inline">\(n=2\)</span></p>
+<p><span class="math display">\[
+nx^{(n-1)} = 2x^{(2-1)}=2x
+\]</span></p>
+<p><span class="math inline">\(\;nx^{(n-1)} = 2x^{(2-1)}=2x\)</span>.</p>
+<p>Let’s try out <span class="math inline">\(\frac{d}{dx}4x^3\)</span> and <span class="math inline">\(\frac{d}{dx}(x^2 + 2x)\)</span> on the board.</p>
+<p>Here are a few functions to practice the differentiation rules:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -446,6 +435,8 @@ Exercise
 <div class="callout-body-container callout-body">
 <p>Use the differentiation rules we have covered so far to calculate the derivatives of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> of the following functions:</p>
 <ol type="1">
+<li><span class="math inline">\(y= 4x^3\)</span></li>
+<li><span class="math inline">\(y= x^2 + 2x\)</span></li>
 <li><span class="math inline">\(y = 2x^2 + 10\)</span></li>
 <li><span class="math inline">\(y = 5x^4 - \frac{2}{3}x^3\)</span></li>
 <li><span class="math inline">\(y = 9 \sqrt x\)</span></li>
@@ -459,99 +450,66 @@ Exercise
 <p><span class="math display">\[
 \begin{aligned}
 (c^x)' &amp;= c^x \cdot ln(c), &amp; \forall x&gt;0 \\
-(e^x)' &amp;= e^x \\
 \\
 (log_a(x))' &amp;= \frac{1}{x \cdot ln(a)}, &amp; \forall x&gt;0  \\
+\end{aligned}
+\]</span></p>
+<p><a href="https://tinyurl.com/2j4a9ykc">Euler’s number</a> (<span class="math inline">\(e\)</span>) has interesting properties when it comes to derivatives.</p>
+<p><span class="math display">\[
+\begin{aligned}
+(e^x)' &amp;= e^x \\
+\\
 (ln(x))' &amp;= \frac{1}{x}, &amp; \forall x&gt;0
 \end{aligned}
 \]</span></p>
-<p>We saw previously how Euler’s number (<span class="math inline">\(e\)</span>) arises from compound interest. The properties above make it very useful in a lot of calculus applications!</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Compute the following:</p>
-<ol type="1">
-<li><span class="math inline">\(\frac{d}{dx}(10e^x)\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(ln(x) - \frac{e^2}{3})\)</span></li>
-</ol>
-</div>
-</div>
+<!-- #### Exercise -->
+<!-- Compute the following: -->
+<!-- 1)  $\frac{d}{dx}(10e^x)$ -->
+<!-- 2)  $\frac{d}{dx}(ln(x) - \frac{e^2}{3})$ -->
 <p>Now we’ll get to a couple of more advanced (and powerful) rules.</p>
 <ul>
 <li><p><strong>Product rule:</strong> <span class="math inline">\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\)</span></p></li>
 <li><p><strong>Quotient rule:</strong> <span class="math inline">\(\displaystyle(\frac{f(x)}{g(x)})' = \frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\)</span></p></li>
 <li><p><strong>Chain rule:</strong> <span class="math inline">\((f(g(x))' = f'(g(x)) \cdot g'(x)\)</span></p></li>
 </ul>
-<blockquote class="blockquote">
-<p>Let’s calculate <span class="math inline">\(\frac{d}{dx}(3 \cdot ln(x) \cdot x^2)\)</span> on the board.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Let’s compute <span class="math inline">\(\frac{d}{dx}(e^{x^{2}})\)</span> on the board.</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use the differentiation rules we have covered so far to calculate the derivatives of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> of the following functions:</p>
-<ol type="1">
-<li><span class="math inline">\(x^3 \cdot x\)</span></li>
-<li><span class="math inline">\(e^x \cdot x^2\)</span></li>
-<li><span class="math inline">\((3x^4-8)^2\)</span></li>
-</ol>
-</div>
-</div>
+<!-- > Let's calculate $\frac{d}{dx}(3 \cdot ln(x) \cdot x^2)$ on the board. -->
+<!-- > Let's compute $\frac{d}{dx}(e^{x^{2}})$ on the board. -->
+<!-- ::: callout-note -->
+<!-- #### Exercise -->
+<!-- Use the differentiation rules we have covered so far to calculate the derivatives of $y$ with respect to $x$ of the following functions: -->
+<!-- 1)  $x^3 \cdot x$ -->
+<!-- 2)  $e^x \cdot x^2$ -->
+<!-- 3)  $(3x^4-8)^2$ -->
+<!-- ::: -->
 </section>
 <section id="higher-order-derivatives" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="higher-order-derivatives"><span class="header-section-number">2.2</span> Higher-order derivatives</h3>
-<p>We saw how politicians can refer to higher-order derivatives. To compute them, you simply “pass the outputs,” starting from the lowest order and going up.</p>
-<p>The second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point <span class="math inline">\(x\)</span> on the function’s domain. For example, when driving a car:</p>
+<p>We saw call <span class="math inline">\(f'(x)\)</span> the first derivative, but we can also calculate higher-order derivatives. These are not common in social science data analysis, but they appear in game theory, complex systems, and agent-based modeling.</p>
+<!-- This explanation is tricky. You may get it, but may not fully get it. Try to visualize in slides -->
+<p>For example, the second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point <span class="math inline">\(x\)</span> on the function’s domain. For example, when driving a car:</p>
 <ul>
 <li><span class="math inline">\(f(x)\)</span> = distance traveled at time <span class="math inline">\(x\)</span></li>
 <li><span class="math inline">\(f'(x)\)</span> = speed at time <span class="math inline">\(x\)</span></li>
 <li><span class="math inline">\(f''(x)\)</span> = acceleration at time <span class="math inline">\(x\)</span></li>
 </ul>
-<p>Let’s compute the following second derivative:</p>
-<p><span class="math display">\[f''(x^4) = \frac{d^2(x^4)}{dx^2}\]</span></p>
-<ul>
-<li><p>First, we take the first derivative: <span class="math inline">\(f'(x^4)=4x^3\)</span></p></li>
-<li><p>Then we use that output to take the second derivative: <span class="math inline">\(f''(x^4)=f'(4x^3)=12x^2\)</span></p></li>
-<li><p>We can keep going… for example, the third derivative: <span class="math display">\[f'''(x^4) = f'(12x^2) = 24x\]</span></p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Compute the following:</p>
-<ol type="1">
-<li><span class="math inline">\(\frac{d^3}{dx^3}(x^5)\)</span></li>
-<li><span class="math inline">\(f''(4x^{3/2})\)</span></li>
-<li><span class="math inline">\(f''(4 \cdot ln(x))\)</span></li>
-</ol>
-</div>
-</div>
+<p>To calculate higher-order derivatives, you just calculate the derivative using the usual differentiation rules, then calculate the derivative of the output, and so on for however many orders you have. In a college-level calculus course, these can get very crazy during your midterm. In practice, you will rarely lead anything beyond a second derivative.</p>
+<p>For example, we can calculate the following second derivative:</p>
+<p><span class="math display">\[f''(x) = \frac{d^2(x^4)}{dx^2}\]</span></p>
+<p>First, we take the first derivative <span class="math display">\[f'(x)=4x^3\]</span></p>
+<p>Then we use that output to take the second derivative <span class="math display">\[f''(x)=f'(4x^3)=12x^2\]</span></p>
+<p>We can keep going… for example, the third derivative is <span class="math display">\[f'''(x) = f'(12x^2) = 24x\]</span></p>
+<!-- ::: callout-note -->
+<!-- #### Exercise -->
+<!-- Compute the following: -->
+<!-- 1)  $\frac{d^3}{dx^3}(x^5)$ -->
+<!-- 2)  $f''(4x^{3/2})$ -->
+<!-- 3)  $f''(4 \cdot ln(x))$ -->
+<!-- ::: -->
 </section>
 <section id="partial-derivatives" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="partial-derivatives"><span class="header-section-number">2.3</span> Partial derivatives</h3>
-<p>For a function <span class="math inline">\(f(x,z)\)</span>, we might want to know how the function changes with respect to <span class="math inline">\(x\)</span>. We call this a <em>partial derivative</em>:</p>
+<p>So far, we have worked with derivatives of functions with only one variable. What happens when we have more than one variable that is changing?</p>
+<p>Suppose we have a function <span class="math inline">\(f\)</span> of two (or more) variables and we want to determine the rate of change relative to one of the variables. For a function <span class="math inline">\(f(x,z)\)</span>, we call this a <em>partial derivative</em></p>
 <p><span class="math display">\[
 \frac{\partial}{\partial_x}f(x,z) = \frac{\partial_y}{\partial_x} = \partial_x f
 \]</span></p>
@@ -562,33 +520,22 @@ y = f(x,z) &amp;= xz \\
 \frac{\partial_y}{\partial_x} &amp;= z
 \end{aligned}
 \]</span></p>
-<p>What is <span class="math inline">\(\displaystyle\frac{\partial_y}{\partial_z}?\)</span></p>
-<p>Let’s solve <span class="math inline">\(\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial x}\)</span> and <span class="math inline">\(\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial y}\)</span> on the board.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Let’s say that <span class="math inline">\(y\)</span> is how much I like a movie, <span class="math inline">\(d\)</span> is how many dogs a movie has, and <span class="math inline">\(e\)</span> is how many explosions a movie has. I claim that how much I like a movie can be expressed by a function of the type <span class="math inline">\(y = f(d, e)\)</span>. Evaluate the following situations:</p>
-<ol type="1">
-<li><p>I like dogs and I don’t care about action. So I believe that the true relationship is <span class="math inline">\(y = f(d, e) = 3 \cdot d\)</span>. What is <span class="math inline">\(\displaystyle\frac{\partial_y}{\partial_d}\)</span>, and how can we interpret it?</p></li>
-<li><p>I like dogs and I like action. So I believe that the true relationship is <span class="math inline">\(y = f(d, e) = 3 \cdot d + 1 \cdot e\)</span>. What is <span class="math inline">\(\displaystyle\frac{\partial_y}{\partial_d}\)</span>, and how can we interpret it?</p></li>
-<li><p>I like dogs and I like action. <em>But I definitely don’t like them together</em>—I don’t want the dogs to be in danger! So I believe that the true relationship is <span class="math inline">\(y = f(d, e) = 3 \cdot d + 1 \cdot e -10 \cdot d \cdot e\)</span>. What is <span class="math inline">\(\displaystyle\frac{\partial_y}{\partial_d}\)</span>, and how can we interpret it?</p></li>
-</ol>
-</div>
-</div>
+<p>You can try to do the same for <span class="math inline">\(\displaystyle\frac{\partial_y}{\partial_z}?\)</span> on your own</p>
+<!-- Let's solve $\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial x}$ and $\displaystyle\frac{\partial (x^2y+xy^2-x)}{\partial y}$ on the board. -->
+<!-- ::: callout-tip -->
+<!-- #### Example -->
+<!-- Let's say that $y$ is how much I like a movie, $d$ is how many dogs a movie has, and $e$ is how many explosions a movie has. I claim that how much I like a movie can be expressed by a function of the type $y = f(d, e)$. Evaluate the following situations: -->
+<!-- 1.  I like dogs and I don't care about action. So I believe that the true relationship is $y = f(d, e) = 3 \cdot d$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it? -->
+<!-- 2.  I like dogs and I like action. So I believe that the true relationship is $y = f(d, e) = 3 \cdot d + 1 \cdot e$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it? -->
+<!-- 3.  I like dogs and I like action. *But I definitely don't like them together*---I don't want the dogs to be in danger! So I believe that the true relationship is $y = f(d, e) = 3 \cdot d + 1 \cdot e -10 \cdot d \cdot e$. What is $\displaystyle\frac{\partial_y}{\partial_d}$, and how can we interpret it? -->
+<!-- ::: -->
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise
+Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -624,7 +571,7 @@ Exercise
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x){<span class="fu">sqrt</span>(<span class="fu">abs</span>(x)) <span class="sc">+</span> <span class="dv">1</span>}, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>), </span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">aes</span>(<span class="at">color =</span> <span class="st">"y = √(|x|) + 1"</span>)) <span class="sc">+</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x){<span class="fu">sign</span>(x) <span class="sc">*</span> <span class="fu">abs</span>(x)<span class="sc">^</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>)}, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>), </span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                <span class="fu">aes</span>(<span class="at">color =</span> <span class="st">"y = ₃√x"</span>)) <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                <span class="fu">aes</span>(<span class="at">color =</span> <span class="st">"y = x^(1/3)"</span>)) <span class="sc">+</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="st">"Function"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"black"</span>)) <span class="sc">+</span></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Examples of functions that are not differentiable at x=0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -638,264 +585,6 @@ Exercise
 <blockquote class="blockquote">
 <p>Informally, functions need to be continuous and reasonably smooth to be differentiable.</p>
 </blockquote>
-</section>
-<section id="how-do-computers-calculate-derivatives" class="level3" data-number="2.5">
-<h3 data-number="2.5" class="anchored" data-anchor-id="how-do-computers-calculate-derivatives"><span class="header-section-number">2.5</span> How do computers calculate derivatives?</h3>
-<p>In quite a few statistics and machine learning problems, computers need to compute derivatives of arbitrarily complex functions, perhaps millions of times. How do they do it? (see <a href="https://dl.acm.org/doi/abs/10.5555/3122009.3242010">Baydin et al.&nbsp;2018</a> for discussion of these three approaches)</p>
-<ul>
-<li><p>Symbolic differentiation: automatically combine the rules of differentiation (power rule, product rule, etc.). It is what math solvers use, e.g., <a href="https://www.wolframalpha.com/calculators/derivative-calculator/">WolframAlpha</a> or (presumably) <a href="https://www.symbolab.com/solver/derivative-calculator">Symbolab</a>.</p></li>
-<li><p>Numerical differentiation: infer the derivative by computing the function at different sample values (like we did with <span class="math inline">\(y=x^2\)</span> before. This is what, for example, R’s <code>optim()</code> function does behind the scenes.</p></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># minimize the x^2 + 5 function:</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">optim</span>(<span class="at">par =</span> <span class="dv">0</span>, <span class="at">fn =</span> <span class="cf">function</span>(x){x <span class="sc">^</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">5</span>}, <span class="at">method =</span> <span class="st">"L-BFGS-B"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$par
-[1] 0
-
-$value
-[1] 5
-
-$counts
-function gradient 
-       1        1 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: NORM OF PROJECTED GRADIENT &lt;= PGTOL"</code></pre>
-</div>
-</div>
-<ul>
-<li>Automatic differentiation: track how every function is constructed from (differentiable) elementary computer operations (e.g., binary arithmetic), and get the result using the chain rule. Implemented in the <a href="https://torch.mlverse.org/"><code>torch</code></a> R package, the <a href="https://www.tensorflow.org/"><code>TensorFlow</code></a>, <a href="https://pytorch.org/"><code>PyTorch</code></a>, and <a href="https://jax.readthedocs.io/en/"><code>JAX</code></a> Python libraries, and the <a href="https://juliadiff.org/ReverseDiff.jl/"><code>ReverseDiff.jl</code></a> and <a href="https://fluxml.ai/Zygote.jl/"><code>Zygote.jl</code></a> Julia packages.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/julia_zygote.png" class="img-fluid figure-img"></p>
-<figcaption>An example of computing the gradient of an esoteric function using Zygote.jl (from <a href="https://fluxml.ai/Zygote.jl/stable/#Taking-Gradients-1">its documentation</a>)</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="optimization" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="optimization"><span class="header-section-number">3</span> Optimization</h2>
-<p><em>Optimization</em> allows us to find the minimum or maximum values (or <em>extrema</em>) a function takes. It has many applications in the social sciences:</p>
-<ul>
-<li><p>Formal theory: utility maximization, continuous choices</p></li>
-<li><p>Ordinary Least Squares (OLS): Focuses on <em>minimizing</em> the squared errors between observed data and model-estimated values</p></li>
-<li><p>Maximum Likelihood Estimation (MLE): Focuses on <em>maximizing</em> a likelihood function, given observed values.</p></li>
-</ul>
-<section id="extrema" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="extrema"><span class="header-section-number">3.1</span> Extrema</h3>
-<p>On <strong>extrema</strong>: informally, a maximum is just the highest value a function takes, and a minimum is the lowest value.</p>
-<p>In some situations, it can be easy to identify extrema intuitively by looking at a graph of the function.</p>
-<ul>
-<li><p>Maxima are high points (“peaks”)</p></li>
-<li><p>Minima are low points (“valleys”)</p></li>
-</ul>
-<p>We can use derivatives (rates of change!) to get at extrema.</p>
-</section>
-<section id="critical-points-and-the-first-order-condition" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="critical-points-and-the-first-order-condition"><span class="header-section-number">3.2</span> Critical points and the First-Order Condition</h3>
-<p>At critical points (or stationary points), the derivative is zero or fails to exist. At these, the function has <em>usually</em> reached a (local) maximum or minimum.</p>
-<ul>
-<li><p>At a maximum, the function must be increasing before the point and decreasing after it.</p></li>
-<li><p>At a minimum, the function must be decreasing before the point and increasing after it.</p></li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Local extrema occur at critical points, but not all critical points are extrema. For instance, sometimes the graph is changing between concave and convex (“inflection points”). Or sometimes the function is not differentiable at that point for other reasons.</p>
-</div>
-</div>
-<p>We can find the local maxima and/or minima of a function by taking the derivative, setting it equal to zero, and solving for <span class="math inline">\(x\)</span> (or whatever variable). This gives us the First-Order Condition (FOC).</p>
-<p><span class="math display">\[FOC: f'(x)=0\]</span></p>
-</section>
-<section id="second-order-condition" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="second-order-condition"><span class="header-section-number">3.3</span> Second-Order Condition</h3>
-<p>Notice that after this we only know that there is a critical point. <strong>BUT</strong> we don’t know if we’ve found a maximum or minimum, or even if we’ve found an extremum.</p>
-<p>To determine whether a we are seeing a (local) maximum or minimum, we can use the <strong>Second Derivative Test</strong>:</p>
-<ul>
-<li><p>Start by identifying <span class="math inline">\(f''(x)\)</span></p></li>
-<li><p>Substitute in the stationary points <span class="math inline">\((x^*)\)</span> identified from the FOC.</p>
-<ul>
-<li><p><span class="math inline">\(f''(x^*) &gt; 0\)</span> we have a local minimum</p></li>
-<li><p><span class="math inline">\(f''(x^*) &lt; 0\)</span> we have a local maximum</p></li>
-<li><p><span class="math inline">\(f''(x^*) = 0\)</span> we (may) have an inflection point - need to calculate higher-order derivatives (don’t worry about this now)</p></li>
-</ul></li>
-</ul>
-<p>Collectively these give us the <strong>Second-Order Condition (SOC)</strong>.</p>
-<p>Let’s do this procedure and obtain the FOC and SOC for <span class="math inline">\(\displaystyle y=\frac{1}{2} x^3 + 3 x^2 - 2\)</span> on the board. What do we learn? Compare this with the plot of the function on <a href="https://www.desmos.com/calculator">Desmos</a>.</p>
-</section>
-<section id="local-or-global-extrema" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="local-or-global-extrema"><span class="header-section-number">3.4</span> Local or global extrema?</h3>
-<p>Now when it comes to knowing whether extrema are local or global:</p>
-<ul>
-<li><p>Here we use the <strong>Extreme value theorem</strong>, which states that if a real-valued function is continuous on a closed and bounded (i.e., finite) interval, the function must have a global minimum and a global minimum on that interval at least once. Importantly, in this situation the global extrema exist, and <strong>they are either at the local extrema or at the boundaries</strong> (where we cannot even find critical points).</p></li>
-<li><p>So to find the minimum/maximum on some interval, compare the local min/max to the value of the function at the interval’s endpoints. So, e.g., if the interval is <span class="math inline">\((-\infty, +\infty)\)</span>, check the function’s limits as it approaches <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(+\infty\)</span>.</p></li>
-</ul>
-<p>Let’s try this last step for our example above, <span class="math inline">\(\displaystyle y=\frac{1}{2} x^3 + 3 x^2 - 2\)</span>, to get the global extrema in the entire domain.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Identify the global extrema of the function <span class="math inline">\(\displaystyle \frac{x^3}{3} - \frac{3}{2}x^2 -10x\)</span> in the interval <span class="math inline">\([-6, 6]\)</span>.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="integrals" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="integrals"><span class="header-section-number">4</span> Integrals</h2>
-<p>Informally, we can think of integrals as the flip side of derivatives.</p>
-<p>We can motivate integrals as a way of finding the area under a curve. Sometimes finding the area is easy. What’s the area under the curve between <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=1\)</span> for this function?</p>
-<p><span class="math display">\[
-f(x) =
-\begin{cases}
-\frac{1}{3} &amp; \text{for } x \in [0, 3] \\
-0 &amp; \text{otherwise}
-\end{cases}
-\]</span></p>
-<p>Normally, finding the area under a curve is much harder. But this is basically the question behind integration.</p>
-<section id="integrals-are-about-infinitesimals-too" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="integrals-are-about-infinitesimals-too"><span class="header-section-number">4.1</span> Integrals are about infinitesimals too</h3>
-<p>Let’s say we have a function <span class="math inline">\(y = x^2\)</span> And we want to find the area under the curve from <span class="math inline">\(x=0\)</span> to <span class="math inline">\(x=1\)</span>. How would we do this?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># draw main function</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x){x <span class="sc">^</span> <span class="dv">2</span>}, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># fill area under the curve between x = 0 and x = 1</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>), <span class="at">stat =</span> <span class="st">"function"</span>,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">fun =</span> <span class="cf">function</span>(x){x <span class="sc">^</span> <span class="dv">2</span>}, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">fill =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="03_calc1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>One way to approximate this area is by drawing narrow rectangles that cover the area in red. Let’s draw this on the board.</p>
-<p>Our approximation is rough, but it gets better and better the narrower the rectangles are:</p>
-<p><span class="math display">\[
-Area = lim_{\Delta x \to 0}\sum_i^n{f(x) \cdot \Delta x}
-\]</span></p>
-<p>, where <span class="math inline">\(\Delta x\)</span> is the width of the rectangles and <span class="math inline">\(n\)</span> is their number.</p>
-<p>This is actually one way to define the <strong>definite integral</strong>, <span class="math inline">\(\displaystyle\int_a^bf(x)dx\)</span> (also known as the Riemann integral). We’ll learn how to compute these in a few moments.</p>
-</section>
-<section id="indefinite-integrals-as-antiderivatives" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="indefinite-integrals-as-antiderivatives"><span class="header-section-number">4.2</span> Indefinite integrals as antiderivatives</h3>
-<p>The <strong>indefinite integral</strong>, also known as the <strong>antiderivative</strong>, <span class="math inline">\(F(x)\)</span> is the inverse of the function <span class="math inline">\(f'(x)\)</span>. <span class="math display">\[F(x)= \displaystyle\int f(x) \text{ } dx\]</span></p>
-<p>This means if you take the derivative of <span class="math inline">\(F(x)\)</span>, you wind up back at <span class="math inline">\(f(x)\)</span>. <span class="math display">\[F' = f \text{ or } \displaystyle\frac{dF(x)}{dx} = f(x)\]</span></p>
-<p>For example, what is the antiderivative for a constant function <span class="math inline">\(f(x) = 1\)</span>? Is there just one? (this example comes from <a href="https://press.princeton.edu/books/paperback/9780691159171/a-mathematics-course-for-political-and-social-research">Moore and Siegel, 2013</a>, p.&nbsp;137).</p>
-<p>This process is called <em>anti-differentiation</em>. We can use this concept to help us solve definite integrals!</p>
-</section>
-<section id="solving-definite-integrals" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="solving-definite-integrals"><span class="header-section-number">4.3</span> Solving definite integrals</h3>
-<p>One way to calculate definite integrals, known as the “fundamental theorem of calculus,” is shown below:</p>
-<p><span class="math display">\[\displaystyle\int_{a}^{b} f(x) \text{ } dx = F(b)-F(a) = F(x)\bigg|_{a}^{b}\]</span></p>
-<p>First we determine the antiderivative (indefinite integral) of <span class="math inline">\(f(x)\)</span> (and represent it <span class="math inline">\(F(x)\)</span>), substitute the upper limit first and then the lower limit one by one, and subtract the results in order.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\(C\)</span> in the following definitions and rules is the called the “constant of integration.” We need to add it when we define <em>all</em> antiderivatives (integrals) of a function because the anti-derivative “undoes” the derivative.</p>
-<p>Remember that the derivative of any constant is zero. So if we find an integral <span class="math inline">\(F(x)\)</span> whose derivative is <span class="math inline">\(f(x)\)</span>, adding (or subtracting) any constant will give us another integral <span class="math inline">\(F(x)+C\)</span> whose derivative is <em>also</em> <span class="math inline">\(f(x)\)</span>.</p>
-</div>
-</div>
-</section>
-<section id="rules-of-integration" class="level3" data-number="4.4">
-<h3 data-number="4.4" class="anchored" data-anchor-id="rules-of-integration"><span class="header-section-number">4.4</span> Rules of integration</h3>
-<p>Many of the rules of integetration have counterparts in differentiation.</p>
-<p><strong>Coefficient rule:</strong> <span class="math inline">\(\displaystyle\int c f(x)\,dx = c \int f(x)\,dx\)</span></p>
-<p><strong>Sum/difference rule:</strong> <span class="math inline">\(\displaystyle\int (f(x) \pm g(x))\,dx = \int f(x)\,dx \pm \int g(x)\,dx\)</span></p>
-<p><strong>Constant rule:</strong> <span class="math inline">\(\displaystyle\int c\,dx = cx + C\)</span></p>
-<p><strong>Power rule:</strong> <span class="math inline">\(\displaystyle\int x^n\,dx = \frac{x^{n+1}}{n+1} + C \qquad \forall n \neq -1\)</span></p>
-<p><strong>Reciprocal rule:</strong><span class="math inline">\(\displaystyle\int \frac{1}{x}\,dx = \ln(x) + C\)</span></p>
-<p><strong>Exponent and logarithm rules:</strong></p>
-<p><span class="math display">\[
-\begin{aligned}
-\displaystyle \int e^x \,dx &amp;= e^x+C \\
-\displaystyle \int c^x \,dx &amp;= \frac{c^x}{ln(c)}+C\\
-\\
-\displaystyle \int ln(x) \,dx &amp;= x \cdot ln(x) - x+C \\
-\displaystyle \int log_c(x) \,dx &amp;= \frac{x \cdot log_c(x) - x}{log_c(x)}+C
-\end{aligned}
-\]</span></p>
-<p>The final two rules are analog to the product rule and the chain rule:</p>
-<p><strong>Integration by parts:</strong> <span class="math inline">\(\displaystyle \int f(x)g'(x)\,dx = f(x)g(x) - \int f'(x)g(x)\,dx\)</span></p>
-<p><strong>Integration by substitution:</strong></p>
-<p><span class="math display">\[
-\begin{aligned}
-1.&amp; \text{ Have }\displaystyle \int f(g(x))g'(x)\,dx \\
-2.&amp; \text{ Set u=g(x)} \\
-3.&amp; \text{ Compute } \int f(u)\,du \\
-4.&amp; \text{ Replace u for g(x)}
-\end{aligned}
-\]</span></p>
-<p>Let’s do an example on the board: <span class="math inline">\(\displaystyle \int e^{x^2} 2x  \,dx\)</span>.</p>
-</section>
-<section id="solving-the-problem" class="level3" data-number="4.5">
-<h3 data-number="4.5" class="anchored" data-anchor-id="solving-the-problem"><span class="header-section-number">4.5</span> Solving the problem</h3>
-<p>Remember our function <span class="math inline">\(y=x^2\)</span> and our goal of finding the area under the curve from <span class="math inline">\(x=0\)</span> to <span class="math inline">\(x=1\)</span>. We can describe this problem as <span class="math inline">\(\displaystyle \int_0^1 x^2 dx\)</span></p>
-<p>Find the indefinite integral, <span class="math inline">\(F(x)\)</span>:</p>
-<p><span class="math display">\[
-\displaystyle\int x^2 \text{ } dx = \displaystyle\frac{x^3}{3}+C
-\]</span></p>
-<p>Now we’ll use the fundamental theory of calculus. Evaluate at our lowest and highest points, <span class="math inline">\(F(0)\)</span> and <span class="math inline">\(F(1)\)</span>:</p>
-<ul>
-<li><p><span class="math inline">\(F(0) = 0\)</span></p></li>
-<li><p><span class="math inline">\(F(1) = \displaystyle\frac{1}{3}\)</span></p></li>
-<li><p>Technically <span class="math inline">\(0 + C\)</span> and <span class="math inline">\(\displaystyle\frac{1}{3} + C\)</span>, but the C’s will fall out in the next step</p></li>
-</ul>
-<p>Calculate <span class="math inline">\(F(1) - F(0)\)</span> <span class="math display">\[\displaystyle\frac{1}{3} - 0 = \displaystyle\frac{1}{3}\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Solve the following indefinite integrals:</p>
-<ol type="1">
-<li><p><span class="math inline">\(\int x^2 \text{ } dx\)</span></p></li>
-<li><p><span class="math inline">\(\int 3x^2\text{ } dx\)</span></p></li>
-<li><p><span class="math inline">\(\int x\text{ } dx\)</span></p></li>
-<li><p><span class="math inline">\(\int (3x^2 + 2x - 7\text{ })dx\)</span></p></li>
-<li><p><span class="math inline">\(\int \dfrac{2}{x}\text{ }dx\)</span></p></li>
-</ol>
-<p>And solve the following definite integrals:</p>
-<ol type="1">
-<li><p><span class="math inline">\(\displaystyle\int_{1}^{7} x^2 \text{ } dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle\int_{1}^{10} 3x^2 \text{ } dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle\int_7^7 x\text{ } dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle\int_{1}^{5} 3x^2 + 2x - 7\text{ }dx\)</span></p></li>
-<li><p><span class="math inline">\(\int_{1}^{e} \dfrac{2}{x}\text{ }dx\)</span></p></li>
-</ol>
-</div>
-</div>
 
 
 </section>

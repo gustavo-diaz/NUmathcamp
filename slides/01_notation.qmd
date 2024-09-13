@@ -1,0 +1,44 @@
+---
+title: | 
+       | Social Science
+       | Math Camp
+author: "Northwestern University"
+format: revealjs
+---
+
+## Agenda
+
+- Who are we?
+- What is math camp?
+- Who are you?
+- What are we going to cover?
+
+# Who are we?
+
+## Co-instructors
+
+::: {.callout-tip}
+## Artur Baranov
+PhD Student in Political Science  
+<artur.baranov@u.northwestern.edu>
+:::
+
+::: {.callout-tip}
+## Gustavo Diaz
+Assistant Professor of Instruction in Political Science  
+<gustavo.diaz@northwestern.edu>
+:::
+
+::: {.callout-tip}
+## Aven Peters
+PhD Student in Sociology  
+<aven.peters@u.northwestern.edu>
+:::
+
+# What is math camp?
+
+CONTINUE HERE
+
+# Who are you?
+
+# What are we going to cover?
