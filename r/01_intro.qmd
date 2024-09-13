@@ -1,22 +1,23 @@
 ---
 title: "Introduction to Computational Social Science and R"
+author: "[Artur Baranov](https://artur-baranov.github.io)"
+date: 2024-09-16
 format: 
   html:
     embed-resources: true
 toc: true
-
 ---
 
 ## Programming for Social Science research
 
--   **Understanding social science research**. Combination of Statistics and Programming would allow you to read, understand and reproduce other scholars' works.
+-   **Understanding social science research**. Combination of Statistics and Programming allows you to read, understand, and reproduce other scholars' works.
 
--   **Automation of manual labor**. Programming saves time in many tasks. Calculations, data gathering, and many more could be automated with basic knowledge of programming.
+-   **Automation of manual labor**. Programming saves time in many tasks. Calculations, data gathering, and many other tasks could be automated with basic knowledge of programming.
 
--   **Producing own research**. Programming empowers researchers to design and execute their own custom analyses, simulations, and data visualizations.
+-   **Producing your own research**. Programming empowers researchers to design and execute their own custom analyses, simulations, and data visualizations.
 
 
-### R vs Other 
+### R vs Others
 
 -   Excel
 
@@ -24,12 +25,12 @@ toc: true
 
 -   Python
 
-R language is 2nd most used statistical software in academia.^[[details here](https://www.r-bloggers.com/2023/06/update-to-data-science-software-popularity/)]
-New social science methods and thus packages are usually either developed in R or adapted to R (e.g., [quanteda](https://quanteda.io) for NLP, [CEM](https://gking.harvard.edu/cem) for causal inference, etc.). However, R allows you to do so many more. For example, this website was made with R and RStudio.
+R is the second most-used statistical software in academia.^[[details here](https://www.r-bloggers.com/2023/06/update-to-data-science-software-popularity/)]
+New social science methods and thus packages are usually either developed in R or adapted to R (e.g., [quanteda](https://quanteda.io) for NLP, [CEM](https://gking.harvard.edu/cem) for causal inference, etc.). However, R allows you to do much more. For example, this website was made with R and RStudio.
 
 ### Installing R and RStudio
 
-**Firstly**, we need to install R. Click the button below and click "Download and Install R". Choose your OS. For Windows you need to download "**base**", for MacOS and Linux you have to choose your version of OS. Install.
+**First**, we need to install R. Click the button below and click "Download and Install R". Choose your OS. For Windows you need to download "**base**"; for MacOS and Linux you have to choose the version of your OS. Install.
   
 <center>[Download R](https://cran.rstudio.com){.btn .btn-primary .btn role="button" target="_blank" style="width:200px"}</center>
 
@@ -42,7 +43,7 @@ New social science methods and thus packages are usually either developed in R o
   <center>![](https://raw.githubusercontent.com/gustavo-diaz/NUmathcamp/main/r/images/install_r_base.png)</center>
 </details>
 
-**Secondly**, we need to install RStudio. Click the button below and click "Download RStudio Desktop". You will be redirected to your version automatically. Install.
+**Second**, we need to install RStudio. Click the button below and click "Download RStudio Desktop". You will be redirected to your version automatically. Install.
 
 <center>[Download RStudio](https://posit.co/download/rstudio-desktop/){.btn .btn-primary .btn role="button" target="_blank" style="width:200px"}</center>
 
@@ -53,7 +54,7 @@ New social science methods and thus packages are usually either developed in R o
 
 ### Navigating RStudio
 
-It will take some time to understand how everything works in RStudio, but when you get it it's quite straightforward. The most classic UI consists of four panes.
+It will take some time to understand how everything works in RStudio, but once you understand it, it’s quite straightforward. The most classic UI consists of four panes.
 
 1.    **Source**. Here we write code to run. 
 
@@ -71,15 +72,15 @@ It will take some time to understand how everything works in RStudio, but when y
 
 ## Markdown and Quarto
 
-In RStudio you can use markdown language to format the text. 
+In RStudio, you can use Markdown language to format text. 
 
-For example, **this is bold text** and *this is italic text*. And, of course, you can insert images. It's pretty easy, and after the class you can take a look on some [tutorials](https://www.markdownguide.org/basic-syntax/).
+For example, **this is bold text** and *this is italic text*. And, of course, you can insert images. It's pretty easy, and after the class you can take a look at some [tutorials](https://www.markdownguide.org/basic-syntax/).
 
 ![Northwestern Logo](https://www.northwestern.edu/brand/images/wordmark/wordmark-vert.jpg)
 
-You can do many-many more different things. In this regards visual editor in RStudio might be helpful. Markdown is also used in several note taking apps, e.g. [Obsidian](https://obsidian.md) or [Notion](https://www.notion.so). Feel free to utilize Markdown knowledge for you Graduate Studies.
+You can do many-many more different things. In this regard, visual editor in RStudio might be helpful. Markdown is also used in several note taking apps, e.g. [Obsidian](https://obsidian.md) or [Notion](https://www.notion.so). Feel free to utilize your Markdown knowledge for your graduate studies.
 
-Generally, what we've done so far can be described by the image below. We have downloaded R ("engine") and RStudio ("car"). In Rstudio we have Quarto, which is this document you are working with right now. We can do a lot of things right now -- e.g., render our output to a word document, PDF or HTML. 
+Generally, what we've done so far can be described by the image below. We have downloaded R ("engine") and RStudio ("car"). In Rstudio we have Quarto, which is this document you are working with now. We can do a lot of things right away -- e.g., render our output to a Word document, PDF or HTML. 
 
 ![R software](https://raw.githubusercontent.com/gustavo-diaz/NUmathcamp/main/r/images/r_rstudio_quarto_output.png)
 
@@ -87,7 +88,7 @@ Generally, what we've done so far can be described by the image below. We have d
 
 ### Objects: Basic Operations
 
-Now, let's turn to statistics and programming. This gray part of the document is called **chunk** or **code block**. Here we can code. Let's create an object called `number` and assign to it `1`. 
+Now, let's turn to statistics and programming. This gray part of the document is called **chunk** or **code block**. Here we can code. Let's create an object called `number` and assign it the value `1`. 
 
 ```{r}
 number <- 1
@@ -127,7 +128,7 @@ nchar(word)
 
 ### Vectors: Logical Operations and Descriptive Statistics
 
-But the real power of programming starts with vectors. Vectors are collection of objects. To create one, you will need to use function `c()`. Here's an example,
+But the real power of programming starts with vectors. Vectors are collections of objects. To create one, you will need to use function `c()`. Here's an example,
 
 ```{r}
 numbers <- c(1, 2, 3)
@@ -153,7 +154,7 @@ You can check if some object in a vector is equal to some specified value using 
 numbers == 2
 ```
 
-*Why are we using double equal sign?*
+*Why are we using a double equal sign?*
 
 Furthermore, we can easily check what values are greater or less than some number.
 
@@ -162,7 +163,7 @@ numbers > 2
 numbers < 2
 ```
 
-The table below summarizes most important logical operators in R. They are quite straightforward, but it might take some time to memorize it.
+The table below summarizes most important logical operators in R. They are quite straightforward, but it might take some time to memorize them.
 
 | Operation                     | Symbol | Example Usage       |
 |-------------------------------|--------|---------------------|
@@ -180,6 +181,12 @@ Let's say we asked a group of people their ages in an Evanston coffee shop. We o
 
 ```{r}
 age <- c(18, 20, 21, 19, 24, 21, 20, 22)
+```
+
+You can access the data using indexation. Let's say you entered the data into your object `age` as you were receiving the results. You can access the age of your second respondent by indicating `[i]` to an object.
+
+```{r}
+age[2]
 ```
 
 Who is allowed to order espresso martini (*yes, in the US drinking age is 21!*)?
@@ -204,16 +211,7 @@ Who is between 20 and 22?
 (age >= 20) & (age ... 22)
 ```
 
-Furthermore, you can access the data using indexation. Let's say you entered the data into your object `age` as you were receiving the results. You can access the age of your second respondent by indicating `[i]` to an object.
-
-```{r}
-age[2]
-```
-Is the 4th responded older than 2nd?
-
-::: callout-tip
-**Third shortcut**. To run only selected line of code or a code highlight you can use `Ctrl + Enter` on Windows and `Cmd + Return` on Mac. Try accessing age of 4th and 2nd respondents separately.
-:::
+Is the 4th respondent older than the 2nd?
 
 ```{r}
 #| eval: false
@@ -221,10 +219,15 @@ Is the 4th responded older than 2nd?
 age[...] ... 
 ```
 
+::: callout-tip
+**Third shortcut**. To run only selected line of code or a code highlight you can use `Ctrl + Enter` on Windows and `Cmd + Return` on Mac. Try accessing age of 4th and 2nd respondents separately.
+:::
+
+
 
 #### Descriptive statistics
 
-Now we are turning to a slightly more advanced things. Most commonly people describe the whole data they have (*sometimes it's hundreds and thousands of observations*) with only a couple of numbers.
+Now we are turning to slightly more advanced topics. Most commonly people describe the whole data they have (*sometimes it's hundreds and thousands of observations*) with only a couple of numbers.
 
 For example, we can calculate the average age in our surveyed group.
 
@@ -241,7 +244,7 @@ min(age)
 max(age)
 ```
 
-Usually such description of data is called **descriptive statistics**. There is a helpful command `summary()` that allows us to describe data in one line. Try it out! What median did you get?
+Usually such description of data is called **descriptive statistics**. There is a helpful command `summary()` that allows us to describe data in one line. Try it out! What is the median you got?
 
 ```{r}
 #| eval: false
@@ -263,7 +266,7 @@ You can use the table below for your reference
 | Summary            | `summary()`    | `summary(x)`             |
 
 
-We also asked people in the coffee shop about their major and got the following data:
+We also asked people in the coffee shop about their majors and received the following data:
 
 ```{r}
 major <- c("computer science", "sociology", "sociology", "political science", "political science", "political science", "computer science", "sociology")
@@ -277,13 +280,20 @@ Try to get the descriptive statistics for this data.
 ...
 ```
 
+For text data you might want to calculate the number of people in each major.
+
+```{r}
+table(major)
+```
+
+
 Insert a chunk and access major of the 3rd respondent.
 
 `...`
 
 ### Dataframes
 
-A dataframe is the most commonly used data structure in data analysis. Basically, it's a simple table that you probably have seen in Excel. Let's create one. We have two vectors, `age` and `major`. We can combine them into one table.
+A dataframe is one of the most commonly used data structures in data analysis. It is a simple table, similar to those you have probably seen in Excel. Let's create one. We have two vectors, `age` and `major`. We can combine them into one table.
 
 ```{r}
 respondents <- data.frame(age, major)
@@ -489,10 +499,10 @@ class(...)
 ```
 Do you think R classified it properly? If a variable is identified incorrectly, you can change it.
 
-For example, you can change it to integer.
+For example, you can change it to a factor.
 
 ```{r}
-cars_information$cyl = as.integer(cars_information$cyl)
+cars_information$cyl <- as.factor(cars_information$cyl)
 ```
 
 
@@ -543,7 +553,7 @@ How many observations are there?
 
 ```
 
-Check the classes of the variables. Is everything correct?
+Check the classes of the variables. Are they correct?
 
 ```{r}
 
@@ -555,7 +565,7 @@ Provide the descriptive statistics of `cpi_2023` variable
 
 ```
 
-Create a new variable that would provide difference between CPI of a country in 2023 and 2022. On average, are countries getting cleaner in terms of corruption?
+Create a new variable that provides the difference between CPI of a country in 2023 and 2022. On average, are countries getting cleaner in terms of corruption?
 
 ```{r}
 
@@ -584,7 +594,7 @@ You'll need to install `tidyverse` library. It allows you to do so many more! In
 install.packages(...)
 ```
 
-Small spoiler alert what you can do with it! Do you remember our histogram before? Check it out. This is a pretty powerful tool to understand what's going on in your data. See you tomorrow!
+Small spoiler alert what you can do with it! Do you remember the histogram we created earlier? Check it out. This is a pretty powerful tool to understand what's going on in your data. See you tomorrow!
 
 ```{r}
 #| message: false
