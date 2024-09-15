@@ -68,7 +68,9 @@ It will take some time to understand how everything works in RStudio, but once y
 
 ### Turning to practice
 
-<center>[Download script](){.btn .btn-primary .btn role="button" target="_blank" download="01_intro.qmd" style="width:200px"}</center>
+<center>
+<a href="https://artur-baranov.github.io/data/01_intro.qmd" class="btn btn-primary" role="button" download="01_intro.qmd" style="width:200px" target="_blank">Download script</a>
+</center>
 
 ## Markdown and Quarto
 
