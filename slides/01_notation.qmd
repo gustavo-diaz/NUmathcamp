@@ -3,15 +3,30 @@ title: |
        | Social Science
        | Math Camp
 author: "Northwestern University"
-format: revealjs
+format: 
+  revealjs:
+    embed-resources: true
+    slide-number: false
+    progress: false
 ---
 
 ## Agenda
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(tinytable)
+
+knitr::opts_chunk$set(fig.pos = "center", echo = FALSE, 
+               message = FALSE, warning = FALSE)
+```
 
 - Who are we?
 - What is math camp?
 - Who are you?
 - What are we going to cover?
+- Start math camp content
+
+
 
 # Who are we?
 
@@ -37,8 +52,142 @@ PhD Student in Sociology
 
 # What is math camp?
 
-CONTINUE HERE
+## Math camp
 
-# Who are you?
+. . .
 
-# What are we going to cover?
+- A (re)introduction to math topics necessary for the quantitative methods sequence
+
+Goals:
+
+::: incremental
+- Get to know you and meet your methods training needs/goals
+- Get to know your colleagues
+:::
+
+
+## Math camp
+
+- A (re)introduction to math topics necessary for the quantitative methods sequence
+
+Why a *math camp*?
+
+::: incremental
+- Can always use more methods training
+- More of a *methods* camp
+:::
+
+## Who are you?
+
+
+
+- Name
+- Pronouns
+- Discipline + intended subfield/research area
+- A hobby or interesting fact about yourself
+
+## What are we going to cover? {.smaller}
+
+```{r schedule, include = FALSE}
+schedule =
+  tribble(
+    ~Day, ~Date, ~Morning, ~Afternoon,
+    1, "September 16", "Notation, sets, functions", "R and RStudio",
+    2, "September 17", "Matrices", "Tidyverse I",
+    3, "September 18", "Calculus I", "Tidyverse II",
+    4, "September 19", "NO MEETING", NA,
+    5, "September 20", "Calculus II", "Sampling and simulation"
+)
+```
+
+
+```{r show-schedule, echo = FALSE, results = "asis"}
+schedule %>% 
+  tt() %>% 
+  style_tt(
+    i = 4,
+    j = 3,
+    colspan = 2,
+    align = "l"
+  )
+```
+
+. . .
+
+- **Morning:** Math (9AM - noon) 
+
+- **Lunch:** Meet faculty, students (noon - 1PM)
+
+- **Break** (1-1:30PM)
+
+- **Afternoon:** R programming (1:30-4PM)
+
+- See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for content
+
+## Expectations
+
+::: incremental
+- You are not being evaluated
+- No need to take extensive notes
+- Bring a laptop
+- Engage
+- Get things wrong
+- Ask
+- Interrupt if you need to
+:::
+
+# Questions?
+
+# Break
+
+# Notation, Sets, Functions
+
+## What is this?
+
+::: incremental
+- Symbols, letters, formulae used over plain language
+- **Goal:** Talk about stuff in general terms
+- **Downside:** Harder to follow
+- **Conjecture:** Math is not hard, its *language* is
+- **Solution:** Practice
+:::
+
+. . .
+
+![](https://media1.tenor.com/m/jpuKorTjmysAAAAC/practice-weainttalkinaboutthegame.gif){fig-align="center"}
+
+## Set Notation
+
+**Set:** A collection of elements
+
+. . .
+
+**Numerical sets**
+
+::: incremental
+- $\mathbb{N}$: Natural numbers &nbsp; $\{(0), 1, 2, 3\}$
+- $\mathbb{Z}$: Integers &nbsp; $\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$
+- $\mathbb{Q}$: Rational numbers &nbsp; $\{1/2, 3/2, 4\}$
+- $\mathbb{R}$: Real numbers &nbsp; $\{-899.8, 22, 4.5, \sqrt{\pi}\}$
+- $\mathbb{I}$: Imaginary numbers &nbsp; $ai | a \in \mathbb{R}; i= \sqrt{-1}$
+- $\mathbb{C}$: Complex numbers &nbsp; $a + bi$
+:::
+
+## Measurement
+
+::: incremental
+- Sets can also have non-numerical elements
+- We may code this as numbers or not, what matters is what we assume about the elements
+- **Nominal:** No mathematical relationship between elements
+- **Ordinal:** Order is meaningful
+- **Interval:** Elements equidistant, but no meaningful zero
+- **Ratio (interval-ratio)**: There is a meaningful zero
+:::
+
+<!-- Ask/give examples -->
+
+## Set notation
+
+. . .
+
+[CONTINUE HERE NOT ONLY WE SPECIFY SETS, WE ALSO SPECIFY ELEMENTS WITHIN, OR RELATIONSHIPS BETWEEN]

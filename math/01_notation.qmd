@@ -29,7 +29,7 @@ $\in$ |  "in" or "element of"                  | States what something / an elem
 $\notin$ | excluding (element) | States that something is not a member of a set
 $\equiv$ | equivalent | Set theory equal
 
-For example, $A = \forall x \in$ the set of natural numbers that are divisible by 4 [FIX AND GIVE IS MORE EXAMPLES IN SLIDES]. This is telling us that A is a set of numbers that is comprised of natural numbers that are divisible by 4. We could list out the elements of this set. Note that curly brackets are always used for sets, never parentheses. E.g. {4, 8, 12, ...} and not (4, 8, 12, ...). 
+For example, $A = \{4n \in \mathbb{N} | n \in \mathbb{N}\}$ says $A$ is the set of natural numbers that are divisible by 4. We could list out the elements of this set. Note that curly brackets are always used for sets, never parentheses. E.g. {4, 8, 12, ...} and not (4, 8, 12, ...). 
 
 
 ## Operators
