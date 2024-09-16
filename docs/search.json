@@ -645,5 +645,54 @@
       "Programming",
       "4. Sampling and simulation"
     ]
+  },
+  {
+    "objectID": "slides/02_matrices.html#getting-ready",
+    "href": "slides/02_matrices.html#getting-ready",
+    "title": "Matrices",
+    "section": "Getting ready",
+    "text": "Getting ready\n\nSet up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio"
+  },
+  {
+    "objectID": "slides/02_matrices.html#agenda",
+    "href": "slides/02_matrices.html#agenda",
+    "title": "Matrices",
+    "section": "Agenda",
+    "text": "Agenda\n\nMorning: Matrices and matrix algebra\nLunch: Senior faculty\nAfternoon: Tidyverse I"
+  },
+  {
+    "objectID": "slides/02_matrices.html#scalars",
+    "href": "slides/02_matrices.html#scalars",
+    "title": "Matrices",
+    "section": "Scalars",
+    "text": "Scalars\nA single number is a scalar\n\na = 12\na\n\n[1] 12\n\n\n\\[a = 12\\]"
+  },
+  {
+    "objectID": "slides/02_matrices.html#vectors",
+    "href": "slides/02_matrices.html#vectors",
+    "title": "Matrices",
+    "section": "Vectors",
+    "text": "Vectors\nWe already talked about vectors in R.\n\nb = c(12,14,15)\n\nHow would you define them?\n\nA collection of concatenated elements"
+  },
+  {
+    "objectID": "slides/02_matrices.html#vectors-1",
+    "href": "slides/02_matrices.html#vectors-1",
+    "title": "Matrices",
+    "section": "Vectors",
+    "text": "Vectors\nColumn vector\n\\[\n\\overrightarrow b =\n\\begin{bmatrix}\n  12 \\\\\n  14 \\\\\n  15\n\\end{bmatrix}\n\\]\n\nRow vector\n\\[\n\\overrightarrow c = \\begin{bmatrix}\n  12 & 14 & 15\n\\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "slides/02_matrices.html#vectors-in-r",
+    "href": "slides/02_matrices.html#vectors-in-r",
+    "title": "Matrices",
+    "section": "Vectors in R",
+    "text": "Vectors in R\n\nc(5, 25, -2, 1)\n\n[1]  5 25 -2  1\n\n\n \n\n\n10:20"
+  },
+  {
+    "objectID": "slides/02_matrices.html#vectors-in-r-1",
+    "href": "slides/02_matrices.html#vectors-in-r-1",
+    "title": "Matrices",
+    "section": "Vectors in R",
+    "text": "Vectors in R\n\nc(5, 25, -2, 1)\n\n[1]  5 25 -2  1\n\n\n \n\n10:20\n\n [1] 10 11 12 13 14 15 16 17 18 19 20\n\n\n \n\n\nseq(from = 3, to = 27, by = 3)\n\n[1]  3  6  9 12 15 18 21 24 27"
   }
 ]

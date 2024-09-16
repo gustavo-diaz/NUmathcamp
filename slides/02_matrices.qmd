@@ -1,0 +1,115 @@
+---
+title: "Matrices"
+author: "NU Social Science Math Camp"
+format: 
+  revealjs:
+    embed-resources: true
+    slide-number: false
+    progress: false
+---
+
+## Getting ready
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(tinytable)
+
+knitr::opts_chunk$set(fig.pos = "center", echo = TRUE, 
+               message = FALSE, warning = FALSE)
+```
+
+- Set up [eduroam](https://services.northwestern.edu/TDClient/30/Portal/KB/ArticleDet?ID=1851)
+
+- Go back and make sure you have the MOST RECENT version of R and RStudio
+
+## Agenda
+
+- **Morning:** Matrices and matrix algebra
+- **Lunch:** Senior faculty
+- **Afternoon:** Tidyverse I
+
+# Matrices
+
+## Scalars
+
+A single number is a scalar
+
+```{r}
+a = 12
+a
+```
+
+$$a = 12$$
+
+## Vectors
+
+We already talked about vectors in R. 
+
+```{r}
+b = c(12,14,15)
+```
+
+How would you define them?
+
+. . .
+
+A collection of *concatenated* elements
+
+## Vectors
+
+Column vector
+
+$$
+\overrightarrow b = 
+\begin{bmatrix}
+  12 \\
+  14 \\
+  15
+\end{bmatrix}
+$$
+
+. . .
+
+Row vector
+
+$$
+\overrightarrow c = \begin{bmatrix}
+  12 & 14 & 15
+\end{bmatrix}
+$$
+
+## Vectors in R
+
+```{r}
+c(5, 25, -2, 1)
+```
+
+&nbsp;
+
+. . .
+
+```{r, eval = FALSE}
+10:20
+```
+
+
+## Vectors in R
+
+```{r}
+c(5, 25, -2, 1)
+```
+
+&nbsp;
+
+```{r}
+10:20
+```
+
+&nbsp;
+
+. . .
+
+```{r}
+seq(from = 3, to = 27, by = 3)
+```
+
