@@ -140,7 +140,7 @@
     "href": "math/01_notation.html#operators",
     "title": "Notation, Sets, and Functions",
     "section": "2.2 Operators",
-    "text": "2.2 Operators\nWe can also symbols to denote operations between sets.\n\n\n\nNotation\nMeaning\nUse\n\n\n\n\n\\(\\subset\\)\nSubset\nLess than\n\n\n\\(\\subseteq\\)\nSubset\nLess than equal\n\n\n\\(\\varnothing\\)\nEmpty set\nZero\n\n\n\\(\\cap\\)\nIntersection\nAND\n\n\n\\(\\cup\\)\nUnion\nOR\n\n\n\\(\\setminus\\)\nDifference\nMinus (remove elements from sets)\n\n\n\nFor example, [EXAMPLE].",
+    "text": "2.2 Operators\nWe can also symbols to denote operations between sets.\n\n\n\nNotation\nMeaning\nUse\n\n\n\n\n\\(\\subset\\)\nSubset\nLess than\n\n\n\\(\\subseteq\\)\nSubset\nLess than equal\n\n\n\\(\\varnothing\\)\nEmpty set\nZero\n\n\n\\(\\cap\\)\nIntersection\nAND\n\n\n\\(\\cup\\)\nUnion\nOR\n\n\n\\(\\setminus\\)\nDifference\nMinus (remove elements from sets)\n\n\n\nFor example, \\(A \\cap B\\) contains the elements that appear in A and B at the same time, whereas \\(A \\cup B\\) contains the elements that appear in either A or B even if they overlap.",
     "crumbs": [
       "Math",
       "1. Notations, sets, functions"
@@ -206,7 +206,7 @@
     "href": "math/01_notation.html#necessary-and-sufficient",
     "title": "Notation, Sets, and Functions",
     "section": "3.2 Necessary and sufficient",
-    "text": "3.2 Necessary and sufficient\nSometimes we want to understand the conditions that determine certain outcomes. To do this, the language of necessary and sufficient conditions is useful. Consider outcome Y and conditions A and B.\nA condition is sufficient if it occurs also when the outcome occurs. So, if A occurs when Y also occurs, they are sufficient for D to occur. D can happen without A, but we do not see A without D.\nA condition is necessary if we never see the outcome without it. So, if we observe Y, B must have also occurred. B can happen without Y, but never Y without B.\nSometimes, conditions operate in more complicated ways. We can have an Insufficient but Necessary part of an Unnecessary but Sufficient set of conditions an outcome to occur (INUS). For example, having unprotected sexual intercourse is insufficient for HIV transmission, but it can be necessary part of one of the many ways in which HIV is transmitted. Informally, it helps to think about INUS conditions as component causes.\nAlso, we can have Sufficient but Unnecessary condition that is part of a condition set that is Insufficient but Necessary for the outcome. For example, fraudulent elections are a sufficient but unnecessary condition to erode democracy. In turn, per the democratic peace theory, the absence of democracy is necessary but not sufficient to cause war. It helps to think of SUIN conditions as precipitating causes.",
+    "text": "3.2 Necessary and sufficient\nSometimes we want to understand the conditions that determine certain outcomes. To do this, the language of necessary and sufficient conditions is useful. Consider outcome Y and conditions A and B.\nA condition is sufficient if it occurs also when the outcome occurs. So, if A occurs when Y also occurs, they are sufficient for B to occur. B can happen without A, but we do not see A without B.\nA condition is necessary if we never see the outcome without it. So, if we observe Y, B must have also occurred. B can happen without Y, but never Y without B.\nSometimes, conditions operate in more complicated ways. We can have an Insufficient but Necessary part of an Unnecessary but Sufficient set of conditions an outcome to occur (INUS). For example, having unprotected sexual intercourse is insufficient for HIV transmission, but it can be necessary part of one of the many ways in which HIV is transmitted. Informally, it helps to think about INUS conditions as component causes.\nAlso, we can have Sufficient but Unnecessary condition that is part of a condition set that is Insufficient but Necessary for the outcome. For example, fraudulent elections are a sufficient but unnecessary condition to erode democracy. In turn, per the democratic peace theory, the absence of democracy is necessary but not sufficient to cause war. It helps to think of SUIN conditions as precipitating causes.",
     "crumbs": [
       "Math",
       "1. Notations, sets, functions"
@@ -657,6 +657,76 @@
     "href": "slides/01_notation.html#set-notation",
     "title": "Social Science\nMath Camp",
     "section": "Set Notation",
-    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\)\n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\sqrt{\\pi}\\}\\)\n\\(\\mathbb{I}\\): Imaginary numbers   \\(ai | a \\in \\mathbb{R}; i= \\sqrt{-1}\\)\n\\(\\mathbb{C}\\): Complex numbers   \\(a + bi\\)"
+    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\)\n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\sqrt{\\pi}\\}\\)\n\\(\\mathbb{I}\\): Imaginary numbers   \\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\)\n\\(\\mathbb{C}\\): Complex numbers   \\(a + bi\\)"
+  },
+  {
+    "objectID": "slides/01_notation.html#measurement",
+    "href": "slides/01_notation.html#measurement",
+    "title": "Social Science\nMath Camp",
+    "section": "Measurement",
+    "text": "Measurement\n\n\nSets can also have non-numerical elements\nWe may code this as numbers or not, what matters is what we assume about the elements\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
+  },
+  {
+    "objectID": "slides/01_notation.html#set-notation-1",
+    "href": "slides/01_notation.html#set-notation-1",
+    "title": "Social Science\nMath Camp",
+    "section": "Set notation",
+    "text": "Set notation\n\nOperations within sets\n\n\n\\(\\exists\\) “there exists”\n\\(\\forall\\) “for all”\n\\(\\exists\\) “exists”; there is something true\n\\(\\in\\) “in” or “element of”\n| Such that\n\\(\\notin\\) excluding (element)\n\\(\\equiv\\) equivalent"
+  },
+  {
+    "objectID": "slides/01_notation.html#set-notation-2",
+    "href": "slides/01_notation.html#set-notation-2",
+    "title": "Social Science\nMath Camp",
+    "section": "Set notation",
+    "text": "Set notation\nOperations between sets\n\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
+  },
+  {
+    "objectID": "slides/01_notation.html#practice",
+    "href": "slides/01_notation.html#practice",
+    "title": "Social Science\nMath Camp",
+    "section": "Practice",
+    "text": "Practice\n\n\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\)\n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
+  },
+  {
+    "objectID": "slides/01_notation.html#greek-notation",
+    "href": "slides/01_notation.html#greek-notation",
+    "title": "Social Science\nMath Camp",
+    "section": "Greek notation",
+    "text": "Greek notation"
+  },
+  {
+    "objectID": "slides/01_notation.html#notation-chart",
+    "href": "slides/01_notation.html#notation-chart",
+    "title": "Social Science\nMath Camp",
+    "section": "Notation chart",
+    "text": "Notation chart\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
+  },
+  {
+    "objectID": "slides/01_notation.html#logic",
+    "href": "slides/01_notation.html#logic",
+    "title": "Social Science\nMath Camp",
+    "section": "Logic",
+    "text": "Logic\n\n\nSufficient: Y is true if A and B are true\nNecessary: Y is true if and only if A and B are true\nINUS: Insufficient but Necessary part of an Unnecessary but Sufficient set of conditions (component causes)\nSUIN: Sufficient but Unnecessary condition that is part of a condition set that is Insufficient but Necessary for the outcome (precipitating causes)"
+  },
+  {
+    "objectID": "slides/01_notation.html#logic-operators-in-r",
+    "href": "slides/01_notation.html#logic-operators-in-r",
+    "title": "Social Science\nMath Camp",
+    "section": "Logic operators in R",
+    "text": "Logic operators in R\n\n\n& AND\n| OR\n! NOT\n&lt; LESS THAN\n&lt;= LEQ\n&gt; GREATER THAN\n&gt;= GEQ\n== EXACTLY EQUAL TO\n!= NOT EQUAL TO\n%in% IN THE SET"
+  },
+  {
+    "objectID": "slides/01_notation.html#logical-operators-in-r",
+    "href": "slides/01_notation.html#logical-operators-in-r",
+    "title": "Social Science\nMath Camp",
+    "section": "Logical operators in R",
+    "text": "Logical operators in R\n\n\n& AND\n| OR\n! NOT\n&lt; LESS THAN\n&lt;= LEQ\n&gt; GREATER THAN\n&gt;= GEQ\n== EXACTLY EQUAL TO\n!= NOT EQUAL TO\n%in% IN THE SET"
+  },
+  {
+    "objectID": "slides/01_notation.html#practice-1",
+    "href": "slides/01_notation.html#practice-1",
+    "title": "Social Science\nMath Camp",
+    "section": "Practice",
+    "text": "Practice\n\nx = 3\nx != 5 & x != 4\n\n \n\n\n3 &gt; 4 | 15 == 12\n\n \n\n\n\nLETTERS == letters\n\n \n\n\n\nfirst_name = unlist(str_split(\"Gustavo\", \"\")) \nfirst_name %in% letters"
   }
 ]

@@ -45,7 +45,7 @@ $\cap$ |  Intersection |  AND
 $\cup$ |  Union | OR
 $\setminus$ |  Difference | Minus (remove elements from sets)
 
-For example, [EXAMPLE].
+For example, $A \cap B$ contains the elements that appear in A and B at the same time, whereas $A \cup B$ contains the elements that appear in either A or B even if they overlap.
 
 ## Number sets
 
@@ -121,7 +121,7 @@ In math, probability, statistics, and game theory, proofs often have different p
 
 Sometimes we want to understand the conditions that determine certain outcomes. To do this, the language of *necessary* and *sufficient* conditions is useful. Consider outcome Y and conditions A and B.
 
-A condition is *sufficient* if it occurs *also* when the outcome occurs. So, if A occurs when Y also occurs, they are sufficient for D to occur. D can happen without A, but we do not see A without D.
+A condition is *sufficient* if it occurs *also* when the outcome occurs. So, if A occurs when Y also occurs, they are sufficient for B to occur. B can happen without A, but we do not see A without B.
 
 A condition is *necessary* if we never see the outcome without it. So, if we observe Y, B must have also occurred. B can happen without Y, but never Y without B.
 

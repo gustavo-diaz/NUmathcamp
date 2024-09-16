@@ -152,9 +152,9 @@ schedule %>%
 - **Solution:** Practice
 :::
 
-. . .
+<!-- . . . -->
 
-![](https://media1.tenor.com/m/jpuKorTjmysAAAAC/practice-weainttalkinaboutthegame.gif){fig-align="center"}
+<!-- ![](https://media1.tenor.com/m/jpuKorTjmysAAAAC/practice-weainttalkinaboutthegame.gif){fig-align="center"} -->
 
 ## Set Notation
 
@@ -169,7 +169,7 @@ schedule %>%
 - $\mathbb{Z}$: Integers &nbsp; $\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$
 - $\mathbb{Q}$: Rational numbers &nbsp; $\{1/2, 3/2, 4\}$
 - $\mathbb{R}$: Real numbers &nbsp; $\{-899.8, 22, 4.5, \sqrt{\pi}\}$
-- $\mathbb{I}$: Imaginary numbers &nbsp; $ai | a \in \mathbb{R}; i= \sqrt{-1}$
+- $\mathbb{I}$: Imaginary numbers &nbsp; $\{ai | a \in \mathbb{R}, i= \sqrt{-1}\}$
 - $\mathbb{C}$: Complex numbers &nbsp; $a + bi$
 :::
 
@@ -190,4 +190,133 @@ schedule %>%
 
 . . .
 
-[CONTINUE HERE NOT ONLY WE SPECIFY SETS, WE ALSO SPECIFY ELEMENTS WITHIN, OR RELATIONSHIPS BETWEEN]
+Operations *within* sets
+
+::: incremental
+- $\exists$  "there exists"
+- $\forall$   "for all"
+- $\exists$   "exists"; there is something true 
+- $\in$   "in" or "element of"
+- \|   Such that 
+- $\notin$  excluding (element) 
+- $\equiv$ equivalent
+:::
+
+## Set notation
+
+Operations *between* sets
+
+::: incremental
+- $\subset$; $\subseteq$  Subset
+- $\varnothing$  Empty set
+- $\cap$  Intersection; AND
+- $\cup$  Union; OR
+- $\setminus$  Difference
+:::
+
+## Practice
+
+::: incremental
+- $\{x|x \in \mathbb{N}, x < 4\}$
+- $\{x|x \in \mathbb{R}, x < 200\}$
+- $\{ai | a \in \mathbb{R}, i= \sqrt{-1}\}$
+- $A \cap B$
+- $A \cup B$
+- $\{4n \in \mathbb{N} | n \in \mathbb{N}\}$
+:::
+
+## Greek notation
+
+. . .
+
+![](img/greek.jpg)
+
+## Notation chart
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Greek
+
+- Letters like $\mu$ denote **parameters** or **quantities of interest**
+
+- Markings like $\widehat{\mu}$ denotes our **estimate** of such parameters/quantities
+
+:::
+
+::: {.column width="50%"}
+### Latin
+
+- Letters like $X$ denote **variables** in our data
+
+
+- Markings like $\bar{X}$  denotes **calculations** from our data
+
+:::
+
+::::
+
+
+::: {style="text-align: center"}
+
+$X \rightarrow \bar{X} \rightarrow \widehat{\mu} \xrightarrow{\text{hopefully!}} \mu$
+:::
+
+## Logic
+
+::: incremental
+- **Sufficient:** Y is true *if* A and B are true
+- **Necessary:** Y is true *if and only if* A and B are true
+- **INUS:** Insufficient but Necessary part of an Unnecessary but Sufficient set of conditions *(component causes)*
+- **SUIN:**  Sufficient but Unnecessary condition that is part of a condition set that is Insufficient but Necessary for the outcome *(precipitating causes)*
+:::
+
+## Logical operators in R {.smaller}
+
+::: incremental
+- `&` AND
+- `|` OR
+- `!` NOT
+- `<` LESS THAN
+- `<=` LEQ
+- `>` GREATER THAN
+- `>=` GEQ
+- `==` EXACTLY EQUAL TO
+- `!=` NOT EQUAL TO
+- `%in%` IN THE SET
+:::
+
+## Practice
+
+```{r, echo = TRUE, eval = FALSE}
+x = 3
+x != 5 & x != 4
+```
+
+&nbsp;
+
+. . .
+
+
+
+```{r, echo = TRUE, eval = FALSE}
+3 > 4 | 15 == 12
+```
+
+&nbsp;
+
+. . .
+
+```{r, echo = TRUE, eval = FALSE}
+LETTERS == letters
+```
+
+&nbsp;
+
+. . .
+
+```{r, echo = TRUE, eval = FALSE}
+first_name = unlist(str_split("Gustavo", "")) 
+first_name %in% letters
+```
+
