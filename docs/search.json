@@ -1034,5 +1034,47 @@
     "title": "Social Science\nMath Camp",
     "section": "Practice",
     "text": "Practice\n\nx = 3\nx != 5 & x != 4\n\n \n\n\n3 &gt; 4 | 15 == 12\n\n \n\n\n\nLETTERS == letters\n\n \n\n\n\nfirst_name = unlist(str_split(\"Gustavo\", \"\")) \nfirst_name %in% letters"
+  },
+  {
+    "objectID": "slides/03_calc1.html#what-have-we-learned-so-far",
+    "href": "slides/03_calc1.html#what-have-we-learned-so-far",
+    "title": "Calculus I",
+    "section": "What have we learned so far?",
+    "text": "What have we learned so far?\nFoundational ideas behind what you will have to deal with during your graduate program:\n\n\nReading about methods \\(\\rightarrow\\) Notation, sets, functions\nWorking with data frames \\(\\rightarrow\\) Matrix operations"
+  },
+  {
+    "objectID": "slides/03_calc1.html#up-next",
+    "href": "slides/03_calc1.html#up-next",
+    "title": "Calculus I",
+    "section": "Up next",
+    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#calculus",
+    "href": "slides/03_calc1.html#calculus",
+    "title": "Calculus I",
+    "section": "Calculus",
+    "text": "Calculus\n\n\nThis is often where people experience the most difficulty\nWe are now operating with whole functions!\nNew operators have new, different rules\nWe will stick together!"
+  },
+  {
+    "objectID": "slides/03_calc1.html#derivatives-as-a-slope",
+    "href": "slides/03_calc1.html#derivatives-as-a-slope",
+    "title": "Calculus I",
+    "section": "Derivatives as a slope",
+    "text": "Derivatives as a slope\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do we find the slope of this line?\n\\(m = \\frac{f(x_2) - f(x_1)}{x_2-x_1} = \\frac{rise}{run}\\)\nLet’s try it out!"
+  },
+  {
+    "objectID": "slides/03_calc1.html#now-try-this-function",
+    "href": "slides/03_calc1.html#now-try-this-function",
+    "title": "Calculus I",
+    "section": "Now try this function",
+    "text": "Now try this function"
+  },
+  {
+    "objectID": "slides/03_calc1.html#now-try-this-one",
+    "href": "slides/03_calc1.html#now-try-this-one",
+    "title": "Calculus I",
+    "section": "Now try this one!",
+    "text": "Now try this one!\n\\(y = x^2\\)"
   }
 ]

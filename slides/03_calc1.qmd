@@ -1,0 +1,98 @@
+---
+title: "Calculus I"
+author: "NU Social Science Math Camp"
+format: 
+  revealjs:
+    embed-resources: true
+    slide-number: false
+    progress: false
+    code-line-numbers: false
+    code-overflow: wrap
+---
+
+## What have we learned so far?
+
+Foundational ideas behind what you will have to deal with during your graduate program:
+
+::: incremental
+- Reading about methods $\rightarrow$ Notation, sets, functions
+- Working with *data frames* $\rightarrow$ Matrix operations
+:::
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(tinytable)
+
+knitr::opts_chunk$set(fig.pos = "center", echo = FALSE, 
+               message = FALSE, warning = FALSE)
+
+# ggplot global options
+theme_set(theme_gray(base_size = 20))
+```
+
+## Up next
+
+Dealing with **continuity** (which implies *infinity*) $\rightarrow$ Calculus
+
+. . .
+
+Two new operators:
+
+1. Derivatives **(Today)**
+
+2. Integrals **(Friday)**
+
+## Calculus
+
+::: incremental
+- This is often where people experience the most difficulty
+
+- We are now operating with whole functions!
+
+- New operators have new, different rules
+
+- We will stick together!
+
+:::
+
+## Derivatives as a slope
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```{r}
+ggplot() +
+  stat_function(fun = function(x){2 * x}, 
+                xlim = c(-10, 10), 
+                linewidth = 3) +
+  theme_gray(base_size = 30)
+```
+
+:::
+
+::: {.column width="30%"}
+
+::: incremental
+- How do we find the slope of this line?
+
+- $m = \frac{f(x_2) - f(x_1)}{x_2-x_1} = \frac{rise}{run}$
+
+- Let's try it out!
+
+:::
+
+:::
+
+::::
+
+## Now try this one!
+
+$y = x^2$
+
+```{r}
+ggplot() +
+  stat_function(fun = function(x){x ^ 2}, 
+                xlim = c(-10, 10),
+                linewidth = 3)
+```
