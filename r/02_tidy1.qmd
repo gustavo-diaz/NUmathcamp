@@ -36,7 +36,7 @@ the basic structure of code using a function:
 
 function(arg1, arg2, arg3, ...)
 ```
-
+Download the script [here](https://github.com/aven-peters/math-camp/raw/main/Tidyverse%20I.qmd)
 
 ### Installing and Loading Packages
 
