@@ -96,3 +96,36 @@ ggplot() +
                 xlim = c(-10, 10),
                 linewidth = 3)
 ```
+
+
+## Why doesn't it work?
+
+::: incremental
+- We need an operation to calculate the slope or *rate of change* for (almost) any kind of *continuous* function
+
+- Enter **derivatives**
+:::
+
+. . .
+
+Generalize slope formula
+
+$$
+m = \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x}
+$$
+
+## Derivatives
+
+When $\Delta x$ is small enough
+
+$$
+\lim_{\Delta x\to0} \frac{f(x_1+ \Delta x) - f(x_1)}{\Delta x} = \frac{d}{dx} f(x) = \frac{dy}{dx} = f'(x) 
+$$
+
+::: incremental
+- Read $\frac{d}{dx} f(x)$ as "the derivative of $f$ of $x$ with respect to $x$
+
+- Read $f'(x)$ as "$f$ prime $x$" for a shorthand for the derivative
+
+:::
+
