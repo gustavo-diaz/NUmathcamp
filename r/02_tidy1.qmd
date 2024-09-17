@@ -7,6 +7,37 @@ embed-resources: true
 
 ## Tidyverse I: Data Wrangling
 
+### Review of Terminology
+
+- There are two ways of viewing Quarto documents: source mode and visual mode. Unlike a Word document,
+what you see while editing a document is not exactly what you'll see in the final version of the document.
+Converting a Quarto document into a clean HTML, Word, or PDF file is called **rendering,** and you
+can render your document at any time by clicking the render button at the top of the RStudio window.
+When your document renders, your code will run from top to bottom, in order. This means that if you
+create an object lower down on your script and then refer to that object above it, you will get an error
+when you render your file. This is true *even if* your code ran perfectly as you wrote it.
+
+- There are essentially two types of commands you can enter in R. The first is to store information.
+This involves creating or modifying an object (and objects can be anything from single values to 
+dataframes to regression models to plots). The second type of command is to retrieve information, or
+equivalently, to print the value of an object. As we've seen, value is not necessarily numeric--it
+could be a table, a plot, a list of strings, or a Boolean value (whether a statement is true or false).
+We store information using an assignment operator (<- or =) and retrieve information by simply typing
+the expression we want R to evaluate.
+
+- Almost all of our work in R will use **functions.** Functions are effectively shortcuts for common
+tasks in programming/data analysis. They can take any number of **arguments**, or inputs (including zero!)
+and return an object as an output. In general, the order of the arguments matters. Some arguments have
+defaults--that is, if you don't specify what values you want them to take, R will use its default. This is
+the basic structure of code using a function:
+
+```{r}
+#| eval: FALSE
+
+function(arg1, arg2, arg3, ...)
+```
+
+
 ### Installing and Loading Packages
 
 R is powerful in part because it is very flexible. Most data analysis tasks can be done several different ways in R, depending on your preferences and the characteristics of your data set. This flexibility comes from the ability to load **packages** with additional functions. Today, we'll be talking about "tidyverse," a suite of packages used for data wrangling and visualization. We can think of tidyverse as a "mega-package" that contains several smaller packages, including "dplyr" and "ggplot2." Usually, it makes sense to load the entire tidyverse at once so that we don't have to worry about which functions belong to each specific package within tidyverse.
@@ -72,14 +103,14 @@ judges_renamed <- rename(judges, contacts = CONT)
 ::: {.callout-tip}
 #### Exercise
 
-Rename the rest of the variables to more sensible names. In general, good variable names are in lowercase and do not have spaces or special characters. If you need to use two or more words, separate them with an underscore rather than a space. Variable names should succinctly communicate what the variable measures.
+Rename the rest of the variables to more sensible names. In general, good variable names are in lowercase and do not have spaces or special characters. If you need to use two or more words, separate them with an underscore rather than a space. A variable name should succinctly communicate what the variable measures.
 :::
 
 Other dplyr verbs include the following:
 
 -   arrange: sort dataframe by the values of one or more variables
 
--   filter: keep only the rows that meet a particular condition (e.g., contacts \> 7)
+-   filter: keep only the rows for which a particular statement is true (e.g., contacts \> 7)
 
 -   select: keep only the listed columns
 
