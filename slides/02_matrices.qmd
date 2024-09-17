@@ -6,6 +6,8 @@ format:
     embed-resources: true
     slide-number: false
     progress: false
+    code-line-numbers: false
+    code-overflow: wrap
 ---
 
 ## Getting ready
@@ -28,7 +30,7 @@ knitr::opts_chunk$set(fig.pos = "center", echo = TRUE,
 - **Lunch:** Senior faculty
 - **Afternoon:** Tidyverse I
 
-# Matrices
+# Basics
 
 ## Scalars
 
@@ -109,7 +111,970 @@ c(5, 25, -2, 1)
 
 . . .
 
+```{r, eval = FALSE}
+seq(from = 3, to = 27, by = 3)
+```
+
+## Vectors in R
+
+```{r}
+c(5, 25, -2, 1)
+```
+
+&nbsp;
+
+```{r}
+10:20
+```
+
+&nbsp;
+
+
 ```{r}
 seq(from = 3, to = 27, by = 3)
 ```
 
+## Summation
+
+$$\overrightarrow d = \begin{bmatrix}
+12 & 7 & -2 & 3 & -1
+\end{bmatrix}$$
+
+. . .
+
+```{r}
+d = c(12, 7, -2, 3, -1)
+```
+
+. . .
+
+$$\sum_{i=1}^3 d_i$$ 
+
+## Summation
+
+$$\overrightarrow d = \begin{bmatrix}
+12 & 7 & -2 & 3 & -1
+\end{bmatrix}$$
+
+```{r}
+d = c(12, 7, -2, 3, -1)
+```
+
+$$\sum_{i=1}^3 d_i = 12+7+(-2)$$ 
+
+. . .
+
+```{r}
+sum(d[1:3])
+```
+
+
+
+## Summation
+
+$$\overrightarrow d = \begin{bmatrix}
+12 & 7 & -2 & 3 & -1
+\end{bmatrix}$$
+
+```{r}
+d = c(12, 7, -2, 3, -1)
+```
+
+. . .
+
+$$
+\sum_{i=1}^n d_i
+$$ 
+
+## Summation
+
+$$\overrightarrow d = \begin{bmatrix}
+12 & 7 & -2 & 3 & -1
+\end{bmatrix}$$
+
+```{r}
+d = c(12, 7, -2, 3, -1)
+```
+
+
+$$
+\sum_{i=1}^n d_i = 12 + 7 + (-2) + 3 + (-1)
+$$ 
+
+. . .
+
+```{r}
+sum(d)
+```
+
+
+## Product
+
+$$\overrightarrow d = \begin{bmatrix}
+12 & 7 & -2 & 3 & 1
+\end{bmatrix}$$
+
+. . .
+
+$$\prod_{i=1}^n d_i$$
+
+## Product
+
+$$\overrightarrow d = \begin{bmatrix}
+12 & 7 & -2 & 3 & 1
+\end{bmatrix}$$
+
+$$\prod_{i=1}^n d_i = 12 \cdot 7 \cdot (-2) \cdot 3 \cdot (-1)$$
+
+. . .
+
+```{r}
+prod(d)
+```
+
+## Product
+
+$$\overrightarrow d = \begin{bmatrix}
+12 & 7 & -2 & 3 & 1
+\end{bmatrix}$$
+
+
+**Practice:** Write and calculate the product of the first three elements of $\overrightarrow{d}$
+
+. . .
+
+```{r}
+prod(d[1:3])
+```
+
+
+## Matrices
+
+. . .
+
+$$A = \begin{bmatrix}
+12 & 14 & 15 \\
+115 & 22 & 127 \\
+193 & 29 & 219
+\end{bmatrix}$$
+
+::: incremental
+- **Dimensions:** rows by columns ($r\times c$)
+- **Notation:** $A_{3 \times 3}$
+- Demarcate with [ ] 
+:::
+
+. . .
+
+Why are they important?
+
+## Create matrices in R
+
+```{r}
+# Create some vectors
+vector1 = 1:4
+vector2 = 5:8
+vector3 = 9:12
+vector4 = 13:16
+```
+
+. . .
+
+```{r, eval = FALSE}
+# Using rbind(), each vector will be a row 
+rbind_mat = rbind(vector1, vector2, vector3, vector4)
+rbind_mat
+```
+
+## Create matrices in R
+
+```{r}
+# Create some vectors
+vector1 = 1:4
+vector2 = 5:8
+vector3 = 9:12
+vector4 = 13:16
+```
+
+```{r}
+# Using rbind(), each vector will be a row 
+rbind_mat = rbind(vector1, vector2, vector3, vector4)
+rbind_mat
+```
+
+
+## Create matrices in R
+
+```{r}
+# Create some vectors
+vector1 = 1:4
+vector2 = 5:8
+vector3 = 9:12
+vector4 = 13:16
+```
+
+. . .
+
+```{r, eval = FALSE}
+# Using cbind(), each vector will be a column
+cbind_mat = cbind(vector1, vector2, vector3, vector4)
+cbind_mat
+```
+
+
+## Create matrices in R
+
+```{r}
+# Create some vectors
+vector1 = 1:4
+vector2 = 5:8
+vector3 = 9:12
+vector4 = 13:16
+```
+
+```{r}
+# Using cbind(), each vector will be a column
+cbind_mat = cbind(vector1, vector2, vector3, vector4)
+cbind_mat
+```
+
+## Create matrices in R
+
+```{r}
+# Create some vectors
+vector1 = 1:4
+vector2 = 5:8
+vector3 = 9:12
+vector4 = 13:16
+```
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+# Using rbind(), 
+# each vector will be a row 
+rbind_mat = rbind(vector1, vector2,
+                  vector3, vector4)
+rbind_mat
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+# Using cbind(), 
+# each vector will be a column
+cbind_mat = cbind(vector1, vector2, 
+                  vector3, vector4)
+cbind_mat
+```
+:::
+
+::::
+
+## Alternative
+
+::: aside
+Try `?matrix` for more information.
+:::
+
+```{r, eval = FALSE}
+matrix(data = c(1:12), nrow = 4, byrow = TRUE)
+```
+
+## Alternative
+
+::: aside
+Try `?matrix` for more information.
+:::
+
+```{r}
+matrix(data = c(1:12), nrow = 4, byrow = TRUE)
+```
+
+&nbsp;
+
+. . .
+
+```{r}
+matrix(data = c(1:12), nrow = 4, byrow = FALSE)
+```
+
+## Structure
+
+. . .
+
+$$
+B=
+\begin{bmatrix}
+b_{11} & b_{12} & b_{13} & \ldots & b_{1n} \\
+b_{21} & b_{22} & b_{23} & \ldots & b_{2n} \\
+\vdots & \vdots & \vdots & \ldots & \vdots \\
+b_{m1} & b_{m2} & b_{m3} & \ldots & b_{mn}
+\end{bmatrix}
+$$
+
+::: incremental
+- $B$ is an $m \times n$ matrix
+- $b_{23}$ is the second cell down and third across
+- $b_{ij}$ is the $i\text{th}$ cell down and $j\text{th}$ across
+- $i$: rows, $j$: columns
+:::
+
+## Indexing in R
+
+```{r}
+# byrow = FALSE is the default
+N = matrix(c(1:12), nrow = 4)
+N
+```
+
+. . .
+
+```{r, eval = FALSE}
+N[1,3]
+```
+
+## Indexing in R
+
+```{r}
+# byrow = FALSE is the default
+N = matrix(c(1:12), nrow = 4)
+N
+```
+
+```{r}
+N[1,3]
+```
+
+## Indexing in R
+
+```{r}
+# byrow = FALSE is the default
+N = matrix(c(1:12), nrow = 4)
+N
+```
+
+```{r}
+N[1,3]
+```
+
+. . .
+
+**Practice:** Write code to find the index corresponding to number 12
+
+. . .
+
+```{r}
+N[4,3]
+```
+
+# Matrix Operations
+
+## Addition and subtraction
+
+. . .
+
+
+$$A \pm B=C$$
+
+. . .
+
+$$c_{ij}=a_{ij} \pm b_{ij} \text{ }\forall i,j$$
+
+. . .
+
+- Add or subtract each corresponding element
+
+- Need $A$ and $B$ to have *exactly* the same dimensions
+
+## Addition and subtraction
+
+$$\begin{bmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+\pm
+\begin{bmatrix}
+b_{11} & b_{12} & b_{13}\\
+b_{21} & b_{22} & b_{23}\\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}$$ $$=$$ $$\begin{bmatrix}
+a_{11}\pm b_{11} & a_{12}\pm b_{12} & a_{13}\pm b_{13}\\
+a_{21}\pm b_{21} & a_{22}\pm b_{22} & a_{23}\pm b_{23}\\
+a_{31}\pm b_{31} & a_{32}\pm b_{32} & a_{33}\pm b_{33}
+\end{bmatrix}$$
+
+## In R
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+$$A= \begin{bmatrix}
+3 & -1 & 2  \\
+9 & 4 & 6
+\end{bmatrix}$$
+:::
+
+::: {.column width="50%"}
+$$B= \begin{bmatrix}
+5 & 2 & 0  \\
+9 & 3 & 4
+\end{bmatrix}$$
+:::
+
+::::
+
+## In R
+
+:::: {.columns}
+
+::: {.column width="50%"}
+$$A= \begin{bmatrix}
+3 & -1 & 2  \\
+9 & 4 & 6
+\end{bmatrix}$$
+
+```{r}
+matrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)
+matrix1
+```
+
+:::
+
+::: {.column width="50%"}
+$$B= \begin{bmatrix}
+5 & 2 & 0  \\
+9 & 3 & 4
+\end{bmatrix}$$
+
+```{r}
+matrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)
+matrix2
+```
+:::
+
+::::
+
+. . .
+
+```{r, eval = FALSE}
+matrix1 + matrix2
+```
+
+
+## In R
+
+:::: {.columns}
+
+::: {.column width="50%"}
+$$A= \begin{bmatrix}
+3 & -1 & 2  \\
+9 & 4 & 6
+\end{bmatrix}$$
+
+```{r}
+matrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)
+matrix1
+```
+
+:::
+
+::: {.column width="50%"}
+$$B= \begin{bmatrix}
+5 & 2 & 0  \\
+9 & 3 & 4
+\end{bmatrix}$$
+
+```{r}
+matrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)
+matrix2
+```
+:::
+
+::::
+
+```{r}
+matrix1 + matrix2
+```
+
+. . .
+
+```{r}
+matrix1 - matrix2
+```
+
+## Exercise
+
+Do one with code and the other by hand.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+1\) Calculate $A + B$
+
+$$A= \begin{bmatrix}
+1 & 0 \\
+-2 & -1
+\end{bmatrix}$$
+
+$$B = \begin{bmatrix}
+5 & 1 \\
+2 & -1
+\end{bmatrix}$$\
+:::
+
+::: {.column width="50%"}
+2\) Calculate $A - B$
+
+$$A= \begin{bmatrix}
+6 & -2 & 8 & 12 \\
+4 & 42 & 8 & -6
+\end{bmatrix}$$
+
+$$B = \begin{bmatrix}
+18 & 42 & 3 & 7 \\
+0 & -42 & 15 & 4
+\end{bmatrix}$$
+:::
+::::
+
+## Answers in R
+
+
+```{r}
+## 1) A + B
+A = matrix(c(1, 0, -2, -1), nrow = 2, byrow = TRUE)
+B = matrix(c(5, 1, 2, -1), nrow = 2, byrow = TRUE)
+
+A + B
+```
+
+. . .
+
+```{r}
+## 2) A - B
+A = matrix(c(6, -2, 8, 12, 4, 42, 8, -6), 
+           nrow = 2, byrow = TRUE)
+B = matrix(c(18, 42, 3, 7, 0, -42, 15, 4), 
+           nrow = 2, byrow = TRUE)
+
+A - B
+```
+
+::: aside
+Careful with vector recycling in R!
+:::
+
+## Scalar multiplication
+
+. . .
+
+$$A = 
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{bmatrix}$$ $$cA = 
+\begin{bmatrix}
+ca_{11} & ca_{12} & ca_{13}\\
+ca_{21} & ca_{22} & ca_{23}\\
+ca_{31} & ca_{32} & ca_{33}
+\end{bmatrix}$$
+
+. . .
+
+```{r}
+3 * matrix1
+```
+
+## Exercise
+
+Calculate $2\times A$ and $-3 \times B$.
+
+$$A= \begin{bmatrix}
+    1 & 4 & 8 \\
+    0 & -1 & 3
+    \end{bmatrix}$$ $$ B = \begin{bmatrix}
+    -15 & 1 & 5 \\
+    2 & -42 & 0 \\
+    7 & 1 & 6
+    \end{bmatrix}$$
+    
+Do one by hand, one in code
+
+## Answers
+
+```{r}
+A = matrix(c(1, 4, 8,
+             0, -1, 3),
+           nrow = 2, byrow = TRUE)
+2*A
+```
+
+. . .
+
+```{r}
+B = matrix(c(-15, 1, 5,
+             2, -42, 0,
+             7, 1, 6),
+           nrow = 3, byrow = TRUE)
+
+-3*B
+```
+
+## Matrix multiplication {{< fa skull-crossbones >}} 
+
+::: incremental
+- Matrices must be **conformable**
+
+- For $A \times B$ we need $A_{i \times k}$ and $B_{k \times j}$
+
+- The result will have $i \times j$ dimensions
+
+- Order matters! $A \times B \neq B \times A$ even if both operations are conformable 
+:::
+
+## Multiplication steps
+
+::: incremental
+1. Multiply each row by each column, summing up each pair of multiplied terms (*dot product*)
+
+2. The element in position $ij$ is the sum of the products of elements in the $i$th row of the first matrix ($A$) and the corresponding elements in the $j$th column of the second matrix ($B$). $$c_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$$
+
+:::
+
+## Example
+
+Furniture company construction costs ($)
+
+
+|          | Chair | Sofa |
+|----------|-------|------|
+| Wood     | 100   | 150  |
+| Cloth    | 270   | 420  |
+| Feathers | 130   | 195  |
+
+. . .
+
+$$C = \begin{bmatrix}
+100 & 150\\
+270 & 420\\
+130 & 195
+\end{bmatrix}$$
+
+## Example
+
+Monthly production
+
+| Product | Quantity |
+|---------|----------|
+| Chair   | 45       |
+| Sofa    | 30       |
+
+. . .
+
+$$Q = \begin{bmatrix}
+45 \\
+30 
+\end{bmatrix}$$
+
+## Example
+
+Total expenditure
+
+$$ E = CQ = \begin{bmatrix}
+100 & 150\\
+270 & 420\\
+130 & 195
+\end{bmatrix}
+\begin{bmatrix}
+45 \\
+30 
+\end{bmatrix}$$
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+|          | Chair | Sofa |
+|----------|-------|------|
+| Wood     | 100   | 150  |
+| Cloth    | 270   | 420  |
+| Feathers | 130   | 195  |
+
+:::
+
+::: {.column width="50%"}
+
+| Product | Quantity |
+|---------|----------|
+| Chair   | 45       |
+| Sofa    | 30       |
+
+:::
+
+::::
+
+
+## Example
+
+Total expenditure
+
+$$ E = CQ = \begin{bmatrix}
+100 & 150\\
+270 & 420\\
+130 & 195
+\end{bmatrix}
+\begin{bmatrix}
+45 \\
+30 
+\end{bmatrix}$$
+
+. . .
+
+$$
+= \begin{bmatrix}
+(100)(45) + (150)(30) \\
+(270)(45) + (420)(30) \\
+(130)(45) + (195)(30)
+\end{bmatrix} =
+\begin{bmatrix}
+9,000 \\
+24,750 \\
+11,700
+\end{bmatrix}
+$$
+
+## Matrix multiplication in R
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+C = matrix(c(100, 270, 130, 
+             150, 420, 195), 
+           nrow = 3)
+C
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+Q = matrix(c(45, 30), 
+           nrow = 2)
+Q
+```
+
+:::
+
+::::
+
+. . .
+
+
+```{r}
+C %*% Q # Matrix multiplication operator
+```
+
+## Practice
+
+Check in R with the `%*%` operator to see if these are conformable
+
+$$
+\begin{aligned}
+B_{4 \times 1}=
+\begin{bmatrix}
+2 \\
+3\\
+4\\
+1
+\end{bmatrix}
+M_{3 \times 3} = 
+\begin{bmatrix}
+1 & 0 & 2\\
+1 & 2 & 4\\
+2 & 3 & 2
+\end{bmatrix}
+L_{2 \times 3} = 
+\begin{bmatrix}
+6 & 5 & -1\\
+1 & 4 & 3 
+\end{bmatrix}
+\end{aligned}
+$$
+
+## Partial answer
+
+```{r}
+B = matrix(c(2,3,4,1), ncol = 1)
+
+M = matrix(c(1, 1, 2, 0, 2, 3, 2, 4, 2), ncol = 3)
+
+L = matrix(c(6, 1, 5, 4, -1, 3), ncol = 3)
+```
+
+. . .
+
+```{r}
+#| error: true
+
+B %*% M
+```
+
+. . .
+
+```{r}
+L %*% M
+```
+
+. . .
+
+```{r}
+#| error: true
+
+M %*% L
+```
+
+## Properties of operations
+
+. . .
+
+**Addition and subtraction:**
+
+::: incremental
+-   Associative: $(A \pm B) \pm C = A \pm (B \pm C)$
+-   Commutative: $A \pm B = B \pm A$
+:::
+
+. . .
+
+**Multiplication:**
+
+::: incremental
+-   $AB \neq BA$
+
+- If $AB = BA$ we say they **commute**
+
+-   $A(BC) = (AB)C$
+
+-   $A(B+C) = AB + AC$
+:::
+
+# Special matrices
+
+## Square matrix
+
+$$
+A = \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+$$
+
+. . .
+
+::: incremental
+-   $m=n$
+
+-   Diagonal $d(A)=\{1,5,9\}$
+
+-   Trace $tr(A) = 1+5+9 = 15$
+
+:::
+
+## Diagonal matrix
+
+$$
+D = \begin{bmatrix}
+4 & 0 & 0 \\
+0 & 5 & 0 \\
+0 & 0 & 6
+\end{bmatrix}
+$$
+
+## Scalar matrix
+
+$$
+S = \begin{bmatrix}
+7 & 0 & 0 \\
+0 & 7 & 0 \\
+0 & 0 & 7
+\end{bmatrix}
+$$
+
+## Identity matrix
+
+$$
+I = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+- Can use $I_3$ as a shorthand
+
+## Transpose
+
+$$J =
+\begin{bmatrix}
+4 & 5\\
+3 & 0\\
+7 & -2
+\end{bmatrix} \quad J' = J^T = 
+\begin{bmatrix}
+4 & 3 & 7 \\
+5 & 0 & -2
+\end{bmatrix}$$
+
+. . .
+
+```{r}
+J = matrix(c(4, 3, 7, 5, 0, -2), ncol = 2)
+J
+```
+
+```{r}
+t(J)
+```
+
+## Inverse
+
+$$A × A^{-1} = I$$
+
+. . .
+
+The inverse of $A$ is $A^{-1}$ iff
+
+$$AA^{-1} = A^{-1}A = I$$
+
+::: aside
+Sometimes there is no inverse
+:::
+
+## Finding inverse in R
+
+```{r}
+A = matrix(c(3, 2, 5, 2, 3, 2, 5, 2, 4), ncol = 3)
+A
+```
+
+```{r}
+solve(A)
+```
+
+. . .
+
+## Transpose and inverse are very important!
+
+$$\widehat{\beta} = \underbrace{(X'X)^{-1}X'Y}_\text{"X prime X inverse, X prime Y"}$$
