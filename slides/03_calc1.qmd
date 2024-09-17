@@ -123,9 +123,54 @@ $$
 $$
 
 ::: incremental
-- Read $\frac{d}{dx} f(x)$ as "the derivative of $f$ of $x$ with respect to $x$
+- Read $\frac{d}{dx} f(x)$ as "the derivative of $f$ of $x$ with respect to $x$"
 
-- Read $f'(x)$ as "$f$ prime $x$" for a shorthand for the derivative
+- Read $f'(x)$ as "$f$ prime $x$" for a shorthand
 
 :::
+
+## How to compute?
+
+::: incremental
+- Can try to plug in many values
+
+- Use properties of limits
+
+- Use Software
+
+:::
+
+## Rules of differentiation
+
+. . .
+
+**Differentation:** "Taking the derivative"
+
+## Rules of differentiation
+
+**Constant rule:** $(c)' = 0$.
+
+. . .
+
+$y = 2$
+
+```{r}
+ggplot() +
+  stat_function(fun = function(x){2}, xlim = c(-10, 10))
+```
+
+## Rules of differentiation
+
+<!-- Demonstrate by hand -->
+
+**Coefficient rule:** $(c \cdot f(x))' = c \cdot f'(x)$
+
+. . .
+
+```{r}
+ggplot() +
+  stat_function(fun = function(x){2 * x}, xlim = c(-10, 10), aes(color = "y = 2x"), linewidth = 3) +
+  stat_function(fun = function(x){4 * x}, xlim = c(-10, 10), aes(color = "y = 4x"), linewidth = 3) +
+  scale_color_manual("Function", values = c("red", "blue"))
+```
 

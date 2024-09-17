@@ -1089,6 +1089,34 @@
     "href": "slides/03_calc1.html#derivatives",
     "title": "Calculus I",
     "section": "Derivatives",
-    "text": "Derivatives\nWhen \\(\\Delta x\\) is small enough\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = \\frac{dy}{dx} = f'(x)\n\\]\n\n\nRead \\(\\frac{d}{dx} f(x)\\) as “the derivative of \\(f\\) of \\(x\\) with respect to \\(x\\)\nRead \\(f'(x)\\) as “\\(f\\) prime \\(x\\)” for a shorthand for the derivative"
+    "text": "Derivatives\nWhen \\(\\Delta x\\) is small enough\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = \\frac{dy}{dx} = f'(x)\n\\]\n\n\nRead \\(\\frac{d}{dx} f(x)\\) as “the derivative of \\(f\\) of \\(x\\) with respect to \\(x\\)”\nRead \\(f'(x)\\) as “\\(f\\) prime \\(x\\)” for a shorthand"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute",
+    "href": "slides/03_calc1.html#how-to-compute",
+    "title": "Calculus I",
+    "section": "How to compute?",
+    "text": "How to compute?\n\n\nCan try to plug in many values\nUse properties of limits\nUse Software"
+  },
+  {
+    "objectID": "slides/03_calc1.html#rules-of-differentiation",
+    "href": "slides/03_calc1.html#rules-of-differentiation",
+    "title": "Calculus I",
+    "section": "Rules of differentiation",
+    "text": "Rules of differentiation\n\nDifferentation: “Taking the derivative”"
+  },
+  {
+    "objectID": "slides/03_calc1.html#rules-of-differentiation-1",
+    "href": "slides/03_calc1.html#rules-of-differentiation-1",
+    "title": "Calculus I",
+    "section": "Rules of differentiation",
+    "text": "Rules of differentiation\nConstant rule: \\((c)' = 0\\).\n\n\\(y = 2\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#rules-of-differentiation-2",
+    "href": "slides/03_calc1.html#rules-of-differentiation-2",
+    "title": "Calculus I",
+    "section": "Rules of differentiation",
+    "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)"
   }
 ]
