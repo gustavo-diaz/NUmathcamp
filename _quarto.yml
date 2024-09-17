@@ -48,7 +48,7 @@ website:
             - text: "2. Tidyverse I"
               file: r/02_tidy1.qmd
             - text: "3. Tidyverse II"
-              file: r/03_tidy1.qmd
+              file: r/03_tidy2.qmd
             - text: "4. Sampling and simulation"
               file: r/04_sampling.qmd
 
