@@ -51,11 +51,11 @@ Regardless of the data type, these functions will interpret the file name **rela
 Example:
 
 ```{r}
-data <- read_csv("Most-Recent-Cohorts-Institution.csv")
+data <- read_csv("data/Most-Recent-Cohorts-Institution.csv")
 
-data_sav <- read_sav("Most-Recent-Cohorts-Institution.sav")
+data_sav <- read_sav("data/Most-Recent-Cohorts-Institution.sav")
 
-data_xpt <- read_xpt("Most_Recent_Cohorts_Institution.xpt")
+data_xpt <- read_xpt("data/Most_Recent_Cohorts_Institution.xpt")
 
 ```
 
