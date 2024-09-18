@@ -1,5 +1,306 @@
 ---
-title: "Untitled"
+title: "Tidyverse II"
+author: "Aven Peters"
+format: html
+embed-resources: true
+execute:
+  freeze: true
 ---
 
-This is a placeholder document. Content TBD.
+## Finding and loading data
+
+Where do we find publicly available social science data?
+
+-   [ICPSR](https://www.icpsr.umich.edu/web/pages/)
+
+-   [IPUMS](https://www.ipums.org/)
+
+-   Websites of large/commonly used data sets (GSS, ANES, NLSY, etc.)
+
+-   Government open data portals (e.g., the [Chicago Data Portal](https://data.cityofchicago.org/))
+
+To illustrate how to work with a relatively large, publicly available data set,
+I've created copies of the Department of Education's [College Scorecard](https://collegescorecard.ed.gov/data) data in different formats. We'll
+be using the institution-level data set, so each row will be a college/university
+in the U.S. Because these files are large and not confidential/sensitive, I've put
+them and this script on [this Google Drive](https://drive.google.com/drive/folders/1_9--Ti_4zurLFFSIzdHNNJgMLDHww_yo?usp=sharing).
+
+### Functions for reading in data
+
+First, let's load the packages we need today. It's a good practice to do this at the top of our Quarto document/R script.
+
+```{r}
+library(tidyverse)
+
+# install.packages("haven") # remove the # to run
+
+library(haven)
+```
+
+| File Type                    | R function(s)      | Packages          |
+|------------------------------|--------------------|-------------------|
+| Comma separated values (CSV) | read.csv, read_csv | base R, tidyverse |
+| Excel file (XLS, XLSX)       | read_excel         | tidyverse         |
+| Stata data file (DTA)        | read_dta           | haven             |
+| SPSS data file (SAV)         | read_sav           | haven             |
+| SAS transport file (XPT)     | read_sas           | haven             |
+| R data file (RDS)            | readRDS            | base R            |
+
+Regardless of the data type, these functions will interpret the file name **relative to your working directory.** If the data file is saved in your working directory, you just need the name of the data file. Otherwise, you will have to specify a longer file path.
+
+Example:
+
+```{r}
+data <- read_csv("Most-Recent-Cohorts-Institution.csv")
+
+data_sav <- read_sav("Most-Recent-Cohorts-Institution.sav")
+
+data_xpt <- read_xpt("Most_Recent_Cohorts_Instution.xpt")
+
+```
+
+::: callout-tip
+### Exercise
+
+Read in the file "Most-Recent-Cohorts-Institution.dta".
+:::
+
+Notice that all of the dataframes have the same dimensions. That's because they're the same data set, just saved in different formats. To be economical, I'm going to delete the extra dataframes. Then I'll examine the data.
+
+```{r}
+rm(data_sav, data_xpt) 
+
+head(data)
+```
+
+There are lots of variables! Let's focus on three: average faculty salary, 6-year completion rate among Pell grant recipients, and region.
+
+::: callout.tip
+### Exercise
+
+Create a column with only the following columns: AVGFACSAL, C150_4_PELL, REGION.
+:::
+
+```{r echo=FALSE}
+selection <- data %>%
+  select(AVGFACSAL, C150_4_PELL, REGION)
+```
+
+## Missing data
+
+Real data sets almost always have at least some missing values. This can occur for a variety of reasons--sometimes a response to a survey question is missing because the respondent refused to answer it, but sometimes it's missing because the respondent never saw the question in the first place (because the question was inapplicable to them, because they stopped taking the survey partway through, or because a random sample of respondents were selected to see the question). Sometimes, variables are not marked as missing in our data, but we recode them as missing because their values are illogical or hard to interpret.
+
+In publicly available data sets, missing values are represented by many different values. Sometimes a missing value is represented by a dot or the word "NULL"; other times, it is a number like -1, 99, 999, etc. The same variable can have multiple missing codes; often, one code will represent a survey response of "Don't know," and another will represent a response of "Refused." If we simply ignored these missing codes, we might get error messages--or worse, incorrect answers that *don't* raise error messages.
+
+Suppose we have the following table in the codebook.
+
+| Response   | Value | Frequency |
+|------------|-------|-----------|
+| Yes        | 1     | 0.45      |
+| No         | 2     | 0.35      |
+| Don't Know | 7     | 0.15      |
+| Refused    | 9     | 0.05      |
+
+If we naively took the mean of this variable, we would get 2.65, which clearly makes no sense for the substantive meaning of the variable.
+
+```{r}
+1*0.45 + 2*0.35 + 7*0.15 + 9*0.05
+```
+
+To prevent issues like this, it's important to recode missing values as NA, which is what R recognizes as missing data. In the dataframe we just loaded, our missing values are already coded as NA, so we can skip this step.
+
+A full treatment of missing data is beyond the scope of today's class. However, you should know how to do two simple tasks. First, you should know how much missing data you have. Here's a simple way to check.
+
+```{r}
+sum(is.na(selection$AVGFACSAL))
+
+sum(is.na(selection$C150_4_PELL))
+
+sum(is.na(selection$REGION))
+
+```
+
+We have quite a bit of missing data for faculty salary, and even more for Pell grant recipient completion rate. We happen not to have any missing data for region.
+
+Next, you should know how to remove all rows of your data set with missing values for the variables you're interested in. This is called **listwise deletion**, and it's not always the right choice, but it's very common in social science research. Here are two ways to do this.
+
+```{r}
+# method 1
+selection_complete <- selection %>%
+  filter(!is.na(AVGFACSAL) & !is.na(C150_4_PELL) & !is.na(REGION))
+
+nrow(selection_complete) # check how many rows we have left
+
+# method 2
+selection_complete <- selection %>%
+  na.omit() # omit all rows with missing values in any variables in the dataframe;
+# can also specify specific variables we'd like to delete
+
+nrow(selection_complete) # check how many rows we have left again
+```
+
+Encouragingly, we get the same number of rows in the complete dataframe using both methods.
+
+::: callout-tip
+### Exercise
+
+1.  Try to remove all rows of selection that have missing values for faculty salary, but keep rows with missing values for Pell recipient completion rate.
+2.  Do universities in different regions of the U.S. have different amounts of missing data? Why might this be?
+:::
+
+## Recoding variables
+
+Before we do any data analysis, we will need to prepare our variables by recoding them. This is especially true for categorical variables. Region in this data set is a good example. From the codebook, we have the following information.
+
+| Region               | Value |
+|----------------------|-------|
+| U.S. Service Schools | 0     |
+| New England          | 1     |
+| Mid East             | 2     |
+| Great Lakes          | 3     |
+| Plains               | 4     |
+| Southeast            | 5     |
+| Southwest            | 6     |
+| Rocky Mountains      | 7     |
+| Far West             | 8     |
+| Outlying Areas       | 9     |
+
+Suppose we wanted to combine some of these regions. We could combine New England and Mid East into an "East" category, group Great Lakes and Plains into a "Midwest" category, keep "Southeast" as its own category, put Southwest, Rocky Mountains, and Far West into a "West" category, and collapse the remaining regions (U.S. Service Schools and Outlying Areas) into an "Other region" category.
+
+The case_when function is ideal for this task. Here's how we might do it.
+
+```{r}
+selection_complete <- selection_complete %>%
+  mutate(region_rec = case_when(REGION %in% c(1,2) ~ "East",
+                                REGION %in% c(3,4) ~ "Midwest",
+                                REGION == 5 ~ "South",
+                                REGION %in% c(6:8) ~ "West",
+                                TRUE ~ "Other"))
+```
+
+Why is the condition for the last line "TRUE"? Case_when reads each line sequentially,
+and assigns the value for the **first** statement that is true. When REGION is between
+1 and 8, at least one of the first four conditions must hold. When evaluating case_when,
+R only goes to the last line when none of the first four conditions have held. This
+could only possibly happen if REGION was 0 or 9. By writing "TRUE," we are effectively
+saying, "If you've gotten to this point, assign the value 'Other' no matter what."
+Of course, we could also use a more specific condition for this last line--TRUE
+is just often simpler to type and makes sure we don't leave out any data.
+
+What if we only cared whether or not a school was in the South? We could create
+a simpler binary variable for this with case_when like this.
+
+```{r}
+selection_complete <- selection_complete %>%
+  mutate(south = case_when(REGION == 5 ~ 1,
+                           TRUE ~ 0))
+```
+
+This code is equivalent to the if_else function we learned about yesterday. Using that
+function, we could write the following.
+
+```{r}
+selection_complete <- selection_complete %>%
+  mutate(south = if_else(REGION == 5, 1, 0))
+
+```
+
+:::{.callout-tip}
+### Exercise
+Create a "west" variable indicating whether a university is in the West of the U.S.
+Find the mean of this variable. What does the mean represent substantively?
+:::
+
+## More data visualization
+
+In addition to histograms, you should know how to create and interpret a scatterplot.
+The syntax for a scatterplot is similar to that for the histogram we created yesterday.
+Let's plot faculty salary on the X-axis and Pell recipient completion rate on the Y-axis.
+
+```{r}
+selection_complete %>%
+  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL)) +
+  geom_point()
+```
+
+What do we learn from this scatterplot?
+
+:::{.callout-tip}
+### Exercise
+Referencing yesterday's material, relabel the axes and add a meaningful title.
+:::
+
+We might wonder if there's variation in this relationship by region. Let's explore
+this in two ways. First, we'll allow the color of the points to indicate the region
+of the university.
+
+```{r}
+selection_complete %>%
+  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL, col = region_rec)) +
+  geom_point() +
+  labs(x = "Average faculty salary (monthly)", y = "6-Year graduation rate among Pell Grant recipients", col = "Region", title = "Pell grant recipient graduation rate by faculty salary") +
+  theme_minimal()
+```
+
+It's hard to see obvious patterns on this plot. Subjectively, it seems like the "Other"
+region schools tend to have lower faculty salaries in general, and those salaries
+don't seem very predictive of graduation rates among Pell grant recipients. However,
+we would need better tools to test this conjecture.
+
+A clearer way to see differences in the relationship between faculty salary and graduation
+rates by region is to use a facet wrap. This will create five separate scatterplots,
+one for each region.
+
+```{r}
+selection_complete %>%
+  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL)) +
+  geom_point() +
+  labs(x = "Average faculty salary (monthly)", y = "6-Year graduation rate among Pell Grant recipients", title = "Pell grant recipient graduation rate by faculty salary") +
+  theme_minimal() +
+  facet_wrap(~region_rec)
+```
+
+How would you interpret these plots?
+
+## Additional topics: working with dates
+
+To explore these topics, we'll use another built-in data set. But first, we'll need
+to load an additional package.
+
+```{r}
+# install.packages("nycflights13")
+library(nycflights13)
+```
+
+We'll use the flights data set, which contains information about all flights from
+New York airports in 2013. First, let's take a look at the first few rows of data.
+
+```{r}
+head(flights)
+```
+
+The last column of this data set indicates the date and time of the flight.
+
+```{r}
+flights <- flights %>%
+  mutate(flight_date = date(time_hour))
+```
+
+Once we have converted this variable into a date, we can use other functions in
+lubridate to extract the year, month, and day of each date. We can also compute the
+time between two dates in days (or any other unit of time). Here are some examples.
+
+```{r}
+year(flights$flight_date[500])
+day(flights$flight_date[500])
+month(flights$flight_date[500])
+
+int <- interval(start = flights$flight_date[1], end = flights$flight_date[10000])
+secs <- int_length(int) # interval length in seconds
+days <- int_length(int)/(60*60*24) # divide to get interval length in days
+
+secs
+days
+```
+This is just a quick sampling of the lubridate package. For more information, check out
+the lubridate website [here](https://lubridate.tidyverse.org/index.html).
