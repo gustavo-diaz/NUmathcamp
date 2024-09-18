@@ -1404,6 +1404,20 @@
     "href": "slides/03_calc1.html#local-vs.-global-extrema",
     "title": "Calculus I",
     "section": "Local vs. global extrema",
-    "text": "Local vs. global extrema\nExtreme value theorem:\n\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nTo find the minimum/maximum on some interval, compare the local min/max to the value of the function at the interval’s endpoints. So, if the interval is \\((-\\infty, +\\infty)\\), check the function’s limits as it approaches \\(-\\infty\\) and \\(+\\infty\\)."
+    "text": "Local vs. global extrema\nExtreme value theorem:\n\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nFind by comparing local min/max to the value of the function at the endpoints\nCould be limits as function approaches \\(-\\infty\\) and \\(+\\infty\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#practice-again",
+    "href": "slides/03_calc1.html#practice-again",
+    "title": "Calculus I",
+    "section": "Practice again",
+    "text": "Practice again\nCheck \\(\\displaystyle y=\\frac{1}{2} x^3 + 3 x^2 - 2\\) for global extrema"
+  },
+  {
+    "objectID": "slides/03_calc1.html#another-one",
+    "href": "slides/03_calc1.html#another-one",
+    "title": "Calculus I",
+    "section": "Another one",
+    "text": "Another one\nIdentify the global extrema of the function \\(\\displaystyle \\frac{x^3}{3} - \\frac{3}{2}x^2 -10x\\) in the interval \\([-6, 6]\\)"
   }
 ]

@@ -3,7 +3,6 @@ title: "Calculus I"
 author: "NU Social Science Math Camp"
 format: 
   revealjs:
-    embed-resources: true
     slide-number: false
     progress: false
     code-line-numbers: false
@@ -718,7 +717,6 @@ Obtain FOC and SOC for $\displaystyle y=\frac{1}{2} x^3 + 3 x^2 - 2$
 ```
 
 
-
 ## Local vs. global extrema
 
 **Extreme value theorem:**
@@ -728,5 +726,21 @@ Obtain FOC and SOC for $\displaystyle y=\frac{1}{2} x^3 + 3 x^2 - 2$
 
 - Either at the boundaries or at one of the local extrema
 
-- To find the minimum/maximum on some interval, compare the local min/max to the value of the function at the interval's endpoints. So, if the interval is $(-\infty, +\infty)$, check the function's limits as it approaches $-\infty$ and $+\infty$.
+- Find by comparing local min/max to the value of the function at the endpoints
+
+- Could be limits as function approaches $-\infty$ and $+\infty$
 :::
+
+## Practice again
+
+Check $\displaystyle y=\frac{1}{2} x^3 + 3 x^2 - 2$ for global extrema
+
+```{=html}
+<iframe src="https://www.desmos.com/calculator/qccgx2ukl7?embed" width="1000" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+```
+
+## Another one
+
+Identify the global extrema of the function $\displaystyle \frac{x^3}{3} - \frac{3}{2}x^2 -10x$ in the interval $[-6, 6]$
+
+<iframe src="https://www.desmos.com/calculator/wetagmqrig?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
