@@ -55,7 +55,7 @@ data <- read_csv("Most-Recent-Cohorts-Institution.csv")
 
 data_sav <- read_sav("Most-Recent-Cohorts-Institution.sav")
 
-data_xpt <- read_xpt("Most_Recent_Cohorts_Instution.xpt")
+data_xpt <- read_xpt("Most_Recent_Cohorts_Institution.xpt")
 
 ```
 
