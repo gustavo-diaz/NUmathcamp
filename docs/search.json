@@ -1089,14 +1089,14 @@
     "href": "slides/03_calc1.html#derivatives",
     "title": "Calculus I",
     "section": "Derivatives",
-    "text": "Derivatives\nWhen \\(\\Delta x\\) is small enough\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = \\frac{dy}{dx} = f'(x)\n\\]\n\n\nRead \\(\\frac{d}{dx} f(x)\\) as “the derivative of \\(f\\) of \\(x\\) with respect to \\(x\\)”\nRead \\(f'(x)\\) as “\\(f\\) prime \\(x\\)” for a shorthand"
+    "text": "Derivatives\nWhen \\(\\Delta x\\) is small enough\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = f'(x)\n\\]\n\n\nRead \\(\\frac{d}{dx} f(x)\\) as “the derivative of \\(f\\) of \\(x\\) with respect to \\(x\\)”\nRead \\(f'(x)\\) as “\\(f\\) prime \\(x\\)” for a shorthand"
   },
   {
     "objectID": "slides/03_calc1.html#how-to-compute",
     "href": "slides/03_calc1.html#how-to-compute",
     "title": "Calculus I",
     "section": "How to compute?",
-    "text": "How to compute?\n\n\nCan try to plug in many values\nUse properties of limits\nUse Software"
+    "text": "How to compute?\n\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation",
@@ -1118,5 +1118,292 @@
     "title": "Calculus I",
     "section": "Rules of differentiation",
     "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#rules-of-differentiation-3",
+    "href": "slides/03_calc1.html#rules-of-differentiation-3",
+    "title": "Calculus I",
+    "section": "Rules of differentiation",
+    "text": "Rules of differentiation\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\n\nExample: \\(f(x) = 3x + 7\\)\n\n\n\\[\nf'(x) = (3x + 7)'\n\\]\n\n\n\\[\n= (3x)' + (7)'\n\\]\n\n\n\\[\n= 3 + 0\n\\]\n\n\n\\[\n= 3\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits",
+    "href": "slides/03_calc1.html#using-limits",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute-1",
+    "href": "slides/03_calc1.html#how-to-compute-1",
+    "title": "Calculus I",
+    "section": "How to compute?",
+    "text": "How to compute?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits-1",
+    "href": "slides/03_calc1.html#using-limits-1",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\n\nBack to \\(x^2\\)\n\n\n\\[\n\\lim_{h \\to0} \\frac{f(x+ h)^2 - x^2}{h}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits-2",
+    "href": "slides/03_calc1.html#using-limits-2",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\nBack to \\(x^2\\)\n\\[\n\\lim_{h\\to0} \\frac{f(x+ h)^2 - x^2}{h} = \\lim_{h\\to0} \\frac{x^2 + 2xh + 2h^2 - x^2}{h}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits-3",
+    "href": "slides/03_calc1.html#using-limits-3",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\nBack to \\(x^2\\)\n\\[\n\\lim_{h\\to0} \\frac{f(x+ h)^2 - x^2}{h} = \\lim_{h\\to0} \\frac{x^2 + 2xh + 2h^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + 2h^2}{h}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits-4",
+    "href": "slides/03_calc1.html#using-limits-4",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\nBack to \\(x^2\\)\n\\[\n\\lim_{h\\to0} \\frac{f(x+ h)^2 - x^2}{h} = \\lim_{h\\to0} \\frac{x^2 + 2xh + 2h^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + 2h^2}{h}\n\\] \\[\n= \\lim_{h \\to 0} \\frac{(2x+2h) h}{h}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits-5",
+    "href": "slides/03_calc1.html#using-limits-5",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\nBack to \\(x^2\\)\n\\[\n\\lim_{h\\to0} \\frac{f(x+ h)^2 - x^2}{h} = \\lim_{h\\to0} \\frac{x^2 + 2xh + 2h^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + 2h^2}{h}\n\\] \\[\n= \\lim_{h \\to 0} \\frac{(2x+2h) h}{h} = \\lim_{h \\to 0} 2x+2h\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits-6",
+    "href": "slides/03_calc1.html#using-limits-6",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\nBack to \\(x^2\\)\n\\[\n\\lim_{h\\to0} \\frac{f(x+ h)^2 - x^2}{h} = \\lim_{h\\to0} \\frac{x^2 + 2xh + 2h^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + 2h^2}{h}\n\\] \\[\n= \\lim_{h \\to 0} \\frac{(2x+2h) h}{h} = \\lim_{h \\to 0} 2x+2h\n\\] \\[\n=2x+0\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-limits-7",
+    "href": "slides/03_calc1.html#using-limits-7",
+    "title": "Calculus I",
+    "section": "Using limits",
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\nBack to \\(x^2\\)\n\\[\n\\lim_{h\\to0} \\frac{f(x+ h)^2 - x^2}{h} = \\lim_{h\\to0} \\frac{x^2 + 2xh + 2h^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + 2h^2}{h}\n\\] \\[\n= \\lim_{h \\to 0} \\frac{(2x+2h) h}{h} = \\lim_{h \\to 0} 2x+2h\n\\] \\[\n=2x+0 = 2x\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute-a-derivative",
+    "href": "slides/03_calc1.html#how-to-compute-a-derivative",
+    "title": "Calculus I",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute-a-derivative-1",
+    "href": "slides/03_calc1.html#how-to-compute-a-derivative-1",
+    "title": "Calculus I",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute-a-derivative-2",
+    "href": "slides/03_calc1.html#how-to-compute-a-derivative-2",
+    "title": "Calculus I",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute-a-derivative-3",
+    "href": "slides/03_calc1.html#how-to-compute-a-derivative-3",
+    "title": "Calculus I",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute-a-derivative-4",
+    "href": "slides/03_calc1.html#how-to-compute-a-derivative-4",
+    "title": "Calculus I",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/03_calc1.html#how-to-compute-a-derivative-5",
+    "href": "slides/03_calc1.html#how-to-compute-a-derivative-5",
+    "title": "Calculus I",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/03_calc1.html#derivatives-as-rate-of-change",
+    "href": "slides/03_calc1.html#derivatives-as-rate-of-change",
+    "title": "Calculus I",
+    "section": "Derivatives as rate of change",
+    "text": "Derivatives as rate of change\n\n\nPositive derivative \\(\\rightarrow\\) Function is increasing\nNegative derivative \\(\\rightarrow\\) Function is decreasing\nZeroes \\(\\rightarrow\\) Max or min (more soon!)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#rules-of-differentiation-4",
+    "href": "slides/03_calc1.html#rules-of-differentiation-4",
+    "title": "Calculus I",
+    "section": "Rules of differentiation",
+    "text": "Rules of differentiation\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\n\n\\[\nf(x) = x^2\n\\]\n\n\n\\[\nf'(x) = nx^{(n-1)}\n\\]\n\n\n\\[\n= 2x^{(2-1)}\n\\]\n\n\n\\[\n= 2x\n\\]\n\n\nRate of change depends on values of \\(x\\)\n“… at a given point”"
+  },
+  {
+    "objectID": "slides/03_calc1.html#practice",
+    "href": "slides/03_calc1.html#practice",
+    "title": "Calculus I",
+    "section": "Practice",
+    "text": "Practice\nLet’s try out \\(\\frac{d}{dx}4x^3\\) and \\(\\frac{d}{dx}(x^2 + 2x)\\) on the board."
+  },
+  {
+    "objectID": "slides/03_calc1.html#more-practice",
+    "href": "slides/03_calc1.html#more-practice",
+    "title": "Calculus I",
+    "section": "More practice",
+    "text": "More practice\nUse the differentiation rules we have covered so far to calculate the derivatives of \\(y\\) with respect to \\(x\\) of as many as these as you can.\n\n\\(y = 2x^2 + 10\\)\n\\(y = 5x^4 - \\frac{2}{3}x^3\\)\n\\(y = 9 \\sqrt x\\)\n\\(y = \\frac{4}{x^2}\\)\n\\(y = \\frac{2w}{5}\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#rules-of-differentiation-5",
+    "href": "slides/03_calc1.html#rules-of-differentiation-5",
+    "title": "Calculus I",
+    "section": "Rules of differentiation",
+    "text": "Rules of differentiation\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n(c^x)' &= c^x \\cdot ln(c), & \\forall x&gt;0 \\\\\n\\\\\n(log_a(x))' &= \\frac{1}{x \\cdot ln(a)}, & \\forall x&gt;0  \\\\\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#rules-of-differentiation-6",
+    "href": "slides/03_calc1.html#rules-of-differentiation-6",
+    "title": "Calculus I",
+    "section": "Rules of differentiation",
+    "text": "Rules of differentiation\nExponent and logarithm rules:\nEuler’s number (\\(e\\)) has interesting properties when it comes to derivatives.\n\\[\n\\begin{aligned}\n(e^x)' &= e^x \\\\\n\\\\\n(ln(x))' &= \\frac{1}{x}, & \\forall x&gt;0\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#more-more-practice",
+    "href": "slides/03_calc1.html#more-more-practice",
+    "title": "Calculus I",
+    "section": "More more practice",
+    "text": "More more practice\nCompute the following:\n\n\\(\\frac{d}{dx}(10e^x)\\) \n\\(\\frac{d}{dx}(ln(x) - \\frac{e^2}{3})\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#advanced-rules",
+    "href": "slides/03_calc1.html#advanced-rules",
+    "title": "Calculus I",
+    "section": "Advanced rules",
+    "text": "Advanced rules\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\n\n\\[\n[(3x+4)(x+2)]'\n\\]\n\n\n\\[\nf(x) = (3x+4), g(x) = (x+2); f'(x) = 3, g'(x) = 1\n\\]\n\n\n\\[\n\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}\n\\]\n\n\n\\[\n= \\color{blue}3 \\color{yellow}{(x+2)} + \\color{purple}{1} \\color{green}{(3x+4)}\n\\]\n\n\n\\[\n= 3x + 6 + 3x+ 4\n\\]\n\n\n\\[\n= 6x + 10\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#advanced-rules-1",
+    "href": "slides/03_calc1.html#advanced-rules-1",
+    "title": "Calculus I",
+    "section": "Advanced rules",
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\n\\[\n\\frac{3x^2}{x+2}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#advanced-rules-2",
+    "href": "slides/03_calc1.html#advanced-rules-2",
+    "title": "Calculus I",
+    "section": "Advanced rules",
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\\[\n\\frac{3x^2}{x+2} \\Rightarrow f(x) = 3x^2, g(x) = x + 2; f'(x) = 6x, g'(x) = 1\n\\]\n\n\\[\n\\frac{\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}}{[\\color{yellow}{g(x)}]^2} =\n\\frac{\\color{blue}{6x}\\color{yellow}{(x+2)} - \\color{purple}1 \\color{green}{(3x^2)}}{\\color{yellow}{(x+2)}^2}\n\\]\n\n\n\\[\n= \\frac{6x^2 + 12x - 3x2}{(x+2)^2} = \\frac{3x^2+12x}{(x+2)^2}\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#advanced-rules-3",
+    "href": "slides/03_calc1.html#advanced-rules-3",
+    "title": "Calculus I",
+    "section": "Advanced rules",
+    "text": "Advanced rules\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n\n\\[\nf(g(x)) = (x+3)^3\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#advanced-rules-4",
+    "href": "slides/03_calc1.html#advanced-rules-4",
+    "title": "Calculus I",
+    "section": "Advanced rules",
+    "text": "Advanced rules\nChain rule: \\([f(g(x))]' = f'(g(x)) \\cdot g'(x)\\)\n\\[\nf(g(x)) = (x+3)^3 \\Rightarrow f(g(x)) = g(x)^3, g(x) = (x+3)\n\\]\n\n\\[\nf'(x) = 3x^2 \\Rightarrow f'(g(x)) = 3 (x+3)^2, g'(x) = 1\n\\]\n\n\nSubstitute\n\\[\n[f(g(x))]' = 3(x+3)^2 \\cdot 1\n\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#more3-practice",
+    "href": "slides/03_calc1.html#more3-practice",
+    "title": "Calculus I",
+    "section": "More\\(^3\\) practice",
+    "text": "More\\(^3\\) practice\n\n\\(\\frac{d}{dx}x^3 \\cdot x\\)\n\\(\\frac{d}{dx}e^x \\cdot x^2\\)\n\\(\\frac{d}{dx}(3x^4-8)^2\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#more-more-more-practice",
+    "href": "slides/03_calc1.html#more-more-more-practice",
+    "title": "Calculus I",
+    "section": "More more more practice",
+    "text": "More more more practice\n\n\\(\\frac{d}{dx}x^3 \\cdot x\\)\n\\(\\frac{d}{dx}e^x \\cdot x^2\\)\n\\(\\frac{d}{dx}(3x^4-8)^2\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#higher-order-derivatives",
+    "href": "slides/03_calc1.html#higher-order-derivatives",
+    "title": "Calculus I",
+    "section": "Higher-order derivatives",
+    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n\n\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#partial-derivative",
+    "href": "slides/03_calc1.html#partial-derivative",
+    "title": "Calculus I",
+    "section": "Partial derivative",
+    "text": "Partial derivative\n\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n\n\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n\n\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
+  },
+  {
+    "objectID": "slides/03_calc1.html#example",
+    "href": "slides/03_calc1.html#example",
+    "title": "Calculus I",
+    "section": "Example",
+    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
+  },
+  {
+    "objectID": "slides/03_calc1.html#differentiability-of-functions",
+    "href": "slides/03_calc1.html#differentiability-of-functions",
+    "title": "Calculus I",
+    "section": "Differentiability of functions",
+    "text": "Differentiability of functions\n\n\nNot all functions are differentiable\nWe need continuous and reasonably smooth functions\nInformally: Can draw them without lifting the pen\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\nDifferentiable \\(\\to\\) continuous\nContinuous \\(\\not\\to\\) differentiable"
+  },
+  {
+    "objectID": "slides/03_calc1.html#using-computers",
+    "href": "slides/03_calc1.html#using-computers",
+    "title": "Calculus I",
+    "section": "Using computers",
+    "text": "Using computers\n\n\nSymbolic differentiation: Do the math for you (WolframAlpha or Mathematica)\nNumerical differentiation: Evaluate the function at many values (optim() in R)\nAutomatic differentiation: Break up functions into elementary operations and use chain rule (torch package in R, various packages in Python)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#numerical-differentiation-in-r",
+    "href": "slides/03_calc1.html#numerical-differentiation-in-r",
+    "title": "Calculus I",
+    "section": "Numerical differentiation in R",
+    "text": "Numerical differentiation in R\n\noptim(par = 0, fn = function(x){x ^ 2 + 5}, method = \"L-BFGS-B\")\n\n$par\n[1] 0\n\n$value\n[1] 5\n\n$counts\nfunction gradient \n       1        1 \n\n$convergence\n[1] 0\n\n$message\n[1] \"CONVERGENCE: NORM OF PROJECTED GRADIENT &lt;= PGTOL\""
+  },
+  {
+    "objectID": "slides/03_calc1.html#optimization",
+    "href": "slides/03_calc1.html#optimization",
+    "title": "Calculus I",
+    "section": "Optimization",
+    "text": "Optimization\n\n\nFind minimum or maximum values\nValleys are minima\nPeaks are maxima\nBoth are extrema\nExtrama can be local or global"
+  },
+  {
+    "objectID": "slides/03_calc1.html#first-order-condition",
+    "href": "slides/03_calc1.html#first-order-condition",
+    "title": "Calculus I",
+    "section": "First order condition",
+    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n\n\\[FOC: f'(x)=0\\]"
+  },
+  {
+    "objectID": "slides/03_calc1.html#second-order-condition",
+    "href": "slides/03_calc1.html#second-order-condition",
+    "title": "Calculus I",
+    "section": "Second order condition",
+    "text": "Second order condition\n\nFOC finds critical points, but can’t tell if minimum or maximum\n\n\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
+  },
+  {
+    "objectID": "slides/03_calc1.html#more-more-more-more-practice",
+    "href": "slides/03_calc1.html#more-more-more-more-practice",
+    "title": "Calculus I",
+    "section": "More more more more practice",
+    "text": "More more more more practice\nObtain FOC and SOC for \\(\\displaystyle y=\\frac{1}{2} x^3 + 3 x^2 - 2\\)"
+  },
+  {
+    "objectID": "slides/03_calc1.html#local-vs.-global-extrema",
+    "href": "slides/03_calc1.html#local-vs.-global-extrema",
+    "title": "Calculus I",
+    "section": "Local vs. global extrema",
+    "text": "Local vs. global extrema\nExtreme value theorem:\n\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nTo find the minimum/maximum on some interval, compare the local min/max to the value of the function at the interval’s endpoints. So, if the interval is \\((-\\infty, +\\infty)\\), check the function’s limits as it approaches \\(-\\infty\\) and \\(+\\infty\\)."
   }
 ]
