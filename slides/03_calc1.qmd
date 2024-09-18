@@ -31,7 +31,7 @@ theme_set(theme_gray(base_size = 20))
 
 ## Up next
 
-Dealing with **continuity** (which implies *infinity*) $\rightarrow$ Calculus
+Dealing with **continuity** (which implies *infinity*) $\rightarrow$ Calculuss
 
 . . .
 

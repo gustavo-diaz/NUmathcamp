@@ -850,15 +850,15 @@
     "objectID": "slides/03_calc1.html#what-have-we-learned-so-far",
     "href": "slides/03_calc1.html#what-have-we-learned-so-far",
     "title": "Calculus I",
-    "section": "",
-    "text": "Foundational ideas behind what you will have to deal with during your graduate program:\n\n\nReading about methods \\(\\rightarrow\\) Notation, sets, functions\nWorking with data frames \\(\\rightarrow\\) Matrix operations"
+    "section": "What have we learned so far?",
+    "text": "What have we learned so far?\nFoundational ideas behind what you will have to deal with during your graduate program:\n\n\nReading about methods \\(\\rightarrow\\) Notation, sets, functions\nWorking with data frames \\(\\rightarrow\\) Matrix operations"
   },
   {
     "objectID": "slides/03_calc1.html#up-next",
     "href": "slides/03_calc1.html#up-next",
     "title": "Calculus I",
     "section": "Up next",
-    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n. . .\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
+    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculuss\n\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
   },
   {
     "objectID": "slides/03_calc1.html#calculus",
@@ -893,7 +893,7 @@
     "href": "slides/03_calc1.html#why-doesnt-it-work",
     "title": "Calculus I",
     "section": "Why doesn’t it work?",
-    "text": "Why doesn’t it work?\n\n\nWe need an operation to calculate the slope or rate of change for (almost) any kind of continuous function\nEnter derivatives\n\n\n. . .\nGeneralize slope formula\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]"
+    "text": "Why doesn’t it work?\n\n\nWe need an operation to calculate the slope or rate of change for (almost) any kind of continuous function\nEnter derivatives\n\n\n\nGeneralize slope formula\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#derivatives",
@@ -914,28 +914,28 @@
     "href": "slides/03_calc1.html#rules-of-differentiation",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\n. . .\nDifferentation: “Taking the derivative”"
+    "text": "Rules of differentiation\n\nDifferentation: “Taking the derivative”"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-1",
     "href": "slides/03_calc1.html#rules-of-differentiation-1",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nConstant rule: \\((c)' = 0\\).\n. . .\n\\(y = 2\\)"
+    "text": "Rules of differentiation\nConstant rule: \\((c)' = 0\\).\n\n\\(y = 2\\)"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-2",
     "href": "slides/03_calc1.html#rules-of-differentiation-2",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)\n. . ."
+    "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-3",
     "href": "slides/03_calc1.html#rules-of-differentiation-3",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\n. . .\nExample: \\(f(x) = 3x + 7\\)\n. . .\n\\[\nf'(x) = (3x + 7)'\n\\]\n. . .\n\\[\n= (3x)' + (7)'\n\\]\n. . .\n\\[\n= 3 + 0\n\\]\n. . .\n\\[\n= 3\n\\]"
+    "text": "Rules of differentiation\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\n\nExample: \\(f(x) = 3x + 7\\)\n\n\n\\[\nf'(x) = (3x + 7)'\n\\]\n\n\n\\[\n= (3x)' + (7)'\n\\]\n\n\n\\[\n= 3 + 0\n\\]\n\n\n\\[\n= 3\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#using-limits",
@@ -956,7 +956,7 @@
     "href": "slides/03_calc1.html#using-limits-1",
     "title": "Calculus I",
     "section": "Using limits",
-    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\n. . .\nBack to \\(x^2\\)\n. . .\n\\[\n\\lim_{h \\to0} \\frac{f(x+ h)^2 - x^2}{h}\n\\]"
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\n\nBack to \\(x^2\\)\n\n\n\\[\n\\lim_{h \\to0} \\frac{f(x+ h)^2 - x^2}{h}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#using-limits-2",
@@ -1054,7 +1054,7 @@
     "href": "slides/03_calc1.html#rules-of-differentiation-4",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\n. . .\n\\[\nf(x) = x^2\n\\]\n. . .\n\\[\nf'(x) = nx^{(n-1)}\n\\]\n. . .\n\\[\n= 2x^{(2-1)}\n\\]\n. . .\n\\[\n= 2x\n\\]\n\n\nRate of change depends on values of \\(x\\)\n“… at a given point”"
+    "text": "Rules of differentiation\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\n\n\\[\nf(x) = x^2\n\\]\n\n\n\\[\nf'(x) = nx^{(n-1)}\n\\]\n\n\n\\[\n= 2x^{(2-1)}\n\\]\n\n\n\\[\n= 2x\n\\]\n\n\nRate of change depends on values of \\(x\\)\n“… at a given point”"
   },
   {
     "objectID": "slides/03_calc1.html#practice",
@@ -1096,35 +1096,35 @@
     "href": "slides/03_calc1.html#advanced-rules",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\n. . .\n\\[\n[(3x+4)(x+2)]'\n\\]\n. . .\n\\[\nf(x) = (3x+4), g(x) = (x+2); f'(x) = 3, g'(x) = 1\n\\]\n. . .\n\\[\n\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}\n\\]\n. . .\n\\[\n= \\color{blue}3 \\color{yellow}{(x+2)} + \\color{purple}{1} \\color{green}{(3x+4)}\n\\]\n. . .\n\\[\n= 3x + 6 + 3x+ 4\n\\]\n. . .\n\\[\n= 6x + 10\n\\]"
+    "text": "Advanced rules\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\n\n\\[\n[(3x+4)(x+2)]'\n\\]\n\n\n\\[\nf(x) = (3x+4), g(x) = (x+2); f'(x) = 3, g'(x) = 1\n\\]\n\n\n\\[\n\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}\n\\]\n\n\n\\[\n= \\color{blue}3 \\color{yellow}{(x+2)} + \\color{purple}{1} \\color{green}{(3x+4)}\n\\]\n\n\n\\[\n= 3x + 6 + 3x+ 4\n\\]\n\n\n\\[\n= 6x + 10\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-1",
     "href": "slides/03_calc1.html#advanced-rules-1",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n. . .\n\\[\n\\frac{3x^2}{x+2}\n\\]"
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\n\\[\n\\frac{3x^2}{x+2}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-2",
     "href": "slides/03_calc1.html#advanced-rules-2",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\\[\n\\frac{3x^2}{x+2} \\Rightarrow f(x) = 3x^2, g(x) = x + 2; f'(x) = 6x, g'(x) = 1\n\\]\n. . .\n\\[\n\\frac{\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}}{[\\color{yellow}{g(x)}]^2} =\n\\frac{\\color{blue}{6x}\\color{yellow}{(x+2)} - \\color{purple}1 \\color{green}{(3x^2)}}{\\color{yellow}{(x+2)}^2}\n\\]\n. . .\n\\[\n= \\frac{6x^2 + 12x - 3x2}{(x+2)^2} = \\frac{3x^2+12x}{(x+2)^2}\n\\]"
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\\[\n\\frac{3x^2}{x+2} \\Rightarrow f(x) = 3x^2, g(x) = x + 2; f'(x) = 6x, g'(x) = 1\n\\]\n\n\\[\n\\frac{\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}}{[\\color{yellow}{g(x)}]^2} =\n\\frac{\\color{blue}{6x}\\color{yellow}{(x+2)} - \\color{purple}1 \\color{green}{(3x^2)}}{\\color{yellow}{(x+2)}^2}\n\\]\n\n\n\\[\n= \\frac{6x^2 + 12x - 3x2}{(x+2)^2} = \\frac{3x^2+12x}{(x+2)^2}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-3",
     "href": "slides/03_calc1.html#advanced-rules-3",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n. . .\n\\[\nf(g(x)) = (x+3)^3\n\\]"
+    "text": "Advanced rules\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n\n\\[\nf(g(x)) = (x+3)^3\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-4",
     "href": "slides/03_calc1.html#advanced-rules-4",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nChain rule: \\([f(g(x))]' = f'(g(x)) \\cdot g'(x)\\)\n\\[\nf(g(x)) = (x+3)^3 \\Rightarrow f(g(x)) = g(x)^3, g(x) = (x+3)\n\\]\n. . .\n\\[\nf'(x) = 3x^2 \\Rightarrow f'(g(x)) = 3 (x+3)^2, g'(x) = 1\n\\]\n. . .\nSubstitute\n\\[\n[f(g(x))]' = 3(x+3)^2 \\cdot 1\n\\]"
+    "text": "Advanced rules\nChain rule: \\([f(g(x))]' = f'(g(x)) \\cdot g'(x)\\)\n\\[\nf(g(x)) = (x+3)^3 \\Rightarrow f(g(x)) = g(x)^3, g(x) = (x+3)\n\\]\n\n\\[\nf'(x) = 3x^2 \\Rightarrow f'(g(x)) = 3 (x+3)^2, g'(x) = 1\n\\]\n\n\nSubstitute\n\\[\n[f(g(x))]' = 3(x+3)^2 \\cdot 1\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#more3-practice",
@@ -1145,21 +1145,21 @@
     "href": "slides/03_calc1.html#higher-order-derivatives",
     "title": "Calculus I",
     "section": "Higher-order derivatives",
-    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n. . .\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n. . .\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
+    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n\n\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
   },
   {
     "objectID": "slides/03_calc1.html#partial-derivative",
     "href": "slides/03_calc1.html#partial-derivative",
     "title": "Calculus I",
     "section": "Partial derivative",
-    "text": "Partial derivative\n. . .\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n. . .\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n. . .\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
+    "text": "Partial derivative\n\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n\n\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n\n\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
   },
   {
     "objectID": "slides/03_calc1.html#example",
     "href": "slides/03_calc1.html#example",
     "title": "Calculus I",
     "section": "Example",
-    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n. . .\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
+    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
   },
   {
     "objectID": "slides/03_calc1.html#differentiability-of-functions",
@@ -1194,14 +1194,14 @@
     "href": "slides/03_calc1.html#first-order-condition",
     "title": "Calculus I",
     "section": "First order condition",
-    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n. . .\n\\[FOC: f'(x)=0\\]"
+    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n\n\\[FOC: f'(x)=0\\]"
   },
   {
     "objectID": "slides/03_calc1.html#second-order-condition",
     "href": "slides/03_calc1.html#second-order-condition",
     "title": "Calculus I",
     "section": "Second order condition",
-    "text": "Second order condition\n. . .\nFOC finds critical points, but can’t tell if minimum or maximum\n. . .\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
+    "text": "Second order condition\n\nFOC finds critical points, but can’t tell if minimum or maximum\n\n\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
   },
   {
     "objectID": "slides/03_calc1.html#more-more-more-more-practice",
