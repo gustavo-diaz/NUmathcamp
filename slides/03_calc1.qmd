@@ -1,5 +1,5 @@
 ---
-title: "Calculus I"
+title: "Calculus I "
 author: "NU Social Science Math Camp"
 format: 
   revealjs:
