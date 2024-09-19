@@ -1,5 +1,721 @@
 ---
-title: "Untitled"
+title: "Sampling and simulation"
+author: "[Artur Baranov](https://artur-baranov.github.io)"
+date: 2024-09-20
+format: 
+  html:
+    embed-resources: true
+toc: true
 ---
 
-This is a placeholder document. Content TBD.
+## Before we start
+
+-   What is `%>%`?
+
+-   A clear environment = a clear mind!
+
+-   How to create a chunk?
+
+-   How to run a line of code?
+
+
+## Random sampling from distributions
+
+Generating data is a powerful skill used to model different situations, allowing for statistical inference. For example, based on distributions we can predict the probability of a specific value occurring.
+
+### Uniform distribution 
+
+Simple things first. For example, you have a task of generating random number between 0 and 1. How would computer do it? Random number generation is a slightly counter intuitive process. Basically, computer is extracting numbers from a **uniform distribution.** Let's try it out.
+
+Run this chunk a couple of times:
+
+```{r}
+runif(10)
+```
+
+If you'd like to control the random generation process, you can use `set.seed()` function. Try this out:
+
+```{r}
+#| results: hold
+
+set.seed(123)
+runif(10)
+
+set.seed(123)
+runif(10)
+```
+
+You can adjust the boundaries however you would like to. Let's simulate a million of observations.
+
+```{r}
+set.seed(123)
+uniform_data <- runif(n = 1000000, min = -3, max = 3)
+```
+
+Now, visualize what we got. It looks like a rectangle! In other words, every number is equally likely to appear. And that's what the uniform distribution is.
+
+```{r}
+#| message: false
+library(tidyverse)
+
+ggplot(data.frame(uniform_data), aes(x = uniform_data)) +
+  geom_histogram(binwidth = 0.25, boundary = 0, closed = "right") +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-5, 5))
+```
+Let's consider a less theoretical example. You'd like to assign a student for next week's presentation. 
+
+```{r}
+students_list <- c("student_1", "student_2", "student_3", "student_4", "student_5", "student_6")
+```
+
+To do this, you can use `sample()` function. You would like each student to appear with the same probability as any other student.
+
+```{r}
+sample(students_list, size = 1)
+```
+
+How fair is this random assignment? You can test it using R! To do this, we need to collect data. In our example, we can generate results easily. Take a look at how we modified `sample()`. `replace = T` argument puts the student back after they are drawn.
+
+```{r}
+database <- data.frame("student" = sample(students_list, size = 10000, replace = T))
+head(database)
+```
+
+Now, check out the graph! Thus, *without adjustment*, `sample()` essentially follows a uniform distribution.
+
+```{r}
+#| warning: false
+ggplot(database) +
+  geom_histogram(aes(x = student), stat = "count") 
+```
+
+
+### Normal distribution (Continuous Data)
+
+However, most numbers that exist in the world tend to have higher probabilities around certain values—almost like gravity around a specific point. For instance, income in the United States is not uniformly distributed—a handful of people are really really rich, lots are very poor, and most are kind of clustered around an average. 
+
+One of such distributions is the “bell curve” - or normal distribution. Let's generate a normal distribution data and visualize it.
+
+```{r}
+#| warning: false
+set.seed(1234)
+normal_data <- rnorm(1000)
+
+normal_plot <- ggplot(data.frame(normal_data), aes(x = normal_data)) +
+  geom_histogram(color = "white") 
+normal_plot
+```
+Now, let's calculate and plot the average of our data. It's centered at 0! This is the first **parameter** of the normal distribution.
+
+```{r}
+#| warning: false
+normal_plot + geom_vline(xintercept = mean(normal_data), color = "red")
+```
+
+But there is another **parameter** of the normal distribution which is the standard deviation (sd or $\sigma$). In simple terms, it means the spread of data from the average. For example, let's highlight +- 1 sd from the average. Generally, it covers 68% of observations.
+
+```{r}
+#| warning: false
+
+normal_plot + 
+  geom_vline(xintercept = mean(normal_data) + sd(normal_data), color = "blue") +
+  geom_vline(xintercept = mean(normal_data) - sd(normal_data), color = "blue") 
+```
+
+In statistics we are often interested in finding a "location" of 95% of observations. It is roughly within +- 2 sd.
+
+```{r}
+#| warning: false
+
+normal_plot + 
+  geom_vline(xintercept = mean(normal_data) + 2*sd(normal_data), color = "blue") +
+  geom_vline(xintercept = mean(normal_data) - 2*sd(normal_data), color = "blue") 
+```
+#### Probability Density Function
+
+Mathematicians - as usual - came up with formula to represent this kind of distribution abstractly. I don't want to scare you, so we won't consider the formula here. However, this formula allows us to draw the graph below. This is a generalized version of the normal distribution, it's called **Probability Density Function (PDF)**. 
+
+```{r}
+ggplot() +
+  stat_function(fun = dnorm) +
+  geom_vline(aes(xintercept = 1, color = "1 SD")) +
+  geom_vline(aes(xintercept = -1, color = "1 SD")) +
+  geom_vline(aes(xintercept = 2, color = "2 SD")) +
+  geom_vline(aes(xintercept = -2, color = "2 SD")) +
+  labs(title = "Normal Distribution (mean = 0, sd = 1)",
+       subtitle = "Probability Density Function",
+       color = "",
+       y = "Probability") +
+  scale_x_continuous(breaks = seq(-5, 5, by = 1), limits = c(-5, 5))
+```
+
+Using this, we can, say, calculate the probability of drawing "0" from a normal distribution with $\mu = 0$ and $\sigma = 1$
+
+```{r}
+dnorm(0, mean = 0, sd = 1)
+```
+
+Let's check it on our `normal_data` we generated previously. I suggest changing `binwidth` for straightforward calculation. Does it remind you the **PDF**?
+
+*Do you remember what the binwidth argument does?*
+
+```{r}
+normal_plot +
+  geom_histogram(binwidth = 1) +
+  scale_x_continuous(breaks = seq(-5, 5, by = 1), limits = c(-5, 5))
+```
+
+There are slightly less than 40% of observations fall into "0". It matches our expectations! In other words, knowing the average and the standard deviation of the normal distribution, we can predict how many observations would be of given value. 
+
+#### Cumulative Distribution Function
+
+What if we are interested in how many observations would be 0 or fewer? For this option we might use **Cumulative Distribution Function**. 
+
+*Any guesses at this point? Take a look on the PDF!*
+
+Cumulative distribution function looks like this. This is kind of S shape.
+
+```{r}
+ggplot() +
+  geom_function(fun = pnorm) +
+  xlim(-5,5) +
+  labs(title = "Normal Distribution (mean = 0, sd = 1)",
+       subtitle = "Cumulative Distribution Function",
+       y = "Probability") 
+```
+
+Slightly harder is to calculate more precise values. For example, how many observations would be 1 or less? 84%!
+
+```{r}
+pnorm(1, mean = 0, sd = 1)
+```
+On the graph, it would look like this:
+
+```{r}
+ggplot(NULL, aes(c(-5,5))) +
+  geom_area(stat = "function", fun = dnorm,  xlim = c(-1.35, 5)) +
+  geom_area(stat = "function", fun = dnorm, fill="sky blue", xlim = c(-5, 1)) +
+  labs(title = "Normal Distribution (mean = 0, sd = 1)",
+       x = "",
+       y = "Probability") +
+  scale_x_continuous(breaks = seq(-5, 5, by = 1), limits = c(-5, 5))
+```
+
+Conversely, to know how many observation would be 1 or more we can use a trick:
+
+```{r}
+1 - pnorm(1, mean = 0, sd = 1)
+```
+
+### Binomial distribution (Discrete Data)
+
+Often you’ll want to generate a column that only has two values: yes/no, treated/untreated, before/after, big/small, red/blue, etc. You’ll also likely want to control the proportions (25% treated, 62% blue, etc.).
+
+For instance, we can ask R to do the following twenty times: flip a fair coin one hundred times, and count the number of tails.
+
+```{r}
+rbinom(n = 20, size = 100, prob = 0.5)
+```
+
+With `prob =` , we can implement unfair coins:
+
+```{r}
+rbinom(n = 20, size = 100, prob = 0.9)
+```
+
+R will choose these values with equal/uniform probability by default, but you can change that in `sample()` with the `prob` argument. For instance, pretend you want to simulate an election. According to the latest polls, one candidate has an 80% chance of winning. You want to randomly choose a winner based on that chance. Here’s how to do that with `sample()`
+
+```{r}
+#| warning: false
+set.seed(1234)
+candidates <- c("Person 1", "Person 2")
+fake_elections <- data.frame(winner = sample(candidates,
+                                         size = 1000,
+                                         prob = c(0.8, 0.2),
+                                         replace = TRUE))
+
+
+ggplot(fake_elections, aes(x = winner)) +
+  geom_histogram(stat = "count")
+```
+
+
+### Other distribution functions
+
+Each distribution can do more than generate random numbers (the prefix r). We can compute the cumulative probability by the function `pbinom()`, `punif()`, and `pnorm()`. Also the density – the value of the PDF – by `dbinom()`, `dunif()` and `dnorm()`.
+
+
+## Random Sampling from Data
+
+Let's work with the real data a bit. Download results of World Happiness Report 2024 from the following [URL](https://github.com/gustavo-diaz/NUmathcamp/blob/main/r/data/happiness_report_2024.csv). Load it to R!
+
+```{r}
+h_report <- read.csv("happiness_report_2024.csv")
+```
+
+Visualize the `happiness_score` variable.
+
+```{r}
+#| eval: false
+
+ggplot(h_report, aes(x = ...)) +
+  geom_histogram(color = "white", binwidth = 1) +
+  labs(title = "Distribution of happiness_score variable") +
+```
+
+Now, let's sample 80 observations from the dataset. Basically, we are randomly extracting rows from the main dataset. Compare `sample()` and `sample_n()`
+
+```{r}
+set.seed(1234)
+h_report_sample <- sample_n(h_report, size = 80)
+```
+
+Now, compare the graphs of original data and of its sample.
+
+```{r}
+ggplot(h_report_sample, aes(x = happiness_score)) +
+  geom_histogram(color = "white", binwidth = 1) +
+  labs(title = "Distribution of Sample of happiness_score variable")
+```
+
+We can check basic characteristics of those distributions. For example, their average. It's pretty similar!
+
+```{r}
+#| results: hold
+mean(h_report_sample$happiness_score)
+mean(h_report$happiness_score)
+```
+
+Alternatively, we can check standard deviation. They are quite similar too.
+
+```{r}
+#| results: hold
+sd(h_report_sample$happiness_score)
+sd(h_report$happiness_score)
+```
+
+If we assume that true average $\mu$ is equal to 5.53, then our estimator $\hat{\mu}$ from the average of the data $\bar{X}$ would be 5.49. In other words, even with the limited access to data we were able to figure average of the "real" distribution.
+
+Now, briefly. Let's check how it matches with our *theoretical* assumptions of how the world works. We assume that the happiness scores are distributed normally. Thus, even with a *limited* sample knowledge (N=80) we can attempt to generalize on the whole population (N = 143). Let's, say, calculate the probability that a given country would receive 6 on happiness score.
+
+```{r}
+dnorm(x = 6,
+      mean = mean(h_report_sample$happiness_score),
+      sd = sd(h_report_sample$happiness_score))
+```
+Now, let's calculate the real data. To make things easier, we add a count of countries in each bin.
+
+```{r}
+#| warning: false
+ggplot(h_report, aes(x = happiness_score)) +
+  geom_histogram(color = "white", binwidth = 1) +
+  stat_bin(binwidth = 1, geom = "text", aes(label = ..count..), vjust = -0.5)
+```
+We got $\approx$ 0.34, when we predicted 0.30. Sounds good with a limited access to data!
+
+```{r}
+49/143
+```
+
+::: callout-note
+## Exercise
+
+You have access to `diamonds` dataset. 
+
+```{r}
+data(diamonds)
+```
+
+What are the variables in this dataset?
+
+```{r}
+
+```
+Using `ggplot()`, draw a histogram of the variable `depth`. Diamond depth describes its proportions. The less, the better. 
+
+```{r}
+#| eval: false
+
+ggplot(diamonds, aes(x=...))+
+  geom_histogram() 
+```
+Does it remind you of normal distribution?
+
+```{r}
+#| results: hold
+mean(diamonds$depth)
+sd(diamonds$depth)
+```
+Draw a probability density function (`dnorm()`). 
+
+```{r}
+#| eval: false
+ggplot() +
+  stat_function(fun = ..., args = list(mean = mean(...), sd = sd(...))) +
+  xlim(40, 80)
+```
+Sample 1000 observations.
+
+```{r}
+#| eval: false
+set.seed(123)
+diamonds_sample = sample_n(diamonds, size = 1000)
+```
+
+Compare average and standard deviation. Are they comparable with the original data?
+
+```{r}
+#| eval: false
+mean(...)
+sd(...)
+```
+In your free time, feel free to experiment how few observations you need to get more or less reliable parameters of a normal distribution!
+
+:::
+
+
+### Bootstrapping
+
+To get a better measure of $\hat{\mu}$ we can apply bootstrapping. To put it simple, we are going to repeat sampling process several times, and each time we draw random sample from the dataset we record its average. First, we create a dataset which we'll be using to store those averages.
+
+```{r}
+sample_averages <- data.frame()
+```
+
+Using loops, you can repeat actions several times. This is what programming is quite helpful in! Explore how a `for` loop below works.
+
+-   `for` indicates the beginning of the loop
+
+-   `i` stands for the index of an iteration
+
+-   `in 1:10`  specifies the range of values from 1 to 10
+
+```{r}
+for(i in 1:10){
+  print(i)
+}
+```
+
+Now, iterate (i.e. repeat) sampling process!
+
+```{r}
+for(i in 1:100){
+  temporary_sample <- sample_n(h_report, size = 80)                   # sample 80 observations
+  temporary_sample_average <- mean(temporary_sample$happiness_score)  # calculate the sample average 
+  sample_averages <- rbind(sample_averages, temporary_sample_average) # add the sample average to the df
+}
+
+colnames(sample_averages) = "average"
+head(sample_averages)
+```
+
+Take a look on the average of the collected averages. Did it get closer to the real parameter? 
+
+```{r}
+mean(sample_averages$average)
+```
+
+::: callout-note
+## Exercise
+
+In dataframe `h_report`, explore `freedom` variable. Check the descriptive statistics.
+
+Draw a histogram of this variable using ggplot. Indicate the average
+
+```{r}
+#| eval: false
+ggplot(...) +
+  geom_histogram(aes(x = ...)) +
+  geom_vline(xintercept = mean(..., na.rm = T))
+```
+
+Calculate the average.
+
+```{r}
+#| eval: false
+
+mean(..., na.rm = T)
+```
+
+Using bootstrapping, get the comparable average.
+
+First, create a dataframe to store the results of the averages.
+
+```{r}
+#| eval: false
+bootsrap_averages = ...
+```
+
+Finish this `for` loop so it saves average of sampled data. Repeat the loop 10 times. Limit the size of `sample_n` to 50.
+
+```{r}
+#| eval: false
+
+...(i in 1:...){
+  temporary_sample <- sample_n(h_report, size = ...)
+  temporary_sample_average <- ...
+  bootsrap_averages <- rbind(bootsrap_averages, temporary_sample_average)
+}
+
+colnames(bootsrap_averages) = "average"
+```
+
+Compare the average of `h_report$freedom` and `bootsrap_averages$average`. Are they different? 
+
+```{r}
+
+```
+
+Repeat the comparison, but change the number of iterations to 100. Did the result improve?
+
+:::
+
+
+## Automation and Custom functions
+-	Custom functions (very small example, mostly to get used to the syntax)
+
+It is a frequent issue that when you work with data you would want to perform same several actions with a given dataset. For example, you would want to calculate average for specific set of variables, and then store it in a different dataframe to describe those selected In this case, custom functions are incredibly helpful.
+
+Explore the function below. It stores the averages for `happiness_score`, `life_expectancy` and `freedom` variables.
+
+```{r}
+calculate_average <- function(dataframe){
+  average_happiness = mean(dataframe$happiness_score)
+  average_expectancy = mean(dataframe$life_expectancy, na.rm = T)
+  average_freedom = mean(dataframe$freedom, na.rm = T)
+  
+  average_output = data.frame(average_happiness, average_expectancy, average_freedom)
+  return(average_output) # This is what the function returns as a result
+}
+```
+
+Try it out.
+
+```{r}
+calculate_average(h_report)
+```
+
+Now, we can easily calculate those averages anytime we sample from the dataset.
+
+```{r}
+calculate_average(h_report_sample)
+```
+
+::: callout-note
+## Exercise
+
+Custom functions save a lot of time, especially if you have a non-trivial task. Write a function that would calculate median for `happiness_score`, `life_expectancy` and `freedom` variables in a given dataframe
+
+```{r}
+#| eval: false
+
+calculate_median <- function(...){
+  
+  ...
+  
+  median_output = data.frame(...)
+  return(median_output) # This is what the function returns as a result
+}
+```
+
+And now try it out!
+
+```{r}
+#| eval: false
+
+calculate_median(h_report)
+```
+
+Write a function that would automate calculation of average happiness in a selected group of countries from regions below.
+
+```{r}
+post_soviet_countries <- c("Kazakhstan", "Uzbekistan", "Armenia")
+latin_america_countries <- c("Venezuela", "Argentina", "Paraguay")
+```
+
+Use a draft below for your function.
+
+```{r}
+#| eval: false
+
+average_happiness = ...(dataframe, countries_list){
+  
+  dataframe %>% 
+    filter(country_name %in% ...) %>%
+    summarize(average = mean(...)) %>%
+    ...()
+  
+}
+
+average_happiness(h_report, post_soviet_countries)            # Note the difference in (i) countries list
+average_happiness(h_report_sample, latin_america_countries)   # and (ii) in dataframes we use
+```
+:::
+
+### Apply function
+
+Sometimes it is easier to use apply family of functions. For example, we can easily calculate an average using `apply()` function for selected columns.
+
+```{r}
+h_report %>%
+  select(happiness_score, log_gdp, social_support) %>%
+  apply(2, mean, na.rm = TRUE)
+```
+
+Moreover, we can calculate some statistics for observations (i.e., rows), not variables. For example, we can find the minimum value across all variables for a specific country. As you might notice, the second argument in `apply()` function refers to whether we want manipulate rows or columns, 1 or 2 respectively. 
+
+```{r}
+h_report %>%
+  filter(country_name == "Azerbaijan") %>%
+  apply(1, min, na.rm = TRUE)
+```
+
+However, most importantly, `apply()` function is compatible with custom functions. For example, you want to standardize the variable so it ranges between 0 to 1. You have the following function.
+
+```{r}
+standartize = function(x){
+  (x - min(x, na.rm = T)) / (max(x, na.rm = T) - min(x, na.rm = T))
+}
+```
+
+Now, you can apply it over a number of variables.
+
+```{r}
+h_report %>%
+  select(social_support, freedom) %>%
+  apply(2, standartize) %>%
+  head()
+```
+
+### Map function
+
+It's quite often the case in programming that the same operation can be done in a multiple ways. Compare the `map()` function from tidyverse with `apply()` function. What is the difference?
+
+```{r}
+h_report %>%
+  select(happiness_score, log_gdp, social_support) %>% 
+  map(mean, na.rm = T)
+```
+
+Now, take a look on the following code below. 
+
+```{r}
+h_report %>%
+  select(happiness_score, log_gdp, social_support) %>% 
+  map_df(mean, na.rm = T)
+```
+Furthermore, it is compatible with custom functions, too.
+
+```{r}
+h_report %>%
+  select(happiness_score, log_gdp, social_support) %>% 
+  map_df(standartize) %>%
+  head()
+```
+
+Generally, this is an extensive toolkit to learn. But to sum up, `apply()` functions are base to R, and `map()` is an addition from tidyverse. If you are coding in a *tidy* way, then I suggest sticking to the *tidy* functions.
+
+Compare `apply()` and `map()` to `summarize_all()` and `summarize()`.
+
+::: callout-note
+## Exercise
+
+Finish a function that would calculate an average based on two columns, namely `social_support`, `corruption`.
+
+```{r}
+#| eval: false
+
+average_of_two = function(dataset){
+  suppurt_average = mean(dataset$..., na.rm = T)
+  corruptuon_average = mean(..., na.rm = T)
+  
+  average = mean(c(...))
+  return(average)
+}
+
+average_of_two(h_report)
+```
+
+Do you remember `mtcars` data? Load it
+
+```{r}
+cars_information <- mtcars
+```
+
+Now, using `apply()` calculate average for each column.
+
+```{r}
+
+```
+
+Now, using `map()` calculate median for each column.
+
+```{r}
+
+```
+
+Using the loop draft below to sample 10 cars from cars dataset 15 times. Each time, apply `map_df()` function to calculate the average `mpg` and `wt`, and store the result in the `sample_statistics` dataframe.
+
+```{r}
+#| eval: false
+
+sample_statistics = data.frame()
+
+for(i in 1:...){
+  temporary_sample <- sample_n(cars_information, size = ...)   
+  
+  temporary_sample_average <- temporary_sample %>% 
+    select(...) %>% 
+    ...(mean)  
+  
+  sample_statistics <- rbind(sample_statistics, ...) 
+}
+
+sample_statistics
+```
+
+
+:::
+
+
+## What should you do if you have questions about programming
+
+-   Stack overflow
+
+-   Your peers
+
+-   The team of this math camp
+
+## Check List
+
+<input type="checkbox"/> Standard deviation, PDF and CDF do not scare me
+
+<input type="checkbox"/> I know what sampling is, and on top of this I can use bootstrapping
+
+<input type="checkbox"/> I can understand custom functions and loops
+
+
+## What did we learn over this week in the programming part?
+
+-   What R, RStudio, Quarto and Markdown are
+
+-   Creating and working with objects, vectors and dataframes
+
+-   Logical Operators
+
+-   What Descriptive statistics is
+
+-   Data wrangling, including `mutate()`, `select()`, `filter()`, `summarize()`, `case_when()`, etc.
+
+-   Data Visualization. Now we know what histograms and scatterplots are
+
+-   We can load data in R and work with it!
+
+
+## Sources
+
+-   Georgia State University, Andrew Young School of Policy Studies, Program Evaluation, https://evalsp24.classes.andrewheiss.com/
+
+-   UT Austin, Department of Government, Methods Camp, https://methodscamp.github.io/
+
+-   Harvard University Department of Government, Math Prefresher, https://iqss.github.io/prefresher/
