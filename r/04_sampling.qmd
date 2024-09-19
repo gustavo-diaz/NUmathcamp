@@ -19,6 +19,11 @@ toc: true
 -   How to run a line of code?
 
 
+<center>
+<a href="https://artur-baranov.github.io/data/04_sampling.qmd" class="btn btn-primary" role="button" download="04_sampling.qmd" style="width:200px" target="_blank">Download script</a>
+</center>
+
+
 ## Random sampling from distributions
 
 Generating data is a powerful skill used to model different situations, allowing for statistical inference. For example, based on distributions we can predict the probability of a specific value occurring.
@@ -169,7 +174,7 @@ There are slightly less than 40% of observations fall into "0". It matches our e
 
 #### Cumulative Distribution Function
 
-What if we are interested in how many observations would be 0 or fewer? For this option we might use **Cumulative Distribution Function**. 
+What if we are interested in how many observations would be 0 or less? For this option we might use **Cumulative Distribution Function**. 
 
 *Any guesses at this point? Take a look on the PDF!*
 
@@ -223,7 +228,7 @@ With `prob =` , we can implement unfair coins:
 rbinom(n = 20, size = 100, prob = 0.9)
 ```
 
-R will choose these values with equal/uniform probability by default, but you can change that in `sample()` with the `prob` argument. For instance, pretend you want to simulate an election. According to the latest polls, one candidate has an 80% chance of winning. You want to randomly choose a winner based on that chance. Here’s how to do that with `sample()`
+For instance, pretend you want to simulate an election. According to the latest polls, one candidate has an 80% chance of winning. You want to randomly choose a winner based on that chance. Here’s how to do that with `sample()`
 
 ```{r}
 #| warning: false
@@ -260,7 +265,7 @@ Visualize the `happiness_score` variable.
 
 ggplot(h_report, aes(x = ...)) +
   geom_histogram(color = "white", binwidth = 1) +
-  labs(title = "Distribution of happiness_score variable") +
+  labs(title = "Distribution of happiness_score variable") 
 ```
 
 Now, let's sample 80 observations from the dataset. Basically, we are randomly extracting rows from the main dataset. Compare `sample()` and `sample_n()`
@@ -294,7 +299,7 @@ sd(h_report_sample$happiness_score)
 sd(h_report$happiness_score)
 ```
 
-If we assume that true average $\mu$ is equal to 5.53, then our estimator $\hat{\mu}$ from the average of the data $\bar{X}$ would be 5.49. In other words, even with the limited access to data we were able to figure average of the "real" distribution.
+If we assume that true average $\mu$ is equal to 5.53, then our estimate $\hat{\mu}$ from the average of the data $\bar{X}$ would be 5.49. In other words, even with the limited access to data we were able to figure average and sd of the "real" distribution.
 
 Now, briefly. Let's check how it matches with our *theoretical* assumptions of how the world works. We assume that the happiness scores are distributed normally. Thus, even with a *limited* sample knowledge (N=80) we can attempt to generalize on the whole population (N = 143). Let's, say, calculate the probability that a given country would receive 6 on happiness score.
 
@@ -331,6 +336,7 @@ What are the variables in this dataset?
 ```{r}
 
 ```
+
 Using `ggplot()`, draw a histogram of the variable `depth`. Diamond depth describes its proportions. The less, the better. 
 
 ```{r}
@@ -339,6 +345,7 @@ Using `ggplot()`, draw a histogram of the variable `depth`. Diamond depth descri
 ggplot(diamonds, aes(x=...))+
   geom_histogram() 
 ```
+
 Does it remind you of normal distribution?
 
 ```{r}
@@ -346,6 +353,7 @@ Does it remind you of normal distribution?
 mean(diamonds$depth)
 sd(diamonds$depth)
 ```
+
 Draw a probability density function (`dnorm()`). 
 
 ```{r}
@@ -354,6 +362,7 @@ ggplot() +
   stat_function(fun = ..., args = list(mean = mean(...), sd = sd(...))) +
   xlim(40, 80)
 ```
+
 Sample 1000 observations.
 
 ```{r}
@@ -369,6 +378,7 @@ Compare average and standard deviation. Are they comparable with the original da
 mean(...)
 sd(...)
 ```
+
 In your free time, feel free to experiment how few observations you need to get more or less reliable parameters of a normal distribution!
 
 :::
@@ -379,7 +389,7 @@ In your free time, feel free to experiment how few observations you need to get 
 To get a better measure of $\hat{\mu}$ we can apply bootstrapping. To put it simple, we are going to repeat sampling process several times, and each time we draw random sample from the dataset we record its average. First, we create a dataset which we'll be using to store those averages.
 
 ```{r}
-sample_averages <- data.frame()
+sample_averages <- data.frame() # simply created empty dataset
 ```
 
 Using loops, you can repeat actions several times. This is what programming is quite helpful in! Explore how a `for` loop below works.
@@ -412,7 +422,7 @@ head(sample_averages)
 Take a look on the average of the collected averages. Did it get closer to the real parameter? 
 
 ```{r}
-mean(sample_averages$average)
+mean(sample_averages$average) 
 ```
 
 ::: callout-note
@@ -472,14 +482,14 @@ Repeat the comparison, but change the number of iterations to 100. Did the resul
 
 
 ## Automation and Custom functions
--	Custom functions (very small example, mostly to get used to the syntax)
 
-It is a frequent issue that when you work with data you would want to perform same several actions with a given dataset. For example, you would want to calculate average for specific set of variables, and then store it in a different dataframe to describe those selected In this case, custom functions are incredibly helpful.
+It is a frequent issue that when you work with data you would want to perform same several actions with a given dataset. For example, you would want to calculate average for specific set of variables, and then store it in a different dataframe to describe those selected. In this case, custom functions are incredibly helpful.
 
 Explore the function below. It stores the averages for `happiness_score`, `life_expectancy` and `freedom` variables.
 
 ```{r}
 calculate_average <- function(dataframe){
+  
   average_happiness = mean(dataframe$happiness_score)
   average_expectancy = mean(dataframe$life_expectancy, na.rm = T)
   average_freedom = mean(dataframe$freedom, na.rm = T)
@@ -604,6 +614,7 @@ h_report %>%
   select(happiness_score, log_gdp, social_support) %>% 
   map_df(mean, na.rm = T)
 ```
+
 Furthermore, it is compatible with custom functions, too.
 
 ```{r}
