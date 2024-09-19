@@ -255,7 +255,7 @@ Each distribution can do more than generate random numbers (the prefix r). We ca
 Let's work with the real data a bit. Download results of World Happiness Report 2024 from the following [URL](https://github.com/gustavo-diaz/NUmathcamp/blob/main/r/data/happiness_report_2024.csv). Load it to R!
 
 ```{r}
-h_report <- read.csv("happiness_report_2024.csv")
+h_report <- read.csv("data/happiness_report_2024.csv")
 ```
 
 Visualize the `happiness_score` variable.

@@ -387,9 +387,13 @@
   {
     "objectID": "r/04_sampling.html",
     "href": "r/04_sampling.html",
-    "title": "Untitled",
+    "title": "Sampling and simulation",
     "section": "",
-    "text": "This is a placeholder document. Content TBD."
+    "text": "What is %&gt;%?\nA clear environment = a clear mind!\nHow to create a chunk?\nHow to run a line of code?\n\n\nDownload script",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
   },
   {
     "objectID": "r/02_tidy1.html",
@@ -718,7 +722,11 @@
     "href": "r/03_tidy2.html",
     "title": "Tidyverse II",
     "section": "",
-    "text": "Where do we find publicly available social science data?\n\nICPSR\nIPUMS\nWebsites of large/commonly used data sets (GSS, ANES, NLSY, etc.)\nGovernment open data portals (e.g., the Chicago Data Portal)\n\nTo illustrate how to work with a relatively large, publicly available data set, I’ve created copies of the Department of Education’s College Scorecard data in different formats. We’ll be using the institution-level data set, so each row will be a college/university in the U.S. Because these files are large and not confidential/sensitive, I’ve put them and this script on this Google Drive.\n\n\nFirst, let’s load the packages we need today. It’s a good practice to do this at the top of our Quarto document/R script.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# install.packages(\"haven\") # remove the # to run\n\nlibrary(haven)\n\n\n\n\n\n\n\n\n\nFile Type\nR function(s)\nPackages\n\n\n\n\nComma separated values (CSV)\nread.csv, read_csv\nbase R, tidyverse\n\n\nExcel file (XLS, XLSX)\nread_excel\ntidyverse\n\n\nStata data file (DTA)\nread_dta\nhaven\n\n\nSPSS data file (SAV)\nread_sav\nhaven\n\n\nSAS transport file (XPT)\nread_sas\nhaven\n\n\nR data file (RDS)\nreadRDS\nbase R\n\n\n\nRegardless of the data type, these functions will interpret the file name relative to your working directory. If the data file is saved in your working directory, you just need the name of the data file. Otherwise, you will have to specify a longer file path.\nExample:\n\ndata &lt;- read_csv(\"data/Most-Recent-Cohorts-Institution.csv\")\n\nRows: 6484 Columns: 3305\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2380): OPEID, OPEID6, INSTNM, CITY, STABBR, ZIP, ACCREDAGENCY, INSTURL,...\ndbl  (850): UNITID, SCH_DEG, HCM2, MAIN, NUMBRANCH, PREDDEG, HIGHDEG, CONTRO...\nlgl   (75): LOCALE2, UG, UGDS_WHITENH, UGDS_BLACKNH, UGDS_API, UGDS_AIANOLD,...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ndata_sav &lt;- read_sav(\"data/Most-Recent-Cohorts-Institution.sav\")\n\ndata_xpt &lt;- read_xpt(\"data/Most_Recent_Cohorts_Institution.xpt\")\n\n\n\n\n\n\n\nExercise\n\n\n\nRead in the file “Most-Recent-Cohorts-Institution.dta”.\n\n\nNotice that all of the dataframes have the same dimensions. That’s because they’re the same data set, just saved in different formats. To be economical, I’m going to delete the extra dataframes. Then I’ll examine the data.\n\nrm(data_sav, data_xpt) \n\nhead(data)\n\n# A tibble: 6 × 3,305\n  UNITID OPEID    OPEID6 INSTNM   CITY  STABBR ZIP   ACCREDAGENCY INSTURL NPCURL\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt; \n1 100654 00100200 001002 Alabama… Norm… AL     35762 Southern As… www.aa… www.a…\n2 100663 00105200 001052 Univers… Birm… AL     3529… Southern As… https:… https…\n3 100690 02503400 025034 Amridge… Mont… AL     3611… Southern As… https:… https…\n4 100706 00105500 001055 Univers… Hunt… AL     35899 Southern As… www.ua… finai…\n5 100724 00100500 001005 Alabama… Mont… AL     3610… Southern As… www.al… www.a…\n6 100751 00105100 001051 The Uni… Tusc… AL     3548… Southern As… www.ua… finan…\n# ℹ 3,295 more variables: SCH_DEG &lt;dbl&gt;, HCM2 &lt;dbl&gt;, MAIN &lt;dbl&gt;,\n#   NUMBRANCH &lt;dbl&gt;, PREDDEG &lt;dbl&gt;, HIGHDEG &lt;dbl&gt;, CONTROL &lt;dbl&gt;,\n#   ST_FIPS &lt;dbl&gt;, REGION &lt;dbl&gt;, LOCALE &lt;dbl&gt;, LOCALE2 &lt;lgl&gt;, LATITUDE &lt;dbl&gt;,\n#   LONGITUDE &lt;dbl&gt;, CCBASIC &lt;dbl&gt;, CCUGPROF &lt;dbl&gt;, CCSIZSET &lt;dbl&gt;, HBCU &lt;dbl&gt;,\n#   PBI &lt;dbl&gt;, ANNHI &lt;dbl&gt;, TRIBAL &lt;dbl&gt;, AANAPII &lt;dbl&gt;, HSI &lt;dbl&gt;,\n#   NANTI &lt;dbl&gt;, MENONLY &lt;dbl&gt;, WOMENONLY &lt;dbl&gt;, RELAFFIL &lt;dbl&gt;,\n#   ADM_RATE &lt;dbl&gt;, ADM_RATE_ALL &lt;dbl&gt;, SATVR25 &lt;dbl&gt;, SATVR75 &lt;dbl&gt;, …\n\n\nThere are lots of variables! Let’s focus on three: average faculty salary, 6-year completion rate among Pell grant recipients, and region.\n\n\n\nCreate a column with only the following columns: AVGFACSAL, C150_4_PELL, REGION."
+    "text": "Where do we find publicly available social science data?\n\nICPSR\nIPUMS\nWebsites of large/commonly used data sets (GSS, ANES, NLSY, etc.)\nGovernment open data portals (e.g., the Chicago Data Portal)\n\nTo illustrate how to work with a relatively large, publicly available data set, I’ve created copies of the Department of Education’s College Scorecard data in different formats. We’ll be using the institution-level data set, so each row will be a college/university in the U.S. Because these files are large and not confidential/sensitive, I’ve put them and this script on this Google Drive.\n\n\nFirst, let’s load the packages we need today. It’s a good practice to do this at the top of our Quarto document/R script.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# install.packages(\"haven\") # remove the # to run\n\nlibrary(haven)\n\n\n\n\n\n\n\n\n\nFile Type\nR function(s)\nPackages\n\n\n\n\nComma separated values (CSV)\nread.csv, read_csv\nbase R, tidyverse\n\n\nExcel file (XLS, XLSX)\nread_excel\ntidyverse\n\n\nStata data file (DTA)\nread_dta\nhaven\n\n\nSPSS data file (SAV)\nread_sav\nhaven\n\n\nSAS transport file (XPT)\nread_sas\nhaven\n\n\nR data file (RDS)\nreadRDS\nbase R\n\n\n\nRegardless of the data type, these functions will interpret the file name relative to your working directory. If the data file is saved in your working directory, you just need the name of the data file. Otherwise, you will have to specify a longer file path.\nExample:\n\ndata &lt;- read_csv(\"data/Most-Recent-Cohorts-Institution.csv\")\n\nRows: 6484 Columns: 3305\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2380): OPEID, OPEID6, INSTNM, CITY, STABBR, ZIP, ACCREDAGENCY, INSTURL,...\ndbl  (850): UNITID, SCH_DEG, HCM2, MAIN, NUMBRANCH, PREDDEG, HIGHDEG, CONTRO...\nlgl   (75): LOCALE2, UG, UGDS_WHITENH, UGDS_BLACKNH, UGDS_API, UGDS_AIANOLD,...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ndata_sav &lt;- read_sav(\"data/Most-Recent-Cohorts-Institution.sav\")\n\ndata_xpt &lt;- read_xpt(\"data/Most_Recent_Cohorts_Institution.xpt\")\n\n\n\n\n\n\n\nExercise\n\n\n\nRead in the file “Most-Recent-Cohorts-Institution.dta”.\n\n\nNotice that all of the dataframes have the same dimensions. That’s because they’re the same data set, just saved in different formats. To be economical, I’m going to delete the extra dataframes. Then I’ll examine the data.\n\nrm(data_sav, data_xpt) \n\nhead(data)\n\n# A tibble: 6 × 3,305\n  UNITID OPEID    OPEID6 INSTNM   CITY  STABBR ZIP   ACCREDAGENCY INSTURL NPCURL\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt; \n1 100654 00100200 001002 Alabama… Norm… AL     35762 Southern As… www.aa… www.a…\n2 100663 00105200 001052 Univers… Birm… AL     3529… Southern As… https:… https…\n3 100690 02503400 025034 Amridge… Mont… AL     3611… Southern As… https:… https…\n4 100706 00105500 001055 Univers… Hunt… AL     35899 Southern As… www.ua… finai…\n5 100724 00100500 001005 Alabama… Mont… AL     3610… Southern As… www.al… www.a…\n6 100751 00105100 001051 The Uni… Tusc… AL     3548… Southern As… www.ua… finan…\n# ℹ 3,295 more variables: SCH_DEG &lt;dbl&gt;, HCM2 &lt;dbl&gt;, MAIN &lt;dbl&gt;,\n#   NUMBRANCH &lt;dbl&gt;, PREDDEG &lt;dbl&gt;, HIGHDEG &lt;dbl&gt;, CONTROL &lt;dbl&gt;,\n#   ST_FIPS &lt;dbl&gt;, REGION &lt;dbl&gt;, LOCALE &lt;dbl&gt;, LOCALE2 &lt;lgl&gt;, LATITUDE &lt;dbl&gt;,\n#   LONGITUDE &lt;dbl&gt;, CCBASIC &lt;dbl&gt;, CCUGPROF &lt;dbl&gt;, CCSIZSET &lt;dbl&gt;, HBCU &lt;dbl&gt;,\n#   PBI &lt;dbl&gt;, ANNHI &lt;dbl&gt;, TRIBAL &lt;dbl&gt;, AANAPII &lt;dbl&gt;, HSI &lt;dbl&gt;,\n#   NANTI &lt;dbl&gt;, MENONLY &lt;dbl&gt;, WOMENONLY &lt;dbl&gt;, RELAFFIL &lt;dbl&gt;,\n#   ADM_RATE &lt;dbl&gt;, ADM_RATE_ALL &lt;dbl&gt;, SATVR25 &lt;dbl&gt;, SATVR75 &lt;dbl&gt;, …\n\n\nThere are lots of variables! Let’s focus on three: average faculty salary, 6-year completion rate among Pell grant recipients, and region.\n\n\n\nCreate a column with only the following columns: AVGFACSAL, C150_4_PELL, REGION.",
+    "crumbs": [
+      "Programming",
+      "3. Tidyverse II"
+    ]
   },
   {
     "objectID": "slides/01_notation.html#agenda",
@@ -850,15 +858,15 @@
     "objectID": "slides/03_calc1.html#what-have-we-learned-so-far",
     "href": "slides/03_calc1.html#what-have-we-learned-so-far",
     "title": "Calculus I",
-    "section": "What have we learned so far?",
-    "text": "What have we learned so far?\nFoundational ideas behind what you will have to deal with during your graduate program:\n\n\nReading about methods \\(\\rightarrow\\) Notation, sets, functions\nWorking with data frames \\(\\rightarrow\\) Matrix operations"
+    "section": "",
+    "text": "Foundational ideas behind what you will have to deal with during your graduate program:\n\n\nReading about methods \\(\\rightarrow\\) Notation, sets, functions\nWorking with data frames \\(\\rightarrow\\) Matrix operations"
   },
   {
     "objectID": "slides/03_calc1.html#up-next",
     "href": "slides/03_calc1.html#up-next",
     "title": "Calculus I",
     "section": "Up next",
-    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
+    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n. . .\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
   },
   {
     "objectID": "slides/03_calc1.html#calculus",
@@ -893,7 +901,7 @@
     "href": "slides/03_calc1.html#why-doesnt-it-work",
     "title": "Calculus I",
     "section": "Why doesn’t it work?",
-    "text": "Why doesn’t it work?\n\n\nWe need an operation to calculate the slope or rate of change for (almost) any kind of continuous function\nEnter derivatives\n\n\n\nGeneralize slope formula\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]"
+    "text": "Why doesn’t it work?\n\n\nWe need an operation to calculate the slope or rate of change for (almost) any kind of continuous function\nEnter derivatives\n\n\n. . .\nGeneralize slope formula\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#derivatives",
@@ -914,28 +922,28 @@
     "href": "slides/03_calc1.html#rules-of-differentiation",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\n\nDifferentation: “Taking the derivative”"
+    "text": "Rules of differentiation\n. . .\nDifferentation: “Taking the derivative”"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-1",
     "href": "slides/03_calc1.html#rules-of-differentiation-1",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nConstant rule: \\((c)' = 0\\).\n\n\\(y = 2\\)"
+    "text": "Rules of differentiation\nConstant rule: \\((c)' = 0\\).\n. . .\n\\(y = 2\\)"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-2",
     "href": "slides/03_calc1.html#rules-of-differentiation-2",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)"
+    "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)\n. . ."
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-3",
     "href": "slides/03_calc1.html#rules-of-differentiation-3",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\n\nExample: \\(f(x) = 3x + 7\\)\n\n\n\\[\nf'(x) = (3x + 7)'\n\\]\n\n\n\\[\n= (3x)' + (7)'\n\\]\n\n\n\\[\n= 3 + 0\n\\]\n\n\n\\[\n= 3\n\\]"
+    "text": "Rules of differentiation\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\n. . .\nExample: \\(f(x) = 3x + 7\\)\n. . .\n\\[\nf'(x) = (3x + 7)'\n\\]\n. . .\n\\[\n= (3x)' + (7)'\n\\]\n. . .\n\\[\n= 3 + 0\n\\]\n. . .\n\\[\n= 3\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#using-limits",
@@ -956,7 +964,7 @@
     "href": "slides/03_calc1.html#using-limits-1",
     "title": "Calculus I",
     "section": "Using limits",
-    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\n\nBack to \\(x^2\\)\n\n\n\\[\n\\lim_{h \\to0} \\frac{f(x+ h)^2 - x^2}{h}\n\\]"
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\n. . .\nBack to \\(x^2\\)\n. . .\n\\[\n\\lim_{h \\to0} \\frac{f(x+ h)^2 - x^2}{h}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#using-limits-2",
@@ -1054,7 +1062,7 @@
     "href": "slides/03_calc1.html#rules-of-differentiation-4",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\n\n\\[\nf(x) = x^2\n\\]\n\n\n\\[\nf'(x) = nx^{(n-1)}\n\\]\n\n\n\\[\n= 2x^{(2-1)}\n\\]\n\n\n\\[\n= 2x\n\\]\n\n\nRate of change depends on values of \\(x\\)\n“… at a given point”"
+    "text": "Rules of differentiation\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\n. . .\n\\[\nf(x) = x^2\n\\]\n. . .\n\\[\nf'(x) = nx^{(n-1)}\n\\]\n. . .\n\\[\n= 2x^{(2-1)}\n\\]\n. . .\n\\[\n= 2x\n\\]\n\n\nRate of change depends on values of \\(x\\)\n“… at a given point”"
   },
   {
     "objectID": "slides/03_calc1.html#practice",
@@ -1096,35 +1104,35 @@
     "href": "slides/03_calc1.html#advanced-rules",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\n\n\\[\n[(3x+4)(x+2)]'\n\\]\n\n\n\\[\nf(x) = (3x+4), g(x) = (x+2); f'(x) = 3, g'(x) = 1\n\\]\n\n\n\\[\n\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}\n\\]\n\n\n\\[\n= \\color{blue}3 \\color{yellow}{(x+2)} + \\color{purple}{1} \\color{green}{(3x+4)}\n\\]\n\n\n\\[\n= 3x + 6 + 3x+ 4\n\\]\n\n\n\\[\n= 6x + 10\n\\]"
+    "text": "Advanced rules\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\n. . .\n\\[\n[(3x+4)(x+2)]'\n\\]\n. . .\n\\[\nf(x) = (3x+4), g(x) = (x+2); f'(x) = 3, g'(x) = 1\n\\]\n. . .\n\\[\n\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}\n\\]\n. . .\n\\[\n= \\color{blue}3 \\color{yellow}{(x+2)} + \\color{purple}{1} \\color{green}{(3x+4)}\n\\]\n. . .\n\\[\n= 3x + 6 + 3x+ 4\n\\]\n. . .\n\\[\n= 6x + 10\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-1",
     "href": "slides/03_calc1.html#advanced-rules-1",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\n\\[\n\\frac{3x^2}{x+2}\n\\]"
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n. . .\n\\[\n\\frac{3x^2}{x+2}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-2",
     "href": "slides/03_calc1.html#advanced-rules-2",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\\[\n\\frac{3x^2}{x+2} \\Rightarrow f(x) = 3x^2, g(x) = x + 2; f'(x) = 6x, g'(x) = 1\n\\]\n\n\\[\n\\frac{\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}}{[\\color{yellow}{g(x)}]^2} =\n\\frac{\\color{blue}{6x}\\color{yellow}{(x+2)} - \\color{purple}1 \\color{green}{(3x^2)}}{\\color{yellow}{(x+2)}^2}\n\\]\n\n\n\\[\n= \\frac{6x^2 + 12x - 3x2}{(x+2)^2} = \\frac{3x^2+12x}{(x+2)^2}\n\\]"
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\\[\n\\frac{3x^2}{x+2} \\Rightarrow f(x) = 3x^2, g(x) = x + 2; f'(x) = 6x, g'(x) = 1\n\\]\n. . .\n\\[\n\\frac{\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}}{[\\color{yellow}{g(x)}]^2} =\n\\frac{\\color{blue}{6x}\\color{yellow}{(x+2)} - \\color{purple}1 \\color{green}{(3x^2)}}{\\color{yellow}{(x+2)}^2}\n\\]\n. . .\n\\[\n= \\frac{6x^2 + 12x - 3x2}{(x+2)^2} = \\frac{3x^2+12x}{(x+2)^2}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-3",
     "href": "slides/03_calc1.html#advanced-rules-3",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n\n\\[\nf(g(x)) = (x+3)^3\n\\]"
+    "text": "Advanced rules\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n. . .\n\\[\nf(g(x)) = (x+3)^3\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-4",
     "href": "slides/03_calc1.html#advanced-rules-4",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nChain rule: \\([f(g(x))]' = f'(g(x)) \\cdot g'(x)\\)\n\\[\nf(g(x)) = (x+3)^3 \\Rightarrow f(g(x)) = g(x)^3, g(x) = (x+3)\n\\]\n\n\\[\nf'(x) = 3x^2 \\Rightarrow f'(g(x)) = 3 (x+3)^2, g'(x) = 1\n\\]\n\n\nSubstitute\n\\[\n[f(g(x))]' = 3(x+3)^2 \\cdot 1\n\\]"
+    "text": "Advanced rules\nChain rule: \\([f(g(x))]' = f'(g(x)) \\cdot g'(x)\\)\n\\[\nf(g(x)) = (x+3)^3 \\Rightarrow f(g(x)) = g(x)^3, g(x) = (x+3)\n\\]\n. . .\n\\[\nf'(x) = 3x^2 \\Rightarrow f'(g(x)) = 3 (x+3)^2, g'(x) = 1\n\\]\n. . .\nSubstitute\n\\[\n[f(g(x))]' = 3(x+3)^2 \\cdot 1\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#more3-practice",
@@ -1145,21 +1153,21 @@
     "href": "slides/03_calc1.html#higher-order-derivatives",
     "title": "Calculus I",
     "section": "Higher-order derivatives",
-    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n\n\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
+    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n. . .\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n. . .\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
   },
   {
     "objectID": "slides/03_calc1.html#partial-derivative",
     "href": "slides/03_calc1.html#partial-derivative",
     "title": "Calculus I",
     "section": "Partial derivative",
-    "text": "Partial derivative\n\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n\n\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n\n\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
+    "text": "Partial derivative\n. . .\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n. . .\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n. . .\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
   },
   {
     "objectID": "slides/03_calc1.html#example",
     "href": "slides/03_calc1.html#example",
     "title": "Calculus I",
     "section": "Example",
-    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
+    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n. . .\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
   },
   {
     "objectID": "slides/03_calc1.html#differentiability-of-functions",
@@ -1194,14 +1202,14 @@
     "href": "slides/03_calc1.html#first-order-condition",
     "title": "Calculus I",
     "section": "First order condition",
-    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n\n\\[FOC: f'(x)=0\\]"
+    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n. . .\n\\[FOC: f'(x)=0\\]"
   },
   {
     "objectID": "slides/03_calc1.html#second-order-condition",
     "href": "slides/03_calc1.html#second-order-condition",
     "title": "Calculus I",
     "section": "Second order condition",
-    "text": "Second order condition\n\nFOC finds critical points, but can’t tell if minimum or maximum\n\n\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
+    "text": "Second order condition\n. . .\nFOC finds critical points, but can’t tell if minimum or maximum\n. . .\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
   },
   {
     "objectID": "slides/03_calc1.html#more-more-more-more-practice",
@@ -1236,35 +1244,55 @@
     "href": "r/03_tidy2.html#finding-and-loading-data",
     "title": "Tidyverse II",
     "section": "",
-    "text": "Where do we find publicly available social science data?\n\nICPSR\nIPUMS\nWebsites of large/commonly used data sets (GSS, ANES, NLSY, etc.)\nGovernment open data portals (e.g., the Chicago Data Portal)\n\nTo illustrate how to work with a relatively large, publicly available data set, I’ve created copies of the Department of Education’s College Scorecard data in different formats. We’ll be using the institution-level data set, so each row will be a college/university in the U.S. Because these files are large and not confidential/sensitive, I’ve put them and this script on this Google Drive.\n\n\nFirst, let’s load the packages we need today. It’s a good practice to do this at the top of our Quarto document/R script.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# install.packages(\"haven\") # remove the # to run\n\nlibrary(haven)\n\n\n\n\n\n\n\n\n\nFile Type\nR function(s)\nPackages\n\n\n\n\nComma separated values (CSV)\nread.csv, read_csv\nbase R, tidyverse\n\n\nExcel file (XLS, XLSX)\nread_excel\ntidyverse\n\n\nStata data file (DTA)\nread_dta\nhaven\n\n\nSPSS data file (SAV)\nread_sav\nhaven\n\n\nSAS transport file (XPT)\nread_sas\nhaven\n\n\nR data file (RDS)\nreadRDS\nbase R\n\n\n\nRegardless of the data type, these functions will interpret the file name relative to your working directory. If the data file is saved in your working directory, you just need the name of the data file. Otherwise, you will have to specify a longer file path.\nExample:\n\ndata &lt;- read_csv(\"data/Most-Recent-Cohorts-Institution.csv\")\n\nRows: 6484 Columns: 3305\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2380): OPEID, OPEID6, INSTNM, CITY, STABBR, ZIP, ACCREDAGENCY, INSTURL,...\ndbl  (850): UNITID, SCH_DEG, HCM2, MAIN, NUMBRANCH, PREDDEG, HIGHDEG, CONTRO...\nlgl   (75): LOCALE2, UG, UGDS_WHITENH, UGDS_BLACKNH, UGDS_API, UGDS_AIANOLD,...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ndata_sav &lt;- read_sav(\"data/Most-Recent-Cohorts-Institution.sav\")\n\ndata_xpt &lt;- read_xpt(\"data/Most_Recent_Cohorts_Institution.xpt\")\n\n\n\n\n\n\n\nExercise\n\n\n\nRead in the file “Most-Recent-Cohorts-Institution.dta”.\n\n\nNotice that all of the dataframes have the same dimensions. That’s because they’re the same data set, just saved in different formats. To be economical, I’m going to delete the extra dataframes. Then I’ll examine the data.\n\nrm(data_sav, data_xpt) \n\nhead(data)\n\n# A tibble: 6 × 3,305\n  UNITID OPEID    OPEID6 INSTNM   CITY  STABBR ZIP   ACCREDAGENCY INSTURL NPCURL\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt; \n1 100654 00100200 001002 Alabama… Norm… AL     35762 Southern As… www.aa… www.a…\n2 100663 00105200 001052 Univers… Birm… AL     3529… Southern As… https:… https…\n3 100690 02503400 025034 Amridge… Mont… AL     3611… Southern As… https:… https…\n4 100706 00105500 001055 Univers… Hunt… AL     35899 Southern As… www.ua… finai…\n5 100724 00100500 001005 Alabama… Mont… AL     3610… Southern As… www.al… www.a…\n6 100751 00105100 001051 The Uni… Tusc… AL     3548… Southern As… www.ua… finan…\n# ℹ 3,295 more variables: SCH_DEG &lt;dbl&gt;, HCM2 &lt;dbl&gt;, MAIN &lt;dbl&gt;,\n#   NUMBRANCH &lt;dbl&gt;, PREDDEG &lt;dbl&gt;, HIGHDEG &lt;dbl&gt;, CONTROL &lt;dbl&gt;,\n#   ST_FIPS &lt;dbl&gt;, REGION &lt;dbl&gt;, LOCALE &lt;dbl&gt;, LOCALE2 &lt;lgl&gt;, LATITUDE &lt;dbl&gt;,\n#   LONGITUDE &lt;dbl&gt;, CCBASIC &lt;dbl&gt;, CCUGPROF &lt;dbl&gt;, CCSIZSET &lt;dbl&gt;, HBCU &lt;dbl&gt;,\n#   PBI &lt;dbl&gt;, ANNHI &lt;dbl&gt;, TRIBAL &lt;dbl&gt;, AANAPII &lt;dbl&gt;, HSI &lt;dbl&gt;,\n#   NANTI &lt;dbl&gt;, MENONLY &lt;dbl&gt;, WOMENONLY &lt;dbl&gt;, RELAFFIL &lt;dbl&gt;,\n#   ADM_RATE &lt;dbl&gt;, ADM_RATE_ALL &lt;dbl&gt;, SATVR25 &lt;dbl&gt;, SATVR75 &lt;dbl&gt;, …\n\n\nThere are lots of variables! Let’s focus on three: average faculty salary, 6-year completion rate among Pell grant recipients, and region.\n\n\n\nCreate a column with only the following columns: AVGFACSAL, C150_4_PELL, REGION."
+    "text": "Where do we find publicly available social science data?\n\nICPSR\nIPUMS\nWebsites of large/commonly used data sets (GSS, ANES, NLSY, etc.)\nGovernment open data portals (e.g., the Chicago Data Portal)\n\nTo illustrate how to work with a relatively large, publicly available data set, I’ve created copies of the Department of Education’s College Scorecard data in different formats. We’ll be using the institution-level data set, so each row will be a college/university in the U.S. Because these files are large and not confidential/sensitive, I’ve put them and this script on this Google Drive.\n\n\nFirst, let’s load the packages we need today. It’s a good practice to do this at the top of our Quarto document/R script.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# install.packages(\"haven\") # remove the # to run\n\nlibrary(haven)\n\n\n\n\n\n\n\n\n\nFile Type\nR function(s)\nPackages\n\n\n\n\nComma separated values (CSV)\nread.csv, read_csv\nbase R, tidyverse\n\n\nExcel file (XLS, XLSX)\nread_excel\ntidyverse\n\n\nStata data file (DTA)\nread_dta\nhaven\n\n\nSPSS data file (SAV)\nread_sav\nhaven\n\n\nSAS transport file (XPT)\nread_sas\nhaven\n\n\nR data file (RDS)\nreadRDS\nbase R\n\n\n\nRegardless of the data type, these functions will interpret the file name relative to your working directory. If the data file is saved in your working directory, you just need the name of the data file. Otherwise, you will have to specify a longer file path.\nExample:\n\ndata &lt;- read_csv(\"data/Most-Recent-Cohorts-Institution.csv\")\n\nRows: 6484 Columns: 3305\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2380): OPEID, OPEID6, INSTNM, CITY, STABBR, ZIP, ACCREDAGENCY, INSTURL,...\ndbl  (850): UNITID, SCH_DEG, HCM2, MAIN, NUMBRANCH, PREDDEG, HIGHDEG, CONTRO...\nlgl   (75): LOCALE2, UG, UGDS_WHITENH, UGDS_BLACKNH, UGDS_API, UGDS_AIANOLD,...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ndata_sav &lt;- read_sav(\"data/Most-Recent-Cohorts-Institution.sav\")\n\ndata_xpt &lt;- read_xpt(\"data/Most_Recent_Cohorts_Institution.xpt\")\n\n\n\n\n\n\n\nExercise\n\n\n\nRead in the file “Most-Recent-Cohorts-Institution.dta”.\n\n\nNotice that all of the dataframes have the same dimensions. That’s because they’re the same data set, just saved in different formats. To be economical, I’m going to delete the extra dataframes. Then I’ll examine the data.\n\nrm(data_sav, data_xpt) \n\nhead(data)\n\n# A tibble: 6 × 3,305\n  UNITID OPEID    OPEID6 INSTNM   CITY  STABBR ZIP   ACCREDAGENCY INSTURL NPCURL\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt; \n1 100654 00100200 001002 Alabama… Norm… AL     35762 Southern As… www.aa… www.a…\n2 100663 00105200 001052 Univers… Birm… AL     3529… Southern As… https:… https…\n3 100690 02503400 025034 Amridge… Mont… AL     3611… Southern As… https:… https…\n4 100706 00105500 001055 Univers… Hunt… AL     35899 Southern As… www.ua… finai…\n5 100724 00100500 001005 Alabama… Mont… AL     3610… Southern As… www.al… www.a…\n6 100751 00105100 001051 The Uni… Tusc… AL     3548… Southern As… www.ua… finan…\n# ℹ 3,295 more variables: SCH_DEG &lt;dbl&gt;, HCM2 &lt;dbl&gt;, MAIN &lt;dbl&gt;,\n#   NUMBRANCH &lt;dbl&gt;, PREDDEG &lt;dbl&gt;, HIGHDEG &lt;dbl&gt;, CONTROL &lt;dbl&gt;,\n#   ST_FIPS &lt;dbl&gt;, REGION &lt;dbl&gt;, LOCALE &lt;dbl&gt;, LOCALE2 &lt;lgl&gt;, LATITUDE &lt;dbl&gt;,\n#   LONGITUDE &lt;dbl&gt;, CCBASIC &lt;dbl&gt;, CCUGPROF &lt;dbl&gt;, CCSIZSET &lt;dbl&gt;, HBCU &lt;dbl&gt;,\n#   PBI &lt;dbl&gt;, ANNHI &lt;dbl&gt;, TRIBAL &lt;dbl&gt;, AANAPII &lt;dbl&gt;, HSI &lt;dbl&gt;,\n#   NANTI &lt;dbl&gt;, MENONLY &lt;dbl&gt;, WOMENONLY &lt;dbl&gt;, RELAFFIL &lt;dbl&gt;,\n#   ADM_RATE &lt;dbl&gt;, ADM_RATE_ALL &lt;dbl&gt;, SATVR25 &lt;dbl&gt;, SATVR75 &lt;dbl&gt;, …\n\n\nThere are lots of variables! Let’s focus on three: average faculty salary, 6-year completion rate among Pell grant recipients, and region.\n\n\n\nCreate a column with only the following columns: AVGFACSAL, C150_4_PELL, REGION.",
+    "crumbs": [
+      "Programming",
+      "3. Tidyverse II"
+    ]
   },
   {
     "objectID": "r/03_tidy2.html#missing-data",
     "href": "r/03_tidy2.html#missing-data",
     "title": "Tidyverse II",
     "section": "Missing data",
-    "text": "Missing data\nReal data sets almost always have at least some missing values. This can occur for a variety of reasons–sometimes a response to a survey question is missing because the respondent refused to answer it, but sometimes it’s missing because the respondent never saw the question in the first place (because the question was inapplicable to them, because they stopped taking the survey partway through, or because a random sample of respondents were selected to see the question). Sometimes, variables are not marked as missing in our data, but we recode them as missing because their values are illogical or hard to interpret.\nIn publicly available data sets, missing values are represented by many different values. Sometimes a missing value is represented by a dot or the word “NULL”; other times, it is a number like -1, 99, 999, etc. The same variable can have multiple missing codes; often, one code will represent a survey response of “Don’t know,” and another will represent a response of “Refused.” If we simply ignored these missing codes, we might get error messages–or worse, incorrect answers that don’t raise error messages.\nSuppose we have the following table in the codebook.\n\n\n\nResponse\nValue\nFrequency\n\n\n\n\nYes\n1\n0.45\n\n\nNo\n2\n0.35\n\n\nDon’t Know\n7\n0.15\n\n\nRefused\n9\n0.05\n\n\n\nIf we naively took the mean of this variable, we would get 2.65, which clearly makes no sense for the substantive meaning of the variable.\n\n1*0.45 + 2*0.35 + 7*0.15 + 9*0.05\n\n[1] 2.65\n\n\nTo prevent issues like this, it’s important to recode missing values as NA, which is what R recognizes as missing data. In the dataframe we just loaded, our missing values are already coded as NA, so we can skip this step.\nA full treatment of missing data is beyond the scope of today’s class. However, you should know how to do two simple tasks. First, you should know how much missing data you have. Here’s a simple way to check.\n\nsum(is.na(selection$AVGFACSAL))\n\n[1] 2596\n\nsum(is.na(selection$C150_4_PELL))\n\n[1] 4300\n\nsum(is.na(selection$REGION))\n\n[1] 0\n\n\nWe have quite a bit of missing data for faculty salary, and even more for Pell grant recipient completion rate. We happen not to have any missing data for region.\nNext, you should know how to remove all rows of your data set with missing values for the variables you’re interested in. This is called listwise deletion, and it’s not always the right choice, but it’s very common in social science research. Here are two ways to do this.\n\n# method 1\nselection_complete &lt;- selection %&gt;%\n  filter(!is.na(AVGFACSAL) & !is.na(C150_4_PELL) & !is.na(REGION))\n\nnrow(selection_complete) # check how many rows we have left\n\n[1] 2148\n\n# method 2\nselection_complete &lt;- selection %&gt;%\n  na.omit() # omit all rows with missing values in any variables in the dataframe;\n# can also specify specific variables we'd like to delete\n\nnrow(selection_complete) # check how many rows we have left again\n\n[1] 2148\n\n\nEncouragingly, we get the same number of rows in the complete dataframe using both methods.\n\n\n\n\n\n\nExercise\n\n\n\n\nTry to remove all rows of selection that have missing values for faculty salary, but keep rows with missing values for Pell recipient completion rate.\nDo universities in different regions of the U.S. have different amounts of missing data? Why might this be?"
+    "text": "Missing data\nReal data sets almost always have at least some missing values. This can occur for a variety of reasons–sometimes a response to a survey question is missing because the respondent refused to answer it, but sometimes it’s missing because the respondent never saw the question in the first place (because the question was inapplicable to them, because they stopped taking the survey partway through, or because a random sample of respondents were selected to see the question). Sometimes, variables are not marked as missing in our data, but we recode them as missing because their values are illogical or hard to interpret.\nIn publicly available data sets, missing values are represented by many different values. Sometimes a missing value is represented by a dot or the word “NULL”; other times, it is a number like -1, 99, 999, etc. The same variable can have multiple missing codes; often, one code will represent a survey response of “Don’t know,” and another will represent a response of “Refused.” If we simply ignored these missing codes, we might get error messages–or worse, incorrect answers that don’t raise error messages.\nSuppose we have the following table in the codebook.\n\n\n\nResponse\nValue\nFrequency\n\n\n\n\nYes\n1\n0.45\n\n\nNo\n2\n0.35\n\n\nDon’t Know\n7\n0.15\n\n\nRefused\n9\n0.05\n\n\n\nIf we naively took the mean of this variable, we would get 2.65, which clearly makes no sense for the substantive meaning of the variable.\n\n1*0.45 + 2*0.35 + 7*0.15 + 9*0.05\n\n[1] 2.65\n\n\nTo prevent issues like this, it’s important to recode missing values as NA, which is what R recognizes as missing data. In the dataframe we just loaded, our missing values are already coded as NA, so we can skip this step.\nA full treatment of missing data is beyond the scope of today’s class. However, you should know how to do two simple tasks. First, you should know how much missing data you have. Here’s a simple way to check.\n\nsum(is.na(selection$AVGFACSAL))\n\n[1] 2596\n\nsum(is.na(selection$C150_4_PELL))\n\n[1] 4300\n\nsum(is.na(selection$REGION))\n\n[1] 0\n\n\nWe have quite a bit of missing data for faculty salary, and even more for Pell grant recipient completion rate. We happen not to have any missing data for region.\nNext, you should know how to remove all rows of your data set with missing values for the variables you’re interested in. This is called listwise deletion, and it’s not always the right choice, but it’s very common in social science research. Here are two ways to do this.\n\n# method 1\nselection_complete &lt;- selection %&gt;%\n  filter(!is.na(AVGFACSAL) & !is.na(C150_4_PELL) & !is.na(REGION))\n\nnrow(selection_complete) # check how many rows we have left\n\n[1] 2148\n\n# method 2\nselection_complete &lt;- selection %&gt;%\n  na.omit() # omit all rows with missing values in any variables in the dataframe;\n# can also specify specific variables we'd like to delete\n\nnrow(selection_complete) # check how many rows we have left again\n\n[1] 2148\n\n\nEncouragingly, we get the same number of rows in the complete dataframe using both methods.\n\n\n\n\n\n\nExercise\n\n\n\n\nTry to remove all rows of selection that have missing values for faculty salary, but keep rows with missing values for Pell recipient completion rate.\nDo universities in different regions of the U.S. have different amounts of missing data? Why might this be?",
+    "crumbs": [
+      "Programming",
+      "3. Tidyverse II"
+    ]
   },
   {
     "objectID": "r/03_tidy2.html#recoding-variables",
     "href": "r/03_tidy2.html#recoding-variables",
     "title": "Tidyverse II",
     "section": "Recoding variables",
-    "text": "Recoding variables\nBefore we do any data analysis, we will need to prepare our variables by recoding them. This is especially true for categorical variables. Region in this data set is a good example. From the codebook, we have the following information.\n\n\n\nRegion\nValue\n\n\n\n\nU.S. Service Schools\n0\n\n\nNew England\n1\n\n\nMid East\n2\n\n\nGreat Lakes\n3\n\n\nPlains\n4\n\n\nSoutheast\n5\n\n\nSouthwest\n6\n\n\nRocky Mountains\n7\n\n\nFar West\n8\n\n\nOutlying Areas\n9\n\n\n\nSuppose we wanted to combine some of these regions. We could combine New England and Mid East into an “East” category, group Great Lakes and Plains into a “Midwest” category, keep “Southeast” as its own category, put Southwest, Rocky Mountains, and Far West into a “West” category, and collapse the remaining regions (U.S. Service Schools and Outlying Areas) into an “Other region” category.\nThe case_when function is ideal for this task. Here’s how we might do it.\n\nselection_complete &lt;- selection_complete %&gt;%\n  mutate(region_rec = case_when(REGION %in% c(1,2) ~ \"East\",\n                                REGION %in% c(3,4) ~ \"Midwest\",\n                                REGION == 5 ~ \"South\",\n                                REGION %in% c(6:8) ~ \"West\",\n                                TRUE ~ \"Other\"))\n\nWhy is the condition for the last line “TRUE”? Case_when reads each line sequentially, and assigns the value for the first statement that is true. When REGION is between 1 and 8, at least one of the first four conditions must hold. When evaluating case_when, R only goes to the last line when none of the first four conditions have held. This could only possibly happen if REGION was 0 or 9. By writing “TRUE,” we are effectively saying, “If you’ve gotten to this point, assign the value ‘Other’ no matter what.” Of course, we could also use a more specific condition for this last line–TRUE is just often simpler to type and makes sure we don’t leave out any data.\nWhat if we only cared whether or not a school was in the South? We could create a simpler binary variable for this with case_when like this.\n\nselection_complete &lt;- selection_complete %&gt;%\n  mutate(south = case_when(REGION == 5 ~ 1,\n                           TRUE ~ 0))\n\nThis code is equivalent to the if_else function we learned about yesterday. Using that function, we could write the following.\n\nselection_complete &lt;- selection_complete %&gt;%\n  mutate(south = if_else(REGION == 5, 1, 0))\n\n\n\n\n\n\n\nExercise\n\n\n\nCreate a “west” variable indicating whether a university is in the West of the U.S. Find the mean of this variable. What does the mean represent substantively?"
+    "text": "Recoding variables\nBefore we do any data analysis, we will need to prepare our variables by recoding them. This is especially true for categorical variables. Region in this data set is a good example. From the codebook, we have the following information.\n\n\n\nRegion\nValue\n\n\n\n\nU.S. Service Schools\n0\n\n\nNew England\n1\n\n\nMid East\n2\n\n\nGreat Lakes\n3\n\n\nPlains\n4\n\n\nSoutheast\n5\n\n\nSouthwest\n6\n\n\nRocky Mountains\n7\n\n\nFar West\n8\n\n\nOutlying Areas\n9\n\n\n\nSuppose we wanted to combine some of these regions. We could combine New England and Mid East into an “East” category, group Great Lakes and Plains into a “Midwest” category, keep “Southeast” as its own category, put Southwest, Rocky Mountains, and Far West into a “West” category, and collapse the remaining regions (U.S. Service Schools and Outlying Areas) into an “Other region” category.\nThe case_when function is ideal for this task. Here’s how we might do it.\n\nselection_complete &lt;- selection_complete %&gt;%\n  mutate(region_rec = case_when(REGION %in% c(1,2) ~ \"East\",\n                                REGION %in% c(3,4) ~ \"Midwest\",\n                                REGION == 5 ~ \"South\",\n                                REGION %in% c(6:8) ~ \"West\",\n                                TRUE ~ \"Other\"))\n\nWhy is the condition for the last line “TRUE”? Case_when reads each line sequentially, and assigns the value for the first statement that is true. When REGION is between 1 and 8, at least one of the first four conditions must hold. When evaluating case_when, R only goes to the last line when none of the first four conditions have held. This could only possibly happen if REGION was 0 or 9. By writing “TRUE,” we are effectively saying, “If you’ve gotten to this point, assign the value ‘Other’ no matter what.” Of course, we could also use a more specific condition for this last line–TRUE is just often simpler to type and makes sure we don’t leave out any data.\nWhat if we only cared whether or not a school was in the South? We could create a simpler binary variable for this with case_when like this.\n\nselection_complete &lt;- selection_complete %&gt;%\n  mutate(south = case_when(REGION == 5 ~ 1,\n                           TRUE ~ 0))\n\nThis code is equivalent to the if_else function we learned about yesterday. Using that function, we could write the following.\n\nselection_complete &lt;- selection_complete %&gt;%\n  mutate(south = if_else(REGION == 5, 1, 0))\n\n\n\n\n\n\n\nExercise\n\n\n\nCreate a “west” variable indicating whether a university is in the West of the U.S. Find the mean of this variable. What does the mean represent substantively?",
+    "crumbs": [
+      "Programming",
+      "3. Tidyverse II"
+    ]
   },
   {
     "objectID": "r/03_tidy2.html#more-data-visualization",
     "href": "r/03_tidy2.html#more-data-visualization",
     "title": "Tidyverse II",
     "section": "More data visualization",
-    "text": "More data visualization\nIn addition to histograms, you should know how to create and interpret a scatterplot. The syntax for a scatterplot is similar to that for the histogram we created yesterday. Let’s plot faculty salary on the X-axis and Pell recipient completion rate on the Y-axis.\n\nselection_complete %&gt;%\n  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL)) +\n  geom_point()\n\n\n\n\nWhat do we learn from this scatterplot?\n\n\n\n\n\n\nExercise\n\n\n\nReferencing yesterday’s material, relabel the axes and add a meaningful title.\n\n\nWe might wonder if there’s variation in this relationship by region. Let’s explore this in two ways. First, we’ll allow the color of the points to indicate the region of the university.\n\nselection_complete %&gt;%\n  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL, col = region_rec)) +\n  geom_point() +\n  labs(x = \"Average faculty salary (monthly)\", y = \"6-Year graduation rate among Pell Grant recipients\", col = \"Region\", title = \"Pell grant recipient graduation rate by faculty salary\") +\n  theme_minimal()\n\n\n\n\nIt’s hard to see obvious patterns on this plot. Subjectively, it seems like the “Other” region schools tend to have lower faculty salaries in general, and those salaries don’t seem very predictive of graduation rates among Pell grant recipients. However, we would need better tools to test this conjecture.\nA clearer way to see differences in the relationship between faculty salary and graduation rates by region is to use a facet wrap. This will create five separate scatterplots, one for each region.\n\nselection_complete %&gt;%\n  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL)) +\n  geom_point() +\n  labs(x = \"Average faculty salary (monthly)\", y = \"6-Year graduation rate among Pell Grant recipients\", title = \"Pell grant recipient graduation rate by faculty salary\") +\n  theme_minimal() +\n  facet_wrap(~region_rec)\n\n\n\n\nHow would you interpret these plots?"
+    "text": "More data visualization\nIn addition to histograms, you should know how to create and interpret a scatterplot. The syntax for a scatterplot is similar to that for the histogram we created yesterday. Let’s plot faculty salary on the X-axis and Pell recipient completion rate on the Y-axis.\n\nselection_complete %&gt;%\n  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL)) +\n  geom_point()\n\n\n\n\n\n\n\n\nWhat do we learn from this scatterplot?\n\n\n\n\n\n\nExercise\n\n\n\nReferencing yesterday’s material, relabel the axes and add a meaningful title.\n\n\nWe might wonder if there’s variation in this relationship by region. Let’s explore this in two ways. First, we’ll allow the color of the points to indicate the region of the university.\n\nselection_complete %&gt;%\n  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL, col = region_rec)) +\n  geom_point() +\n  labs(x = \"Average faculty salary (monthly)\", y = \"6-Year graduation rate among Pell Grant recipients\", col = \"Region\", title = \"Pell grant recipient graduation rate by faculty salary\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\nIt’s hard to see obvious patterns on this plot. Subjectively, it seems like the “Other” region schools tend to have lower faculty salaries in general, and those salaries don’t seem very predictive of graduation rates among Pell grant recipients. However, we would need better tools to test this conjecture.\nA clearer way to see differences in the relationship between faculty salary and graduation rates by region is to use a facet wrap. This will create five separate scatterplots, one for each region.\n\nselection_complete %&gt;%\n  ggplot(aes(x = AVGFACSAL, y = C150_4_PELL)) +\n  geom_point() +\n  labs(x = \"Average faculty salary (monthly)\", y = \"6-Year graduation rate among Pell Grant recipients\", title = \"Pell grant recipient graduation rate by faculty salary\") +\n  theme_minimal() +\n  facet_wrap(~region_rec)\n\n\n\n\n\n\n\n\nHow would you interpret these plots?",
+    "crumbs": [
+      "Programming",
+      "3. Tidyverse II"
+    ]
   },
   {
     "objectID": "r/03_tidy2.html#additional-topics-working-with-dates",
     "href": "r/03_tidy2.html#additional-topics-working-with-dates",
     "title": "Tidyverse II",
     "section": "Additional topics: working with dates",
-    "text": "Additional topics: working with dates\nTo explore these topics, we’ll use another built-in data set. But first, we’ll need to load an additional package.\n\n# install.packages(\"nycflights13\")\nlibrary(nycflights13)\n\nWe’ll use the flights data set, which contains information about all flights from New York airports in 2013. First, let’s take a look at the first few rows of data.\n\nhead(flights)\n\n# A tibble: 6 × 19\n   year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n  &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n1  2013     1     1      517            515         2      830            819\n2  2013     1     1      533            529         4      850            830\n3  2013     1     1      542            540         2      923            850\n4  2013     1     1      544            545        -1     1004           1022\n5  2013     1     1      554            600        -6      812            837\n6  2013     1     1      554            558        -4      740            728\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\nThe last column of this data set indicates the date and time of the flight.\n\nflights &lt;- flights %&gt;%\n  mutate(flight_date = date(time_hour))\n\nOnce we have converted this variable into a date, we can use other functions in lubridate to extract the year, month, and day of each date. We can also compute the time between two dates in days (or any other unit of time). Here are some examples.\n\nyear(flights$flight_date[500])\n\n[1] 2013\n\nday(flights$flight_date[500])\n\n[1] 1\n\nmonth(flights$flight_date[500])\n\n[1] 1\n\nint &lt;- interval(start = flights$flight_date[1], end = flights$flight_date[10000])\nsecs &lt;- int_length(int) # interval length in seconds\ndays &lt;- int_length(int)/(60*60*24) # divide to get interval length in days\n\nsecs\n\n[1] 950400\n\ndays\n\n[1] 11\n\n\nThis is just a quick sampling of the lubridate package. For more information, check out the lubridate website here."
+    "text": "Additional topics: working with dates\nTo explore these topics, we’ll use another built-in data set. But first, we’ll need to load an additional package.\n\n# install.packages(\"nycflights13\")\nlibrary(nycflights13)\n\nWe’ll use the flights data set, which contains information about all flights from New York airports in 2013. First, let’s take a look at the first few rows of data.\n\nhead(flights)\n\n# A tibble: 6 × 19\n   year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n  &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n1  2013     1     1      517            515         2      830            819\n2  2013     1     1      533            529         4      850            830\n3  2013     1     1      542            540         2      923            850\n4  2013     1     1      544            545        -1     1004           1022\n5  2013     1     1      554            600        -6      812            837\n6  2013     1     1      554            558        -4      740            728\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\nThe last column of this data set indicates the date and time of the flight.\n\nflights &lt;- flights %&gt;%\n  mutate(flight_date = date(time_hour))\n\nOnce we have converted this variable into a date, we can use other functions in lubridate to extract the year, month, and day of each date. We can also compute the time between two dates in days (or any other unit of time). Here are some examples.\n\nyear(flights$flight_date[500])\n\n[1] 2013\n\nday(flights$flight_date[500])\n\n[1] 1\n\nmonth(flights$flight_date[500])\n\n[1] 1\n\nint &lt;- interval(start = flights$flight_date[1], end = flights$flight_date[10000])\nsecs &lt;- int_length(int) # interval length in seconds\ndays &lt;- int_length(int)/(60*60*24) # divide to get interval length in days\n\nsecs\n\n[1] 950400\n\ndays\n\n[1] 11\n\n\nThis is just a quick sampling of the lubridate package. For more information, check out the lubridate website here.",
+    "crumbs": [
+      "Programming",
+      "3. Tidyverse II"
+    ]
   },
   {
     "objectID": "slides/03_calc1.html",
@@ -1328,5 +1356,478 @@
     "title": "Matrices",
     "section": "Matrix multiplication ",
     "text": "Matrix multiplication \n\n\nMatrices must be conformable\nFor \\(A \\times B\\) we need \\(A_{i \\times k}\\) and \\(B_{k \\times j}\\)\nThe result will have \\(i \\times j\\) dimensions\nOrder matters! \\(A \\times B \\neq B \\times A\\) even if both operations are conformable"
+  },
+  {
+    "objectID": "r/04_sampling.html#before-we-start",
+    "href": "r/04_sampling.html#before-we-start",
+    "title": "Sampling and simulation",
+    "section": "",
+    "text": "What is %&gt;%?\nA clear environment = a clear mind!\nHow to create a chunk?\nHow to run a line of code?\n\n\nDownload script",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "r/04_sampling.html#random-sampling-from-distributions",
+    "href": "r/04_sampling.html#random-sampling-from-distributions",
+    "title": "Sampling and simulation",
+    "section": "Random sampling from distributions",
+    "text": "Random sampling from distributions\nGenerating data is a powerful skill used to model different situations, allowing for statistical inference. For example, based on distributions we can predict the probability of a specific value occurring.\n\nUniform distribution\nSimple things first. For example, you have a task of generating random number between 0 and 1. How would computer do it? Random number generation is a slightly counter intuitive process. Basically, computer is extracting numbers from a uniform distribution. Let’s try it out.\nRun this chunk a couple of times:\n\nrunif(10)\n\n [1] 0.4696058 0.6359545 0.2781490 0.2525799 0.1566532 0.2139058 0.3334451\n [8] 0.8963178 0.8623301 0.4870929\n\n\nIf you’d like to control the random generation process, you can use set.seed() function. Try this out:\n\nset.seed(123)\nrunif(10)\n\nset.seed(123)\nrunif(10)\n\n [1] 0.2875775 0.7883051 0.4089769 0.8830174 0.9404673 0.0455565 0.5281055\n [8] 0.8924190 0.5514350 0.4566147\n [1] 0.2875775 0.7883051 0.4089769 0.8830174 0.9404673 0.0455565 0.5281055\n [8] 0.8924190 0.5514350 0.4566147\n\n\nYou can adjust the boundaries however you would like to. Let’s simulate a million of observations.\n\nset.seed(123)\nuniform_data &lt;- runif(n = 1000000, min = -3, max = 3)\n\nNow, visualize what we got. It looks like a rectangle! In other words, every number is equally likely to appear. And that’s what the uniform distribution is.\n\nlibrary(tidyverse)\n\nggplot(data.frame(uniform_data), aes(x = uniform_data)) +\n  geom_histogram(binwidth = 0.25, boundary = 0, closed = \"right\") +\n  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-5, 5))\n\n\n\n\n\n\n\n\nLet’s consider a less theoretical example. You’d like to assign a student for next week’s presentation.\n\nstudents_list &lt;- c(\"student_1\", \"student_2\", \"student_3\", \"student_4\", \"student_5\", \"student_6\")\n\nTo do this, you can use sample() function. You would like each student to appear with the same probability as any other student.\n\nsample(students_list, size = 1)\n\n[1] \"student_5\"\n\n\nHow fair is this random assignment? You can test it using R! To do this, we need to collect data. In our example, we can generate results easily. Take a look at how we modified sample(). replace = T argument puts the student back after they are drawn.\n\ndatabase &lt;- data.frame(\"student\" = sample(students_list, size = 10000, replace = T))\nhead(database)\n\n    student\n1 student_4\n2 student_4\n3 student_3\n4 student_2\n5 student_2\n6 student_4\n\n\nNow, check out the graph! Thus, without adjustment, sample() essentially follows a uniform distribution.\n\nggplot(database) +\n  geom_histogram(aes(x = student), stat = \"count\") \n\n\n\n\n\n\n\n\n\n\nNormal distribution (Continuous Data)\nHowever, most numbers that exist in the world tend to have higher probabilities around certain values—almost like gravity around a specific point. For instance, income in the United States is not uniformly distributed—a handful of people are really really rich, lots are very poor, and most are kind of clustered around an average.\nOne of such distributions is the “bell curve” - or normal distribution. Let’s generate a normal distribution data and visualize it.\n\nset.seed(1234)\nnormal_data &lt;- rnorm(1000)\n\nnormal_plot &lt;- ggplot(data.frame(normal_data), aes(x = normal_data)) +\n  geom_histogram(color = \"white\") \nnormal_plot\n\n\n\n\n\n\n\n\nNow, let’s calculate and plot the average of our data. It’s centered at 0! This is the first parameter of the normal distribution.\n\nnormal_plot + geom_vline(xintercept = mean(normal_data), color = \"red\")\n\n\n\n\n\n\n\n\nBut there is another parameter of the normal distribution which is the standard deviation (sd or \\(\\sigma\\)). In simple terms, it means the spread of data from the average. For example, let’s highlight +- 1 sd from the average. Generally, it covers 68% of observations.\n\nnormal_plot + \n  geom_vline(xintercept = mean(normal_data) + sd(normal_data), color = \"blue\") +\n  geom_vline(xintercept = mean(normal_data) - sd(normal_data), color = \"blue\") \n\n\n\n\n\n\n\n\nIn statistics we are often interested in finding a “location” of 95% of observations. It is roughly within +- 2 sd.\n\nnormal_plot + \n  geom_vline(xintercept = mean(normal_data) + 2*sd(normal_data), color = \"blue\") +\n  geom_vline(xintercept = mean(normal_data) - 2*sd(normal_data), color = \"blue\") \n\n\n\n\n\n\n\n\n\nProbability Density Function\nMathematicians - as usual - came up with formula to represent this kind of distribution abstractly. I don’t want to scare you, so we won’t consider the formula here. However, this formula allows us to draw the graph below. This is a generalized version of the normal distribution, it’s called Probability Density Function (PDF).\n\nggplot() +\n  stat_function(fun = dnorm) +\n  geom_vline(aes(xintercept = 1, color = \"1 SD\")) +\n  geom_vline(aes(xintercept = -1, color = \"1 SD\")) +\n  geom_vline(aes(xintercept = 2, color = \"2 SD\")) +\n  geom_vline(aes(xintercept = -2, color = \"2 SD\")) +\n  labs(title = \"Normal Distribution (mean = 0, sd = 1)\",\n       subtitle = \"Probability Density Function\",\n       color = \"\",\n       y = \"Probability\") +\n  scale_x_continuous(breaks = seq(-5, 5, by = 1), limits = c(-5, 5))\n\n\n\n\n\n\n\n\nUsing this, we can, say, calculate the probability of drawing “0” from a normal distribution with \\(\\mu = 0\\) and \\(\\sigma = 1\\)\n\ndnorm(0, mean = 0, sd = 1)\n\n[1] 0.3989423\n\n\nLet’s check it on our normal_data we generated previously. I suggest changing binwidth for straightforward calculation. Does it remind you the PDF?\nDo you remember what the binwidth argument does?\n\nnormal_plot +\n  geom_histogram(binwidth = 1) +\n  scale_x_continuous(breaks = seq(-5, 5, by = 1), limits = c(-5, 5))\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_bar()`).\n\n\n\n\n\n\n\n\n\nThere are slightly less than 40% of observations fall into “0”. It matches our expectations! In other words, knowing the average and the standard deviation of the normal distribution, we can predict how many observations would be of given value.\n\n\nCumulative Distribution Function\nWhat if we are interested in how many observations would be 0 or fewer? For this option we might use Cumulative Distribution Function.\nAny guesses at this point? Take a look on the PDF!\nCumulative distribution function looks like this. This is kind of S shape.\n\nggplot() +\n  geom_function(fun = pnorm) +\n  xlim(-5,5) +\n  labs(title = \"Normal Distribution (mean = 0, sd = 1)\",\n       subtitle = \"Cumulative Distribution Function\",\n       y = \"Probability\") \n\n\n\n\n\n\n\n\nSlightly harder is to calculate more precise values. For example, how many observations would be 1 or less? 84%!\n\npnorm(1, mean = 0, sd = 1)\n\n[1] 0.8413447\n\n\nOn the graph, it would look like this:\n\nggplot(NULL, aes(c(-5,5))) +\n  geom_area(stat = \"function\", fun = dnorm,  xlim = c(-1.35, 5)) +\n  geom_area(stat = \"function\", fun = dnorm, fill=\"sky blue\", xlim = c(-5, 1)) +\n  labs(title = \"Normal Distribution (mean = 0, sd = 1)\",\n       x = \"\",\n       y = \"Probability\") +\n  scale_x_continuous(breaks = seq(-5, 5, by = 1), limits = c(-5, 5))\n\n\n\n\n\n\n\n\nConversely, to know how many observation would be 1 or more we can use a trick:\n\n1 - pnorm(1, mean = 0, sd = 1)\n\n[1] 0.1586553\n\n\n\n\n\nBinomial distribution (Discrete Data)\nOften you’ll want to generate a column that only has two values: yes/no, treated/untreated, before/after, big/small, red/blue, etc. You’ll also likely want to control the proportions (25% treated, 62% blue, etc.).\nFor instance, we can ask R to do the following twenty times: flip a fair coin one hundred times, and count the number of tails.\n\nrbinom(n = 20, size = 100, prob = 0.5)\n\n [1] 51 45 54 54 43 57 55 49 44 54 46 52 46 54 47 45 51 52 52 53\n\n\nWith prob = , we can implement unfair coins:\n\nrbinom(n = 20, size = 100, prob = 0.9)\n\n [1] 94 90 87 90 94 92 93 84 92 91 93 95 93 94 86 93 90 87 92 89\n\n\nR will choose these values with equal/uniform probability by default, but you can change that in sample() with the prob argument. For instance, pretend you want to simulate an election. According to the latest polls, one candidate has an 80% chance of winning. You want to randomly choose a winner based on that chance. Here’s how to do that with sample()\n\nset.seed(1234)\ncandidates &lt;- c(\"Person 1\", \"Person 2\")\nfake_elections &lt;- data.frame(winner = sample(candidates,\n                                         size = 1000,\n                                         prob = c(0.8, 0.2),\n                                         replace = TRUE))\n\n\nggplot(fake_elections, aes(x = winner)) +\n  geom_histogram(stat = \"count\")\n\n\n\n\n\n\n\n\n\n\nOther distribution functions\nEach distribution can do more than generate random numbers (the prefix r). We can compute the cumulative probability by the function pbinom(), punif(), and pnorm(). Also the density – the value of the PDF – by dbinom(), dunif() and dnorm().",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "r/04_sampling.html#random-sampling-from-data",
+    "href": "r/04_sampling.html#random-sampling-from-data",
+    "title": "Sampling and simulation",
+    "section": "Random Sampling from Data",
+    "text": "Random Sampling from Data\nLet’s work with the real data a bit. Download results of World Happiness Report 2024 from the following URL. Load it to R!\n\nh_report &lt;- read.csv(\"data/happiness_report_2024.csv\")\n\nVisualize the happiness_score variable.\n\nggplot(h_report, aes(x = ...)) +\n  geom_histogram(color = \"white\", binwidth = 1) +\n  labs(title = \"Distribution of happiness_score variable\") +\n\nNow, let’s sample 80 observations from the dataset. Basically, we are randomly extracting rows from the main dataset. Compare sample() and sample_n()\n\nset.seed(1234)\nh_report_sample &lt;- sample_n(h_report, size = 80)\n\nNow, compare the graphs of original data and of its sample.\n\nggplot(h_report_sample, aes(x = happiness_score)) +\n  geom_histogram(color = \"white\", binwidth = 1) +\n  labs(title = \"Distribution of Sample of happiness_score variable\")\n\n\n\n\n\n\n\n\nWe can check basic characteristics of those distributions. For example, their average. It’s pretty similar!\n\nmean(h_report_sample$happiness_score)\nmean(h_report$happiness_score)\n\n[1] 5.487167\n[1] 5.527572\n\n\nAlternatively, we can check standard deviation. They are quite similar too.\n\nsd(h_report_sample$happiness_score)\nsd(h_report$happiness_score)\n\n[1] 1.210437\n[1] 1.17069\n\n\nIf we assume that true average \\(\\mu\\) is equal to 5.53, then our estimator \\(\\hat{\\mu}\\) from the average of the data \\(\\bar{X}\\) would be 5.49. In other words, even with the limited access to data we were able to figure average of the “real” distribution.\nNow, briefly. Let’s check how it matches with our theoretical assumptions of how the world works. We assume that the happiness scores are distributed normally. Thus, even with a limited sample knowledge (N=80) we can attempt to generalize on the whole population (N = 143). Let’s, say, calculate the probability that a given country would receive 6 on happiness score.\n\ndnorm(x = 6,\n      mean = mean(h_report_sample$happiness_score),\n      sd = sd(h_report_sample$happiness_score))\n\n[1] 0.3012936\n\n\nNow, let’s calculate the real data. To make things easier, we add a count of countries in each bin.\n\nggplot(h_report, aes(x = happiness_score)) +\n  geom_histogram(color = \"white\", binwidth = 1) +\n  stat_bin(binwidth = 1, geom = \"text\", aes(label = ..count..), vjust = -0.5)\n\n\n\n\n\n\n\n\nWe got \\(\\approx\\) 0.34, when we predicted 0.30. Sounds good with a limited access to data!\n\n49/143\n\n[1] 0.3426573\n\n\n\n\n\n\n\n\nExercise\n\n\n\nYou have access to diamonds dataset.\n\ndata(diamonds)\n\nWhat are the variables in this dataset?\nUsing ggplot(), draw a histogram of the variable depth. Diamond depth describes its proportions. The less, the better.\n\nggplot(diamonds, aes(x=...))+\n  geom_histogram() \n\nDoes it remind you of normal distribution?\n\nmean(diamonds$depth)\nsd(diamonds$depth)\n\n[1] 61.7494\n[1] 1.432621\n\n\nDraw a probability density function (dnorm()).\n\nggplot() +\n  stat_function(fun = ..., args = list(mean = mean(...), sd = sd(...))) +\n  xlim(40, 80)\n\nSample 1000 observations.\n\nset.seed(123)\ndiamonds_sample = sample_n(diamonds, size = 1000)\n\nCompare average and standard deviation. Are they comparable with the original data?\n\nmean(...)\nsd(...)\n\nIn your free time, feel free to experiment how few observations you need to get more or less reliable parameters of a normal distribution!\n\n\n\nBootstrapping\nTo get a better measure of \\(\\hat{\\mu}\\) we can apply bootstrapping. To put it simple, we are going to repeat sampling process several times, and each time we draw random sample from the dataset we record its average. First, we create a dataset which we’ll be using to store those averages.\n\nsample_averages &lt;- data.frame()\n\nUsing loops, you can repeat actions several times. This is what programming is quite helpful in! Explore how a for loop below works.\n\nfor indicates the beginning of the loop\ni stands for the index of an iteration\nin 1:10 specifies the range of values from 1 to 10\n\n\nfor(i in 1:10){\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n[1] 6\n[1] 7\n[1] 8\n[1] 9\n[1] 10\n\n\nNow, iterate (i.e. repeat) sampling process!\n\nfor(i in 1:100){\n  temporary_sample &lt;- sample_n(h_report, size = 80)                   # sample 80 observations\n  temporary_sample_average &lt;- mean(temporary_sample$happiness_score)  # calculate the sample average \n  sample_averages &lt;- rbind(sample_averages, temporary_sample_average) # add the sample average to the df\n}\n\ncolnames(sample_averages) = \"average\"\nhead(sample_averages)\n\n   average\n1 5.444772\n2 5.782780\n3 5.351790\n4 5.519500\n5 5.477656\n6 5.479902\n\n\nTake a look on the average of the collected averages. Did it get closer to the real parameter?\n\nmean(sample_averages$average)\n\n[1] 5.531569\n\n\n\n\n\n\n\n\nExercise\n\n\n\nIn dataframe h_report, explore freedom variable. Check the descriptive statistics.\nDraw a histogram of this variable using ggplot. Indicate the average\n\nggplot(...) +\n  geom_histogram(aes(x = ...)) +\n  geom_vline(xintercept = mean(..., na.rm = T))\n\nCalculate the average.\n\nmean(..., na.rm = T)\n\nUsing bootstrapping, get the comparable average.\nFirst, create a dataframe to store the results of the averages.\n\nbootsrap_averages = ...\n\nFinish this for loop so it saves average of sampled data. Repeat the loop 10 times. Limit the size of sample_n to 50.\n\n...(i in 1:...){\n  temporary_sample &lt;- sample_n(h_report, size = ...)\n  temporary_sample_average &lt;- ...\n  bootsrap_averages &lt;- rbind(bootsrap_averages, temporary_sample_average)\n}\n\ncolnames(bootsrap_averages) = \"average\"\n\nCompare the average of h_report$freedom and bootsrap_averages$average. Are they different?\nRepeat the comparison, but change the number of iterations to 100. Did the result improve?",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "r/04_sampling.html#automation-and-custom-functions",
+    "href": "r/04_sampling.html#automation-and-custom-functions",
+    "title": "Sampling and simulation",
+    "section": "Automation and Custom functions",
+    "text": "Automation and Custom functions\n\nCustom functions (very small example, mostly to get used to the syntax)\n\nIt is a frequent issue that when you work with data you would want to perform same several actions with a given dataset. For example, you would want to calculate average for specific set of variables, and then store it in a different dataframe to describe those selected In this case, custom functions are incredibly helpful.\nExplore the function below. It stores the averages for happiness_score, life_expectancy and freedom variables.\n\ncalculate_average &lt;- function(dataframe){\n  average_happiness = mean(dataframe$happiness_score)\n  average_expectancy = mean(dataframe$life_expectancy, na.rm = T)\n  average_freedom = mean(dataframe$freedom, na.rm = T)\n  \n  average_output = data.frame(average_happiness, average_expectancy, average_freedom)\n  return(average_output) # This is what the function returns as a result\n}\n\nTry it out.\n\ncalculate_average(h_report)\n\n  average_happiness average_expectancy average_freedom\n1          5.527572           0.520843       0.6205882\n\n\nNow, we can easily calculate those averages anytime we sample from the dataset.\n\ncalculate_average(h_report_sample)\n\n  average_happiness average_expectancy average_freedom\n1          5.487167          0.5148118       0.6285374\n\n\n\n\n\n\n\n\nExercise\n\n\n\nCustom functions save a lot of time, especially if you have a non-trivial task. Write a function that would calculate median for happiness_score, life_expectancy and freedom variables in a given dataframe\n\ncalculate_median &lt;- function(...){\n  \n  ...\n  \n  median_output = data.frame(...)\n  return(median_output) # This is what the function returns as a result\n}\n\nAnd now try it out!\n\ncalculate_median(h_report)\n\nWrite a function that would automate calculation of average happiness in a selected group of countries from regions below.\n\npost_soviet_countries &lt;- c(\"Kazakhstan\", \"Uzbekistan\", \"Armenia\")\nlatin_america_countries &lt;- c(\"Venezuela\", \"Argentina\", \"Paraguay\")\n\nUse a draft below for your function.\n\naverage_happiness = ...(dataframe, countries_list){\n  \n  dataframe %&gt;% \n    filter(country_name %in% ...) %&gt;%\n    summarize(average = mean(...)) %&gt;%\n    ...()\n  \n}\n\naverage_happiness(h_report, post_soviet_countries)            # Note the difference in (i) countries list\naverage_happiness(h_report_sample, latin_america_countries)   # and (ii) in dataframes we use\n\n\n\n\nApply function\nSometimes it is easier to use apply family of functions. For example, we can easily calculate an average using apply() function for selected columns.\n\nh_report %&gt;%\n  select(happiness_score, log_gdp, social_support) %&gt;%\n  apply(2, mean, na.rm = TRUE)\n\nhappiness_score         log_gdp  social_support \n       5.527572        1.378779        1.134323 \n\n\nMoreover, we can calculate some statistics for observations (i.e., rows), not variables. For example, we can find the minimum value across all variables for a specific country. As you might notice, the second argument in apply() function refers to whether we want manipulate rows or columns, 1 or 2 respectively.\n\nh_report %&gt;%\n  filter(country_name == \"Azerbaijan\") %&gt;%\n  apply(1, min, na.rm = TRUE)\n\n[1] \"0.1115664\"\n\n\nHowever, most importantly, apply() function is compatible with custom functions. For example, you want to standardize the variable so it ranges between 0 to 1. You have the following function.\n\nstandartize = function(x){\n  (x - min(x, na.rm = T)) / (max(x, na.rm = T) - min(x, na.rm = T))\n}\n\nNow, you can apply it over a number of variables.\n\nh_report %&gt;%\n  select(social_support, freedom) %&gt;%\n  apply(2, standartize) %&gt;%\n  head()\n\n     social_support   freedom\n[1,]      0.9726830 0.9953240\n[2,]      0.9405118 0.9529831\n[3,]      1.0000000 0.9480820\n[4,]      0.9284272 0.9709709\n[5,]      0.9358299 0.7430091\n[6,]      0.9044380 0.8398647\n\n\n\n\nMap function\nIt’s quite often the case in programming that the same operation can be done in a multiple ways. Compare the map() function from tidyverse with apply() function. What is the difference?\n\nh_report %&gt;%\n  select(happiness_score, log_gdp, social_support) %&gt;% \n  map(mean, na.rm = T)\n\n$happiness_score\n[1] 5.527572\n\n$log_gdp\n[1] 1.378779\n\n$social_support\n[1] 1.134323\n\n\nNow, take a look on the following code below.\n\nh_report %&gt;%\n  select(happiness_score, log_gdp, social_support) %&gt;% \n  map_df(mean, na.rm = T)\n\n# A tibble: 1 × 3\n  happiness_score log_gdp social_support\n            &lt;dbl&gt;   &lt;dbl&gt;          &lt;dbl&gt;\n1            5.53    1.38           1.13\n\n\nFurthermore, it is compatible with custom functions, too.\n\nh_report %&gt;%\n  select(happiness_score, log_gdp, social_support) %&gt;% \n  map_df(standartize) %&gt;%\n  head()\n\n# A tibble: 6 × 3\n  happiness_score log_gdp social_support\n            &lt;dbl&gt;   &lt;dbl&gt;          &lt;dbl&gt;\n1           1       0.861          0.973\n2           0.974   0.891          0.941\n3           0.964   0.879          1    \n4           0.934   0.877          0.928\n5           0.934   0.842          0.936\n6           0.930   0.888          0.904\n\n\nGenerally, this is an extensive toolkit to learn. But to sum up, apply() functions are base to R, and map() is an addition from tidyverse. If you are coding in a tidy way, then I suggest sticking to the tidy functions.\nCompare apply() and map() to summarize_all() and summarize().\n\n\n\n\n\n\nExercise\n\n\n\nFinish a function that would calculate an average based on two columns, namely social_support, corruption.\n\naverage_of_two = function(dataset){\n  suppurt_average = mean(dataset$..., na.rm = T)\n  corruptuon_average = mean(..., na.rm = T)\n  \n  average = mean(c(...))\n  return(average)\n}\n\naverage_of_two(h_report)\n\nDo you remember mtcars data? Load it\n\ncars_information &lt;- mtcars\n\nNow, using apply() calculate average for each column.\nNow, using map() calculate median for each column.\nUsing the loop draft below to sample 10 cars from cars dataset 15 times. Each time, apply map_df() function to calculate the average mpg and wt, and store the result in the sample_statistics dataframe.\n\nsample_statistics = data.frame()\n\nfor(i in 1:...){\n  temporary_sample &lt;- sample_n(cars_information, size = ...)   \n  \n  temporary_sample_average &lt;- temporary_sample %&gt;% \n    select(...) %&gt;% \n    ...(mean)  \n  \n  sample_statistics &lt;- rbind(sample_statistics, ...) \n}\n\nsample_statistics",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "r/04_sampling.html#what-should-you-do-if-you-have-questions-about-programming",
+    "href": "r/04_sampling.html#what-should-you-do-if-you-have-questions-about-programming",
+    "title": "Sampling and simulation",
+    "section": "What should you do if you have questions about programming",
+    "text": "What should you do if you have questions about programming\n\nStack overflow\nYour peers\nThe team of this math camp",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "r/04_sampling.html#check-list",
+    "href": "r/04_sampling.html#check-list",
+    "title": "Sampling and simulation",
+    "section": "Check List",
+    "text": "Check List\n Standard deviation, PDF and CDF do not scare me\n I know what sampling is, and on top of this I can use bootstrapping\n I can understand custom functions and loops",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "r/04_sampling.html#what-did-we-learn-over-this-week-in-the-programming-part",
+    "href": "r/04_sampling.html#what-did-we-learn-over-this-week-in-the-programming-part",
+    "title": "Sampling and simulation",
+    "section": "What did we learn over this week in the programming part?",
+    "text": "What did we learn over this week in the programming part?\n\nWhat R, RStudio, Quarto and Markdown are\nCreating and working with objects, vectors and dataframes\nLogical Operators\nWhat Descriptive statistics is\nData wrangling, including mutate(), select(), filter(), summarize(), case_when(), etc.\nData Visualization. Now we know what histograms and scatterplots are\nWe can load data in R and work with it!",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "r/04_sampling.html#sources",
+    "href": "r/04_sampling.html#sources",
+    "title": "Sampling and simulation",
+    "section": "Sources",
+    "text": "Sources\n\nGeorgia State University, Andrew Young School of Policy Studies, Program Evaluation, https://evalsp24.classes.andrewheiss.com/\nUT Austin, Department of Government, Methods Camp, https://methodscamp.github.io/\nHarvard University Department of Government, Math Prefresher, https://iqss.github.io/prefresher/",
+    "crumbs": [
+      "Programming",
+      "4. Sampling and simulation"
+    ]
+  },
+  {
+    "objectID": "slides/04_calc2.html#last-time",
+    "href": "slides/04_calc2.html#last-time",
+    "title": "Calculus II",
+    "section": "Last time",
+    "text": "Last time\nHow to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/04_calc2.html#last-time-1",
+    "href": "slides/04_calc2.html#last-time-1",
+    "title": "Calculus II",
+    "section": "Last time",
+    "text": "Last time\nHow to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/04_calc2.html#last-time-2",
+    "href": "slides/04_calc2.html#last-time-2",
+    "title": "Calculus II",
+    "section": "Last time",
+    "text": "Last time\nHow to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware\n\nThen integrals!"
+  },
+  {
+    "objectID": "slides/04_calc2.html#but-first",
+    "href": "slides/04_calc2.html#but-first",
+    "title": "Calculus II",
+    "section": "But first!",
+    "text": "But first!\nHigher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n. . .\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n. . .\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#partial-derivative",
+    "href": "slides/04_calc2.html#partial-derivative",
+    "title": "Calculus II",
+    "section": "Partial derivative",
+    "text": "Partial derivative\n\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n\n\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n\n\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
+  },
+  {
+    "objectID": "slides/04_calc2.html#example",
+    "href": "slides/04_calc2.html#example",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
+  },
+  {
+    "objectID": "slides/04_calc2.html#differentiability-of-functions",
+    "href": "slides/04_calc2.html#differentiability-of-functions",
+    "title": "Calculus II",
+    "section": "Differentiability of functions",
+    "text": "Differentiability of functions\n\n\nNot all functions are differentiable\nWe need continuous and reasonably smooth functions\nInformally: Can draw them without lifting the pen\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\nDifferentiable \\(\\to\\) continuous\nContinuous \\(\\not\\to\\) differentiable"
+  },
+  {
+    "objectID": "slides/04_calc2.html#how-to-compute-a-derivative-3",
+    "href": "slides/04_calc2.html#how-to-compute-a-derivative-3",
+    "title": "Calculus II",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/04_calc2.html#how-to-compute-a-derivative-4",
+    "href": "slides/04_calc2.html#how-to-compute-a-derivative-4",
+    "title": "Calculus II",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/04_calc2.html#using-computers",
+    "href": "slides/04_calc2.html#using-computers",
+    "title": "Calculus II",
+    "section": "Using computers",
+    "text": "Using computers\n\n\nSymbolic differentiation: Do the math for you (WolframAlpha or Mathematica)\nNumerical differentiation: Evaluate the function at many values (optim() in R)\nAutomatic differentiation: Break up functions into elementary operations and use chain rule (torch package in R, various packages in Python)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#optimization",
+    "href": "slides/04_calc2.html#optimization",
+    "title": "Calculus II",
+    "section": "Optimization",
+    "text": "Optimization\n\n\nFind minimum or maximum values\nValleys are minima\nPeaks are maxima\nBoth are extrema\nExtrama can be local or global"
+  },
+  {
+    "objectID": "slides/04_calc2.html#first-order-condition",
+    "href": "slides/04_calc2.html#first-order-condition",
+    "title": "Calculus II",
+    "section": "First order condition",
+    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n\n\\[FOC: f'(x)=0\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#second-order-condition",
+    "href": "slides/04_calc2.html#second-order-condition",
+    "title": "Calculus II",
+    "section": "Second order condition",
+    "text": "Second order condition\n\nFOC finds critical points, but can’t tell if minimum or maximum\n\n\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
+  },
+  {
+    "objectID": "slides/04_calc2.html#more-more-more-more-practice",
+    "href": "slides/04_calc2.html#more-more-more-more-practice",
+    "title": "Calculus II",
+    "section": "More more more more practice",
+    "text": "More more more more practice\nObtain FOC and SOC for \\(\\displaystyle y=\\frac{1}{2} x^3 + 3 x^2 - 2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#local-vs.-global-extrema",
+    "href": "slides/04_calc2.html#local-vs.-global-extrema",
+    "title": "Calculus II",
+    "section": "Local vs. global extrema",
+    "text": "Local vs. global extrema\nExtreme value theorem:\n\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nFind by comparing local min/max to the value of the function at the endpoints\nCould be limits as function approaches \\(-\\infty\\) and \\(+\\infty\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#practice-again",
+    "href": "slides/04_calc2.html#practice-again",
+    "title": "Calculus II",
+    "section": "Practice again",
+    "text": "Practice again\nIdentify the global extrema of the function \\(\\displaystyle \\frac{x^3}{3} - \\frac{3}{2}x^2 -10x\\) in the interval \\([-6, 6]\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#another-one",
+    "href": "slides/04_calc2.html#another-one",
+    "title": "Calculus II",
+    "section": "Another one",
+    "text": "Another one\nIdentify the global extrema of the function \\(\\displaystyle \\frac{x^3}{3} - \\frac{3}{2}x^2 -10x\\) in the interval \\([-6, 6]\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#last-time-3",
+    "href": "slides/04_calc2.html#last-time-3",
+    "title": "Calculus II",
+    "section": "Last time",
+    "text": "Last time\nHow to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware\n\nThen integrals!"
+  },
+  {
+    "objectID": "slides/04_calc2.html#how-to-compute-a-derivative-5",
+    "href": "slides/04_calc2.html#how-to-compute-a-derivative-5",
+    "title": "Calculus II",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/04_calc2.html#higher-order-derivatives",
+    "href": "slides/04_calc2.html#higher-order-derivatives",
+    "title": "Calculus II",
+    "section": "Higher-order derivatives",
+    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n\n\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#today",
+    "href": "slides/04_calc2.html#today",
+    "title": "Calculus II",
+    "section": "Today",
+    "text": "Today\n\nWrap up derivatives\nWhat makes derivatives useful?\nIntegrals"
+  },
+  {
+    "objectID": "slides/04_calc2.html#how-to-compute-a-derivative-2",
+    "href": "slides/04_calc2.html#how-to-compute-a-derivative-2",
+    "title": "Calculus II",
+    "section": "How to compute a derivative?",
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+  },
+  {
+    "objectID": "slides/04_calc2.html#practice",
+    "href": "slides/04_calc2.html#practice",
+    "title": "Calculus II",
+    "section": "Practice",
+    "text": "Practice\nObtain FOC and SOC for \\(\\displaystyle y=\\frac{1}{2} x^3 + 3 x^2 - 2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#integration",
+    "href": "slides/04_calc2.html#integration",
+    "title": "Calculus II",
+    "section": "Integration",
+    "text": "Integration\n\nInverse operation to the derivative\nDerivative: instantaneous change at a given point\nIntegrals: Net effect of change of a function at a range"
+  },
+  {
+    "objectID": "slides/04_calc2.html#area-under-a-curve",
+    "href": "slides/04_calc2.html#area-under-a-curve",
+    "title": "Calculus II",
+    "section": "Area under a curve",
+    "text": "Area under a curve\n\nCalculate the area under\n\\[\nf(x) =\n\\begin{cases}\n\\frac{1}{3} & \\text{for } x \\in [0, 3] \\\\\n0 & \\text{otherwise}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#area-under-a-curve-1",
+    "href": "slides/04_calc2.html#area-under-a-curve-1",
+    "title": "Calculus II",
+    "section": "Area under a curve",
+    "text": "Area under a curve\n\\(y=x^2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#area-under-a-curve-2",
+    "href": "slides/04_calc2.html#area-under-a-curve-2",
+    "title": "Calculus II",
+    "section": "Area under a curve",
+    "text": "Area under a curve\n\\(y=x^2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#area-under-a-curve-3",
+    "href": "slides/04_calc2.html#area-under-a-curve-3",
+    "title": "Calculus II",
+    "section": "Area under a curve",
+    "text": "Area under a curve\n\\(y=x^2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#a-more-complicated-example",
+    "href": "slides/04_calc2.html#a-more-complicated-example",
+    "title": "Calculus II",
+    "section": "A more complicated example",
+    "text": "A more complicated example\n\\(y=x^2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#a-more-complicated-example-1",
+    "href": "slides/04_calc2.html#a-more-complicated-example-1",
+    "title": "Calculus II",
+    "section": "A more complicated example",
+    "text": "A more complicated example\n\\(y=x^2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#a-more-complicated-example-2",
+    "href": "slides/04_calc2.html#a-more-complicated-example-2",
+    "title": "Calculus II",
+    "section": "A more complicated example",
+    "text": "A more complicated example\n\\(y=x^2\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#two-kinds-of-integrals",
+    "href": "slides/04_calc2.html#two-kinds-of-integrals",
+    "title": "Calculus II",
+    "section": "Two kinds of integrals",
+    "text": "Two kinds of integrals\n\nDefinite integral\nIndefinite integral"
+  },
+  {
+    "objectID": "slides/04_calc2.html#indefinite-integral",
+    "href": "slides/04_calc2.html#indefinite-integral",
+    "title": "Calculus II",
+    "section": "Indefinite integral",
+    "text": "Indefinite integral\n\\[F(x)= \\displaystyle\\int f(x) \\text{ } dx\\]\n\n\n\\(\\int\\) is the anti-derivative with respect to \\(dx\\)\n\\(F(x)\\) is the inverse of \\(f'(x)\\)\n\n\n\n\\[\\displaystyle\\frac{dF(x)}{dx} = f(x)\\]\n\n\n\\[F' = f\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#toy-example",
+    "href": "slides/04_calc2.html#toy-example",
+    "title": "Calculus II",
+    "section": "Toy example",
+    "text": "Toy example\n\\[f(x) = 1\\]\n\n\\[F'(x) = 1\\]\n\n\n\\[F(x) = x\\]\n\n\n\\[F(x) = x + 10\\]\n\n\n\\[F(x) = x + 100\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#toy-example-1",
+    "href": "slides/04_calc2.html#toy-example-1",
+    "title": "Calculus II",
+    "section": "Toy example",
+    "text": "Toy example"
+  },
+  {
+    "objectID": "slides/04_calc2.html#generalizing",
+    "href": "slides/04_calc2.html#generalizing",
+    "title": "Calculus II",
+    "section": "Generalizing",
+    "text": "Generalizing\n\n\nFor \\(f(x) = F'(x) = 1\\) we can write \\(F(x) = x + C\\)\n\\(C\\) is the constant of integration\nFinding the inverse of a derivative is called anti-differentiation"
+  },
+  {
+    "objectID": "slides/04_calc2.html#definite-integrals",
+    "href": "slides/04_calc2.html#definite-integrals",
+    "title": "Calculus II",
+    "section": "Definite integrals",
+    "text": "Definite integrals"
+  },
+  {
+    "objectID": "slides/04_calc2.html#definite-integral",
+    "href": "slides/04_calc2.html#definite-integral",
+    "title": "Calculus II",
+    "section": "Definite integral",
+    "text": "Definite integral\nIndefinite integral:\n\\[\\displaystyle\\int f(x)dx\\]\n\nDefinite integral:\n\\[\\displaystyle\\int_{a}^{b} f(x)dx\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#calculating-definite-integrals",
+    "href": "slides/04_calc2.html#calculating-definite-integrals",
+    "title": "Calculus II",
+    "section": "Calculating definite integrals",
+    "text": "Calculating definite integrals\n\nThe first FUNDAMENTAL THEOREM OF CALCULUS\n\\[\\displaystyle\\int_{a}^{b} f(x) \\text{ } dx = F(b)-F(a) = F(x)\\bigg|_{a}^{b}\\]\n\n\nDetermine \\(F(x)\\)\nSubstitute in \\(F(b)\\) and \\(F(a)\\)\nCalculate difference"
+  },
+  {
+    "objectID": "slides/04_calc2.html#fundamental-theorem-of-calculus",
+    "href": "slides/04_calc2.html#fundamental-theorem-of-calculus",
+    "title": "Calculus II",
+    "section": "FUNDAMENTAL THEOREM OF CALCULUS",
+    "text": "FUNDAMENTAL THEOREM OF CALCULUS\n\\[\\displaystyle\\int_{a}^{b} f(x) \\text{ } dx = F(b)-F(a) = F(x)\\bigg|_{a}^{b}\\]\n\n\nDetermine \\(F(x)\\)\nSubstitute in \\(F(b)\\) and \\(F(a)\\)\nCalculate difference"
+  },
+  {
+    "objectID": "slides/04_calc2.html#rules-of-integration",
+    "href": "slides/04_calc2.html#rules-of-integration",
+    "title": "Calculus II",
+    "section": "Rules of integration",
+    "text": "Rules of integration\nCoefficient rule: \\(\\displaystyle \\color{gray}\\int c f(x)\\, \\color{gray}{dx} \\color{gray}= c \\color{gray}\\int f(x)\\,\\color{gray}{dx}\\)\n\nSum/difference rule: \\(\\displaystyle\\color{gray}\\int (f(x) \\pm g(x))\\,\\color{gray}{dx} \\color{gray}= \\color{gray}\\int f(x)\\,\\color{gray}{dx} \\pm \\color{gray}\\int g(x)\\,\\color{gray}{dx}\\)\n\n\nConstant rule: \\(\\displaystyle\\color{gray}\\int c\\,\\color{gray}{dx} \\color{gray}= cx \\color{gray}{+ C}\\)\n\n\nPower rule: \\(\\displaystyle\\color{gray}\\int x^n\\,\\color{gray}{dx} \\color{gray}= \\frac{x^{n+1}}{n+1} \\color{gray}{+ C} \\qquad \\forall n \\neq -1\\)\n\n\nReciprocal rule:\\(\\displaystyle\\color{gray}\\int \\frac{1}{x}\\,\\color{gray}{dx} \\color{gray}= \\ln(x) \\color{gray}{+ C}\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#rules-of-integration-1",
+    "href": "slides/04_calc2.html#rules-of-integration-1",
+    "title": "Calculus II",
+    "section": "Rules of integration",
+    "text": "Rules of integration\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n\\displaystyle \\color{gray}\\int e^x \\,\\color{gray}{dx} &\\color{gray}= e^x\\color{gray}{+C} \\\\\n\\displaystyle \\color{gray}\\int c^x \\,\\color{gray}{dx} &\\color{gray}= \\frac{c^x}{ln(c)}\\color{gray}{+C}\n\\end{aligned}\n\\]\n\n\\[\n\\begin{aligned}\n\\displaystyle \\color{gray}\\int ln(x) \\,\\color{gray}{dx} &\\color{gray}= x \\cdot ln(x) - x\\color{gray}{+C} \\\\\n\\displaystyle \\color{gray}\\int log_c(x) \\,\\color{gray}{dx} &\\color{gray}= \\frac{x \\cdot log_c(x) - x}{log_c(x)}\\color{gray}{+C}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#integration-by-parts",
+    "href": "slides/04_calc2.html#integration-by-parts",
+    "title": "Calculus II",
+    "section": "Integration by parts",
+    "text": "Integration by parts\n\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\n\\[\n\\int u dv = uv - \\int vdu\n\\]\n\n\nAnalog to the product rule."
+  },
+  {
+    "objectID": "slides/04_calc2.html#integration-by-substitution",
+    "href": "slides/04_calc2.html#integration-by-substitution",
+    "title": "Calculus II",
+    "section": "Integration by substitution",
+    "text": "Integration by substitution\n\n\nHave \\(\\displaystyle \\int f(g(x))g'(x)\\,dx\\)\nSet \\(u=g(x)\\)\nCompute \\(\\int f(u)\\,du\\)\nReplace \\(u\\) for \\(g(x)\\)\n\n\n\n\nAnalog to the chain rule."
+  },
+  {
+    "objectID": "slides/04_calc2.html#dont-worry",
+    "href": "slides/04_calc2.html#dont-worry",
+    "title": "Calculus II",
+    "section": "Don’t worry!",
+    "text": "Don’t worry!\nWe are not going to practice hard rules by hand"
+  },
+  {
+    "objectID": "slides/04_calc2.html#practice-1",
+    "href": "slides/04_calc2.html#practice-1",
+    "title": "Calculus II",
+    "section": "Practice",
+    "text": "Practice\nSolve the following definite integrals\n\n\\(\\displaystyle\\int_{1}^{7} x^2 \\text{ } dx\\)\n\\(\\displaystyle\\int_{1}^{10} 3x^2 \\text{ } dx\\)\n\\(\\displaystyle\\int_7^7 x\\text{ } dx\\)\n\\(\\displaystyle\\int_{1}^{5} 3x^2 + 2x - 7\\text{ }dx\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-1",
+    "href": "slides/04_calc2.html#example-1",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[ \\int x e^x dx\\]\n\n\\[ \\int udv = uv - \\int vdu \\]\n\n\n\\[\n\\color{purple}{u = x}; \\text{ } \\color{green}{du = 1dx}; \\text{ } \\color{yellow}{dv = e^xdx} ;  \\text{ } \\color{blue}{v = e^x}\n\\]\n\n\n\\[\n\\int \\color{purple}x \\color{yellow}{e^xdx}= \\color{purple}x \\color{blue}{e^x} - \\int \\color{blue}{e^x} \\color{green}{(1dx)}\n\\]\n\n\n\\[\n= xe^x - e^x + C\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#integration-by-parts-1",
+    "href": "slides/04_calc2.html#integration-by-parts-1",
+    "title": "Calculus II",
+    "section": "Integration by parts",
+    "text": "Integration by parts\n\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\\[\n\\int u dv = \\underbrace{uv - \\int vdu}_\\text{\"ultraviolet voodoo\"}\n\\]\n\nAnalog to the product rule."
+  },
+  {
+    "objectID": "slides/04_calc2.html#integration-by-u-substitution",
+    "href": "slides/04_calc2.html#integration-by-u-substitution",
+    "title": "Calculus II",
+    "section": "Integration by (U-)substitution",
+    "text": "Integration by (U-)substitution\n\n\nHave \\(\\displaystyle \\int f(g(x))g'(x)\\,dx\\)\nSet \\(u=g(x)\\)\nCompute \\(\\int f(u)\\,du\\)\nReplace \\(u\\) for \\(g(x)\\)\n\n\n\n\nAnalog to the chain rule."
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-2",
+    "href": "slides/04_calc2.html#example-2",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n\n\n\\[\n\\text{} \\color{green}{du = 2x dx}\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-3",
+    "href": "slides/04_calc2.html#example-3",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n\\[\n\\text{} \\color{green}{du = 2x dx \\Rightarrow \\frac{du}{2x} = \\frac{2xdx}{2x}}  \n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-4",
+    "href": "slides/04_calc2.html#example-4",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n\\[\n\\text{} \\color{green}{du = 2x dx \\Rightarrow \\frac{du}{2x} = \\frac{2xdx}{2x} \\Rightarrow \\frac{du}{2x} = dx}  \n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#replacing",
+    "href": "slides/04_calc2.html#replacing",
+    "title": "Calculus II",
+    "section": "Replacing",
+    "text": "Replacing\n\\[\n\\int 4x \\color{purple}{(x^2 + 5)}^3 \\color{green}{dx}\n\\]\n\n\\[\n\\int 4x \\color{purple}u^3 \\color{green}{\\frac{du}{2x}}\n\\]\n\n\n\\[\n= 2 \\int \\color{purple}{u}^3 \\color{green}{du}\n\\]\n\n\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#bring-back-u",
+    "href": "slides/04_calc2.html#bring-back-u",
+    "title": "Calculus II",
+    "section": "Bring back \\(u\\)",
+    "text": "Bring back \\(u\\)\n\\[\n= \\frac{1}{2} \\color{purple}u^4 + C\n\\]\n\n\\[\n\\frac{1}{2} \\color{purple{(x2 + 5)}^4 + C\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#clean-up-and-bring-back-u",
+    "href": "slides/04_calc2.html#clean-up-and-bring-back-u",
+    "title": "Calculus II",
+    "section": "Clean up and bring back \\(u\\)",
+    "text": "Clean up and bring back \\(u\\)\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]\n\n\\[\n= \\frac{1}{2} \\color{purple}u^4 + C\n\\]\n\n\n\\[\n\\frac{1}{2} \\color{purple}{(x2 + 5)}^4 + C\n\\]"
   }
 ]

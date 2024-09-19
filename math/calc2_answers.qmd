@@ -1,0 +1,22 @@
+---
+title: "Calc 2 Answer sheet"
+format: pdf
+date: last-modified
+date-format: long
+---
+
+Just showing the indefinite integrals since the final step is trivial.
+
+1.  $\displaystyle\int x^2 dx = \frac{x^3}{3} + C$
+
+2.  $\displaystyle\int 3x^2dx = x^3 + C$
+
+3.  $\displaystyle\int xdx = \frac{x^2}{2} + C$
+
+4.  $\displaystyle\int 3x^2 + 2x - 7dx = x^3 + x^2 - 7x + C$
+
+Things to remember:
+
+- Insist on including the constant $C$ on the first example to show how they cancel out, then ignore it
+- When computing the final definite integral, remember that continuous functions do not have density at discrete points. Important intuition for later!
+
