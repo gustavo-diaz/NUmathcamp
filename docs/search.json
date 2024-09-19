@@ -1744,7 +1744,7 @@
     "href": "slides/04_calc2.html#integration-by-parts",
     "title": "Calculus II",
     "section": "Integration by parts",
-    "text": "Integration by parts\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\n\nIf you cannot integrate \\(f(x)g'(x)\\)\nBut can integrate \\(g'(x)\\) and \\(f'(x)g(x)\\)\nHelpful when \\(g'(x\\)) is something like \\(e^x\\)\n\n\n\n\nAnalog to the product rule."
+    "text": "Integration by parts\n\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\n\\[\n\\int u dv = uv - \\int vdu\n\\]\n\n\nAnalog to the product rule."
   },
   {
     "objectID": "slides/04_calc2.html#integration-by-substitution",
@@ -1766,5 +1766,68 @@
     "title": "Calculus II",
     "section": "Practice",
     "text": "Practice\nSolve the following definite integrals\n\n\\(\\displaystyle\\int_{1}^{7} x^2 \\text{ } dx\\)\n\\(\\displaystyle\\int_{1}^{10} 3x^2 \\text{ } dx\\)\n\\(\\displaystyle\\int_7^7 x\\text{ } dx\\)\n\\(\\displaystyle\\int_{1}^{5} 3x^2 + 2x - 7\\text{ }dx\\)"
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-1",
+    "href": "slides/04_calc2.html#example-1",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[ \\int x e^x dx\\]\n\n\\[ \\int udv = uv - \\int vdu \\]\n\n\n\\[\n\\color{purple}{u = x}; \\text{ } \\color{green}{du = 1dx}; \\text{ } \\color{yellow}{dv = e^xdx} ;  \\text{ } \\color{blue}{v = e^x}\n\\]\n\n\n\\[\n\\int \\color{purple}x \\color{yellow}{e^xdx}= \\color{purple}x \\color{blue}{e^x} - \\int \\color{blue}{e^x} \\color{green}{(1dx)}\n\\]\n\n\n\\[\n= xe^x - e^x + C\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#integration-by-parts-1",
+    "href": "slides/04_calc2.html#integration-by-parts-1",
+    "title": "Calculus II",
+    "section": "Integration by parts",
+    "text": "Integration by parts\n\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\\[\n\\int u dv = \\underbrace{uv - \\int vdu}_\\text{\"ultraviolet voodoo\"}\n\\]\n\nAnalog to the product rule."
+  },
+  {
+    "objectID": "slides/04_calc2.html#integration-by-u-substitution",
+    "href": "slides/04_calc2.html#integration-by-u-substitution",
+    "title": "Calculus II",
+    "section": "Integration by (U-)substitution",
+    "text": "Integration by (U-)substitution\n\n\nHave \\(\\displaystyle \\int f(g(x))g'(x)\\,dx\\)\nSet \\(u=g(x)\\)\nCompute \\(\\int f(u)\\,du\\)\nReplace \\(u\\) for \\(g(x)\\)\n\n\n\n\nAnalog to the chain rule."
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-2",
+    "href": "slides/04_calc2.html#example-2",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n\n\n\\[\n\\text{} \\color{green}{du = 2x dx}\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-3",
+    "href": "slides/04_calc2.html#example-3",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n\\[\n\\text{} \\color{green}{du = 2x dx \\Rightarrow \\frac{du}{2x} = \\frac{2xdx}{2x}}  \n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#example-4",
+    "href": "slides/04_calc2.html#example-4",
+    "title": "Calculus II",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n\\[\n\\text{} \\color{green}{du = 2x dx \\Rightarrow \\frac{du}{2x} = \\frac{2xdx}{2x} \\Rightarrow \\frac{du}{2x} = dx}  \n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#replacing",
+    "href": "slides/04_calc2.html#replacing",
+    "title": "Calculus II",
+    "section": "Replacing",
+    "text": "Replacing\n\\[\n\\int 4x \\color{purple}{(x^2 + 5)}^3 \\color{green}{dx}\n\\]\n\n\\[\n\\int 4x \\color{purple}u^3 \\color{green}{\\frac{du}{2x}}\n\\]\n\n\n\\[\n= 2 \\int \\color{purple}{u}^3 \\color{green}{du}\n\\]\n\n\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#bring-back-u",
+    "href": "slides/04_calc2.html#bring-back-u",
+    "title": "Calculus II",
+    "section": "Bring back \\(u\\)",
+    "text": "Bring back \\(u\\)\n\\[\n= \\frac{1}{2} \\color{purple}u^4 + C\n\\]\n\n\\[\n\\frac{1}{2} \\color{purple{(x2 + 5)}^4 + C\n\\]"
+  },
+  {
+    "objectID": "slides/04_calc2.html#clean-up-and-bring-back-u",
+    "href": "slides/04_calc2.html#clean-up-and-bring-back-u",
+    "title": "Calculus II",
+    "section": "Clean up and bring back \\(u\\)",
+    "text": "Clean up and bring back \\(u\\)\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]\n\n\\[\n= \\frac{1}{2} \\color{purple}u^4 + C\n\\]\n\n\n\\[\n\\frac{1}{2} \\color{purple}{(x2 + 5)}^4 + C\n\\]"
   }
 ]

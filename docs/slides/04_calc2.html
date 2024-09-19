@@ -685,22 +685,54 @@ f(x) =
 </section>
 <section id="integration-by-parts" class="slide level2">
 <h2>Integration by parts</h2>
+
 <p><span class="math display">\[
 \displaystyle \color{gray}\int f(x)g'(x)\,\color{gray}{dx} = f(x)g(x) - \color{gray}\int f'(x)g(x)\,\color{gray}{dx}
 \]</span></p>
-<div>
-<ul>
-<li class="fragment">If you cannot integrate <span class="math inline">\(f(x)g'(x)\)</span></li>
-<li class="fragment">But can integrate <span class="math inline">\(g'(x)\)</span> and <span class="math inline">\(f'(x)g(x)\)</span></li>
-<li class="fragment">Helpful when <span class="math inline">\(g'(x\)</span>) is something like <span class="math inline">\(e^x\)</span></li>
-</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\int u dv = uv - \int vdu
+\]</span></p>
 </div>
-
 <aside><div>
 <p>Analog to the product rule.</p>
 </div></aside></section>
-<section id="integration-by-substitution" class="slide level2">
-<h2>Integration by substitution</h2>
+<section id="integration-by-parts-1" class="slide level2">
+<h2>Integration by parts</h2>
+
+<p><span class="math display">\[
+\displaystyle \color{gray}\int f(x)g'(x)\,\color{gray}{dx} = f(x)g(x) - \color{gray}\int f'(x)g(x)\,\color{gray}{dx}
+\]</span></p>
+<p><span class="math display">\[
+\int u dv = \underbrace{uv - \int vdu}_\text{"ultraviolet voodoo"}
+\]</span></p>
+<aside><div>
+<p>Analog to the product rule.</p>
+</div></aside></section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<p><span class="math display">\[ \int x e^x dx\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[ \int udv = uv - \int vdu \]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\color{purple}{u = x}; \text{ } \color{green}{du = 1dx}; \text{ } \color{yellow}{dv = e^xdx} ;  \text{ } \color{blue}{v = e^x}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\int \color{purple}x \color{yellow}{e^xdx}= \color{purple}x \color{blue}{e^x} - \int \color{blue}{e^x} \color{green}{(1dx)}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+= xe^x - e^x + C
+\]</span></p>
+</div>
+</section>
+<section id="integration-by-u-substitution" class="slide level2">
+<h2>Integration by (U-)substitution</h2>
 <div>
 <ol type="1">
 <li class="fragment">Have <span class="math inline">\(\displaystyle \int f(g(x))g'(x)\,dx\)</span></li>
@@ -713,6 +745,83 @@ f(x) =
 <aside><div>
 <p>Analog to the chain rule.</p>
 </div></aside></section>
+<section id="example-2" class="slide level2">
+<h2>Example</h2>
+<p><span class="math display">\[
+\int 4x (x^2 + 5)^3 dx
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\color{purple}{u = x2 + 5}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\text{} \color{green}{du = 2x dx}
+\]</span></p>
+</div>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example</h2>
+<p><span class="math display">\[
+\int 4x (x^2 + 5)^3 dx
+\]</span></p>
+<p><span class="math display">\[
+\color{purple}{u = x2 + 5}
+\]</span></p>
+<p><span class="math display">\[
+\text{} \color{green}{du = 2x dx \Rightarrow \frac{du}{2x} = \frac{2xdx}{2x}}  
+\]</span></p>
+</section>
+<section id="example-4" class="slide level2">
+<h2>Example</h2>
+<p><span class="math display">\[
+\int 4x (x^2 + 5)^3 dx
+\]</span></p>
+<p><span class="math display">\[
+\color{purple}{u = x2 + 5}
+\]</span></p>
+<p><span class="math display">\[
+\text{} \color{green}{du = 2x dx \Rightarrow \frac{du}{2x} = \frac{2xdx}{2x} \Rightarrow \frac{du}{2x} = dx}  
+\]</span></p>
+</section>
+<section id="replacing" class="slide level2">
+<h2>Replacing</h2>
+<p><span class="math display">\[
+\int 4x \color{purple}{(x^2 + 5)}^3 \color{green}{dx}
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\int 4x \color{purple}u^3 \color{green}{\frac{du}{2x}}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+= 2 \int \color{purple}{u}^3 \color{green}{du}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+= 2 \cdot \frac{\color{purple}u}{4}^4 + C
+\]</span></p>
+</div>
+</section>
+<section id="clean-up-and-bring-back-u" class="slide level2">
+<h2>Clean up and bring back <span class="math inline">\(u\)</span></h2>
+<p><span class="math display">\[
+= 2 \cdot \frac{\color{purple}u}{4}^4 + C
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+= \frac{1}{2} \color{purple}u^4 + C
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\frac{1}{2} \color{purple}{(x2 + 5)}^4 + C
+\]</span></p>
+</div>
+</section>
 <section id="dont-worry" class="slide level2">
 <h2>Don’t worry!</h2>
 <p>We are not going to practice hard rules by hand</p>

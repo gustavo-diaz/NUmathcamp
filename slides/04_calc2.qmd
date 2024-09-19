@@ -423,21 +423,63 @@ $$
 
 ## Integration by parts
 
+::: aside
+Analog to the product rule.
+:::
+
 $$
 \displaystyle \color{gray}\int f(x)g'(x)\,\color{gray}{dx} = f(x)g(x) - \color{gray}\int f'(x)g(x)\,\color{gray}{dx}
 $$
 
-::: incremental
-- If you cannot integrate $f(x)g'(x)$
-- But can integrate $g'(x)$ and $f'(x)g(x)$
-- Helpful when $g'(x$) is something like $e^x$
-:::
+. . .
+
+$$
+\int u dv = uv - \int vdu
+$$
+
+## Integration by parts
 
 ::: aside
 Analog to the product rule.
 :::
 
-## Integration by substitution
+$$
+\displaystyle \color{gray}\int f(x)g'(x)\,\color{gray}{dx} = f(x)g(x) - \color{gray}\int f'(x)g(x)\,\color{gray}{dx}
+$$
+
+
+$$
+\int u dv = \underbrace{uv - \int vdu}_\text{"ultraviolet voodoo"}
+$$
+
+
+## Example
+
+$$ \int x e^x dx$$
+
+. . . 
+
+$$ \int udv = uv - \int vdu $$
+
+. . .
+
+$$
+\color{purple}{u = x}; \text{ } \color{green}{du = 1dx}; \text{ } \color{yellow}{dv = e^xdx} ;  \text{ } \color{blue}{v = e^x}
+$$
+
+. . .
+
+$$
+\int \color{purple}x \color{yellow}{e^xdx}= \color{purple}x \color{blue}{e^x} - \int \color{blue}{e^x} \color{green}{(1dx)}
+$$
+
+. . .
+
+$$
+= xe^x - e^x + C
+$$
+
+## Integration by (U-)substitution
 
 ::: incremental
 1. Have $\displaystyle \int f(g(x))g'(x)\,dx$
@@ -449,6 +491,100 @@ Analog to the product rule.
 ::: aside
 Analog to the chain rule.
 :::
+
+## Example
+
+$$
+\int 4x (x^2 + 5)^3 dx
+$$
+
+. . .
+
+$$
+\color{purple}{u = x2 + 5}
+$$
+
+. . .
+
+$$
+\text{} \color{green}{du = 2x dx}
+$$
+
+## Example
+
+$$
+\int 4x (x^2 + 5)^3 dx
+$$
+
+$$
+\color{purple}{u = x2 + 5}
+$$
+
+$$
+\text{} \color{green}{du = 2x dx \Rightarrow \frac{du}{2x} = \frac{2xdx}{2x}}  
+$$
+
+## Example
+
+$$
+\int 4x (x^2 + 5)^3 dx
+$$
+
+$$
+\color{purple}{u = x2 + 5}
+$$
+
+$$
+\text{} \color{green}{du = 2x dx \Rightarrow \frac{du}{2x} = \frac{2xdx}{2x} \Rightarrow \frac{du}{2x} = dx}  
+$$
+
+## Replacing
+
+$$
+\int 4x \color{purple}{(x^2 + 5)}^3 \color{green}{dx}
+$$
+
+. . .
+
+$$
+\int 4x \color{purple}u^3 \color{green}{\frac{du}{2x}}
+$$
+
+. . .
+
+
+
+$$
+= 2 \int \color{purple}{u}^3 \color{green}{du}
+$$
+
+. . .
+
+$$
+= 2 \cdot \frac{\color{purple}u}{4}^4 + C
+$$
+
+
+
+## Clean up and bring back $u$
+
+$$
+= 2 \cdot \frac{\color{purple}u}{4}^4 + C
+$$
+
+. . .
+
+$$
+= \frac{1}{2} \color{purple}u^4 + C
+$$
+
+. . .
+
+$$
+\frac{1}{2} \color{purple}{(x2 + 5)}^4 + C
+$$
+
+
 
 ## Don't worry!
 
