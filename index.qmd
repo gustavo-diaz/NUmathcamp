@@ -22,6 +22,8 @@ This is the website for the 2024 Social Science Math Camp, hosted by the Departm
 
 Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.
 
+Here are the slides from the information session on [Research Computing and Data Services resources](rcds.pptx).
+
 ### Details
 
 - {{< fa calendar >}} &nbsp; September 16 -- 20

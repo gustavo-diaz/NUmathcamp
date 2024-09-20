@@ -533,21 +533,30 @@
     "href": "index.html",
     "title": "Math Camp",
     "section": "",
-    "text": "This is the website for the 2024 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n   September 16 – 20\n   9:00 AM – 4:00 PM\n   Scott Hall 212"
+    "text": "This is the website for the 2024 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\nHere are the slides from the information session on Research Computing and Data Services resources.\n\n\n\n   September 16 – 20\n   9:00 AM – 4:00 PM\n   Scott Hall 212",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#welcome",
     "href": "index.html#welcome",
     "title": "Math Camp",
     "section": "",
-    "text": "This is the website for the 2024 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n   September 16 – 20\n   9:00 AM – 4:00 PM\n   Scott Hall 212"
+    "text": "This is the website for the 2024 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\nHere are the slides from the information session on Research Computing and Data Services resources.\n\n\n\n   September 16 – 20\n   9:00 AM – 4:00 PM\n   Scott Hall 212",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#schedule",
     "href": "index.html#schedule",
     "title": "Math Camp",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n    \n\n    \n    \n      \n        \n        \n              \n                Day\n                Date\n                Morning\n                Afternoon\n              \n        \n        \n        \n                \n                  1\n                  September 16\n                  Notation, sets, functions\n                  R and RStudio          \n                \n                \n                  2\n                  September 17\n                  Matrices                 \n                  Tidyverse I            \n                \n                \n                  3\n                  September 18\n                  Calculus I               \n                  Tidyverse II           \n                \n                \n                  4\n                  September 19\n                  NO MEETING               \n                  NA                     \n                \n                \n                  5\n                  September 20\n                  Calculus II              \n                  Sampling and simulation"
+    "text": "Schedule\n\n\n    \n\n    \n    \n      \n        \n        \n              \n                Day\n                Date\n                Morning\n                Afternoon\n              \n        \n        \n        \n                \n                  1\n                  September 16\n                  Notation, sets, functions\n                  R and RStudio          \n                \n                \n                  2\n                  September 17\n                  Matrices                 \n                  Tidyverse I            \n                \n                \n                  3\n                  September 18\n                  Calculus I               \n                  Tidyverse II           \n                \n                \n                  4\n                  September 19\n                  NO MEETING               \n                  NA                     \n                \n                \n                  5\n                  September 20\n                  Calculus II              \n                  Sampling and simulation",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "math/01_notation.html",
