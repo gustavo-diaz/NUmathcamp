@@ -4932,8 +4932,8 @@ window.Quarto = {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.4696058 0.6359545 0.2781490 0.2525799 0.1566532 0.2139058 0.3334451
- [8] 0.8963178 0.8623301 0.4870929</code></pre>
+<pre><code> [1] 0.88061036 0.13990718 0.69175141 0.13979542 0.46188173 0.55763305
+ [7] 0.76615103 0.65960307 0.26947303 0.06477498</code></pre>
 </div>
 </div>
 <p>If you’d like to control the random generation process, you can use <code>set.seed()</code> function. Try this out:</p>
@@ -5119,7 +5119,7 @@ window.Quarto = {
 </section>
 <section id="cumulative-distribution-function" class="level4">
 <h4 class="anchored" data-anchor-id="cumulative-distribution-function">Cumulative Distribution Function</h4>
-<p>What if we are interested in how many observations would be 0 or fewer? For this option we might use <strong>Cumulative Distribution Function</strong>.</p>
+<p>What if we are interested in how many observations would be 0 or less? For this option we might use <strong>Cumulative Distribution Function</strong>.</p>
 <p><em>Any guesses at this point? Take a look on the PDF!</em></p>
 <p>Cumulative distribution function looks like this. This is kind of S shape.</p>
 <div class="cell">
@@ -5187,7 +5187,7 @@ window.Quarto = {
 <pre><code> [1] 94 90 87 90 94 92 93 84 92 91 93 95 93 94 86 93 90 87 92 89</code></pre>
 </div>
 </div>
-<p>R will choose these values with equal/uniform probability by default, but you can change that in <code>sample()</code> with the <code>prob</code> argument. For instance, pretend you want to simulate an election. According to the latest polls, one candidate has an 80% chance of winning. You want to randomly choose a winner based on that chance. Here’s how to do that with <code>sample()</code></p>
+<p>For instance, pretend you want to simulate an election. According to the latest polls, one candidate has an 80% chance of winning. You want to randomly choose a winner based on that chance. Here’s how to do that with <code>sample()</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>candidates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Person 1&quot;</span>, <span class="st">&quot;Person 2&quot;</span>)</span>
@@ -5223,7 +5223,7 @@ window.Quarto = {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(h_report, <span class="fu">aes</span>(<span class="at">x =</span> ...)) <span class="sc">+</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>, <span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Distribution of happiness_score variable&quot;</span>) <span class="sc">+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Distribution of happiness_score variable&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, let’s sample 80 observations from the dataset. Basically, we are randomly extracting rows from the main dataset. Compare <code>sample()</code> and <code>sample_n()</code></p>
 <div class="cell">
@@ -5261,7 +5261,7 @@ window.Quarto = {
 [1] 1.17069</code></pre>
 </div>
 </div>
-<p>If we assume that true average <span class="math inline">\(\mu\)</span> is equal to 5.53, then our estimator <span class="math inline">\(\hat{\mu}\)</span> from the average of the data <span class="math inline">\(\bar{X}\)</span> would be 5.49. In other words, even with the limited access to data we were able to figure average of the “real” distribution.</p>
+<p>If we assume that true average <span class="math inline">\(\mu\)</span> is equal to 5.53, then our estimate <span class="math inline">\(\hat{\mu}\)</span> from the average of the data <span class="math inline">\(\bar{X}\)</span> would be 5.49. In other words, even with the limited access to data we were able to figure average and sd of the “real” distribution.</p>
 <p>Now, briefly. Let’s check how it matches with our <em>theoretical</em> assumptions of how the world works. We assume that the happiness scores are distributed normally. Thus, even with a <em>limited</em> sample knowledge (N=80) we can attempt to generalize on the whole population (N = 143). Let’s, say, calculate the probability that a given country would receive 6 on happiness score.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dnorm</span>(<span class="at">x =</span> <span class="dv">6</span>,</span>
@@ -5343,7 +5343,7 @@ Exercise
 <h3 class="anchored" data-anchor-id="bootstrapping">Bootstrapping</h3>
 <p>To get a better measure of <span class="math inline">\(\hat{\mu}\)</span> we can apply bootstrapping. To put it simple, we are going to repeat sampling process several times, and each time we draw random sample from the dataset we record its average. First, we create a dataset which we’ll be using to store those averages.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>sample_averages <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>sample_averages <span class="ot">&lt;-</span> <span class="fu">data.frame</span>() <span class="co"># simply created empty dataset</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Using loops, you can repeat actions several times. This is what programming is quite helpful in! Explore how a <code>for</code> loop below works.</p>
 <ul>
@@ -5390,7 +5390,7 @@ Exercise
 </div>
 <p>Take a look on the average of the collected averages. Did it get closer to the real parameter?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(sample_averages<span class="sc">$</span>average)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(sample_averages<span class="sc">$</span>average) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5.531569</code></pre>
 </div>
@@ -5439,20 +5439,18 @@ Exercise
 </section>
 <section id="automation-and-custom-functions" class="level2">
 <h2 class="anchored" data-anchor-id="automation-and-custom-functions">Automation and Custom functions</h2>
-<ul>
-<li>Custom functions (very small example, mostly to get used to the syntax)</li>
-</ul>
-<p>It is a frequent issue that when you work with data you would want to perform same several actions with a given dataset. For example, you would want to calculate average for specific set of variables, and then store it in a different dataframe to describe those selected In this case, custom functions are incredibly helpful.</p>
+<p>It is a frequent issue that when you work with data you would want to perform same several actions with a given dataset. For example, you would want to calculate average for specific set of variables, and then store it in a different dataframe to describe those selected. In this case, custom functions are incredibly helpful.</p>
 <p>Explore the function below. It stores the averages for <code>happiness_score</code>, <code>life_expectancy</code> and <code>freedom</code> variables.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>calculate_average <span class="ot">&lt;-</span> <span class="cf">function</span>(dataframe){</span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>  average_happiness <span class="ot">=</span> <span class="fu">mean</span>(dataframe<span class="sc">$</span>happiness_score)</span>
-<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>  average_expectancy <span class="ot">=</span> <span class="fu">mean</span>(dataframe<span class="sc">$</span>life_expectancy, <span class="at">na.rm =</span> T)</span>
-<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>  average_freedom <span class="ot">=</span> <span class="fu">mean</span>(dataframe<span class="sc">$</span>freedom, <span class="at">na.rm =</span> T)</span>
-<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a>  average_output <span class="ot">=</span> <span class="fu">data.frame</span>(average_happiness, average_expectancy, average_freedom)</span>
-<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(average_output) <span class="co"># This is what the function returns as a result</span></span>
-<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>  average_happiness <span class="ot">=</span> <span class="fu">mean</span>(dataframe<span class="sc">$</span>happiness_score)</span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>  average_expectancy <span class="ot">=</span> <span class="fu">mean</span>(dataframe<span class="sc">$</span>life_expectancy, <span class="at">na.rm =</span> T)</span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>  average_freedom <span class="ot">=</span> <span class="fu">mean</span>(dataframe<span class="sc">$</span>freedom, <span class="at">na.rm =</span> T)</span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a>  average_output <span class="ot">=</span> <span class="fu">data.frame</span>(average_happiness, average_expectancy, average_freedom)</span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(average_output) <span class="co"># This is what the function returns as a result</span></span>
+<span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Try it out.</p>
 <div class="cell">
