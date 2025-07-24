@@ -1,10 +1,10 @@
 ---
 title: "Math Camp"
-subtitle: "Northwestern University -- Social Science -- Summer 2024"
+subtitle: "Northwestern University -- Social Science -- Summer 2025"
 authors:
-  - "[Artur Baranov](https://polisci.northwestern.edu/people/graduate-students/artur-baranov.html)"
+  - "[Artur Baranov](https://artur-baranov.github.io)"
   - "[Gustavo Diaz](https://gustavodiaz.org/)"
-  - "[Aven Peters](https://sociology.northwestern.edu/people/graduate-students/profiles/aven-peters.html)"
+  - "TBD"
 format: 
   html:
     page-layout: full
@@ -18,15 +18,18 @@ library(markdown)
 
 ## Welcome
 
-This is the website for the 2024 Social Science Math Camp, hosted by the Departments of [Political Science](https://polisci.northwestern.edu/) and [Sociology](https://sociology.northwestern.edu/) at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.
+<!-- Duke math camp syllabus  -->
+<!-- https://sites.duke.edu/daveasiegel/files/2020/07/Mathematics-for-Political-and-Social-Research-Syllabus_Siegel-1.pdf -->
+
+This is the website for the 2025 Social Science Math Camp, hosted by the Departments of [Political Science](https://polisci.northwestern.edu/) and (maybe) [Sociology](https://sociology.northwestern.edu/) at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.
 
 Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.
 
-Here are the slides from the information session on [Research Computing and Data Services resources](rcds.pptx).
+<!-- Here are the slides from the information session on [Research Computing and Data Services resources](rcds.pptx). -->
 
 ### Details
 
-- {{< fa calendar >}} &nbsp; September 16 -- 20
+- {{< fa calendar >}} &nbsp; September 3 -- 12
 - {{< fa clock >}} &nbsp; 9:00 AM -- 4:00 PM
 - {{< fa location-dot >}} &nbsp; Scott Hall 212
 
@@ -37,24 +40,21 @@ Here are the slides from the information session on [Research Computing and Data
 schedule =
   tribble(
     ~Day, ~Date, ~Morning, ~Afternoon,
-    1, "September 16", "Notation, sets, functions", "R and RStudio",
-    2, "September 17", "Matrices", "Tidyverse I",
-    3, "September 18", "Calculus I", "Tidyverse II",
-    4, "September 19", "NO MEETING", NA,
-    5, "September 20", "Calculus II", "Sampling and simulation"
+    1, "Wednesday, September 3", "Introduction", "R and RStudio",
+    2, "Thursday, September 4", "Notation, sets, functions", "Tidyverse I",
+    3, "Friday, September 5", "Matrices", "Tidyverse II",
+    4, "Monday, September 8", "Calculus I", "NO MEETING",
+    5, "Tuesday, September 9", "Calculus II", "Sampling and simulation",
+    6, "Wednesday, September 10", "Probability", "NO MEETING",
+    7, "Thursday, September 11", "NO MEETING", "NO MEETING ",
+    8, "Friday, September 12", "Review", "Markdown"
 )
 ```
 
 
 ```{r show-schedule, echo = FALSE, results = "asis"}
 schedule %>% 
-  tt() %>% 
-  style_tt(
-    i = 4,
-    j = 3,
-    colspan = 2,
-    align = "l"
-  )
+  tt()
 ```
 
 <!-- For my own reference, the order of lunch guests: -->
