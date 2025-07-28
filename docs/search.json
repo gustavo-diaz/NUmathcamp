@@ -1807,5 +1807,306 @@
     "title": "Calculus I",
     "section": "Another one",
     "text": "Another one\nIdentify the global extrema of the function \\(\\displaystyle \\frac{x^3}{3} - \\frac{3}{2}x^2 -10x\\) in the interval \\([-6, 6]\\)"
+  },
+  {
+    "objectID": "slides/00_intro.html#agenda",
+    "href": "slides/00_intro.html#agenda",
+    "title": "Social Science\nMath Camp",
+    "section": "Agenda",
+    "text": "Agenda\n\nWho are we?\nWhat is math camp?\nWho are you?\nWhat are we going to cover?\nGetting in the mindset"
+  },
+  {
+    "objectID": "slides/00_intro.html#co-instructors",
+    "href": "slides/00_intro.html#co-instructors",
+    "title": "Social Science\nMath Camp",
+    "section": "Co-instructors",
+    "text": "Co-instructors\n\n\n\n\n\n\nArtur Baranov\n\n\nPhD Student in Political Science\nartur.baranov@u.northwestern.edu\n\n\n\n\n\n\n\n\n\nGustavo Diaz\n\n\nAssistant Professor of Instruction in Political Science\ngustavo.diaz@northwestern.edu\n\n\n\n\n\n\n\n\n\nSomeone else\n\n\nPhD Student in Sociology (maybe)\nsomeone.else@u.northwestern.edu"
+  },
+  {
+    "objectID": "slides/00_intro.html#math-camp",
+    "href": "slides/00_intro.html#math-camp",
+    "title": "Social Science\nMath Camp",
+    "section": "Math camp",
+    "text": "Math camp\n\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nGoals:\n\nGet to know you and meet your methods training needs/goals\nGet to know your colleagues"
+  },
+  {
+    "objectID": "slides/00_intro.html#math-camp-1",
+    "href": "slides/00_intro.html#math-camp-1",
+    "title": "Social Science\nMath Camp",
+    "section": "Math camp",
+    "text": "Math camp\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nWhy a math camp?\n\nCan always use more methods training\nMore of a methods camp"
+  },
+  {
+    "objectID": "slides/00_intro.html#who-are-you",
+    "href": "slides/00_intro.html#who-are-you",
+    "title": "Social Science\nMath Camp",
+    "section": "Who are you?",
+    "text": "Who are you?\n\nName\nPronouns\nCity or country you are/came from\nDiscipline + intended subfield/research area\nA hobby or interesting fact about yourself"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-are-we-going-to-cover",
+    "href": "slides/00_intro.html#what-are-we-going-to-cover",
+    "title": "Social Science\nMath Camp",
+    "section": "What are we going to cover?",
+    "text": "What are we going to cover?\n\n\n    \n\n    \n    \n      \n        \n        \n              \n                Week\n                Date\n                Morning\n                Afternoon\n              \n        \n        \n        \n                \n                  1\n                  Wednesday, September 3 \n                  Introduction             \n                  R and RStudio          \n                \n                \n                  1\n                  Thursday, September 4  \n                  Notation, sets, functions\n                  Tidyverse I            \n                \n                \n                  1\n                  Friday, September 5    \n                  Matrices                 \n                  Tidyverse II           \n                \n                \n                  2\n                  Monday, September 8    \n                  Calculus I               \n                  NO MEETING             \n                \n                \n                  2\n                  Tuesday, September 9   \n                  Calculus II              \n                  Sampling and simulation\n                \n                \n                  2\n                  Wednesday, September 10\n                  Probability              \n                  NO MEETING             \n                \n                \n                  2\n                  Thursday, September 11 \n                  NO MEETING               \n                  NO MEETING             \n                \n                \n                  2\n                  Friday, September 12   \n                  Review                   \n                  Markdown"
+  },
+  {
+    "objectID": "slides/00_intro.html#expectations",
+    "href": "slides/00_intro.html#expectations",
+    "title": "Social Science\nMath Camp",
+    "section": "Expectations",
+    "text": "Expectations\n\nYou are not being evaluated\nNo need to take extensive notes\nBring a laptop\nEngage\nGet things wrong\nAsk\nInterrupt if you need to"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-is-this",
+    "href": "slides/00_intro.html#what-is-this",
+    "title": "Social Science\nMath Camp",
+    "section": "What is this?",
+    "text": "What is this?\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
+  },
+  {
+    "objectID": "slides/00_intro.html#set-notation",
+    "href": "slides/00_intro.html#set-notation",
+    "title": "Social Science\nMath Camp",
+    "section": "Set Notation",
+    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\)\n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\sqrt{\\pi}\\}\\)\n\\(\\mathbb{I}\\): Imaginary numbers   \\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\)\n\\(\\mathbb{C}\\): Complex numbers   \\(a + bi\\)"
+  },
+  {
+    "objectID": "slides/00_intro.html#measurement",
+    "href": "slides/00_intro.html#measurement",
+    "title": "Social Science\nMath Camp",
+    "section": "Measurement",
+    "text": "Measurement\n\nSets can also have non-numerical elements\nWe may code this as numbers or not, what matters is what we assume about the elements\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
+  },
+  {
+    "objectID": "slides/00_intro.html#set-notation-1",
+    "href": "slides/00_intro.html#set-notation-1",
+    "title": "Social Science\nMath Camp",
+    "section": "Set notation",
+    "text": "Set notation\n\nOperations within sets\n\n\\(\\exists\\) “there exists”\n\\(\\forall\\) “for all”\n\\(\\exists\\) “exists”; there is something true\n\\(\\in\\) “in” or “element of”\n| Such that\n\\(\\notin\\) excluding (element)\n\\(\\equiv\\) equivalent"
+  },
+  {
+    "objectID": "slides/00_intro.html#set-notation-2",
+    "href": "slides/00_intro.html#set-notation-2",
+    "title": "Social Science\nMath Camp",
+    "section": "Set notation",
+    "text": "Set notation\nOperations between sets\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
+  },
+  {
+    "objectID": "slides/00_intro.html#practice",
+    "href": "slides/00_intro.html#practice",
+    "title": "Social Science\nMath Camp",
+    "section": "Practice",
+    "text": "Practice\n\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\)\n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
+  },
+  {
+    "objectID": "slides/00_intro.html#greek-notation",
+    "href": "slides/00_intro.html#greek-notation",
+    "title": "Social Science\nMath Camp",
+    "section": "Greek notation",
+    "text": "Greek notation"
+  },
+  {
+    "objectID": "slides/00_intro.html#notation-chart",
+    "href": "slides/00_intro.html#notation-chart",
+    "title": "Social Science\nMath Camp",
+    "section": "Notation chart",
+    "text": "Notation chart\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
+  },
+  {
+    "objectID": "slides/00_intro.html#logic",
+    "href": "slides/00_intro.html#logic",
+    "title": "Social Science\nMath Camp",
+    "section": "Logic",
+    "text": "Logic\n\nSufficient: Y is true if A and B are true\nNecessary: Y is true if and only if A and B are true\nINUS: Insufficient but Necessary part of an Unnecessary but Sufficient set of conditions (component causes)\nSUIN: Sufficient but Unnecessary condition that is part of a condition set that is Insufficient but Necessary for the outcome (precipitating causes)"
+  },
+  {
+    "objectID": "slides/00_intro.html#logical-operators-in-r",
+    "href": "slides/00_intro.html#logical-operators-in-r",
+    "title": "Social Science\nMath Camp",
+    "section": "Logical operators in R",
+    "text": "Logical operators in R\n\n& AND\n| OR\n! NOT\n&lt; LESS THAN\n&lt;= LEQ\n&gt; GREATER THAN\n&gt;= GEQ\n== EXACTLY EQUAL TO\n!= NOT EQUAL TO\n%in% IN THE SET"
+  },
+  {
+    "objectID": "slides/00_intro.html#practice-1",
+    "href": "slides/00_intro.html#practice-1",
+    "title": "Social Science\nMath Camp",
+    "section": "Practice",
+    "text": "Practice\n\nx = 3\nx != 5 & x != 4\n\n \n\n\n3 &gt; 4 | 15 == 12\n\n \n\n\n\nLETTERS == letters\n\n \n\n\n\nfirst_name = unlist(str_split(\"Gustavo\", \"\")) \nfirst_name %in% letters"
+  },
+  {
+    "objectID": "slides/00_intro.html#daily-schedule",
+    "href": "slides/00_intro.html#daily-schedule",
+    "title": "Social Science\nMath Camp",
+    "section": "Daily schedule",
+    "text": "Daily schedule\n\nBreakfast (9 - 9:30AM)\nMorning: Math (9:30AM - noon)\nLunch: Meet faculty, students (noon - 1PM)\nBreak (1 - 1:30PM)\nAfternoon: R programming (1:30 - 4PM)\n\n\n\nSee gustavodiaz.org/NUmathcamp for content"
+  },
+  {
+    "objectID": "slides/00_intro.html#learning-goals",
+    "href": "slides/00_intro.html#learning-goals",
+    "title": "Social Science\nMath Camp",
+    "section": "Learning goals",
+    "text": "Learning goals\n\nMake you feel very stressed about things you are supposed to already know\nMe saying “I told you this was important” in five years\nConfront your fears about math early on\nSo that you can do the cool things with confidence\n(The fear never goes away, but you learn to live with it)"
+  },
+  {
+    "objectID": "slides/00_intro.html#some-notes",
+    "href": "slides/00_intro.html#some-notes",
+    "title": "Social Science\nMath Camp",
+    "section": "Some notes",
+    "text": "Some notes\n\nClass is not graded, but you will get credit for attending (POLI_SCI 490)\nContent is cumulative (now and forever)\nEveryone comes in with different experiences and background. This is a feature, not a bug"
+  },
+  {
+    "objectID": "slides/00_intro.html#tips-on-being-a-grad-student",
+    "href": "slides/00_intro.html#tips-on-being-a-grad-student",
+    "title": "Social Science\nMath Camp",
+    "section": "Tips on being a grad student",
+    "text": "Tips on being a grad student\n\nRead the material, learn to be strategic about it, come up with things to discuss\nPeople around you are colleagues, not competition. Treat everyone with respect (including yourself)\nNobody knows what is going on, most people will help you figure things out\nThere is life beyond grad school"
+  },
+  {
+    "objectID": "slides/00_intro.html#why-do-i-need-mathcamp",
+    "href": "slides/00_intro.html#why-do-i-need-mathcamp",
+    "title": "Social Science\nMath Camp",
+    "section": "Why do I need mathcamp?",
+    "text": "Why do I need mathcamp?\nYou are being trained to become a producer of scientific knowledge\n\nScience: Knowledge generation through falsification\n\n\nFalsification: Trying to prove ourselves wrong"
+  },
+  {
+    "objectID": "slides/00_intro.html#scientific-method",
+    "href": "slides/00_intro.html#scientific-method",
+    "title": "Social Science\nMath Camp",
+    "section": "Scientific method",
+    "text": "Scientific method\n\nPuzzle/question\nTheory/model\nHypothesis/implications\nObservation/testing\nConclusion/evaluation\n\n\nYour job will be to become good at proposing and testing theories"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-is-a-theory",
+    "href": "slides/00_intro.html#what-is-a-theory",
+    "title": "Social Science\nMath Camp",
+    "section": "What is a theory?",
+    "text": "What is a theory?"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-is-a-theory-1",
+    "href": "slides/00_intro.html#what-is-a-theory-1",
+    "title": "Social Science\nMath Camp",
+    "section": "What is a theory?",
+    "text": "What is a theory?\n¯\\(ツ)/¯"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-is-a-theory-2",
+    "href": "slides/00_intro.html#what-is-a-theory-2",
+    "title": "Social Science\nMath Camp",
+    "section": "What is a theory?",
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-is-a-theory-3",
+    "href": "slides/00_intro.html#what-is-a-theory-3",
+    "title": "Social Science\nMath Camp",
+    "section": "What is a theory?",
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-is-a-theory-4",
+    "href": "slides/00_intro.html#what-is-a-theory-4",
+    "title": "Social Science\nMath Camp",
+    "section": "What is a theory?",
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated"
+  },
+  {
+    "objectID": "slides/00_intro.html#what-is-a-theory-5",
+    "href": "slides/00_intro.html#what-is-a-theory-5",
+    "title": "Social Science\nMath Camp",
+    "section": "What is a theory?",
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated\n\n\nand that’s why you need a PhD to do it well"
+  },
+  {
+    "objectID": "slides/00_intro.html#but-it-sure-is-important",
+    "href": "slides/00_intro.html#but-it-sure-is-important",
+    "title": "Social Science\nMath Camp",
+    "section": "But it sure is important!",
+    "text": "But it sure is important!\n\nMost common reasons why a peer-reviewed journal rejects an article:\n\nHaving no theory\nWeak theory\nInsufficient theoretical innovation\n\n\n\nIf you ask me, theory is logical explanation or informed speculation\n\n\n\n(but I am not the right person to ask)"
+  },
+  {
+    "objectID": "slides/00_intro.html#the-important-part",
+    "href": "slides/00_intro.html#the-important-part",
+    "title": "Social Science\nMath Camp",
+    "section": "The important part",
+    "text": "The important part\n\nCannot test theories because they unambiguously true or false\nNeed to believe a theory is true to engage with it scientifically\nInstead, test arguments that follow from a theory (hypotheses/implications)\n\n\nSounds like splitting hairs, but there is a good reason for this"
+  },
+  {
+    "objectID": "slides/00_intro.html#example",
+    "href": "slides/00_intro.html#example",
+    "title": "Social Science\nMath Camp",
+    "section": "Example",
+    "text": "Example\n\n\n\n\n\n\n\nhttps://news.northwestern.edu/stories/2025/04/virtual-singing-brings-connection-and-joy-to-isolated-older-adults-study-finds/"
+  },
+  {
+    "objectID": "slides/00_intro.html#details",
+    "href": "slides/00_intro.html#details",
+    "title": "Social Science\nMath Camp",
+    "section": "Details",
+    "text": "Details\n\nIn collaboration with Illinois-based Sounds Good Choir, the study assessed the feasibility of virtual group singing for adults over 55 — including those with neurocognitive disorders like dementia — during the COVID-19 pandemic when older adults were experiencing health declines due to isolation. It found virtual group singing can be an effective tool for promoting well-being and social connection during isolation.\n\n\n\nhttps://doi.org/10.1177/13872877251333155"
+  },
+  {
+    "objectID": "slides/00_intro.html#breaking-it-apart",
+    "href": "slides/00_intro.html#breaking-it-apart",
+    "title": "Social Science\nMath Camp",
+    "section": "Breaking it apart",
+    "text": "Breaking it apart\n\nQuestion: Can singing help overcome isolation?\n\n\nTheory: Choral singing is a therapeutic activity for individuals with neurological disorders\n\n\nHypothesis: Individuals who sing in a choir will report higher levels of well-being than those who do not\n\n\nTest: Organize virtual group choir, ask survey questions in the end\n\n\nConclusion: “Isolated older adults find joy and connection through virtual singing”"
+  },
+  {
+    "objectID": "slides/00_intro.html#details-1",
+    "href": "slides/00_intro.html#details-1",
+    "title": "Social Science\nMath Camp",
+    "section": "Details",
+    "text": "Details\n\nParticipants in the group choir during the pandemic consistently described the activity as providing a sense of normalcy amid widespread disruption — a theme that emerged prominently and merits further investigation."
+  },
+  {
+    "objectID": "slides/00_intro.html#findings",
+    "href": "slides/00_intro.html#findings",
+    "title": "Social Science\nMath Camp",
+    "section": "Findings",
+    "text": "Findings\n\nParticipants in the group choir during the pandemic consistently described the activity as providing a sense of normalcy amid widespread disruption — a theme that emerged prominently and merits further investigation.\n\n\n\nThis suggests that such interventions may help restore a feeling of normalcy, supporting psychological well-being and offering a means of reconnecting with a stable sense of self.\n\n\n\n\nhttps://doi.org/10.1177/13872877251333155"
+  },
+  {
+    "objectID": "slides/00_intro.html#limitations",
+    "href": "slides/00_intro.html#limitations",
+    "title": "Social Science\nMath Camp",
+    "section": "Limitations?",
+    "text": "Limitations?\n\nIdeal study\n\n\nObserve person \\(i\\)’s well-being with and without singing, everything else constant\n\n\nActual study\n\nAdults 55 an older in Chicago\nElected to participate\nTwo teleconferencing programs\n176 survey responses out of 695 participants"
+  },
+  {
+    "objectID": "slides/00_intro.html#limitations-1",
+    "href": "slides/00_intro.html#limitations-1",
+    "title": "Social Science\nMath Camp",
+    "section": "Limitations?",
+    "text": "Limitations?\nActual study\n\nAdults 55 an older in Chicago\nElected to participate\nTwo teleconferencing programs\n176 survey responses out of 695 participants"
+  },
+  {
+    "objectID": "slides/00_intro.html#problem",
+    "href": "slides/00_intro.html#problem",
+    "title": "Social Science\nMath Camp",
+    "section": "Problem",
+    "text": "Problem\n\nCannot observe the ideal counterfactual\n\n\nAny test/evidence can only be suggestive\n\n\n\nWhen evidence supports hypothesis, your theory is accepted not rejected\nWhen evidence does not support hypothesis, your theory is rejected not accepted\n\n\n\nConnecting from narrow findings to broad theories requires assumptions"
+  },
+  {
+    "objectID": "slides/00_intro.html#statistics",
+    "href": "slides/00_intro.html#statistics",
+    "title": "Social Science\nMath Camp",
+    "section": "Statistics",
+    "text": "Statistics\nIs all about acknowledging this gap and making assumptions explicit, systematic, and credible\n\nMath is a tool that helps us translate across domains\nThe difficulty lies mostly in embracing the abstraction\nLess so on notation, symbols, operations"
+  },
+  {
+    "objectID": "slides/00_intro.html#faq",
+    "href": "slides/00_intro.html#faq",
+    "title": "Social Science\nMath Camp",
+    "section": "FAQ",
+    "text": "FAQ\n\nDo I need math camp if I already have training in quantitative methods?\n\n\nDo I need math camp if I only plan to use qualitative methods?\n\n\nDo I need math camp if I am in political theory?\n\n\nDo I need math camp if I plan to focus primarily on teaching?\n\n\nDo I need math camp if I plan to go to industry?"
+  },
+  {
+    "objectID": "slides/00_intro.html#frequently-asked-questions",
+    "href": "slides/00_intro.html#frequently-asked-questions",
+    "title": "Social Science\nMath Camp",
+    "section": "Frequently asked questions",
+    "text": "Frequently asked questions\n\nDo I need mathcamp if…\n\nI already have training in quantitative methods?\nI plan to use qualitative methods only?\nI am in political theory?\nI want a teaching job?\nI am considering non-academic jobs?"
   }
 ]

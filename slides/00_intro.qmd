@@ -1,0 +1,457 @@
+---
+title: | 
+       | Social Science
+       | Math Camp
+author: "Northwestern University"
+format: 
+  revealjs:
+    embed-resources: true
+    slide-number: false
+    progress: false
+---
+
+## Agenda
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(tinytable)
+
+knitr::opts_chunk$set(fig.pos = "center", echo = FALSE, 
+               message = FALSE, warning = FALSE)
+```
+
+- Who are we?
+- What is math camp?
+- Who are you?
+- What are we going to cover?
+- Getting in the mindset
+
+
+
+# Who are we?
+
+## Co-instructors
+
+::: {.callout-tip}
+## Artur Baranov
+PhD Student in Political Science  
+<artur.baranov@u.northwestern.edu>
+:::
+
+::: {.callout-tip}
+## Gustavo Diaz
+Assistant Professor of Instruction in Political Science  
+<gustavo.diaz@northwestern.edu>
+:::
+
+::: {.callout-tip}
+## Someone else
+PhD Student in Sociology (maybe)  
+<someone.else@u.northwestern.edu>
+:::
+
+# What is math camp?
+
+## Math camp
+
+. . .
+
+- A (re)introduction to math topics necessary for the quantitative methods sequence
+
+Goals:
+
+::: incremental
+- Get to know you and meet your methods training needs/goals
+- Get to know your colleagues
+:::
+
+
+## Math camp
+
+- A (re)introduction to math topics necessary for the quantitative methods sequence
+
+Why a *math camp*?
+
+::: incremental
+- Can always use more methods training
+- More of a *methods* camp
+:::
+
+## Who are you?
+
+
+
+- Name
+- Pronouns
+- City or country you are/came from
+- Discipline + intended subfield/research area
+- A hobby or interesting fact about yourself
+
+## What are we going to cover? {.smaller}
+
+```{r schedule, include = FALSE}
+schedule =
+  tribble(
+    ~Week, ~Date, ~Morning, ~Afternoon,
+    1, "Wednesday, September 3", "Introduction", "R and RStudio",
+    1, "Thursday, September 4", "Notation, sets, functions", "Tidyverse I",
+    1, "Friday, September 5", "Matrices", "Tidyverse II",
+    2, "Monday, September 8", "Calculus I", "NO MEETING",
+    2, "Tuesday, September 9", "Calculus II", "Sampling and simulation",
+    2, "Wednesday, September 10", "Probability", "NO MEETING",
+    2, "Thursday, September 11", "NO MEETING", "NO MEETING ",
+    2, "Friday, September 12", "Review", "Markdown"
+)
+```
+
+
+```{r show-schedule, echo = FALSE, results = "asis"}
+schedule %>% 
+  tt() %>% 
+  style_tt(
+    i = c(4, 6),
+    j = 4,
+    background = "lightgray"
+  ) %>% 
+  style_tt(i = 7,
+           background = "lightgray")
+```
+
+## Daily schedule
+
+- **Breakfast** (9 - 9:30AM)
+
+- **Morning:** Math (9:30AM - noon) 
+
+- **Lunch:** Meet faculty, students (noon - 1PM)
+
+- **Break** (1 - 1:30PM)
+
+- **Afternoon:** R programming (1:30 - 4PM)
+
+::: aside
+See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for content
+::::
+
+## Learning goals
+
+::: incremental
+
+- Make you feel very stressed about things you are supposed to already know
+
+- Me saying "I told you this was important" in five years
+
+- Confront your fears about math early on
+
+- So that you can do the cool things with confidence
+
+- (The fear never goes away, but you learn to live with it)
+
+:::
+
+
+
+## Expectations
+
+::: incremental
+- You are not being evaluated
+- No need to take extensive notes
+- Bring a laptop
+- Engage
+- Get things wrong
+- Ask
+- Interrupt if you need to
+:::
+
+## Some notes
+
+::: incremental
+- Class is not graded, but you will get credit for attending (POLI_SCI 490)
+
+- Content is cumulative (now and forever)
+
+- Everyone comes in with different experiences and background. This is a feature, not a bug
+:::
+
+## Tips on being a grad student
+
+::: incremental
+- Read the material, learn to be strategic about it, come up with things to discuss
+
+- People around you are colleagues, not competition. Treat everyone with respect (including yourself)
+
+- Nobody knows what is going on, most people will help you figure things out
+
+- There is life beyond grad school
+:::
+
+# Questions?
+
+# Break
+
+# Getting in the mindset
+
+## Why do I need mathcamp?
+
+You are being trained to become a producer of **scientific knowledge**
+
+. . . 
+
+**Science:** Knowledge generation through falsification
+
+. . . 
+
+**Falsification:** Trying to prove *ourselves* wrong
+
+## Scientific method
+
+1. Puzzle/question
+
+2. Theory/model
+
+3. Hypothesis/implications
+
+4. Observation/testing
+
+5. Conclusion/evaluation
+
+. . .
+
+Your job will be to become good at *proposing* and *testing* **theories**
+
+::: {style="text-align: center"}
+## What is a theory? {.center}
+
+
+:::
+
+::: {style="text-align: center"}
+## What is a theory? {.center}
+
+### ¯\\_(ツ)_/¯
+
+:::
+
+::: {style="text-align: center"}
+## What is a theory? {.center}
+
+### ¯\\_(ツ)_/¯
+
+I have no idea
+
+:::
+
+::: {style="text-align: center"}
+## What is a theory? {.center}
+
+### ¯\\_(ツ)_/¯
+
+I have no idea
+
+::: {style="font-size: 80%;"}
+My *theory* is that no one really knows
+:::
+
+:::
+
+::: {style="text-align: center"}
+## What is a theory? {.center}
+
+### ¯\\_(ツ)_/¯
+
+I have no idea
+
+::: {style="font-size: 80%;"}
+My *theory* is that no one really knows
+:::
+
+::: {style="font-size: 60%;"}
+so they make it complicated
+:::
+
+:::
+
+::: {style="text-align: center"}
+## What is a theory? {.center}
+
+### ¯\\_(ツ)_/¯
+
+I have no idea
+
+::: {style="font-size: 80%;"}
+My *theory* is that no one really knows
+:::
+
+::: {style="font-size: 60%;"}
+so they make it complicated
+:::
+
+::: {style="font-size: 40%;"}
+and that's why you need a PhD to do it well
+:::
+
+:::
+
+## But it sure is important!
+
+. . .
+
+Most common reasons why a peer-reviewed journal rejects an article:
+
+::: incremental
+1. Having no theory
+2. Weak theory
+3. Insufficient theoretical innovation
+:::
+
+. . .
+
+If you ask me, theory is **logical explanation** or **informed speculation**
+
+. . .
+
+::: {style="font-size: 60%;"}
+(but I am not the right person to ask)
+:::
+
+## The important part
+
+::: incremental
+- Cannot *test* theories because they **unambiguously true or false**
+
+- Need to **believe** a theory is true to engage with it scientifically
+
+- Instead, test **arguments** that follow from a theory (hypotheses/implications)
+:::
+
+. . .
+
+Sounds like splitting hairs, but there is a good reason for this
+
+## Example
+
+![](img/nu_sing_study.png){fig-align="center" width="90%"}
+
+::: aside
+https://news.northwestern.edu/stories/2025/04/virtual-singing-brings-connection-and-joy-to-isolated-older-adults-study-finds/
+:::
+
+## Details
+
+> In collaboration with Illinois-based Sounds Good Choir, the study assessed the feasibility of virtual group singing for adults over 55 — including those with neurocognitive disorders like dementia — during the COVID-19 pandemic when older adults were experiencing health declines due to isolation. It found virtual group singing can be an effective tool for promoting well-being and social connection during isolation.
+
+::: aside
+https://doi.org/10.1177/13872877251333155
+:::
+
+## Findings
+
+> Participants in the group choir during the pandemic consistently described the activity as providing a sense of normalcy amid widespread disruption — a theme that emerged prominently and merits further investigation.
+
+. . .
+
+> This suggests that such interventions may help restore a feeling of normalcy, supporting psychological well-being and offering a means of reconnecting with a stable sense of self.
+
+::: aside
+https://doi.org/10.1177/13872877251333155
+:::
+
+## Breaking it apart
+
+. . .
+
+**Question:** Can singing help overcome isolation?
+
+. . .
+
+**Theory:** Choral singing is a therapeutic activity for individuals with neurological disorders
+
+. . .
+
+**Hypothesis:** Individuals who sing in a choir will report higher levels of well-being than those who do not
+
+. . .
+
+**Test:** Organize virtual group choir, ask survey questions in the end
+
+. . .
+
+**Conclusion:** "Isolated older adults find joy and connection through virtual singing"
+
+. . .
+
+## Limitations?
+
+. . .
+
+**Ideal study**
+
+. . .
+
+Observe person $i$'s well-being with and without singing, everything else constant
+
+. . .
+
+
+**Actual study**
+
+- Adults 55 an older in Chicago
+
+- Elected to participate
+
+- Two teleconferencing programs
+
+- 176 survey responses out of 695 participants
+
+## Problem
+
+. . .
+
+Cannot observe the ideal counterfactual
+
+. . .
+
+Any test/evidence can only be **suggestive**
+
+. . .
+
+- When evidence supports hypothesis, your theory is ~~accepted~~ **not rejected**
+
+- When evidence does not support hypothesis, your theory is ~~rejected~~ **not accepted**
+
+. . . 
+
+Connecting from narrow findings to broad theories requires **assumptions**
+
+## Statistics
+
+Is all about acknowledging this gap and making assumptions *explicit, systematic, and credible*
+
+::: incremental
+
+- **Math** is a tool that helps us translate across domains
+
+- The difficulty lies mostly in embracing the *abstraction*
+
+- Less so on notation, symbols, operations
+
+:::
+
+## Frequently asked questions
+
+. . .
+
+Do I need mathcamp if...
+
+::: incremental
+- I already have training in quantitative methods?
+- I plan to use qualitative methods only?
+- I am in political theory?
+- I want a teaching job?
+- I am considering non-academic jobs?
+:::
+
+
+# Questions?
+
+
