@@ -1,8 +1,6 @@
 ---
-title: | 
-       | Social Science
-       | Math Camp
-author: "Northwestern University"
+title: "Notations, Sets, Functions"
+author: "NU Social Science Math Camp"
 format: 
   revealjs:
     embed-resources: true
@@ -10,139 +8,29 @@ format:
     progress: false
 ---
 
-## Agenda
+## Getting ready
 
 ```{r setup, include = FALSE}
 library(tidyverse)
 library(tinytable)
 
-knitr::opts_chunk$set(fig.pos = "center", echo = FALSE, 
+knitr::opts_chunk$set(fig.pos = "center", echo = TRUE, 
                message = FALSE, warning = FALSE)
 ```
 
-- Who are we?
-- What is math camp?
-- Who are you?
-- What are we going to cover?
-- Start math camp content
+- Set up [eduroam](https://services.northwestern.edu/TDClient/30/Portal/KB/ArticleDet?ID=1851)
+
+- Go back and make sure you have the MOST RECENT version of R and RStudio
+
+## Agenda
 
 
+- **Morning:** Notations, sets, functions
+- **Lunch:** TBD
+- **Afternoon:** Tidyverse I
 
-# Who are we?
+## What is notation?
 
-## Co-instructors
-
-::: {.callout-tip}
-## Artur Baranov
-PhD Student in Political Science  
-<artur.baranov@u.northwestern.edu>
-:::
-
-::: {.callout-tip}
-## Gustavo Diaz
-Assistant Professor of Instruction in Political Science  
-<gustavo.diaz@northwestern.edu>
-:::
-
-::: {.callout-tip}
-## Aven Peters
-PhD Student in Sociology  
-<aven.peters@u.northwestern.edu>
-:::
-
-# What is math camp?
-
-## Math camp
-
-. . .
-
-- A (re)introduction to math topics necessary for the quantitative methods sequence
-
-Goals:
-
-::: incremental
-- Get to know you and meet your methods training needs/goals
-- Get to know your colleagues
-:::
-
-
-## Math camp
-
-- A (re)introduction to math topics necessary for the quantitative methods sequence
-
-Why a *math camp*?
-
-::: incremental
-- Can always use more methods training
-- More of a *methods* camp
-:::
-
-## Who are you?
-
-
-
-- Name
-- Pronouns
-- Discipline + intended subfield/research area
-- A hobby or interesting fact about yourself
-
-## What are we going to cover? {.smaller}
-
-```{r schedule, include = FALSE}
-schedule =
-  tribble(
-    ~Day, ~Date, ~Morning, ~Afternoon,
-    1, "September 16", "Notation, sets, functions", "R and RStudio",
-    2, "September 17", "Matrices", "Tidyverse I",
-    3, "September 18", "Calculus I", "Tidyverse II",
-    4, "September 19", "NO MEETING", NA,
-    5, "September 20", "Calculus II", "Sampling and simulation"
-)
-```
-
-
-```{r show-schedule, echo = FALSE, results = "asis"}
-schedule %>% 
-  tt() %>% 
-  style_tt(
-    i = 4,
-    j = 3,
-    colspan = 2,
-    align = "l"
-  )
-```
-
-. . .
-
-- **Morning:** Math (9AM - noon) 
-
-- **Lunch:** Meet faculty, students (noon - 1PM)
-
-- **Break** (1-1:30PM)
-
-- **Afternoon:** R programming (1:30-4PM)
-
-- See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for content
-
-## Expectations
-
-::: incremental
-- You are not being evaluated
-- No need to take extensive notes
-- Bring a laptop
-- Engage
-- Get things wrong
-- Ask
-- Interrupt if you need to
-:::
-
-# Questions?
-
-# Break
-
-# Notation, Sets, Functions
-
-## What is this?
 
 ::: incremental
 - Symbols, letters, formulae used over plain language
@@ -168,23 +56,82 @@ schedule %>%
 - $\mathbb{N}$: Natural numbers &nbsp; $\{(0), 1, 2, 3\}$
 - $\mathbb{Z}$: Integers &nbsp; $\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$
 - $\mathbb{Q}$: Rational numbers &nbsp; $\{1/2, 3/2, 4\}$
-- $\mathbb{R}$: Real numbers &nbsp; $\{-899.8, 22, 4.5, \sqrt{\pi}\}$
-- $\mathbb{I}$: Imaginary numbers &nbsp; $\{ai | a \in \mathbb{R}, i= \sqrt{-1}\}$
-- $\mathbb{C}$: Complex numbers &nbsp; $a + bi$
+<!-- Can be represented as ratio of two integers -->
+- $\mathbb{R}$: Real numbers &nbsp; $\{-899.8, 22, 4.5, \pi, e\}$
+- $\mathbb{R}^2$: 2-dimensional space 
+- $\mathbb{R}^3$: 3-dimensional space
+
 :::
 
 ## Measurement
 
+. . .
+
+Sets can also have non-numerical elements
+
+. . .
+
+We can *treat* these as numbers or not, what matters is what we assume about the elements
+
 ::: incremental
-- Sets can also have non-numerical elements
-- We may code this as numbers or not, what matters is what we assume about the elements
 - **Nominal:** No mathematical relationship between elements
 - **Ordinal:** Order is meaningful
 - **Interval:** Elements equidistant, but no meaningful zero
 - **Ratio (interval-ratio)**: There is a meaningful zero
 :::
 
+
 <!-- Ask/give examples -->
+
+## Set notation
+
+. . .
+
+Elements of a set
+
+::: incremental
+- Capital letters denote a set $A$
+
+- Lowercase denotes an *arbitrary* element of a set $a$
+
+:::
+
+## Set notation
+
+Bracketing
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="33%"}
+$[ \text{ }]$: Brackets
+:::
+
+::: {.column width="33%"}
+$( \text{ } )$: Parentheses (round brackets)
+:::
+
+::: {.column width="33%"}
+$\{\}$: Braces<br>(curly brackets)
+:::
+
+:::: 
+
+. . .
+
+Uses vary, but generally...
+
+::: incremental
+- **Brackets** are for *continuous* sets $[0, 1]$
+
+- **Parentheses** are for *exclusive* sets $(0,1)$
+
+- Can mix and match like $[0,1)$
+
+- **Braces** are for *discrete* sets $\{0,1\}$
+:::
+
 
 ## Set notation
 
@@ -194,7 +141,7 @@ Operations *within* sets
 
 ::: incremental
 - $\exists$  "there exists"
-- $\forall$   "for all"
+- $\forall$   "for all"; for every
 - $\exists$   "exists"; there is something true 
 - $\in$   "in" or "element of"
 - \|   Such that 
@@ -207,6 +154,7 @@ Operations *within* sets
 Operations *between* sets
 
 ::: incremental
+-
 - $\subset$; $\subseteq$  Subset
 - $\varnothing$  Empty set
 - $\cap$  Intersection; AND
@@ -217,6 +165,7 @@ Operations *between* sets
 ## Practice
 
 ::: incremental
+- $x \in \mathbb{Z}$
 - $\{x|x \in \mathbb{N}, x < 4\}$
 - $\{x|x \in \mathbb{R}, x < 200\}$
 - $\{ai | a \in \mathbb{R}, i= \sqrt{-1}\}$
@@ -225,13 +174,17 @@ Operations *between* sets
 - $\{4n \in \mathbb{N} | n \in \mathbb{N}\}$
 :::
 
+<!-- Do more practice with empty, union, intersecting sets -->
+
+
+
 ## Greek notation
 
 . . .
 
-![](img/greek.jpg)
+![](img/greek.jpg){fig-align="center" width="90%"}
 
-## Notation chart
+## Greek vs. Latin
 
 :::: {.columns}
 
@@ -262,61 +215,99 @@ Operations *between* sets
 $X \rightarrow \bar{X} \rightarrow \widehat{\mu} \xrightarrow{\text{hopefully!}} \mu$
 :::
 
-## Logic
+## Another way to think about it
+
+**Variables** are denoted by Latin letters like $x, y, z$
+
+. . .
+
+**Constants** are denoted by Latin letters $a, b, c$
+
+. . .
+
+- Variables and constants appear in a spreadsheet
+
+&nbsp;
+
+. . .
+
+**Parameters** are denoted by Greek letters $\alpha, \beta, \gamma$
 
 ::: incremental
-- **Sufficient:** Y is true *if* A and B are true
-- **Necessary:** Y is true *if and only if* A and B are true
-- **INUS:** Insufficient but Necessary part of an Unnecessary but Sufficient set of conditions *(component causes)*
-- **SUIN:**  Sufficient but Unnecessary condition that is part of a condition set that is Insufficient but Necessary for the outcome *(precipitating causes)*
+- Parameters are *theoretical* quantities
+- May map to constants or variables (but need not to)
 :::
 
-## Logical operators in R {.smaller}
+# Questions?
 
-::: incremental
-- `&` AND
-- `|` OR
-- `!` NOT
-- `<` LESS THAN
-- `<=` LEQ
-- `>` GREATER THAN
-- `>=` GEQ
-- `==` EXACTLY EQUAL TO
-- `!=` NOT EQUAL TO
-- `%in%` IN THE SET
-:::
+# What else?
 
-## Practice
+## Arithmetic operations
 
-```{r, echo = TRUE, eval = FALSE}
-x = 3
-x != 5 & x != 4
-```
+**Addition:** $2+3 = 5$
 
-&nbsp;
+**Subtraction:** $2-3 = -1$
 
-. . .
+**Multiplication:** $2 \times 3 = 2 \ast 3 = 2 \cdot 3 = 6$
 
+**Division:** $2 \div 3 = 2/3 = \frac{2}{3} = 0.\bar{6}$
 
+**Exponentiation:** $2^3 = 2 \hat{} 3 = 8$
 
-```{r, echo = TRUE, eval = FALSE}
-3 > 4 | 15 == 12
-```
+**Square root:** $\sqrt{x}$
 
-&nbsp;
+**Logarithm:** $\log_a(x)$
+
+**Natural logarithm:** $log_e(x) = ln(x) \approx log(x)$
+
+## With many elements
 
 . . .
 
-```{r, echo = TRUE, eval = FALSE}
-LETTERS == letters
-```
 
-&nbsp;
+**Summation** 
+
+$$
+\sum_i^n x_i = x_1 + x_2 + x_3 + \ldots + x_n
+$$
 
 . . .
 
-```{r, echo = TRUE, eval = FALSE}
-first_name = unlist(str_split("Gustavo", "")) 
-first_name %in% letters
-```
+**Product**
 
+$$
+\prod_i^n x_i = x_1 \cdot x_2 \cdot x_3 \cdot \ldots \cdot x_n
+$$
+
+
+
+## Order of operations
+
+**P**arentheses  
+**E**xponents  
+**M**ultiplication  
+**D**ivision  
+**A**ddition  
+**S**ubtraction  
+
+. . .
+
+This sounds trivial but it's very important!
+
+## Order of operations
+
+**PEMDAS**
+
+. . .
+
+<!-- Do it in the whiteboard. Answer is -93 -->
+
+$$
+(3+7)^2 (2+3) / (1-6)
+$$
+
+. . .
+
+$$
+= -93
+$$

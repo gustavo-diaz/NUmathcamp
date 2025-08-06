@@ -1335,9 +1335,9 @@
   {
     "objectID": "slides/01_notation.html#agenda",
     "href": "slides/01_notation.html#agenda",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Agenda",
-    "text": "Agenda\n\nWho are we?\nWhat is math camp?\nWho are you?\nWhat are we going to cover?\nStart math camp content"
+    "text": "Agenda\n\nMorning: Notations, sets, functions\nLunch: TBD\nAfternoon: Tidyverse I"
   },
   {
     "objectID": "slides/01_notation.html#co-instructors",
@@ -1384,77 +1384,77 @@
   {
     "objectID": "slides/01_notation.html#what-is-this",
     "href": "slides/01_notation.html#what-is-this",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "What is this?",
     "text": "What is this?\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
   },
   {
     "objectID": "slides/01_notation.html#set-notation",
     "href": "slides/01_notation.html#set-notation",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Set Notation",
-    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\)\n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\sqrt{\\pi}\\}\\)\n\\(\\mathbb{I}\\): Imaginary numbers   \\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\)\n\\(\\mathbb{C}\\): Complex numbers   \\(a + bi\\)"
+    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\) \n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\pi, e\\}\\)\n\\(\\mathbb{R}^2\\): 2-dimensional space\n\\(\\mathbb{R}^3\\): 3-dimensional space"
   },
   {
     "objectID": "slides/01_notation.html#measurement",
     "href": "slides/01_notation.html#measurement",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Measurement",
-    "text": "Measurement\n\nSets can also have non-numerical elements\nWe may code this as numbers or not, what matters is what we assume about the elements\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
+    "text": "Measurement\n\nSets can also have non-numerical elements\n\n\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-1",
     "href": "slides/01_notation.html#set-notation-1",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\n\nOperations within sets\n\n\\(\\exists\\) “there exists”\n\\(\\forall\\) “for all”\n\\(\\exists\\) “exists”; there is something true\n\\(\\in\\) “in” or “element of”\n| Such that\n\\(\\notin\\) excluding (element)\n\\(\\equiv\\) equivalent"
+    "text": "Set notation\n\nElements of a set\n\nCapital letters denote a set \\(A\\)\nLowercase denotes an arbitrary element of a set \\(a\\)"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-2",
     "href": "slides/01_notation.html#set-notation-2",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\nOperations between sets\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
+    "text": "Set notation\nBracketing\n\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces(curly brackets)\n\n\n\nUses vary, but generally…\n\nBrackets are for continuous sets \\([0, 1]\\)\nParentheses are for exclusive sets \\((0,1)\\)\nCan mix and match like \\([0,1)\\)\nBraces are for discrete sets \\(\\{0,1\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#practice",
     "href": "slides/01_notation.html#practice",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Practice",
-    "text": "Practice\n\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\)\n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
+    "text": "Practice\n\n\\(x \\in \\mathbb{Z}\\)\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\)\n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#greek-notation",
     "href": "slides/01_notation.html#greek-notation",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Greek notation",
     "text": "Greek notation"
   },
   {
     "objectID": "slides/01_notation.html#notation-chart",
     "href": "slides/01_notation.html#notation-chart",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Notation chart",
     "text": "Notation chart\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
   },
   {
     "objectID": "slides/01_notation.html#logic",
     "href": "slides/01_notation.html#logic",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Logic",
     "text": "Logic\n\nSufficient: Y is true if A and B are true\nNecessary: Y is true if and only if A and B are true\nINUS: Insufficient but Necessary part of an Unnecessary but Sufficient set of conditions (component causes)\nSUIN: Sufficient but Unnecessary condition that is part of a condition set that is Insufficient but Necessary for the outcome (precipitating causes)"
   },
   {
     "objectID": "slides/01_notation.html#logical-operators-in-r",
     "href": "slides/01_notation.html#logical-operators-in-r",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Logical operators in R",
     "text": "Logical operators in R\n\n& AND\n| OR\n! NOT\n&lt; LESS THAN\n&lt;= LEQ\n&gt; GREATER THAN\n&gt;= GEQ\n== EXACTLY EQUAL TO\n!= NOT EQUAL TO\n%in% IN THE SET"
   },
   {
     "objectID": "slides/01_notation.html#practice-1",
     "href": "slides/01_notation.html#practice-1",
-    "title": "Social Science\nMath Camp",
+    "title": "Notations, Sets, Functions",
     "section": "Practice",
     "text": "Practice\n\nx = 3\nx != 5 & x != 4\n\n \n\n\n3 &gt; 4 | 15 == 12\n\n \n\n\n\nLETTERS == letters\n\n \n\n\n\nfirst_name = unlist(str_split(\"Gustavo\", \"\")) \nfirst_name %in% letters"
   },
@@ -2108,5 +2108,89 @@
     "title": "Social Science\nMath Camp",
     "section": "Frequently asked questions",
     "text": "Frequently asked questions\n\nDo I need mathcamp if…\n\nI already have training in quantitative methods?\nI plan to use qualitative methods only?\nI am in political theory?\nI want a teaching job?\nI am considering non-academic jobs?"
+  },
+  {
+    "objectID": "slides/01_notation.html#getting-ready",
+    "href": "slides/01_notation.html#getting-ready",
+    "title": "Notations, Sets, Functions",
+    "section": "Getting ready",
+    "text": "Getting ready\n\nSet up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio"
+  },
+  {
+    "objectID": "slides/01_notation.html#bracketing",
+    "href": "slides/01_notation.html#bracketing",
+    "title": "Notations, Sets, Functions",
+    "section": "Bracketing",
+    "text": "Bracketing\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces (curly brackets)\n\n\nMileage may vary, but generally…\n\nBrackets are for XXX [EXAMPLE]\nParentheses are for XXX [EXAMPLE]\nBraces are for discrete sets \\(\\{1, 2, 3\\}\\)"
+  },
+  {
+    "objectID": "slides/01_notation.html#other-practical-properties",
+    "href": "slides/01_notation.html#other-practical-properties",
+    "title": "Notations, Sets, Functions",
+    "section": "Other practical properties",
+    "text": "Other practical properties\n\nBoundedness: Logical minimum or maximum"
+  },
+  {
+    "objectID": "slides/01_notation.html#set-notation-3",
+    "href": "slides/01_notation.html#set-notation-3",
+    "title": "Notations, Sets, Functions",
+    "section": "Set notation",
+    "text": "Set notation\n\nOperations within sets\n\n\\(\\exists\\) “there exists”\n\\(\\forall\\) “for all”; for every\n\\(\\exists\\) “exists”; there is something true\n\\(\\in\\) “in” or “element of”\n| Such that\n\\(\\notin\\) excluding (element)\n\\(\\equiv\\) equivalent"
+  },
+  {
+    "objectID": "slides/01_notation.html#set-notation-4",
+    "href": "slides/01_notation.html#set-notation-4",
+    "title": "Notations, Sets, Functions",
+    "section": "Set notation",
+    "text": "Set notation\nOperations between sets\n\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
+  },
+  {
+    "objectID": "slides/01_notation.html#what-is-notation",
+    "href": "slides/01_notation.html#what-is-notation",
+    "title": "Notations, Sets, Functions",
+    "section": "What is notation?",
+    "text": "What is notation?\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
+  },
+  {
+    "objectID": "slides/01_notation.html#greek-vs.-latin",
+    "href": "slides/01_notation.html#greek-vs.-latin",
+    "title": "Notations, Sets, Functions",
+    "section": "Greek vs. Latin",
+    "text": "Greek vs. Latin\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
+  },
+  {
+    "objectID": "slides/01_notation.html#another-way-to-think-about-it",
+    "href": "slides/01_notation.html#another-way-to-think-about-it",
+    "title": "Notations, Sets, Functions",
+    "section": "Another way to think about it",
+    "text": "Another way to think about it\nVariables are denoted by Latin letters like \\(x, y, z\\)\n\nConstants are denoted by Latin letters \\(a, b, c\\)\n\n\n\nVariables and constants appear in a spreadsheet\n\n \n\n\nParameters are denoted by Greek letters \\(\\alpha, \\beta, \\gamma\\)\n\nParameters are theoretical quantities\nMay map to constants or variables (but need not to)"
+  },
+  {
+    "objectID": "slides/01_notation.html#arithmetic-operations",
+    "href": "slides/01_notation.html#arithmetic-operations",
+    "title": "Notations, Sets, Functions",
+    "section": "Arithmetic operations",
+    "text": "Arithmetic operations\nAddition: \\(2+3 = 5\\)\nSubtraction: \\(2-3 = -1\\)\nMultiplication: \\(2 \\times 3 = 2 \\ast 3 = 2 \\cdot 3 = 6\\)\nDivision: \\(2 \\div 3 = 2/3 = \\frac{2}{3} = 0.\\bar{6}\\)\nExponentiation: \\(2^3 = 2 \\hat{} 3 = 8\\)\nSquare root: \\(\\sqrt{x}\\)\nLogarithm: \\(\\log_a(x)\\)\nNatural logarithm: \\(log_e(x) = ln(x) \\approx log(x)\\)"
+  },
+  {
+    "objectID": "slides/01_notation.html#with-many-elements",
+    "href": "slides/01_notation.html#with-many-elements",
+    "title": "Notations, Sets, Functions",
+    "section": "With many elements",
+    "text": "With many elements\n\nSummation\n\\[\n\\sum_i^n x_i = x_1 + x_2 + x_3 + \\ldots + x_n\n\\]\n\n\nProduct\n\\[\n\\prod_i^n x_i = x_1 \\cdot x_2 \\cdot x_3 \\cdot \\ldots \\cdot x_n\n\\]"
+  },
+  {
+    "objectID": "slides/01_notation.html#order-of-operations",
+    "href": "slides/01_notation.html#order-of-operations",
+    "title": "Notations, Sets, Functions",
+    "section": "Order of operations",
+    "text": "Order of operations\nParentheses\nExponents\nMultiplication\nDivision\nAddition\nSubtraction\n\nThis sounds trivial but it’s very important!"
+  },
+  {
+    "objectID": "slides/01_notation.html#order-of-operations-1",
+    "href": "slides/01_notation.html#order-of-operations-1",
+    "title": "Notations, Sets, Functions",
+    "section": "Order of operations",
+    "text": "Order of operations\nPEMDAS\n\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n\n\n\\[\n= -93\n\\]"
   }
 ]
