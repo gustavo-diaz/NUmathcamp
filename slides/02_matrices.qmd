@@ -10,7 +10,7 @@ format:
     code-overflow: wrap
 ---
 
-## Getting ready
+## Agenda
 
 ```{r setup, include = FALSE}
 library(tidyverse)
@@ -20,15 +20,14 @@ knitr::opts_chunk$set(fig.pos = "center", echo = TRUE,
                message = FALSE, warning = FALSE)
 ```
 
-- Set up [eduroam](https://services.northwestern.edu/TDClient/30/Portal/KB/ArticleDet?ID=1851)
 
-- Go back and make sure you have the MOST RECENT version of R and RStudio
 
 ## Agenda
 
 - **Morning:** Matrices and matrix algebra
-- **Lunch:** Senior faculty
-- **Afternoon:** Tidyverse I
+- **Lunch:** Meet junior faculty
+- **Afternoon:** Tidyverse II
+
 
 # Basics
 
@@ -264,9 +263,19 @@ $$A = \begin{bmatrix}
 - Demarcate with [ ] 
 :::
 
-. . .
+## Why are they important?
 
-Why are they important?
+::: incremental
+- Quantitative data comes in rectangular format
+
+- But in R, matrices and data frames are different!
+
+- Being good at matrix algebra makes you good at cleaning data
+
+- Follow technical details in statistics (e.g. OLS regression)
+
+- Write more efficient code
+:::
 
 ## Create matrices in R
 
@@ -421,6 +430,20 @@ $$
 - $i$: rows, $j$: columns
 :::
 
+## Structure
+
+$$
+B=
+\begin{bmatrix}
+b_{11} & b_{12} & b_{13} & \ldots & b_{1n} \\
+b_{21} & b_{22} & b_{23} & \ldots & b_{2n} \\
+\vdots & \vdots & \vdots & \ldots & \vdots \\
+b_{m1} & b_{m2} & b_{m3} & \ldots & b_{mn}
+\end{bmatrix}
+$$
+
+Thinking about matrices of arbitrary dimensions is tricky but useful!
+
 ## Indexing in R
 
 ```{r}
@@ -487,6 +510,8 @@ $$c_{ij}=a_{ij} \pm b_{ij} \text{ }\forall i,j$$
 - Add or subtract each corresponding element
 
 - Need $A$ and $B$ to have *exactly* the same dimensions
+
+- aka being of equal *order* or having equal *size*
 
 ## Addition and subtraction
 
@@ -738,6 +763,10 @@ B = matrix(c(-15, 1, 5,
 - Order matters! $A \times B \neq B \times A$ even if both operations are conformable 
 :::
 
+. . .
+
+Many errors in data analysis happen because we try to multiply matrices that are not conformable
+
 ## Multiplication steps
 
 ::: incremental
@@ -912,6 +941,8 @@ L_{2 \times 3} =
 \end{aligned}
 $$
 
+What happens when they are not?
+
 ## Partial answer
 
 ```{r}
@@ -968,6 +999,7 @@ M %*% L
 
 -   $A(B+C) = AB + AC$
 :::
+
 
 # Special matrices
 
@@ -1074,6 +1106,30 @@ solve(A)
 ```
 
 . . .
+
+## Tangent: Matrix division
+
+. . .
+
+$$
+A \div B = A \times B^{-1}
+$$
+
+. . .
+
+This is true iff $B$ is *invertible*
+
+. . .
+
+If $B$ is not invertible, then answer is not unique
+
+. . .
+
+Because **matrix multiplication is not commutative**
+
+::: aside
+More: <https://youtu.be/f429BxWNwfs>
+:::
 
 ## Transpose and inverse are very important!
 

@@ -291,7 +291,7 @@
     "href": "slides/02_matrices.html#agenda",
     "title": "Matrices",
     "section": "Agenda",
-    "text": "Agenda\n\nMorning: Matrices and matrix algebra\nLunch: Senior faculty\nAfternoon: Tidyverse I"
+    "text": "Agenda"
   },
   {
     "objectID": "slides/02_matrices.html#scalars",
@@ -389,7 +389,7 @@
     "href": "slides/02_matrices.html#matrices",
     "title": "Matrices",
     "section": "Matrices",
-    "text": "Matrices\n\n\\[A = \\begin{bmatrix}\n12 & 14 & 15 \\\\\n115 & 22 & 127 \\\\\n193 & 29 & 219\n\\end{bmatrix}\\]\n\nDimensions: rows by columns (\\(r\\times c\\))\nNotation: \\(A_{3 \\times 3}\\)\nDemarcate with [ ]\n\n\n\nWhy are they important?"
+    "text": "Matrices\n\n\\[A = \\begin{bmatrix}\n12 & 14 & 15 \\\\\n115 & 22 & 127 \\\\\n193 & 29 & 219\n\\end{bmatrix}\\]\n\nDimensions: rows by columns (\\(r\\times c\\))\nNotation: \\(A_{3 \\times 3}\\)\nDemarcate with [ ]"
   },
   {
     "objectID": "slides/02_matrices.html#create-matrices-in-r",
@@ -473,7 +473,7 @@
     "href": "slides/02_matrices.html#addition-and-subtraction",
     "title": "Matrices",
     "section": "Addition and subtraction",
-    "text": "Addition and subtraction\n\n\\[A \\pm B=C\\]\n\n\n\\[c_{ij}=a_{ij} \\pm b_{ij} \\text{ }\\forall i,j\\]\n\n\n\nAdd or subtract each corresponding element\nNeed \\(A\\) and \\(B\\) to have exactly the same dimensions"
+    "text": "Addition and subtraction\n\n\\[A \\pm B=C\\]\n\n\n\\[c_{ij}=a_{ij} \\pm b_{ij} \\text{ }\\forall i,j\\]\n\n\n\nAdd or subtract each corresponding element\nNeed \\(A\\) and \\(B\\) to have exactly the same dimensions\naka being of equal order or having equal size"
   },
   {
     "objectID": "slides/02_matrices.html#addition-and-subtraction-1",
@@ -543,7 +543,7 @@
     "href": "slides/02_matrices.html#matrix-multiplication",
     "title": "Matrices",
     "section": "Matrix multiplication ",
-    "text": "Matrix multiplication \n\nMatrices must be conformable\nFor \\(A \\times B\\) we need \\(A_{i \\times k}\\) and \\(B_{k \\times j}\\)\nThe result will have \\(i \\times j\\) dimensions\nOrder matters! \\(A \\times B \\neq B \\times A\\) even if both operations are conformable"
+    "text": "Matrix multiplication \n\nMatrices must be conformable\nFor \\(A \\times B\\) we need \\(A_{i \\times k}\\) and \\(B_{k \\times j}\\)\nThe result will have \\(i \\times j\\) dimensions\nOrder matters! \\(A \\times B \\neq B \\times A\\) even if both operations are conformable\n\n\nMany errors in data analysis happen because we try to multiply matrices that are not conformable"
   },
   {
     "objectID": "slides/02_matrices.html#multiplication-steps",
@@ -592,7 +592,7 @@
     "href": "slides/02_matrices.html#practice",
     "title": "Matrices",
     "section": "Practice",
-    "text": "Practice\nCheck in R with the %*% operator to see if these are conformable\n\\[\n\\begin{aligned}\nB_{4 \\times 1}=\n\\begin{bmatrix}\n2 \\\\\n3\\\\\n4\\\\\n1\n\\end{bmatrix}\nM_{3 \\times 3} =\n\\begin{bmatrix}\n1 & 0 & 2\\\\\n1 & 2 & 4\\\\\n2 & 3 & 2\n\\end{bmatrix}\nL_{2 \\times 3} =\n\\begin{bmatrix}\n6 & 5 & -1\\\\\n1 & 4 & 3\n\\end{bmatrix}\n\\end{aligned}\n\\]"
+    "text": "Practice\nCheck in R with the %*% operator to see if these are conformable\n\\[\n\\begin{aligned}\nB_{4 \\times 1}=\n\\begin{bmatrix}\n2 \\\\\n3\\\\\n4\\\\\n1\n\\end{bmatrix}\nM_{3 \\times 3} =\n\\begin{bmatrix}\n1 & 0 & 2\\\\\n1 & 2 & 4\\\\\n2 & 3 & 2\n\\end{bmatrix}\nL_{2 \\times 3} =\n\\begin{bmatrix}\n6 & 5 & -1\\\\\n1 & 4 & 3\n\\end{bmatrix}\n\\end{aligned}\n\\]\nWhat happens when they are not?"
   },
   {
     "objectID": "slides/02_matrices.html#partial-answer",
@@ -1400,7 +1400,7 @@
     "href": "slides/01_notation.html#measurement",
     "title": "Notations, Sets, Functions",
     "section": "Measurement",
-    "text": "Measurement\n\nSets can also have non-numerical elements\n\n\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
+    "text": "Measurement\n\nSets can also have non-numerical elements\n\n\n\\[\n\\mathbb{A} = \\{\\text{Argentina}, \\text{Nigeria}, \\text{South Korea} \\}\n\\]\n\n\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-1",
@@ -1841,7 +1841,7 @@
     "href": "slides/00_intro.html#who-are-you",
     "title": "Social Science\nMath Camp",
     "section": "Who are you?",
-    "text": "Who are you?\n\nName\nPronouns\nCity or country you are/came from\nDiscipline + intended subfield/research area\nA hobby or interesting fact about yourself"
+    "text": "Who are you?\n\nName\nPronouns\nWhere you are from\nDiscipline + intended subfield/research area\nA hobby or interesting fact about yourself"
   },
   {
     "objectID": "slides/00_intro.html#what-are-we-going-to-cover",
@@ -2192,5 +2192,40 @@
     "title": "Notations, Sets, Functions",
     "section": "Order of operations",
     "text": "Order of operations\nPEMDAS\n\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n\n\n\\[\n= -93\n\\]"
+  },
+  {
+    "objectID": "slides/02_matrices.html#agenda-1",
+    "href": "slides/02_matrices.html#agenda-1",
+    "title": "Matrices",
+    "section": "Agenda",
+    "text": "Agenda\n\nMorning: Matrices and matrix algebra\nLunch: Meet junior faculty\nAfternoon: Tidyverse II"
+  },
+  {
+    "objectID": "slides/02_matrices.html#why-is-this-important",
+    "href": "slides/02_matrices.html#why-is-this-important",
+    "title": "Matrices",
+    "section": "Why is this important?",
+    "text": "Why is this important?"
+  },
+  {
+    "objectID": "slides/02_matrices.html#why-are-they-important",
+    "href": "slides/02_matrices.html#why-are-they-important",
+    "title": "Matrices",
+    "section": "Why are they important?",
+    "text": "Why are they important?\n\nQuantitative data comes in rectangular format\nBut in R, matrices and data frames are different!\nBeing good at matrix algebra makes you good at cleaning data\nFollow technical details in statistics (e.g. OLS regression)\nWrite more efficient code"
+  },
+  {
+    "objectID": "slides/02_matrices.html#structure-1",
+    "href": "slides/02_matrices.html#structure-1",
+    "title": "Matrices",
+    "section": "Structure",
+    "text": "Structure\n\\[\nB=\n\\begin{bmatrix}\nb_{11} & b_{12} & b_{13} & \\ldots & b_{1n} \\\\\nb_{21} & b_{22} & b_{23} & \\ldots & b_{2n} \\\\\n\\vdots & \\vdots & \\vdots & \\ldots & \\vdots \\\\\nb_{m1} & b_{m2} & b_{m3} & \\ldots & b_{mn}\n\\end{bmatrix}\n\\]\nThinking about matrices of arbitrary dimensions is tricky but useful!"
+  },
+  {
+    "objectID": "slides/02_matrices.html#tangent-matrix-division",
+    "href": "slides/02_matrices.html#tangent-matrix-division",
+    "title": "Matrices",
+    "section": "Tangent: Matrix division",
+    "text": "Tangent: Matrix division\n\n\\[\nA \\div B = A \\times B^{-1}\n\\]\n\n\nThis is true iff \\(B\\) is invertible\n\n\nIf \\(B\\) is not invertible, then answer is not unique\n\n\nBecause matrix multiplication is not commutative\n\n\n\nMore: https://youtu.be/f429BxWNwfs"
   }
 ]
