@@ -4,7 +4,7 @@ subtitle: "Northwestern University -- Social Science -- Summer 2025"
 authors:
   - "[Artur Baranov](https://artur-baranov.github.io)"
   - "[Gustavo Diaz](https://gustavodiaz.org/)"
-  - "TBD"
+  - "[Aven Peters](https://sociology.northwestern.edu/people/graduate-students/profiles/aven-peters.html)"
 format: 
   html:
     page-layout: full
@@ -21,7 +21,7 @@ library(markdown)
 <!-- Duke math camp syllabus  -->
 <!-- https://sites.duke.edu/daveasiegel/files/2020/07/Mathematics-for-Political-and-Social-Research-Syllabus_Siegel-1.pdf -->
 
-This is the website for the 2025 Social Science Math Camp, hosted by the Departments of [Political Science](https://polisci.northwestern.edu/) and (maybe) [Sociology](https://sociology.northwestern.edu/) at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.
+This is the website for the 2025 Social Science Math Camp, hosted by the Departments of [Political Science](https://polisci.northwestern.edu/) and [Sociology](https://sociology.northwestern.edu/) at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.
 
 Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.
 

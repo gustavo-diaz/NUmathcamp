@@ -1,30 +1,42 @@
 ---
 title: "Tidyverse I"
-author: 
-  - Gustavo Diaz
-  - Aven Peters
+author: "Aven Peters"
 format: html
 embed-resources: true
 ---
 
-<!-- Remember to link to R4DS -->
-
 ## Tidyverse I: Data Wrangling
 
-In the previous programming section, you learned about the usefulness of libraries or packages in R. The [`tidyverse`](https://www.tidyverse.org) is a suite of packages designed to streamline data processing (wrangling) tasks ranging from loading, cleaning, transforming, and visualizing data.
+### Review of Terminology
 
-We may have already installed the tidyverse in the previous section, in case you need to do so again, you can run the code chunk below. Remember, you only need to do this once per device, and then once more when you update base R. If you  wish to install the `tidyverse` suite, you must first *uncomment* the code below by deleting the `#` symbol.
+- There are two ways of viewing Quarto documents: source mode and visual mode. Unlike a Word document,
+what you see while editing a document is not exactly what you'll see in the final version of the document.
+Converting a Quarto document into a clean HTML, Word, or PDF file is called **rendering,** and you
+can render your document at any time by clicking the render button at the top of the RStudio window.
+When your document renders, your code will run from top to bottom, in order. This means that if you
+create an object lower down on your script and then refer to that object above it, you will get an error
+when you render your file. This is true *even if* your code ran perfectly as you wrote it.
 
-```{r install_tidyverse}
-# install.packages("tidyverse")
+- There are essentially two types of commands you can enter in R. The first is to store information.
+This involves creating or modifying an object (and objects can be anything from single values to 
+dataframes to regression models to plots). The second type of command is to retrieve information, or
+equivalently, to print the value of an object. As we've seen, value is not necessarily numeric--it
+could be a table, a plot, a list of strings, or a Boolean value (whether a statement is true or false).
+We store information using an assignment operator (<- or =) and retrieve information by simply typing
+the expression we want R to evaluate.
+
+- Almost all of our work in R will use **functions.** Functions are effectively shortcuts for common
+tasks in programming/data analysis. They can take any number of **arguments**, or inputs (including zero!)
+and return an object as an output. In general, the order of the arguments matters. Some arguments have
+defaults--that is, if you don't specify what values you want them to take, R will use its default. This is
+the basic structure of code using a function:
+
+```{r}
+#| eval: FALSE
+
+function(arg1, arg2, arg3, ...)
 ```
-
-While you only need to *install* packages once. You must *call* or load *libraries* once per session, meaning every time you open RStudio after closing it. A good practice is to load all the required dependencies at the beginning of a document in a *setup* code chunk.
-
-```{r setup}
-
-```
-
+Download the script [here](https://github.com/aven-peters/math-camp/raw/main/Tidyverse%20I.qmd)
 
 ### Installing and Loading Packages
 

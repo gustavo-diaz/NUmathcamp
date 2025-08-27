@@ -45,9 +45,9 @@ Assistant Professor of Instruction in Political Science
 :::
 
 ::: {.callout-tip}
-## Someone else
-PhD Student in Sociology (maybe)  
-<someone.else@u.northwestern.edu>
+## Aven Peters
+PhD Student in Sociology
+<aven.peters@u.northwestern.edu>
 :::
 
 # What is math camp?
