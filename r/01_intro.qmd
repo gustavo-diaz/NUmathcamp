@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Computational Social Science and R"
 author: "[Artur Baranov](https://artur-baranov.github.io)"
-date: 2024-09-16
+date: 2025-09-03
 format: 
   html:
     embed-resources: true
@@ -71,6 +71,7 @@ It will take some time to understand how everything works in RStudio, but once y
 <center>
 <a href="https://artur-baranov.github.io/data/01_intro.qmd" class="btn btn-primary" role="button" download="01_intro.qmd" style="width:200px" target="_blank">Download script</a>
 </center>
+
 
 ## Markdown and Quarto
 
@@ -150,6 +151,7 @@ Let us start with numbers. R allows you to automate calculation of statistics, p
 ```{r}
 numbers + 5
 ```
+
 You can check if some object in a vector is equal to some specified value using `==` operator. For example:
 
 ```{r}
@@ -185,7 +187,7 @@ Let's say we asked a group of people their ages in an Evanston coffee shop. We o
 age <- c(18, 20, 21, 19, 24, 21, 20, 22)
 ```
 
-You can access the data using indexation. Let's say you entered the data into your object `age` as you were receiving the results. You can access the age of your second respondent by indicating `[i]` to an object.
+You can access the data using indexing. Let's say you entered the data into your object `age` as you were receiving the results. You can access the age of your second respondent by indicating `[i]` to an object.
 
 ```{r}
 age[2]
@@ -339,7 +341,7 @@ This would allow you to manipulate this variable. And as a *spoiler* of the futu
 hist(respondents$age)
 ```
 
-You can easily combine previously used functions. For example, indexation provides access to any observation.
+You can easily combine previously used functions. For example, indexing provides access to any observation.
 
 ```{r}
 respondents$major[8]
@@ -407,11 +409,13 @@ Are there any cars that have horse power greater than 200 but less than 250?
 ```{r}
 
 ```
+
 Create a new variable called `power_to_weight`, which calculates the ratio of horsepower (`hp`) to weight (`wt`). You need to divide horsepower by weight
 
 ```{r}
 
 ```
+
 What is an average Power to Weight Ratio?
 
 ```{r}
@@ -482,6 +486,7 @@ For each object, vector, or variable, you can check its class
 class(cars_information$mpg)
 class(respondents$major)
 ```
+
 Alternatively, you can check if this variable is of specific class
 
 ```{r}
@@ -490,6 +495,7 @@ Alternatively, you can check if this variable is of specific class
 is.integer(cars_information$mpg)
 is.character(cars_information)
 ```
+
 Take a look on the `cyl` variable in cars dataset. What is its class?
 
 ```{r}
@@ -499,6 +505,7 @@ Take a look on the `cyl` variable in cars dataset. What is its class?
 
 class(...)
 ```
+
 Do you think R classified it properly? If a variable is identified incorrectly, you can change it.
 
 For example, you can change it to a factor.
@@ -608,26 +615,29 @@ ggplot(data = respondents) +
 
 ## Check List 
 
-<input type="checkbox"/> I know what panes in RStudio used for
+- [ ] I know what panes in RStudio used for
 
-<input type="checkbox"/> I know what objects, vectors and dataframes are, and I know how to create them
+- [ ] I know what objects, vectors and dataframes are, and I know how to create them
 
-<input type="checkbox"/> I know what variables and observations are
+- [ ] I know what variables and observations are
 
-<input type="checkbox"/> I know what descriptive statistics is and I can easily calculate average, median, etc.
+- [ ] I know what descriptive statistics is and I can easily calculate average, median, etc.
 
-<input type="checkbox"/> I know how to create a variable and how to change its class 
+- [ ] I know how to create a variable and how to change its class 
 
-<input type="checkbox"/> I know how to load data to R and how to install new libraries 
+- [ ] I know how to load data to R and how to install new libraries 
 
-## Sources
-
--   Higher School of Economics, Data Science Minor, https://electives.hse.ru/minor_data_spb/
+## Resources
 
 -   Posit, RStudio User Guides, https://docs.posit.co/ide/user/ide/guide/ui/ui-panes.html
-
--   Transparency International, Corruption Perception Index, https://www.transparency.org/en/cpi/
 
 -   UT Austin, Department of Government, Methods Camp, https://methodscamp.github.io/
 
 -   Harvard University Department of Government, Math Prefresher, https://iqss.github.io/prefresher/
+
+## References
+
+-   Higher School of Economics, Data Science Minor, https://electives.hse.ru/minor_data_spb/
+
+-   Transparency International, Corruption Perception Index, https://www.transparency.org/en/cpi/
+
