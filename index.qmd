@@ -59,11 +59,11 @@ schedule %>%
 
 
 <!-- For my own reference, the order of lunch guests: -->
-<!-- Wed Sept 3: -->
+<!-- Wed Sept 3: Tanner, Felix-->
 <!-- Thu Sept 4: Alex, Doron-->
 <!-- Fri Sept 5: Isa, Liz-->
 <!-- Tu Sept 9: Emilio Lehoucq -->
-<!-- Fri Sept 12: -->
+<!-- Fri Sept 12: Andres -->
 
 
 
