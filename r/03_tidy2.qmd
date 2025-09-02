@@ -1,6 +1,8 @@
 ---
 title: "Tidyverse II"
-author: "Aven Peters"
+author:
+  - Gustavo Diaz
+  - Aven Peters
 format: html
 embed-resources: true
 execute:
@@ -19,10 +21,18 @@ Where do we find publicly available social science data?
 
 -   Government open data portals (e.g., the [Chicago Data Portal](https://data.cityofchicago.org/))
 
+- Cross-national data collection projects like [Correlates of War](https://correlatesofwar.org) or [Varieties of Democracy](https://www.v-dem.net)
+
+- International public opinion surveys like the [World Value Survey](https://www.worldvaluessurvey.org/wvs.jsp), the [Americas Barometer](https://www.vanderbilt.edu/lapop/raw-data.php) or the [Asian Barometer](https://www.asianbarometer.org)
+
+Depending on your field, you may also find yourself collecting new, original data in multiple forms. For example, you can conduct your own survey, field a laboratory experiment on an undergraduate subjects, or scrape unstructured data from the internet or the archive.
+
+In a sense, math camp is not the best place to answer the "where to get data?" question because the variability across social science subfields is incredibly high. What we can do, however, is to give you some pointers on how to load data from different sources.
+
 To illustrate how to work with a relatively large, publicly available data set,
-I've created copies of the Department of Education's [College Scorecard](https://collegescorecard.ed.gov/data) data in different formats. We'll
+Aven created copies of the Department of Education's [College Scorecard](https://collegescorecard.ed.gov/data) data in different formats. We'll
 be using the institution-level data set, so each row will be a college/university
-in the U.S. Because these files are large and not confidential/sensitive, I've put
+in the U.S. Because these files are large and not confidential/sensitive, Aven put
 them and this script on [this Google Drive](https://drive.google.com/drive/folders/1_9--Ti_4zurLFFSIzdHNNJgMLDHww_yo?usp=sharing).
 
 ### Functions for reading in data

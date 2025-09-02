@@ -13,6 +13,10 @@ embed-resources: true
 
 In the previous programming section, you learned about the usefulness of libraries or packages in R. The [`tidyverse`](https://www.tidyverse.org) is a suite of packages designed to streamline data processing (wrangling) tasks ranging from loading, cleaning, transforming, and visualizing data.
 
+The number of tasks streamlined by the `tidyverse` far exceed what we can cover in math camp. We recommend perusing the book [R for Data Science](https://r4ds.hadley.nz) as you work with R for coursework or research.
+
+### Installing and Loading Packages
+
 We may have already installed the tidyverse in the previous section, in case you need to do so again, you can run the code chunk below. Remember, you only need to do this once per device, and then once more when you update base R. If you  wish to install the `tidyverse` suite, you must first *uncomment* the code below by deleting the `#` symbol.
 
 ```{r install_tidyverse}
@@ -22,27 +26,10 @@ We may have already installed the tidyverse in the previous section, in case you
 While you only need to *install* packages once. You must *call* or load *libraries* once per session, meaning every time you open RStudio after closing it. A good practice is to load all the required dependencies at the beginning of a document in a *setup* code chunk.
 
 ```{r setup}
-
-```
-
-
-### Installing and Loading Packages
-
-R is powerful in part because it is very flexible. Most data analysis tasks can be done several different ways in R, depending on your preferences and the characteristics of your data set. This flexibility comes from the ability to load **packages** with additional functions. Today, we'll be talking about "tidyverse," a suite of packages used for data wrangling and visualization. We can think of tidyverse as a "mega-package" that contains several smaller packages, including "dplyr" and "ggplot2." Usually, it makes sense to load the entire tidyverse at once so that we don't have to worry about which functions belong to each specific package within tidyverse.
-
-If you don't have tidyverse installed, we'll have to do that first.
-
-```{r install_tidyverse}
-# install.packages("tidyverse") # to run this code, remove the # at the beginning
-```
-
-This line of code only needs to be run once on your device. After you've installed tidyverse, it lives on your machine forever.
-
-Once a package is installed, we have to tell R that we want to use it in this specific R script/Quarto document. This is called loading the package, and we usually do it with the "library" function. Some packages come preloaded in every R session--these are called "base R."
-
-```{r load_tidyverse}
 library(tidyverse)
 ```
+
+
 
 Note that we don't need quotation marks around the name of the package in the library function, even though we do need them in install.packages. Minor formatting choices like this matter a lot in R.
 

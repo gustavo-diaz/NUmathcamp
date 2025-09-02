@@ -270,7 +270,7 @@ $$A = \begin{bmatrix}
 
 - But in R, matrices and data frames are different!
 
-- Being good at matrix algebra makes you good at cleaning data
+- Being good at matrix algebra makes you good at thinking about data in the abstract
 
 - Follow technical details in statistics (e.g. OLS regression)
 

@@ -46,7 +46,7 @@ Assistant Professor of Instruction in Political Science
 
 ::: {.callout-tip}
 ## Aven Peters
-PhD Student in Sociology
+PhD Student in Sociology  
 <aven.peters@u.northwestern.edu>
 :::
 
@@ -117,11 +117,12 @@ schedule %>%
            background = "lightgray")
 ```
 
+
 ## Daily schedule
 
-- **Breakfast** (9 - 9:30AM)
+- **Breakfast** (8:30 - 9:00AM)
 
-- **Morning:** Math (9:30AM - noon) 
+- **Morning:** Math (9:00AM - noon) 
 
 - **Lunch:** Meet faculty, students (noon - 1PM)
 
@@ -132,6 +133,8 @@ schedule %>%
 ::: aside
 See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for content
 ::::
+
+![](img/website.png){.absolute bottom=0 right=0 width="250" height="250"}
 
 ## Learning goals
 
@@ -166,14 +169,14 @@ See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for conten
 ## Some notes
 
 ::: incremental
-- Class is not graded, but you will get credit for attending (POLI_SCI 490)
+- Class is not graded, but you can get credit for attending (POLI_SCI 490)
 
 - Content is cumulative (now and forever)
 
 - Everyone comes in with different experiences and background. This is a feature, not a bug
 :::
 
-## Tips on being a grad student
+## Expectations beyond math camp
 
 ::: incremental
 - Read the material, learn to be strategic about it, come up with things to discuss
@@ -186,6 +189,10 @@ See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for conten
 :::
 
 # Questions?
+
+Schedule a meeting if you want to chat: [cal.com/gustavodiaz](https://cal.com/gustavodiaz/)
+
+![](img/cal.png){fig-align="right" width="250" height="250"}
 
 # Break
 

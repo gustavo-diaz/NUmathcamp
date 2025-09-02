@@ -1,0 +1,84 @@
+---
+title: "Markdown"
+author: "Gustavo Diaz"
+format: 
+  html:
+    embed-resources: true
+---
+
+## What is Markdown?
+
+You may have wondered why we have insisted so much on working with RStudio. Everything we have done so far, including the `tidyverse` stuff, can be done in base R or any other user interface that supports R.
+
+The main reason to use RStudio is that it serves as a hub for the entire academic production enterprise. From data cleaning and analysis to the presentations of results in presentations and writing papers, the main advantage of RStudio is that you can do everything here.
+
+Recently, the RStudio company rebranded as [Posit](https://posit.co). With this change, they released [Quarto](https://quarto.org) as an open-source scientific and technical publishing system, expanding to incorporate Python and Julia to their workflow.
+
+For our purposes, that means we can use Quarto through RStudio to write professional looking documents like papers, presentations, and posters.
+
+The idea is that you work on your data analyses and writing on RStudio/Quarto using [Markdown](https://markdown.land). Markdown is (confusingly) a markup language creating for formatting text using a plain text editor. 
+
+Unlike writing documents in Microsoft Word or Google Docs, every aspect of document formatting is encoded as a default parameter, or defined by user. This facilitates reduces time wasted on pointing and clicking to get the format right. The downside is having to learn a specific syntax.
+
+We will focus on the functionality to write PDF documents by connecting Markdown with LaTeX, which is another markup language popular in academic production. However, unlike LaTeX, Markdown focuses on readibility. Under the hood, an engine called [pandoc](https://pandoc.org) converts Markdown to LaTeX, and then renders a pdf.
+
+The figure below illustrates the process:
+
+![](https://raw.githubusercontent.com/nrennie/nrennie.rbind.io/main/content/blog/2024-01-31-making-pdf-with-quarto-typst-latex/featured.png)
+
+We will not discuss the [Typst](https://quarto.org/docs/output-formats/typst.html) today since it is a markup language relatively new to the social sciences, but I suggest you keep an eye on it as it compiles documents considerably faster.
+
+We will also focus exclusively on making PDF documents today, since it is the disciplinary norm. You can also create HTML documents with Quarto Markdown, which gives you more flexibility. For example, this website was made entirely in HTML from RStudio.
+
+## Pre-requisites
+
+To create PDFs in R and RStudio, we need two ingredients:
+
+1. Recent versions of R and RStudio (which we already have)
+
+2. A LaTeX distribution
+
+We recommend using [*tiny*Tex](https://yihui.org/tinytex/) as your LaTeX distribution as it can be installed and updated within RStudio.
+
+To get started, we just need to install the `tinytex` package through the Quarto terminal. This is a window separate from the R console that may not be visible by default.
+
+```
+quarto install tinytex
+```
+
+This should be all you need to start making PDF documents. Check the [*tiny*Tex](https://yihui.org/tinytex/) for more instructions.
+
+## Documents
+
+To create a standard PDF document, which you may use to write an academic paper, we create a new `.qmd` file by clicking `File > New File > Quarto Document`. Then you can choose the relevant format.
+
+This opens a new tab in RStudio with an empty template of your desired format. The document has a **preamble** area at the top in which you specify the title, author, and formatting options. Then follows the body itself, with sections and content. You can follow the guide [here](https://quarto.org/docs/output-formats/pdf-basics.html) for some basic instructions on setting up your document. You can also check this [cheat sheet](https://posit.co/wp-content/uploads/2022/10/rmarkdown-1.pdf) for some tips on syntax.
+
+Later on, you may consult this [template](https://github.com/gustavo-diaz/statworkshop/blob/main/papers/template.qmd) as a reference to write your own papers.
+
+
+## Slides
+
+You can create presentation slides in the same way. The difference is that Quarto uses [Beamer](https://quarto.org/docs/presentations/beamer.html) as a highly customizable template for presentations.
+
+You create a new Beamer `.qmd` file using `File > New File > Quarto Presentation` and then choosing the appropriate format. 
+
+You can use the link above to see some of the formatting and syntax options for Beamer. You can also find a working template [here](https://github.com/gustavo-diaz/statworkshop/blob/main/presentations/pdf_slides.qmd).
+
+## Posters
+
+Another common form of academic writing are conference posters. Unlike papers and presentations, RStudio does not have a built-in functionality for posters.
+
+If you wish to create a poster in RStudio, you can use the [`posterdown`](https://github.com/brentthorne/posterdown) package.
+
+## Practice
+
+During our meeting, we will have a small [~~PowerPoint~~ *Beamer* party](https://youtube.com/shorts/A4sqdmFZjLE?si=jNqcURRYTPtRvWBs)!
+
+You can work alone or in groups to create a 5-minute presentation on literally any topic you like. The only requirement is that you make it using Beamer and RStudio.
+
+Once you are done, you can use this link to upload your slides: <https://forms.office.com/r/q92h5mCYPC> (Northwestern login required).
+
+We may not get to see everyone's presentation, and you can opt-out from presenting altogether, but we would still like to see your slides!
+
+

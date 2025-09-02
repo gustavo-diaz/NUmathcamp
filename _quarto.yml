@@ -51,6 +51,8 @@ website:
               file: r/03_tidy2.qmd
             - text: "4. Sampling and simulation"
               file: r/04_sampling.qmd
+            - text: "5. Markdown"
+              file: r/05_markdown.qmd
 
 format:
   html:

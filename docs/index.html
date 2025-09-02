@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,9 +35,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-b5f99037f11833bbdc1619586295dd76.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -351,6 +351,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">4. Sampling and simulation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r/05_markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Markdown</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -412,12 +418,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- preamble start -->
 
     <script>
-      function styleCell_xwmalcchbqhmbe48dsix(i, j, css_id) {
-        var table = document.getElementById("tinytable_xwmalcchbqhmbe48dsix");
+      function styleCell_zke6jju7funh2b0vy439(i, j, css_id) {
+        var table = document.getElementById("tinytable_zke6jju7funh2b0vy439");
         table.rows[i].cells[j].classList.add(css_id);
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_xwmalcchbqhmbe48dsix');
+        var table = document.getElementById('tinytable_zke6jju7funh2b0vy439');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -425,8 +431,8 @@ ul.task-list li input[type="checkbox"] {
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_xwmalcchbqhmbe48dsix(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_xwmalcchbqhmbe48dsix");
+      function spanCell_zke6jju7funh2b0vy439(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_zke6jju7funh2b0vy439");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -452,17 +458,17 @@ ul.task-list li input[type="checkbox"] {
         targetCell.rowSpan = rowspan;
         targetCell.colSpan = colspan;
       }
-window.addEventListener('load', function () { styleCell_xwmalcchbqhmbe48dsix(0, 0, 'tinytable_css_idaqycgkwxs4wru1wmps71') })
-window.addEventListener('load', function () { styleCell_xwmalcchbqhmbe48dsix(0, 1, 'tinytable_css_idaqycgkwxs4wru1wmps71') })
-window.addEventListener('load', function () { styleCell_xwmalcchbqhmbe48dsix(0, 2, 'tinytable_css_idaqycgkwxs4wru1wmps71') })
-window.addEventListener('load', function () { styleCell_xwmalcchbqhmbe48dsix(0, 3, 'tinytable_css_idaqycgkwxs4wru1wmps71') })
+window.addEventListener('load', function () { styleCell_zke6jju7funh2b0vy439(0, 0, 'tinytable_css_idaupqiftsvuqphudeb1rt') })
+window.addEventListener('load', function () { styleCell_zke6jju7funh2b0vy439(0, 1, 'tinytable_css_idaupqiftsvuqphudeb1rt') })
+window.addEventListener('load', function () { styleCell_zke6jju7funh2b0vy439(0, 2, 'tinytable_css_idaupqiftsvuqphudeb1rt') })
+window.addEventListener('load', function () { styleCell_zke6jju7funh2b0vy439(0, 3, 'tinytable_css_idaupqiftsvuqphudeb1rt') })
     </script>
 
     <style>
-    .table td.tinytable_css_idaqycgkwxs4wru1wmps71, .table th.tinytable_css_idaqycgkwxs4wru1wmps71 {  border-bottom: solid 0.1em #d3d8dc; }
+    .table td.tinytable_css_idaupqiftsvuqphudeb1rt, .table th.tinytable_css_idaupqiftsvuqphudeb1rt {  border-bottom: solid 0.1em #d3d8dc; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_xwmalcchbqhmbe48dsix" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_zke6jju7funh2b0vy439" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -527,11 +533,11 @@ window.addEventListener('load', function () { styleCell_xwmalcchbqhmbe48dsix(0, 
     </div>
 <!-- hack to avoid NA insertion in last line -->
 <!-- For my own reference, the order of lunch guests: -->
-<!-- Wed Sept 3: -->
+<!-- Wed Sept 3: Tanner, Felix-->
 <!-- Thu Sept 4: Alex, Doron-->
 <!-- Fri Sept 5: Isa, Liz-->
 <!-- Tu Sept 9: Emilio Lehoucq -->
-<!-- Fri Sept 12: -->
+<!-- Fri Sept 12: Andres -->
 
 
 </section>

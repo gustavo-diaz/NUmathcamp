@@ -1,8 +1,6 @@
 ---
 title: "Matrices"
 author: "[Gustavo Diaz](https://gustavodiaz.org)"
-date: last-modified
-date-format: long
 number-sections: true
 toc: true
 ---

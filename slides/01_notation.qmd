@@ -22,6 +22,12 @@ knitr::opts_chunk$set(fig.pos = "center", echo = TRUE,
 
 - Go back and make sure you have the MOST RECENT version of R and RStudio
 
+::: aside
+See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for materials
+::::
+
+![](img/website.png){.absolute bottom=0 right=0 width="250" height="250"}
+
 ## Agenda
 
 
@@ -146,12 +152,11 @@ Uses vary, but generally...
 Operations *within* sets
 
 ::: incremental
-- $\exists$  "there exists"
-- $\forall$   "for all"; for every
-- $\exists$   "exists"; there is something true 
+- $\exists$   "exists"; there is something true
+- $\forall$   "for all"; for every element
 - $\in$   "in" or "element of"
-- \|   Such that 
-- $\notin$  excluding (element) 
+- \|   Such that (specify a condition)
+- $\notin$  "not in", excluding element(s) 
 - $\equiv$ equivalent
 :::
 
@@ -160,7 +165,6 @@ Operations *within* sets
 Operations *between* sets
 
 ::: incremental
--
 - $\subset$; $\subseteq$  Subset
 - $\varnothing$  Empty set
 - $\cap$  Intersection; AND
@@ -174,7 +178,7 @@ Operations *between* sets
 - $x \in \mathbb{Z}$
 - $\{x|x \in \mathbb{N}, x < 4\}$
 - $\{x|x \in \mathbb{R}, x < 200\}$
-- $\{ai | a \in \mathbb{R}, i= \sqrt{-1}\}$
+- $\{ai | a \in \mathbb{R}, i= \sqrt{-1}\}$ <!-- Definition of a pure imaginary number -->
 - $A \cap B$
 - $A \cup B$
 - $\{4n \in \mathbb{N} | n \in \mathbb{N}\}$
