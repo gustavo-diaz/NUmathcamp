@@ -2158,5 +2158,68 @@
     "title": "Notations, Sets, Functions",
     "section": "",
     "text": "Set up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
+  },
+  {
+    "objectID": "slides/01_notation.html#what-is-a-function",
+    "href": "slides/01_notation.html#what-is-a-function",
+    "title": "Notations, Sets, Functions",
+    "section": "What is a function?",
+    "text": "What is a function?\nInformally: Anything that takes an input and produces an output\n\nThree main parts:\n\nInput\nRelationship of interest (operations)\nOutput"
+  },
+  {
+    "objectID": "slides/01_notation.html#example",
+    "href": "slides/01_notation.html#example",
+    "title": "Notations, Sets, Functions",
+    "section": "Example",
+    "text": "Example\n\\[\nf(x) = 3x + 4\n\\]\n\n\\(x\\) is the input (value or domain)\n\\(3x + 4\\) is the relationship\n\\(f(x)\\) is the output (range)\n\n\nCan also write\n\\[\ny = 3x + 4\n\\]\nBecause “\\(y\\) is a function of \\(x\\)”"
+  },
+  {
+    "objectID": "slides/01_notation.html#example-1",
+    "href": "slides/01_notation.html#example-1",
+    "title": "Notations, Sets, Functions",
+    "section": "Example",
+    "text": "Example\n\\[\nf(x) = 3x + 4\n\\]\n\n\\(x\\) is the input (value or domain)\n\\(3x + 4\\) is the relationship\n\\(f(x)\\) is the output (range)\n\nCan also write\n\\[\ny = 3x + 4\n\\]\nBecause “\\(y\\) is a function of \\(x\\)” \\(\\Rightarrow\\) \\(y = f(x)\\)"
+  },
+  {
+    "objectID": "slides/01_notation.html#types-of-functions",
+    "href": "slides/01_notation.html#types-of-functions",
+    "title": "Notations, Sets, Functions",
+    "section": "Types of functions",
+    "text": "Types of functions\n\n\n\nInjective: Every value of domain maps to a different value in codomain\n\n\n\n\nSurjective: Every in value in codomain maps to a different value in domain"
+  },
+  {
+    "objectID": "slides/01_notation.html#parts-of-a-function",
+    "href": "slides/01_notation.html#parts-of-a-function",
+    "title": "Notations, Sets, Functions",
+    "section": "Parts of a function",
+    "text": "Parts of a function"
+  },
+  {
+    "objectID": "slides/01_notation.html#types-of-functions-1",
+    "href": "slides/01_notation.html#types-of-functions-1",
+    "title": "Notations, Sets, Functions",
+    "section": "Types of functions",
+    "text": "Types of functions\n\nBijective: Both injective and surjective"
+  },
+  {
+    "objectID": "slides/01_notation.html#why",
+    "href": "slides/01_notation.html#why",
+    "title": "Notations, Sets, Functions",
+    "section": "Why?",
+    "text": "Why?\nWhich of the following would translate well into a data frame?"
+  },
+  {
+    "objectID": "slides/01_notation.html#practice-1",
+    "href": "slides/01_notation.html#practice-1",
+    "title": "Notations, Sets, Functions",
+    "section": "Practice",
+    "text": "Practice\nClassify each of the following"
+  },
+  {
+    "objectID": "slides/01_notation.html#functions-in-r",
+    "href": "slides/01_notation.html#functions-in-r",
+    "title": "Notations, Sets, Functions",
+    "section": "Functions in R",
+    "text": "Functions in R\n\nfunction(arguments){operation}\n\n\n\nf = function(x){x * 2}\n\n\n\n\nf(x = 5)\n\n[1] 10\n\n\n\n\nWe can omit argument names and R will assume they come in order:\n\nf(5)\n\n[1] 10"
   }
 ]

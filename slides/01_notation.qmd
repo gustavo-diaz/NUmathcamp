@@ -6,6 +6,7 @@ format:
     embed-resources: true
     slide-number: false
     progress: false
+    code-line-numbers: false
 ---
 
 ## Getting ready
@@ -321,3 +322,141 @@ $$
 $$
 = -93
 $$
+
+
+# Functions
+
+## What is a function?
+
+**Informally:** Anything that takes an input and produces an output
+
+. . .
+
+Three main parts:
+
+::: incremental
+1. Input
+2. Relationship of interest (operations)
+3. Output
+:::
+
+---
+
+![](img/function_machine.png){fig-align="center"}
+
+
+
+## Example
+
+$$
+f(x) = 3x + 4
+$$
+
+
+::: incremental
+- $x$ is the *input* (value or domain)
+- $3x + 4$ is the *relationship*
+- $f(x)$ is the output (range)
+:::
+
+. . .
+
+Can also write
+
+$$
+y = 3x + 4
+$$
+
+Because "$y$ is a function of $x$"
+
+## Example
+
+$$
+f(x) = 3x + 4
+$$
+
+
+- $x$ is the *input* (value or domain)
+- $3x + 4$ is the *relationship*
+- $f(x)$ is the output (range)
+
+
+Can also write
+
+$$
+y = 3x + 4
+$$
+
+Because "$y$ is a function of $x$" $\Rightarrow$ $y = f(x)$
+
+## Parts of a function {.nostretch}
+
+![](img/fun_domain.png){width=70% fig-align="center"}
+
+## Types of functions
+
+<!-- injective, surjective, bijective -->
+
+. . .
+
+- **Injective:** Every value of *domain* maps to a different value in *codomain*
+
+. . .
+
+- **Surjective:** Every in value in *codomain* maps to a different value in *domain*
+
+. . .
+
+![](img/injective_surjective.png){fig-align="center"}
+
+## Types of functions
+
+- **Bijective:** Both injective *and* surjective
+
+. . .
+
+![](img/bijective.png){fig-align="center"}
+
+
+
+
+## Practice
+
+Classify each of the following
+
+. . .
+
+![](img/vertical_line_test.png){fig-align="center" width=90%}
+
+
+
+## Functions in R
+
+```{r, eval=FALSE}
+function(arguments){operation}
+```
+
+. . .
+
+
+
+```{r}
+f = function(x){x * 2}
+```
+
+. . .
+
+
+
+```{r}
+f(x = 5)
+```
+
+. . .
+
+We can omit argument names and R will assume they come in order:
+
+```{r}
+f(5)
+```
+
