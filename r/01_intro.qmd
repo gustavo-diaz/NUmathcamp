@@ -529,7 +529,7 @@ Here are the most common file types to save/load your datasets:
 
 -   `rds` is R file. Most comfortable to work with in R.
 
-Let's try the most used one, namely `csv`. Download Corruption Perception Index dataset from transparency international using this [URL](https://artur-baranov.github.io/data/cpi.csv).
+Let's try the most used one, namely `csv`. Download Corruption Perception Index dataset from transparency international using this [URL](https://artur-baranov.github.io/data/cpi.csv) (and the alternative [URL](https://github.com/artur-baranov/artur-baranov.github.io/blob/main/docs/data/cpi.csv) if the first one does not work).
 
 You need to put this dataset to your current working directory, which is
 
