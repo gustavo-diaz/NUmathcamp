@@ -305,28 +305,28 @@
     "href": "slides/02_matrices.html#vectors",
     "title": "Matrices",
     "section": "Vectors",
-    "text": "Vectors\nWe already talked about vectors in R.\n\nb = c(12,14,15)\n\nHow would you define them?\n\nA collection of concatenated elements"
+    "text": "Vectors\nWe already talked about vectors in R.\n\nb = c(12,14,15)\n\nHow would you define them?\n. . .\nA collection of concatenated elements"
   },
   {
     "objectID": "slides/02_matrices.html#vectors-1",
     "href": "slides/02_matrices.html#vectors-1",
     "title": "Matrices",
     "section": "Vectors",
-    "text": "Vectors\nColumn vector\n\\[\n\\overrightarrow b =\n\\begin{bmatrix}\n  12 \\\\\n  14 \\\\\n  15\n\\end{bmatrix}\n\\]\n\nRow vector\n\\[\n\\overrightarrow c = \\begin{bmatrix}\n  12 & 14 & 15\n\\end{bmatrix}\n\\]"
+    "text": "Vectors\nColumn vector\n\\[\n\\overrightarrow b =\n\\begin{bmatrix}\n  12 \\\\\n  14 \\\\\n  15\n\\end{bmatrix}\n\\]\n. . .\nRow vector\n\\[\n\\overrightarrow c = \\begin{bmatrix}\n  12 & 14 & 15\n\\end{bmatrix}\n\\]"
   },
   {
     "objectID": "slides/02_matrices.html#vectors-in-r",
     "href": "slides/02_matrices.html#vectors-in-r",
     "title": "Matrices",
     "section": "Vectors in R",
-    "text": "Vectors in R\n\nc(5, 25, -2, 1)\n\n[1]  5 25 -2  1\n\n\n \n\n\n10:20"
+    "text": "Vectors in R\n\nc(5, 25, -2, 1)\n\n[1]  5 25 -2  1\n\n\n \n. . .\n\n10:20"
   },
   {
     "objectID": "slides/02_matrices.html#vectors-in-r-1",
     "href": "slides/02_matrices.html#vectors-in-r-1",
     "title": "Matrices",
     "section": "Vectors in R",
-    "text": "Vectors in R\n\nc(5, 25, -2, 1)\n\n[1]  5 25 -2  1\n\n\n \n\n10:20\n\n [1] 10 11 12 13 14 15 16 17 18 19 20\n\n\n \n\n\nseq(from = 3, to = 27, by = 3)"
+    "text": "Vectors in R\n\nc(5, 25, -2, 1)\n\n[1]  5 25 -2  1\n\n\n \n\n10:20\n\n [1] 10 11 12 13 14 15 16 17 18 19 20\n\n\n \n. . .\n\nseq(from = 3, to = 27, by = 3)"
   },
   {
     "objectID": "slides/02_matrices.html#vectors-in-r-2",
@@ -340,70 +340,70 @@
     "href": "slides/02_matrices.html#summation",
     "title": "Matrices",
     "section": "Summation",
-    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n\n\nd = c(12, 7, -2, 3, -1)\n\n\n\n\\[\\sum_{i=1}^3 d_i\\]"
+    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n. . .\n\nd = c(12, 7, -2, 3, -1)\n\n. . .\n\\[\\sum_{i=1}^3 d_i\\]"
   },
   {
     "objectID": "slides/02_matrices.html#summation-1",
     "href": "slides/02_matrices.html#summation-1",
     "title": "Matrices",
     "section": "Summation",
-    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n\nd = c(12, 7, -2, 3, -1)\n\n\\[\\sum_{i=1}^3 d_i = 12+7+(-2)\\]\n\n\nsum(d[1:3])\n\n[1] 17"
+    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n\nd = c(12, 7, -2, 3, -1)\n\n\\[\\sum_{i=1}^3 d_i = 12+7+(-2)\\]\n. . .\n\nsum(d[1:3])\n\n[1] 17"
   },
   {
     "objectID": "slides/02_matrices.html#summation-2",
     "href": "slides/02_matrices.html#summation-2",
     "title": "Matrices",
     "section": "Summation",
-    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n\nd = c(12, 7, -2, 3, -1)\n\n\n\\[\n\\sum_{i=1}^n d_i\n\\]"
+    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n\nd = c(12, 7, -2, 3, -1)\n\n. . .\n\\[\n\\sum_{i=1}^n d_i\n\\]"
   },
   {
     "objectID": "slides/02_matrices.html#summation-3",
     "href": "slides/02_matrices.html#summation-3",
     "title": "Matrices",
     "section": "Summation",
-    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n\nd = c(12, 7, -2, 3, -1)\n\n\\[\n\\sum_{i=1}^n d_i = 12 + 7 + (-2) + 3 + (-1)\n\\]\n\n\nsum(d)\n\n[1] 19"
+    "text": "Summation\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & -1\n\\end{bmatrix}\\]\n\nd = c(12, 7, -2, 3, -1)\n\n\\[\n\\sum_{i=1}^n d_i = 12 + 7 + (-2) + 3 + (-1)\n\\]\n. . .\n\nsum(d)\n\n[1] 19"
   },
   {
     "objectID": "slides/02_matrices.html#product",
     "href": "slides/02_matrices.html#product",
     "title": "Matrices",
     "section": "Product",
-    "text": "Product\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & 1\n\\end{bmatrix}\\]\n\n\\[\\prod_{i=1}^n d_i\\]"
+    "text": "Product\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & 1\n\\end{bmatrix}\\]\n. . .\n\\[\\prod_{i=1}^n d_i\\]"
   },
   {
     "objectID": "slides/02_matrices.html#product-1",
     "href": "slides/02_matrices.html#product-1",
     "title": "Matrices",
     "section": "Product",
-    "text": "Product\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & 1\n\\end{bmatrix}\\]\n\\[\\prod_{i=1}^n d_i = 12 \\cdot 7 \\cdot (-2) \\cdot 3 \\cdot (-1)\\]\n\n\nprod(d)\n\n[1] 504"
+    "text": "Product\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & 1\n\\end{bmatrix}\\]\n\\[\\prod_{i=1}^n d_i = 12 \\cdot 7 \\cdot (-2) \\cdot 3 \\cdot (-1)\\]\n. . .\n\nprod(d)\n\n[1] 504"
   },
   {
     "objectID": "slides/02_matrices.html#product-2",
     "href": "slides/02_matrices.html#product-2",
     "title": "Matrices",
     "section": "Product",
-    "text": "Product\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & 1\n\\end{bmatrix}\\]\nPractice: Write and calculate the product of the first three elements of \\(\\overrightarrow{d}\\)\n\n\nprod(d[1:3])\n\n[1] -168"
+    "text": "Product\n\\[\\overrightarrow d = \\begin{bmatrix}\n12 & 7 & -2 & 3 & 1\n\\end{bmatrix}\\]\nPractice: Write and calculate the product of the first three elements of \\(\\overrightarrow{d}\\)\n. . .\n\nprod(d[1:3])\n\n[1] -168"
   },
   {
     "objectID": "slides/02_matrices.html#matrices",
     "href": "slides/02_matrices.html#matrices",
     "title": "Matrices",
     "section": "Matrices",
-    "text": "Matrices\n\n\\[A = \\begin{bmatrix}\n12 & 14 & 15 \\\\\n115 & 22 & 127 \\\\\n193 & 29 & 219\n\\end{bmatrix}\\]\n\nDimensions: rows by columns (\\(r\\times c\\))\nNotation: \\(A_{3 \\times 3}\\)\nDemarcate with [ ]"
+    "text": "Matrices\n. . .\n\\[A = \\begin{bmatrix}\n12 & 14 & 15 \\\\\n115 & 22 & 127 \\\\\n193 & 29 & 219\n\\end{bmatrix}\\]\n\n\nDimensions: rows by columns (\\(r\\times c\\))\nNotation: \\(A_{3 \\times 3}\\)\nDemarcate with [ ]"
   },
   {
     "objectID": "slides/02_matrices.html#why-are-they-important",
     "href": "slides/02_matrices.html#why-are-they-important",
     "title": "Matrices",
     "section": "Why are they important?",
-    "text": "Why are they important?\n\nQuantitative data comes in rectangular format\nBut in R, matrices and data frames are different!\nBeing good at matrix algebra makes you good at thinking about data in the abstract\nFollow technical details in statistics (e.g. OLS regression)\nWrite more efficient code"
+    "text": "Why are they important?\n\n\nQuantitative data comes in rectangular format\nBut in R, matrices and data frames are different!\nBeing good at matrix algebra makes you good at thinking about data in the abstract\nFollow technical details in statistics (e.g. OLS regression)\nWrite more efficient code"
   },
   {
     "objectID": "slides/02_matrices.html#create-matrices-in-r",
     "href": "slides/02_matrices.html#create-matrices-in-r",
     "title": "Matrices",
     "section": "Create matrices in R",
-    "text": "Create matrices in R\n\n# Create some vectors\nvector1 = 1:4\nvector2 = 5:8\nvector3 = 9:12\nvector4 = 13:16\n\n\n\n# Using rbind(), each vector will be a row \nrbind_mat = rbind(vector1, vector2, vector3, vector4)\nrbind_mat"
+    "text": "Create matrices in R\n\n# Create some vectors\nvector1 = 1:4\nvector2 = 5:8\nvector3 = 9:12\nvector4 = 13:16\n\n. . .\n\n# Using rbind(), each vector will be a row \nrbind_mat = rbind(vector1, vector2, vector3, vector4)\nrbind_mat"
   },
   {
     "objectID": "slides/02_matrices.html#create-matrices-in-r-1",
@@ -417,7 +417,7 @@
     "href": "slides/02_matrices.html#create-matrices-in-r-2",
     "title": "Matrices",
     "section": "Create matrices in R",
-    "text": "Create matrices in R\n\n# Create some vectors\nvector1 = 1:4\nvector2 = 5:8\nvector3 = 9:12\nvector4 = 13:16\n\n\n\n# Using cbind(), each vector will be a column\ncbind_mat = cbind(vector1, vector2, vector3, vector4)\ncbind_mat"
+    "text": "Create matrices in R\n\n# Create some vectors\nvector1 = 1:4\nvector2 = 5:8\nvector3 = 9:12\nvector4 = 13:16\n\n. . .\n\n# Using cbind(), each vector will be a column\ncbind_mat = cbind(vector1, vector2, vector3, vector4)\ncbind_mat"
   },
   {
     "objectID": "slides/02_matrices.html#create-matrices-in-r-3",
@@ -438,21 +438,21 @@
     "href": "slides/02_matrices.html#alternative",
     "title": "Matrices",
     "section": "Alternative",
-    "text": "Alternative\n\n\nmatrix(data = c(1:12), nrow = 4, byrow = TRUE)\n\n\nTry ?matrix for more information."
+    "text": "Alternative\n\n\nTry ?matrix for more information.\n\nmatrix(data = c(1:12), nrow = 4, byrow = TRUE)"
   },
   {
     "objectID": "slides/02_matrices.html#alternative-1",
     "href": "slides/02_matrices.html#alternative-1",
     "title": "Matrices",
     "section": "Alternative",
-    "text": "Alternative\n\n\nmatrix(data = c(1:12), nrow = 4, byrow = TRUE)\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    4    5    6\n[3,]    7    8    9\n[4,]   10   11   12\n\n\n \n\n\nmatrix(data = c(1:12), nrow = 4, byrow = FALSE)\n\n     [,1] [,2] [,3]\n[1,]    1    5    9\n[2,]    2    6   10\n[3,]    3    7   11\n[4,]    4    8   12\n\n\n\n\nTry ?matrix for more information."
+    "text": "Alternative\n\n\nTry ?matrix for more information.\n\nmatrix(data = c(1:12), nrow = 4, byrow = TRUE)\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    4    5    6\n[3,]    7    8    9\n[4,]   10   11   12\n\n\n \n. . .\n\nmatrix(data = c(1:12), nrow = 4, byrow = FALSE)\n\n     [,1] [,2] [,3]\n[1,]    1    5    9\n[2,]    2    6   10\n[3,]    3    7   11\n[4,]    4    8   12"
   },
   {
     "objectID": "slides/02_matrices.html#structure",
     "href": "slides/02_matrices.html#structure",
     "title": "Matrices",
     "section": "Structure",
-    "text": "Structure\n\n\\[\nB=\n\\begin{bmatrix}\nb_{11} & b_{12} & b_{13} & \\ldots & b_{1n} \\\\\nb_{21} & b_{22} & b_{23} & \\ldots & b_{2n} \\\\\n\\vdots & \\vdots & \\vdots & \\ldots & \\vdots \\\\\nb_{m1} & b_{m2} & b_{m3} & \\ldots & b_{mn}\n\\end{bmatrix}\n\\]\n\n\\(B\\) is an \\(m \\times n\\) matrix\n\\(b_{23}\\) is the second cell down and third across\n\\(b_{ij}\\) is the \\(i\\text{th}\\) cell down and \\(j\\text{th}\\) across\n\\(i\\): rows, \\(j\\): columns"
+    "text": "Structure\n. . .\n\\[\nB=\n\\begin{bmatrix}\nb_{11} & b_{12} & b_{13} & \\ldots & b_{1n} \\\\\nb_{21} & b_{22} & b_{23} & \\ldots & b_{2n} \\\\\n\\vdots & \\vdots & \\vdots & \\ldots & \\vdots \\\\\nb_{m1} & b_{m2} & b_{m3} & \\ldots & b_{mn}\n\\end{bmatrix}\n\\]\n\n\n\\(B\\) is an \\(m \\times n\\) matrix\n\\(b_{23}\\) is the second cell down and third across\n\\(b_{ij}\\) is the \\(i\\text{th}\\) cell down and \\(j\\text{th}\\) across\n\\(i\\): rows, \\(j\\): columns"
   },
   {
     "objectID": "slides/02_matrices.html#structure-1",
@@ -466,7 +466,7 @@
     "href": "slides/02_matrices.html#indexing-in-r",
     "title": "Matrices",
     "section": "Indexing in R",
-    "text": "Indexing in R\n\n# byrow = FALSE is the default\nN = matrix(c(1:12), nrow = 4)\nN\n\n     [,1] [,2] [,3]\n[1,]    1    5    9\n[2,]    2    6   10\n[3,]    3    7   11\n[4,]    4    8   12\n\n\n\n\nN[1,3]"
+    "text": "Indexing in R\n\n# byrow = FALSE is the default\nN = matrix(c(1:12), nrow = 4)\nN\n\n     [,1] [,2] [,3]\n[1,]    1    5    9\n[2,]    2    6   10\n[3,]    3    7   11\n[4,]    4    8   12\n\n\n. . .\n\nN[1,3]"
   },
   {
     "objectID": "slides/02_matrices.html#indexing-in-r-1",
@@ -480,14 +480,14 @@
     "href": "slides/02_matrices.html#indexing-in-r-2",
     "title": "Matrices",
     "section": "Indexing in R",
-    "text": "Indexing in R\n\n# byrow = FALSE is the default\nN = matrix(c(1:12), nrow = 4)\nN\n\n     [,1] [,2] [,3]\n[1,]    1    5    9\n[2,]    2    6   10\n[3,]    3    7   11\n[4,]    4    8   12\n\n\n\nN[1,3]\n\n[1] 9\n\n\n\nPractice: Write code to find the index corresponding to number 12\n\n\n\nN[4,3]\n\n[1] 12"
+    "text": "Indexing in R\n\n# byrow = FALSE is the default\nN = matrix(c(1:12), nrow = 4)\nN\n\n     [,1] [,2] [,3]\n[1,]    1    5    9\n[2,]    2    6   10\n[3,]    3    7   11\n[4,]    4    8   12\n\n\n\nN[1,3]\n\n[1] 9\n\n\n. . .\nPractice: Write code to find the index corresponding to number 12\n. . .\n\nN[4,3]\n\n[1] 12"
   },
   {
     "objectID": "slides/02_matrices.html#addition-and-subtraction",
     "href": "slides/02_matrices.html#addition-and-subtraction",
     "title": "Matrices",
     "section": "Addition and subtraction",
-    "text": "Addition and subtraction\n\n\\[A \\pm B=C\\]\n\n\n\\[c_{ij}=a_{ij} \\pm b_{ij} \\text{ }\\forall i,j\\]\n\n\n\nAdd or subtract each corresponding element\nNeed \\(A\\) and \\(B\\) to have exactly the same dimensions\naka being of equal order or having equal size"
+    "text": "Addition and subtraction\n. . .\n\\[A \\pm B=C\\]\n. . .\n\\[c_{ij}=a_{ij} \\pm b_{ij} \\text{ }\\forall i,j\\]\n. . .\n\nAdd or subtract each corresponding element\nNeed \\(A\\) and \\(B\\) to have exactly the same dimensions\naka being of equal order or having equal size"
   },
   {
     "objectID": "slides/02_matrices.html#addition-and-subtraction-1",
@@ -501,21 +501,21 @@
     "href": "slides/02_matrices.html#in-r",
     "title": "Matrices",
     "section": "In R",
-    "text": "In R\n\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]"
+    "text": "In R\n. . .\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]"
   },
   {
     "objectID": "slides/02_matrices.html#in-r-1",
     "href": "slides/02_matrices.html#in-r-1",
     "title": "Matrices",
     "section": "In R",
-    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    0    3\n[2,]    2    9    4\n\n\n\n\n\nmatrix1 + matrix2"
+    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    0    3\n[2,]    2    9    4\n\n\n\n\n. . .\n\nmatrix1 + matrix2"
   },
   {
     "objectID": "slides/02_matrices.html#in-r-2",
     "href": "slides/02_matrices.html#in-r-2",
     "title": "Matrices",
     "section": "In R",
-    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    0    3\n[2,]    2    9    4\n\n\n\n\nmatrix1 + matrix2\n\n     [,1] [,2] [,3]\n[1,]    8   -1    5\n[2,]   11   13   10\n\n\n\n\nmatrix1 - matrix2\n\n     [,1] [,2] [,3]\n[1,]   -2   -1   -1\n[2,]    7   -5    2"
+    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    0    3\n[2,]    2    9    4\n\n\n\n\n\nmatrix1 + matrix2\n\n     [,1] [,2] [,3]\n[1,]    8   -1    5\n[2,]   11   13   10\n\n\n. . .\n\nmatrix1 - matrix2\n\n     [,1] [,2] [,3]\n[1,]   -2   -1   -1\n[2,]    7   -5    2"
   },
   {
     "objectID": "slides/02_matrices.html#exercise",
@@ -529,14 +529,14 @@
     "href": "slides/02_matrices.html#answers-in-r",
     "title": "Matrices",
     "section": "Answers in R",
-    "text": "Answers in R\n\n## 1) A + B\nA = matrix(c(1, 0, -2, -1), nrow = 2, byrow = TRUE)\nB = matrix(c(5, 1, 2, -1), nrow = 2, byrow = TRUE)\n\nA + B\n\n     [,1] [,2]\n[1,]    6    1\n[2,]    0   -2\n\n\n\n\n## 2) A - B\nA = matrix(c(6, -2, 8, 12, 4, 42, 8, -6), \n           nrow = 2, byrow = TRUE)\nB = matrix(c(18, 42, 3, 7, 0, -42, 15, 4), \n           nrow = 2, byrow = TRUE)\n\nA - B\n\n     [,1] [,2] [,3] [,4]\n[1,]  -12  -44    5    5\n[2,]    4   84   -7  -10\n\n\n\n\n\nCareful with vector recycling in R!"
+    "text": "Answers in R\n\n## 1) A + B\nA = matrix(c(1, 0, -2, -1), nrow = 2, byrow = TRUE)\nB = matrix(c(5, 1, 2, -1), nrow = 2, byrow = TRUE)\n\nA + B\n\n     [,1] [,2]\n[1,]    6    1\n[2,]    0   -2\n\n\n. . .\n\n## 2) A - B\nA = matrix(c(6, -2, 8, 12, 4, 42, 8, -6), \n           nrow = 2, byrow = TRUE)\nB = matrix(c(18, 42, 3, 7, 0, -42, 15, 4), \n           nrow = 2, byrow = TRUE)\n\nA - B\n\n     [,1] [,2] [,3] [,4]\n[1,]  -12  -44    5    5\n[2,]    4   84   -7  -10\n\n\n\n\nCareful with vector recycling in R!"
   },
   {
     "objectID": "slides/02_matrices.html#scalar-multiplication",
     "href": "slides/02_matrices.html#scalar-multiplication",
     "title": "Matrices",
     "section": "Scalar multiplication",
-    "text": "Scalar multiplication\n\n\\[A =\n\\begin{bmatrix}\na_{11} & a_{12} & a_{13}\\\\\na_{21} & a_{22} & a_{23}\\\\\na_{31} & a_{32} & a_{33}\n\\end{bmatrix}\\] \\[cA =\n\\begin{bmatrix}\nca_{11} & ca_{12} & ca_{13}\\\\\nca_{21} & ca_{22} & ca_{23}\\\\\nca_{31} & ca_{32} & ca_{33}\n\\end{bmatrix}\\]\n\n\n\n3 * matrix1\n\n     [,1] [,2] [,3]\n[1,]    9   -3    6\n[2,]   27   12   18"
+    "text": "Scalar multiplication\n. . .\n\\[A =\n\\begin{bmatrix}\na_{11} & a_{12} & a_{13}\\\\\na_{21} & a_{22} & a_{23}\\\\\na_{31} & a_{32} & a_{33}\n\\end{bmatrix}\\] \\[cA =\n\\begin{bmatrix}\nca_{11} & ca_{12} & ca_{13}\\\\\nca_{21} & ca_{22} & ca_{23}\\\\\nca_{31} & ca_{32} & ca_{33}\n\\end{bmatrix}\\]\n. . .\n\n3 * matrix1\n\n     [,1] [,2] [,3]\n[1,]    9   -3    6\n[2,]   27   12   18"
   },
   {
     "objectID": "slides/02_matrices.html#exercise-1",
@@ -550,56 +550,56 @@
     "href": "slides/02_matrices.html#answers",
     "title": "Matrices",
     "section": "Answers",
-    "text": "Answers\n\nA = matrix(c(1, 4, 8,\n             0, -1, 3),\n           nrow = 2, byrow = TRUE)\n2*A\n\n     [,1] [,2] [,3]\n[1,]    2    8   16\n[2,]    0   -2    6\n\n\n\n\nB = matrix(c(-15, 1, 5,\n             2, -42, 0,\n             7, 1, 6),\n           nrow = 3, byrow = TRUE)\n\n-3*B\n\n     [,1] [,2] [,3]\n[1,]   45   -3  -15\n[2,]   -6  126    0\n[3,]  -21   -3  -18"
+    "text": "Answers\n\nA = matrix(c(1, 4, 8,\n             0, -1, 3),\n           nrow = 2, byrow = TRUE)\n2*A\n\n     [,1] [,2] [,3]\n[1,]    2    8   16\n[2,]    0   -2    6\n\n\n. . .\n\nB = matrix(c(-15, 1, 5,\n             2, -42, 0,\n             7, 1, 6),\n           nrow = 3, byrow = TRUE)\n\n-3*B\n\n     [,1] [,2] [,3]\n[1,]   45   -3  -15\n[2,]   -6  126    0\n[3,]  -21   -3  -18"
   },
   {
     "objectID": "slides/02_matrices.html#matrix-multiplication",
     "href": "slides/02_matrices.html#matrix-multiplication",
     "title": "Matrices",
     "section": "Matrix multiplication ",
-    "text": "Matrix multiplication \n\nMatrices must be conformable\nFor \\(A \\times B\\) we need \\(A_{i \\times k}\\) and \\(B_{k \\times j}\\)\nThe result will have \\(i \\times j\\) dimensions\nOrder matters! \\(A \\times B \\neq B \\times A\\) even if both operations are conformable\n\n\nMany errors in data analysis happen because we try to multiply matrices that are not conformable"
+    "text": "Matrix multiplication \n\n\nMatrices must be conformable\nFor \\(A \\times B\\) we need \\(A_{i \\times k}\\) and \\(B_{k \\times j}\\)\nThe result will have \\(i \\times j\\) dimensions\nOrder matters! \\(A \\times B \\neq B \\times A\\) even if both operations are conformable\n\n\n. . .\nMany errors in data analysis happen because we try to multiply matrices that are not conformable"
   },
   {
     "objectID": "slides/02_matrices.html#multiplication-steps",
     "href": "slides/02_matrices.html#multiplication-steps",
     "title": "Matrices",
     "section": "Multiplication steps",
-    "text": "Multiplication steps\n\nMultiply each row by each column, summing up each pair of multiplied terms (dot product)\nThe element in position \\(ij\\) is the sum of the products of elements in the \\(i\\)th row of the first matrix (\\(A\\)) and the corresponding elements in the \\(j\\)th column of the second matrix (\\(B\\)). \\[c_{ij}=\\sum_{k=1}^n a_{ik}b_{kj}\\]"
+    "text": "Multiplication steps\n\n\nMultiply each row by each column, summing up each pair of multiplied terms (dot product)\nThe element in position \\(ij\\) is the sum of the products of elements in the \\(i\\)th row of the first matrix (\\(A\\)) and the corresponding elements in the \\(j\\)th column of the second matrix (\\(B\\)). \\[c_{ij}=\\sum_{k=1}^n a_{ik}b_{kj}\\]"
   },
   {
     "objectID": "slides/02_matrices.html#example",
     "href": "slides/02_matrices.html#example",
     "title": "Matrices",
     "section": "Example",
-    "text": "Example\nFurniture company construction costs ($)\n\n\n\n\nChair\nSofa\n\n\n\n\nWood\n100\n150\n\n\nCloth\n270\n420\n\n\nFeathers\n130\n195\n\n\n\n\n\\[C = \\begin{bmatrix}\n100 & 150\\\\\n270 & 420\\\\\n130 & 195\n\\end{bmatrix}\\]"
+    "text": "Example\nFurniture company construction costs ($)\n\n\n\n\nChair\nSofa\n\n\n\n\nWood\n100\n150\n\n\nCloth\n270\n420\n\n\nFeathers\n130\n195\n\n\n\n. . .\n\\[C = \\begin{bmatrix}\n100 & 150\\\\\n270 & 420\\\\\n130 & 195\n\\end{bmatrix}\\]"
   },
   {
     "objectID": "slides/02_matrices.html#example-1",
     "href": "slides/02_matrices.html#example-1",
     "title": "Matrices",
     "section": "Example",
-    "text": "Example\nMonthly production\n\n\n\nProduct\nQuantity\n\n\n\n\nChair\n45\n\n\nSofa\n30\n\n\n\n\n\\[Q = \\begin{bmatrix}\n45 \\\\\n30\n\\end{bmatrix}\\]"
+    "text": "Example\nMonthly production\n\n\n\nProduct\nQuantity\n\n\n\n\nChair\n45\n\n\nSofa\n30\n\n\n\n. . .\n\\[Q = \\begin{bmatrix}\n45 \\\\\n30\n\\end{bmatrix}\\]"
   },
   {
     "objectID": "slides/02_matrices.html#example-2",
     "href": "slides/02_matrices.html#example-2",
     "title": "Matrices",
     "section": "Example",
-    "text": "Example\nTotal expenditure\n\\[ E = CQ = \\begin{bmatrix}\n100 & 150\\\\\n270 & 420\\\\\n130 & 195\n\\end{bmatrix}\n\\begin{bmatrix}\n45 \\\\\n30\n\\end{bmatrix}\\]\n\n\n\n\n\n\n\nChair\nSofa\n\n\n\n\nWood\n100\n150\n\n\nCloth\n270\n420\n\n\nFeathers\n130\n195\n\n\n\n\n\n\n\nProduct\nQuantity\n\n\n\n\nChair\n45\n\n\nSofa\n30"
+    "text": "Example\nTotal expenditure\n\\[ E = CQ = \\begin{bmatrix}\n100 & 150\\\\\n270 & 420\\\\\n130 & 195\n\\end{bmatrix}\n\\begin{bmatrix}\n45 \\\\\n30\n\\end{bmatrix}\\]\n. . .\n\n\n\n\n\n\nChair\nSofa\n\n\n\n\nWood\n100\n150\n\n\nCloth\n270\n420\n\n\nFeathers\n130\n195\n\n\n\n\n\n\n\nProduct\nQuantity\n\n\n\n\nChair\n45\n\n\nSofa\n30"
   },
   {
     "objectID": "slides/02_matrices.html#example-3",
     "href": "slides/02_matrices.html#example-3",
     "title": "Matrices",
     "section": "Example",
-    "text": "Example\nTotal expenditure\n\\[ E = CQ = \\begin{bmatrix}\n100 & 150\\\\\n270 & 420\\\\\n130 & 195\n\\end{bmatrix}\n\\begin{bmatrix}\n45 \\\\\n30\n\\end{bmatrix}\\]\n\n\\[\n= \\begin{bmatrix}\n(100)(45) + (150)(30) \\\\\n(270)(45) + (420)(30) \\\\\n(130)(45) + (195)(30)\n\\end{bmatrix} =\n\\begin{bmatrix}\n9,000 \\\\\n24,750 \\\\\n11,700\n\\end{bmatrix}\n\\]"
+    "text": "Example\nTotal expenditure\n\\[ E = CQ = \\begin{bmatrix}\n100 & 150\\\\\n270 & 420\\\\\n130 & 195\n\\end{bmatrix}\n\\begin{bmatrix}\n45 \\\\\n30\n\\end{bmatrix}\\]\n. . .\n\\[\n= \\begin{bmatrix}\n(100)(45) + (150)(30) \\\\\n(270)(45) + (420)(30) \\\\\n(130)(45) + (195)(30)\n\\end{bmatrix} =\n\\begin{bmatrix}\n9,000 \\\\\n24,750 \\\\\n11,700\n\\end{bmatrix}\n\\]"
   },
   {
     "objectID": "slides/02_matrices.html#matrix-multiplication-in-r",
     "href": "slides/02_matrices.html#matrix-multiplication-in-r",
     "title": "Matrices",
     "section": "Matrix multiplication in R",
-    "text": "Matrix multiplication in R\n\n\n\nC = matrix(c(100, 270, 130, \n             150, 420, 195), \n           nrow = 3)\nC\n\n     [,1] [,2]\n[1,]  100  150\n[2,]  270  420\n[3,]  130  195\n\n\n\n\nQ = matrix(c(45, 30), \n           nrow = 2)\nQ\n\n     [,1]\n[1,]   45\n[2,]   30\n\n\n\n\n\nC %*% Q # Matrix multiplication operator\n\n      [,1]\n[1,]  9000\n[2,] 24750\n[3,] 11700"
+    "text": "Matrix multiplication in R\n\n\n\nC = matrix(c(100, 270, 130, \n             150, 420, 195), \n           nrow = 3)\nC\n\n     [,1] [,2]\n[1,]  100  150\n[2,]  270  420\n[3,]  130  195\n\n\n\n\nQ = matrix(c(45, 30), \n           nrow = 2)\nQ\n\n     [,1]\n[1,]   45\n[2,]   30\n\n\n\n\n. . .\n\nC %*% Q # Matrix multiplication operator\n\n      [,1]\n[1,]  9000\n[2,] 24750\n[3,] 11700"
   },
   {
     "objectID": "slides/02_matrices.html#practice",
@@ -613,21 +613,21 @@
     "href": "slides/02_matrices.html#partial-answer",
     "title": "Matrices",
     "section": "Partial answer",
-    "text": "Partial answer\n\nB = matrix(c(2,3,4,1), ncol = 1)\n\nM = matrix(c(1, 1, 2, 0, 2, 3, 2, 4, 2), ncol = 3)\n\nL = matrix(c(6, 1, 5, 4, -1, 3), ncol = 3)\n\n\n\nB %*% M\n\nError in B %*% M: non-conformable arguments\n\n\n\n\n\nL %*% M\n\n     [,1] [,2] [,3]\n[1,]    9    7   30\n[2,]   11   17   24\n\n\n\n\n\nM %*% L\n\nError in M %*% L: non-conformable arguments"
+    "text": "Partial answer\n\nB = matrix(c(2,3,4,1), ncol = 1)\n\nM = matrix(c(1, 1, 2, 0, 2, 3, 2, 4, 2), ncol = 3)\n\nL = matrix(c(6, 1, 5, 4, -1, 3), ncol = 3)\n\n. . .\n\nB %*% M\n\nError in B %*% M: non-conformable arguments\n\n\n. . .\n\nL %*% M\n\n     [,1] [,2] [,3]\n[1,]    9    7   30\n[2,]   11   17   24\n\n\n. . .\n\nM %*% L\n\nError in M %*% L: non-conformable arguments"
   },
   {
     "objectID": "slides/02_matrices.html#properties-of-operations",
     "href": "slides/02_matrices.html#properties-of-operations",
     "title": "Matrices",
     "section": "Properties of operations",
-    "text": "Properties of operations\n\nAddition and subtraction:\n\nAssociative: \\((A \\pm B) \\pm C = A \\pm (B \\pm C)\\)\nCommutative: \\(A \\pm B = B \\pm A\\)\n\n\n\nMultiplication:\n\n\\(AB \\neq BA\\)\nIf \\(AB = BA\\) we say they commute\n\\(A(BC) = (AB)C\\)\n\\(A(B+C) = AB + AC\\)"
+    "text": "Properties of operations\n. . .\nAddition and subtraction:\n\n\nAssociative: \\((A \\pm B) \\pm C = A \\pm (B \\pm C)\\)\nCommutative: \\(A \\pm B = B \\pm A\\)\n\n\n. . .\nMultiplication:\n\n\n\\(AB \\neq BA\\)\nIf \\(AB = BA\\) we say they commute\n\\(A(BC) = (AB)C\\)\n\\(A(B+C) = AB + AC\\)"
   },
   {
     "objectID": "slides/02_matrices.html#square-matrix",
     "href": "slides/02_matrices.html#square-matrix",
     "title": "Matrices",
     "section": "Square matrix",
-    "text": "Square matrix\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6 \\\\\n7 & 8 & 9\n\\end{bmatrix}\n\\]\n\n\n\\(m=n\\)\nDiagonal \\(d(A)=\\{1,5,9\\}\\)\nTrace \\(tr(A) = 1+5+9 = 15\\)"
+    "text": "Square matrix\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6 \\\\\n7 & 8 & 9\n\\end{bmatrix}\n\\]\n. . .\n\n\n\\(m=n\\)\nDiagonal \\(d(A)=\\{1,5,9\\}\\)\nTrace \\(tr(A) = 1+5+9 = 15\\)"
   },
   {
     "objectID": "slides/02_matrices.html#diagonal-matrix",
@@ -655,28 +655,28 @@
     "href": "slides/02_matrices.html#transpose",
     "title": "Matrices",
     "section": "Transpose",
-    "text": "Transpose\n\\[J =\n\\begin{bmatrix}\n4 & 5\\\\\n3 & 0\\\\\n7 & -2\n\\end{bmatrix} \\quad J' = J^T =\n\\begin{bmatrix}\n4 & 3 & 7 \\\\\n5 & 0 & -2\n\\end{bmatrix}\\]\n\n\nJ = matrix(c(4, 3, 7, 5, 0, -2), ncol = 2)\nJ\n\n     [,1] [,2]\n[1,]    4    5\n[2,]    3    0\n[3,]    7   -2\n\n\n\nt(J)\n\n     [,1] [,2] [,3]\n[1,]    4    3    7\n[2,]    5    0   -2"
+    "text": "Transpose\n\\[J =\n\\begin{bmatrix}\n4 & 5\\\\\n3 & 0\\\\\n7 & -2\n\\end{bmatrix} \\quad J' = J^T =\n\\begin{bmatrix}\n4 & 3 & 7 \\\\\n5 & 0 & -2\n\\end{bmatrix}\\]\n. . .\n\nJ = matrix(c(4, 3, 7, 5, 0, -2), ncol = 2)\nJ\n\n     [,1] [,2]\n[1,]    4    5\n[2,]    3    0\n[3,]    7   -2\n\n\n\nt(J)\n\n     [,1] [,2] [,3]\n[1,]    4    3    7\n[2,]    5    0   -2"
   },
   {
     "objectID": "slides/02_matrices.html#inverse",
     "href": "slides/02_matrices.html#inverse",
     "title": "Matrices",
     "section": "Inverse",
-    "text": "Inverse\n\\[A × A^{-1} = I\\]\n\nThe inverse of \\(A\\) is \\(A^{-1}\\) iff\n\\[AA^{-1} = A^{-1}A = I\\]\n\n\n\nSometimes there is no inverse"
+    "text": "Inverse\n\\[A × A^{-1} = I\\]\n. . .\nThe inverse of \\(A\\) is \\(A^{-1}\\) iff\n\\[AA^{-1} = A^{-1}A = I\\]\n\n\nSometimes there is no inverse"
   },
   {
     "objectID": "slides/02_matrices.html#finding-inverse-in-r",
     "href": "slides/02_matrices.html#finding-inverse-in-r",
     "title": "Matrices",
     "section": "Finding inverse in R",
-    "text": "Finding inverse in R\n\nA = matrix(c(3, 2, 5, 2, 3, 2, 5, 2, 4), ncol = 3)\nA\n\n     [,1] [,2] [,3]\n[1,]    3    2    5\n[2,]    2    3    2\n[3,]    5    2    4\n\n\n\nsolve(A)\n\n            [,1]        [,2]       [,3]\n[1,] -0.29629630 -0.07407407  0.4074074\n[2,] -0.07407407  0.48148148 -0.1481481\n[3,]  0.40740741 -0.14814815 -0.1851852"
+    "text": "Finding inverse in R\n\nA = matrix(c(3, 2, 5, 2, 3, 2, 5, 2, 4), ncol = 3)\nA\n\n     [,1] [,2] [,3]\n[1,]    3    2    5\n[2,]    2    3    2\n[3,]    5    2    4\n\n\n\nsolve(A)\n\n            [,1]        [,2]       [,3]\n[1,] -0.29629630 -0.07407407  0.4074074\n[2,] -0.07407407  0.48148148 -0.1481481\n[3,]  0.40740741 -0.14814815 -0.1851852\n\n\n. . ."
   },
   {
     "objectID": "slides/02_matrices.html#tangent-matrix-division",
     "href": "slides/02_matrices.html#tangent-matrix-division",
     "title": "Matrices",
     "section": "Tangent: Matrix division",
-    "text": "Tangent: Matrix division\n\n\\[\nA \\div B = A \\times B^{-1}\n\\]\n\n\nThis is true iff \\(B\\) is invertible\n\n\nIf \\(B\\) is not invertible, then answer is not unique\n\n\nBecause matrix multiplication is not commutative\n\n\n\nMore: https://youtu.be/f429BxWNwfs"
+    "text": "Tangent: Matrix division\n. . .\n\\[\nA \\div B = A \\times B^{-1}\n\\]\n. . .\nThis is true iff \\(B\\) is invertible\n. . .\nIf \\(B\\) is not invertible, then answer is not unique\n. . .\nBecause matrix multiplication is not commutative\n\n\nMore: https://youtu.be/f429BxWNwfs"
   },
   {
     "objectID": "slides/02_matrices.html#transpose-and-inverse-are-very-important",
@@ -689,29 +689,29 @@
     "objectID": "slides/00_intro.html#agenda",
     "href": "slides/00_intro.html#agenda",
     "title": "Social Science\nMath Camp",
-    "section": "Agenda",
-    "text": "Agenda\n\nWho are we?\nWhat is math camp?\nWho are you?\nWhat are we going to cover?\nGetting in the mindset"
+    "section": "",
+    "text": "Who are we?\nWhat is math camp?\nWho are you?\nWhat are we going to cover?\nGetting in the mindset"
   },
   {
     "objectID": "slides/00_intro.html#co-instructors",
     "href": "slides/00_intro.html#co-instructors",
     "title": "Social Science\nMath Camp",
     "section": "Co-instructors",
-    "text": "Co-instructors\n\n\n\n\n\n\nArtur Baranov\n\n\nPhD Student in Political Science\nartur.baranov@u.northwestern.edu\n\n\n\n\n\n\n\n\n\nGustavo Diaz\n\n\nAssistant Professor of Instruction in Political Science\ngustavo.diaz@northwestern.edu\n\n\n\n\n\n\n\n\n\nAven Peters\n\n\nPhD Student in Sociology\naven.peters@u.northwestern.edu"
+    "text": "Co-instructors\n\n\n\n\n\n\nArtur Baranov\n\n\n\nPhD Student in Political Science\nartur.baranov@u.northwestern.edu\n\n\n\n\n\n\n\n\nGustavo Diaz\n\n\n\nAssistant Professor of Instruction in Political Science\ngustavo.diaz@northwestern.edu\n\n\n\n\n\n\n\n\nAven Peters\n\n\n\nPhD Student in Sociology\naven.peters@u.northwestern.edu"
   },
   {
     "objectID": "slides/00_intro.html#math-camp",
     "href": "slides/00_intro.html#math-camp",
     "title": "Social Science\nMath Camp",
     "section": "Math camp",
-    "text": "Math camp\n\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nGoals:\n\nGet to know you and meet your methods training needs/goals\nGet to know your colleagues"
+    "text": "Math camp\n. . .\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nGoals:\n\n\nGet to know you and meet your methods training needs/goals\nGet to know your colleagues"
   },
   {
     "objectID": "slides/00_intro.html#math-camp-1",
     "href": "slides/00_intro.html#math-camp-1",
     "title": "Social Science\nMath Camp",
     "section": "Math camp",
-    "text": "Math camp\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nWhy a math camp?\n\nCan always use more methods training\nMore of a methods camp"
+    "text": "Math camp\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nWhy a math camp?\n\n\nCan always use more methods training\nMore of a methods camp"
   },
   {
     "objectID": "slides/00_intro.html#who-are-you",
@@ -732,49 +732,49 @@
     "href": "slides/00_intro.html#daily-schedule",
     "title": "Social Science\nMath Camp",
     "section": "Daily schedule",
-    "text": "Daily schedule\n\nBreakfast (8:30 - 9:00AM)\nMorning: Math (9:00AM - noon)\nLunch: Meet faculty, students (noon - 1PM)\nBreak (1 - 1:30PM)\nAfternoon: R programming (1:30 - 4PM)\n\n\n\n\nSee gustavodiaz.org/NUmathcamp for content"
+    "text": "Daily schedule\n\nBreakfast (8:30 - 9:00AM)\nMorning: Math (9:00AM - noon)\nLunch: Meet faculty, students (noon - 1PM)\nBreak (1 - 1:30PM)\nAfternoon: R programming (1:30 - 4PM)\n\n\n\nSee gustavodiaz.org/NUmathcamp for content"
   },
   {
     "objectID": "slides/00_intro.html#learning-goals",
     "href": "slides/00_intro.html#learning-goals",
     "title": "Social Science\nMath Camp",
     "section": "Learning goals",
-    "text": "Learning goals\n\nMake you feel very stressed about things you are supposed to already know\nMe saying “I told you this was important” in five years\nConfront your fears about math early on\nSo that you can do the cool things with confidence\n(The fear never goes away, but you learn to live with it)"
+    "text": "Learning goals\n\n\nMake you feel very stressed about things you are supposed to already know\nMe saying “I told you this was important” in five years\nConfront your fears about math early on\nSo that you can do the cool things with confidence\n(The fear never goes away, but you learn to live with it)"
   },
   {
     "objectID": "slides/00_intro.html#expectations",
     "href": "slides/00_intro.html#expectations",
     "title": "Social Science\nMath Camp",
     "section": "Expectations",
-    "text": "Expectations\n\nYou are not being evaluated\nNo need to take extensive notes\nBring a laptop\nEngage\nGet things wrong\nAsk\nInterrupt if you need to"
+    "text": "Expectations\n\n\nYou are not being evaluated\nNo need to take extensive notes\nBring a laptop\nEngage\nGet things wrong\nAsk\nInterrupt if you need to"
   },
   {
     "objectID": "slides/00_intro.html#some-notes",
     "href": "slides/00_intro.html#some-notes",
     "title": "Social Science\nMath Camp",
     "section": "Some notes",
-    "text": "Some notes\n\nClass is not graded, but you can get credit for attending (POLI_SCI 490)\nContent is cumulative (now and forever)\nEveryone comes in with different experiences and background. This is a feature, not a bug"
+    "text": "Some notes\n\n\nClass is not graded, but you can get credit for attending (POLI_SCI 490)\nContent is cumulative (now and forever)\nEveryone comes in with different experiences and background. This is a feature, not a bug"
   },
   {
     "objectID": "slides/00_intro.html#expectations-beyond-math-camp",
     "href": "slides/00_intro.html#expectations-beyond-math-camp",
     "title": "Social Science\nMath Camp",
     "section": "Expectations beyond math camp",
-    "text": "Expectations beyond math camp\n\nRead the material, learn to be strategic about it, come up with things to discuss\nPeople around you are colleagues, not competition. Treat everyone with respect (including yourself)\nNobody knows what is going on, most people will help you figure things out\nThere is life beyond grad school"
+    "text": "Expectations beyond math camp\n\n\nRead the material, learn to be strategic about it, come up with things to discuss\nPeople around you are colleagues, not competition. Treat everyone with respect (including yourself)\nNobody knows what is going on, most people will help you figure things out\nThere is life beyond grad school"
   },
   {
     "objectID": "slides/00_intro.html#why-do-i-need-mathcamp",
     "href": "slides/00_intro.html#why-do-i-need-mathcamp",
     "title": "Social Science\nMath Camp",
     "section": "Why do I need mathcamp?",
-    "text": "Why do I need mathcamp?\nYou are being trained to become a producer of scientific knowledge\n\nScience: Knowledge generation through falsification\n\n\nFalsification: Trying to prove ourselves wrong"
+    "text": "Why do I need mathcamp?\nYou are being trained to become a producer of scientific knowledge\n. . .\nScience: Knowledge generation through falsification\n. . .\nFalsification: Trying to prove ourselves wrong"
   },
   {
     "objectID": "slides/00_intro.html#scientific-method",
     "href": "slides/00_intro.html#scientific-method",
     "title": "Social Science\nMath Camp",
     "section": "Scientific method",
-    "text": "Scientific method\n\nPuzzle/question\nTheory/model\nHypothesis/implications\nObservation/testing\nConclusion/evaluation\n\n\nYour job will be to become good at proposing and testing theories"
+    "text": "Scientific method\n\nPuzzle/question\nTheory/model\nHypothesis/implications\nObservation/testing\nConclusion/evaluation\n\n. . .\nYour job will be to become good at proposing and testing theories"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory",
@@ -788,49 +788,49 @@
     "href": "slides/00_intro.html#what-is-a-theory-1",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n¯\\(ツ)/¯"
+    "text": "What is a theory?\n\n¯\\(ツ)/¯"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-2",
     "href": "slides/00_intro.html#what-is-a-theory-2",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea"
+    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-3",
     "href": "slides/00_intro.html#what-is-a-theory-3",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows"
+    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-4",
     "href": "slides/00_intro.html#what-is-a-theory-4",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated"
+    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-5",
     "href": "slides/00_intro.html#what-is-a-theory-5",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated\n\n\nand that’s why you need a PhD to do it well"
+    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated\n\n\nand that’s why you need a PhD to do it well"
   },
   {
     "objectID": "slides/00_intro.html#but-it-sure-is-important",
     "href": "slides/00_intro.html#but-it-sure-is-important",
     "title": "Social Science\nMath Camp",
     "section": "But it sure is important!",
-    "text": "But it sure is important!\n\nMost common reasons why a peer-reviewed journal rejects an article:\n\nHaving no theory\nWeak theory\nInsufficient theoretical innovation\n\n\n\nIf you ask me, theory is logical explanation or informed speculation\n\n\n\n(but I am not the right person to ask)"
+    "text": "But it sure is important!\n. . .\nMost common reasons why a peer-reviewed journal rejects an article:\n\n\nHaving no theory\nWeak theory\nInsufficient theoretical innovation\n\n\n. . .\nIf you ask me, theory is logical explanation or informed speculation\n. . .\n\n(but I am not the right person to ask)"
   },
   {
     "objectID": "slides/00_intro.html#the-important-part",
     "href": "slides/00_intro.html#the-important-part",
     "title": "Social Science\nMath Camp",
     "section": "The important part",
-    "text": "The important part\n\nCannot test theories because they unambiguously true or false\nNeed to believe a theory is true to engage with it scientifically\nInstead, test arguments that follow from a theory (hypotheses/implications)\n\n\nSounds like splitting hairs, but there is a good reason for this"
+    "text": "The important part\n\n\nCannot test theories because they unambiguously true or false\nNeed to believe a theory is true to engage with it scientifically\nInstead, test arguments that follow from a theory (hypotheses/implications)\n\n\n. . .\nSounds like splitting hairs, but there is a good reason for this"
   },
   {
     "objectID": "slides/00_intro.html#example",
@@ -851,42 +851,42 @@
     "href": "slides/00_intro.html#findings",
     "title": "Social Science\nMath Camp",
     "section": "Findings",
-    "text": "Findings\n\nParticipants in the group choir during the pandemic consistently described the activity as providing a sense of normalcy amid widespread disruption — a theme that emerged prominently and merits further investigation.\n\n\n\nThis suggests that such interventions may help restore a feeling of normalcy, supporting psychological well-being and offering a means of reconnecting with a stable sense of self.\n\n\n\n\nhttps://doi.org/10.1177/13872877251333155"
+    "text": "Findings\n\nParticipants in the group choir during the pandemic consistently described the activity as providing a sense of normalcy amid widespread disruption — a theme that emerged prominently and merits further investigation.\n\n. . .\n\nThis suggests that such interventions may help restore a feeling of normalcy, supporting psychological well-being and offering a means of reconnecting with a stable sense of self.\n\n\n\nhttps://doi.org/10.1177/13872877251333155"
   },
   {
     "objectID": "slides/00_intro.html#breaking-it-apart",
     "href": "slides/00_intro.html#breaking-it-apart",
     "title": "Social Science\nMath Camp",
     "section": "Breaking it apart",
-    "text": "Breaking it apart\n\nQuestion: Can singing help overcome isolation?\n\n\nTheory: Choral singing is a therapeutic activity for individuals with neurological disorders\n\n\nHypothesis: Individuals who sing in a choir will report higher levels of well-being than those who do not\n\n\nTest: Organize virtual group choir, ask survey questions in the end\n\n\nConclusion: “Isolated older adults find joy and connection through virtual singing”"
+    "text": "Breaking it apart\n. . .\nQuestion: Can singing help overcome isolation?\n. . .\nTheory: Choral singing is a therapeutic activity for individuals with neurological disorders\n. . .\nHypothesis: Individuals who sing in a choir will report higher levels of well-being than those who do not\n. . .\nTest: Organize virtual group choir, ask survey questions in the end\n. . .\nConclusion: “Isolated older adults find joy and connection through virtual singing”\n. . ."
   },
   {
     "objectID": "slides/00_intro.html#limitations",
     "href": "slides/00_intro.html#limitations",
     "title": "Social Science\nMath Camp",
     "section": "Limitations?",
-    "text": "Limitations?\n\nIdeal study\n\n\nObserve person \\(i\\)’s well-being with and without singing, everything else constant\n\n\nActual study\n\nAdults 55 an older in Chicago\nElected to participate\nTwo teleconferencing programs\n176 survey responses out of 695 participants"
+    "text": "Limitations?\n. . .\nIdeal study\n. . .\nObserve person \\(i\\)’s well-being with and without singing, everything else constant\n. . .\nActual study\n\nAdults 55 an older in Chicago\nElected to participate\nTwo teleconferencing programs\n176 survey responses out of 695 participants"
   },
   {
     "objectID": "slides/00_intro.html#problem",
     "href": "slides/00_intro.html#problem",
     "title": "Social Science\nMath Camp",
     "section": "Problem",
-    "text": "Problem\n\nCannot observe the ideal counterfactual\n\n\nAny test/evidence can only be suggestive\n\n\n\nWhen evidence supports hypothesis, your theory is accepted not rejected\nWhen evidence does not support hypothesis, your theory is rejected not accepted\n\n\n\nConnecting from narrow findings to broad theories requires assumptions"
+    "text": "Problem\n. . .\nCannot observe the ideal counterfactual\n. . .\nAny test/evidence can only be suggestive\n. . .\n\nWhen evidence supports hypothesis, your theory is accepted not rejected\nWhen evidence does not support hypothesis, your theory is rejected not accepted\n\n. . .\nConnecting from narrow findings to broad theories requires assumptions"
   },
   {
     "objectID": "slides/00_intro.html#statistics",
     "href": "slides/00_intro.html#statistics",
     "title": "Social Science\nMath Camp",
     "section": "Statistics",
-    "text": "Statistics\nIs all about acknowledging this gap and making assumptions explicit, systematic, and credible\n\nMath is a tool that helps us translate across domains\nThe difficulty lies mostly in embracing the abstraction\nLess so on notation, symbols, operations"
+    "text": "Statistics\nIs all about acknowledging this gap and making assumptions explicit, systematic, and credible\n\n\nMath is a tool that helps us translate across domains\nThe difficulty lies mostly in embracing the abstraction\nLess so on notation, symbols, operations"
   },
   {
     "objectID": "slides/00_intro.html#frequently-asked-questions",
     "href": "slides/00_intro.html#frequently-asked-questions",
     "title": "Social Science\nMath Camp",
     "section": "Frequently asked questions",
-    "text": "Frequently asked questions\n\nDo I need mathcamp if…\n\nI already have training in quantitative methods?\nI plan to use qualitative methods only?\nI am in political theory?\nI want a teaching job?\nI am considering non-academic jobs?"
+    "text": "Frequently asked questions\n. . .\nDo I need mathcamp if…\n\n\nI already have training in quantitative methods?\nI plan to use qualitative methods only?\nI am in political theory?\nI want a teaching job?\nI am considering non-academic jobs?"
   },
   {
     "objectID": "r/04_sampling.html",
@@ -1046,7 +1046,7 @@
     "href": "r/01_intro.html#data-structures-in-r",
     "title": "Introduction to Computational Social Science and R",
     "section": "Data Structures in R",
-    "text": "Data Structures in R\n\nObjects: Basic Operations\nNow, let’s turn to statistics and programming. This gray part of the document is called chunk or code block. Here we can code. Let’s create an object called number and assign it the value 1.\n\nnumber &lt;- 1\nnumber\n\n[1] 1\n\n\n\n\n\n\n\n\nTip\n\n\n\nFirst shortcut. On windows you can use Alt and -, on Mac you can use Option and - to insert assignment operator. Try it out! Alternatively, you can always type &lt;- or = yourself.\n\nword ... c(\"Northwestern\")\nword\n\n\n\nAs you noticed, created objects can contain different information, be it numbers or words. As R is the object-oriented language, we can perform different manipulations with our objects.\n\nFor example, some basic mathematical operations with numbers\n\n\nnumber + 2\nnumber - 2\nnumber * 2\nnumber / 2\n\n[1] 3\n[1] -1\n[1] 2\n[1] 0.5\n\n\n\nWith words, for example, you can calculate the number of characters\n\n\nnchar(word)\n\n\n\nVectors: Logical Operations and Descriptive Statistics\nBut the real power of programming starts with vectors. Vectors are collections of objects. To create one, you will need to use function c(). Here’s an example,\n\nnumbers &lt;- c(1, 2, 3)\nnumbers\n\n[1] 1 2 3\n\n\n\n\n\n\n\n\nTip\n\n\n\nSecond shortcut. To insert a chunk on Windows you can use Ctrl+Alt+I, on Mac Cmd+Option+I. Try it out and instead of ... insert the following code in this chunk: words &lt;- c(\"Welcome\", \"to\" ,\"Northwestern\")\n\n\n...\n\nBasic logical operations\nLet us start with numbers. R allows you to automate calculation of statistics, perform different manipulations on a set of values.\n\nnumbers + 5\n\n[1] 6 7 8\n\n\nYou can check if some object in a vector is equal to some specified value using == operator. For example:\n\nnumbers == 2\n\n[1] FALSE  TRUE FALSE\n\n\nWhy are we using a double equal sign?\nFurthermore, we can easily check what values are greater or less than some number.\n\nnumbers &gt; 2\n\n[1] FALSE FALSE  TRUE\n\nnumbers &lt; 2\n\n[1]  TRUE FALSE FALSE\n\n\nThe table below summarizes most important logical operators in R. They are quite straightforward, but it might take some time to memorize them.\n\n\n\nOperation\nSymbol\nExample Usage\n\n\n\n\nEqual to\n==\nx == y\n\n\nNot equal to\n!=\nx != y\n\n\nGreater than\n&gt;\nx &gt; y\n\n\nLess than\n&lt;\nx &lt; y\n\n\nGreater than or equal to\n&gt;=\nx &gt;= y\n\n\nLess than or equal to\n&lt;=\nx &lt;= y\n\n\nLogical AND\n&\n(x &gt; y) & (a &lt; b)\n\n\nLogical OR\n|\n(x &gt; y) | (a &lt; b)\n\n\nLogical NOT\n!\n!(x &gt; y)\n\n\n\nLet’s say we asked a group of people their ages in an Evanston coffee shop. We obtained the following data and assigned it to an object called age.\n\nage &lt;- c(18, 20, 21, 19, 24, 21, 20, 22)\n\nYou can access the data using indexation. Let’s say you entered the data into your object age as you were receiving the results. You can access the age of your second respondent by indicating [i] to an object.\n\nage[2]\n\n[1] 20\n\n\nWho is allowed to order espresso martini (yes, in the US drinking age is 21!)?\n\nage ... 21\n\nWho is not 20 years old?\n\n...\n\nWho is between 20 and 22?\n\n(age &gt;= 20) & (age ... 22)\n\nIs the 4th respondent older than the 2nd?\n\nage[...] ... \n\n\n\n\n\n\n\nTip\n\n\n\nThird shortcut. To run only selected line of code or a code highlight you can use Ctrl + Enter on Windows and Cmd + Return on Mac. Try accessing age of 4th and 2nd respondents separately.\n\n\n\n\nDescriptive statistics\nNow we are turning to slightly more advanced topics. Most commonly people describe the whole data they have (sometimes it’s hundreds and thousands of observations) with only a couple of numbers.\nFor example, we can calculate the average age in our surveyed group.\n\nmean(age)\n\n[1] 20.625\n\n\nAlternatively, we can describe our data with minimum and maximum values.\n\nmin(age)\nmax(age)\n\n[1] 18\n[1] 24\n\n\nUsually such description of data is called descriptive statistics. There is a helpful command summary() that allows us to describe data in one line. Try it out! What is the median you got?\n\nsummary(...)\n\nYou can use the table below for your reference\n\n\n\nStatistic\nFunction\nExample Usage\n\n\n\n\nMinimum\nmin()\nmin(x)\n\n\nMaximum\nmax()\nmax(x)\n\n\nMean\nmean()\nmean(x)\n\n\nMedian\nmedian()\nmedian(x)\n\n\nStandard Deviation\nsd()\nsd(x)\n\n\nVariance\nvar()\nvar(x)\n\n\nSum\nsum()\nsum(x)\n\n\nSummary\nsummary()\nsummary(x)\n\n\n\nWe also asked people in the coffee shop about their majors and received the following data:\n\nmajor &lt;- c(\"computer science\", \"sociology\", \"sociology\", \"political science\", \"political science\", \"political science\", \"computer science\", \"sociology\")\n\nTry to get the descriptive statistics for this data.\n\n...\n\nFor text data you might want to calculate the number of people in each major.\n\ntable(major)\n\nmajor\n computer science political science         sociology \n                2                 3                 3 \n\n\nInsert a chunk and access major of the 3rd respondent.\n...\n\n\n\nDataframes\nA dataframe is one of the most commonly used data structures in data analysis. It is a simple table, similar to those you have probably seen in Excel. Let’s create one. We have two vectors, age and major. We can combine them into one table.\n\nrespondents &lt;- data.frame(age, major)\nrespondents\n\n  age             major\n1  18  computer science\n2  20         sociology\n3  21         sociology\n4  19 political science\n5  24 political science\n6  21 political science\n7  20  computer science\n8  22         sociology\n\n\nColumns are vectors. In a table format they are referred to as variables (and thus these labels are used interchangeably). Rows are called observations. There are some useful commands that provide information about your dataframe.\n\nNames of your variables\n\n\nnames(respondents)\n\n[1] \"age\"   \"major\"\n\n\n\nNumber of rows in your dataframe\n\n\nnrow(respondents)\n\n[1] 8\n\n\n\nNumber of columns in your dataframe\n\n\nncol(respondents)\n\n[1] 2\n\n\n\nNumber of dimensions (number of rows and columns)\n\n\ndim(respondents)\n\n[1] 8 2\n\n\nTo access a variable as vector you can use $ sign.\n\nrespondents$age\n\n[1] 18 20 21 19 24 21 20 22\n\n\nThis would allow you to manipulate this variable. And as a spoiler of the future sections, let’s visualize this data!\n\nhist(respondents$age)\n\n\n\n\n\n\n\n\nYou can easily combine previously used functions. For example, indexation provides access to any observation.\n\nrespondents$major[8]\n\n[1] \"sociology\"\n\n\nOr you can get the maximum age in our dataset.\n\nmax(respondents$age)\n\n[1] 24\n\n\nMoreover, $ operator can create a new variable in your dataframe. Let’s calculate the number of characters in majors using the nchar() function\n\nrespondents$nchar_major &lt;- ...(respondents$...)\nrespondents\n\nHere is a dataset that consist of information about selected cars. Provide your answers to the questions using code\n\ncars_information &lt;- mtcars\n\nWhat information is included in the dataset (list names of the variables)?\n\n\n\n\n\n\nTip\n\n\n\nTo understand what these variables stand for you can check details about included datasets or any other functions using ?\n\n?mtcars\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nHow many cars are listed in the dataframe (how many rows are there)?\nDescribe mpg variable. Include average, minimum and maximum.\nWhat is the minimum horsepower (hp)?\nAre there any cars that have horse power greater than 200 but less than 250?\nCreate a new variable called power_to_weight, which calculates the ratio of horsepower (hp) to weight (wt). You need to divide horsepower by weight\nWhat is an average Power to Weight Ratio?\nWhat is a minimum Power to Weight Ratio?\nCreate a histogram of power_to_weight variable",
+    "text": "Data Structures in R\n\nObjects: Basic Operations\nNow, let’s turn to statistics and programming. This gray part of the document is called chunk or code block. Here we can code. Let’s create an object called number and assign it the value 1.\n\nnumber &lt;- 1\nnumber\n\n[1] 1\n\n\n\n\n\n\n\n\nTip\n\n\n\nFirst shortcut. On windows you can use Alt and -, on Mac you can use Option and - to insert assignment operator. Try it out! Alternatively, you can always type &lt;- or = yourself.\n\nword ... c(\"Northwestern\")\nword\n\n\n\nAs you noticed, created objects can contain different information, be it numbers or words. As R is the object-oriented language, we can perform different manipulations with our objects.\n\nFor example, some basic mathematical operations with numbers\n\n\nnumber + 2\nnumber - 2\nnumber * 2\nnumber / 2\n\n[1] 3\n[1] -1\n[1] 2\n[1] 0.5\n\n\n\nWith words, for example, you can calculate the number of characters\n\n\nnchar(word)\n\n\n\nVectors: Logical Operations and Descriptive Statistics\nBut the real power of programming starts with vectors. Vectors are collections of objects. To create one, you will need to use function c(). Here’s an example,\n\nnumbers &lt;- c(1, 2, 3)\nnumbers\n\n[1] 1 2 3\n\n\n\n\n\n\n\n\nTip\n\n\n\nSecond shortcut. To insert a chunk on Windows you can use Ctrl+Alt+I, on Mac Cmd+Option+I. Try it out and instead of ... insert the following code in this chunk: words &lt;- c(\"Welcome\", \"to\" ,\"Northwestern\")\n\n\n...\n\nBasic logical operations\nLet us start with numbers. R allows you to automate calculation of statistics, perform different manipulations on a set of values.\n\nnumbers + 5\n\n[1] 6 7 8\n\n\nYou can check if some object in a vector is equal to some specified value using == operator. For example:\n\nnumbers == 2\n\n[1] FALSE  TRUE FALSE\n\n\nWhy are we using a double equal sign?\nFurthermore, we can easily check what values are greater or less than some number.\n\nnumbers &gt; 2\n\n[1] FALSE FALSE  TRUE\n\nnumbers &lt; 2\n\n[1]  TRUE FALSE FALSE\n\n\nThe table below summarizes most important logical operators in R. They are quite straightforward, but it might take some time to memorize them.\n\n\n\nOperation\nSymbol\nExample Usage\n\n\n\n\nEqual to\n==\nx == y\n\n\nNot equal to\n!=\nx != y\n\n\nGreater than\n&gt;\nx &gt; y\n\n\nLess than\n&lt;\nx &lt; y\n\n\nGreater than or equal to\n&gt;=\nx &gt;= y\n\n\nLess than or equal to\n&lt;=\nx &lt;= y\n\n\nLogical AND\n&\n(x &gt; y) & (a &lt; b)\n\n\nLogical OR\n|\n(x &gt; y) | (a &lt; b)\n\n\nLogical NOT\n!\n!(x &gt; y)\n\n\n\nLet’s say we asked a group of people their ages in an Evanston coffee shop. We obtained the following data and assigned it to an object called age.\n\nage &lt;- c(18, 20, 21, 19, 24, 21, 20, 22)\n\nYou can access the data using indexing. Let’s say you entered the data into your object age as you were receiving the results. You can access the age of your second respondent by indicating [i] to an object.\n\nage[2]\n\n[1] 20\n\n\nWho is allowed to order espresso martini (yes, in the US drinking age is 21!)?\n\nage ... 21\n\nWho is not 20 years old?\n\n...\n\nWho is between 20 and 22?\n\n(age &gt;= 20) & (age ... 22)\n\nIs the 4th respondent older than the 2nd?\n\nage[...] ... \n\n\n\n\n\n\n\nTip\n\n\n\nThird shortcut. To run only selected line of code or a code highlight you can use Ctrl + Enter on Windows and Cmd + Return on Mac. Try accessing age of 4th and 2nd respondents separately.\n\n\n\n\nDescriptive statistics\nNow we are turning to slightly more advanced topics. Most commonly people describe the whole data they have (sometimes it’s hundreds and thousands of observations) with only a couple of numbers.\nFor example, we can calculate the average age in our surveyed group.\n\nmean(age)\n\n[1] 20.625\n\n\nAlternatively, we can describe our data with minimum and maximum values.\n\nmin(age)\nmax(age)\n\n[1] 18\n[1] 24\n\n\nUsually such description of data is called descriptive statistics. There is a helpful command summary() that allows us to describe data in one line. Try it out! What is the median you got?\n\nsummary(...)\n\nYou can use the table below for your reference\n\n\n\nStatistic\nFunction\nExample Usage\n\n\n\n\nMinimum\nmin()\nmin(x)\n\n\nMaximum\nmax()\nmax(x)\n\n\nMean\nmean()\nmean(x)\n\n\nMedian\nmedian()\nmedian(x)\n\n\nStandard Deviation\nsd()\nsd(x)\n\n\nVariance\nvar()\nvar(x)\n\n\nSum\nsum()\nsum(x)\n\n\nSummary\nsummary()\nsummary(x)\n\n\n\nWe also asked people in the coffee shop about their majors and received the following data:\n\nmajor &lt;- c(\"computer science\", \"sociology\", \"sociology\", \"political science\", \"political science\", \"political science\", \"computer science\", \"sociology\")\n\nTry to get the descriptive statistics for this data.\n\n...\n\nFor text data you might want to calculate the number of people in each major.\n\ntable(major)\n\nmajor\n computer science political science         sociology \n                2                 3                 3 \n\n\nInsert a chunk and access major of the 3rd respondent.\n...\n\n\n\nDataframes\nA dataframe is one of the most commonly used data structures in data analysis. It is a simple table, similar to those you have probably seen in Excel. Let’s create one. We have two vectors, age and major. We can combine them into one table.\n\nrespondents &lt;- data.frame(age, major)\nrespondents\n\n  age             major\n1  18  computer science\n2  20         sociology\n3  21         sociology\n4  19 political science\n5  24 political science\n6  21 political science\n7  20  computer science\n8  22         sociology\n\n\nColumns are vectors. In a table format they are referred to as variables (and thus these labels are used interchangeably). Rows are called observations. There are some useful commands that provide information about your dataframe.\n\nNames of your variables\n\n\nnames(respondents)\n\n[1] \"age\"   \"major\"\n\n\n\nNumber of rows in your dataframe\n\n\nnrow(respondents)\n\n[1] 8\n\n\n\nNumber of columns in your dataframe\n\n\nncol(respondents)\n\n[1] 2\n\n\n\nNumber of dimensions (number of rows and columns)\n\n\ndim(respondents)\n\n[1] 8 2\n\n\nTo access a variable as vector you can use $ sign.\n\nrespondents$age\n\n[1] 18 20 21 19 24 21 20 22\n\n\nThis would allow you to manipulate this variable. And as a spoiler of the future sections, let’s visualize this data!\n\nhist(respondents$age)\n\n\n\n\n\n\n\n\nYou can easily combine previously used functions. For example, indexing provides access to any observation.\n\nrespondents$major[8]\n\n[1] \"sociology\"\n\n\nOr you can get the maximum age in our dataset.\n\nmax(respondents$age)\n\n[1] 24\n\n\nMoreover, $ operator can create a new variable in your dataframe. Let’s calculate the number of characters in majors using the nchar() function\n\nrespondents$nchar_major &lt;- ...(respondents$...)\nrespondents\n\nHere is a dataset that consist of information about selected cars. Provide your answers to the questions using code\n\ncars_information &lt;- mtcars\n\nWhat information is included in the dataset (list names of the variables)?\n\n\n\n\n\n\nTip\n\n\n\nTo understand what these variables stand for you can check details about included datasets or any other functions using ?\n\n?mtcars\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nHow many cars are listed in the dataframe (how many rows are there)?\nDescribe mpg variable. Include average, minimum and maximum.\nWhat is the minimum horsepower (hp)?\nAre there any cars that have horse power greater than 200 but less than 250?\nCreate a new variable called power_to_weight, which calculates the ratio of horsepower (hp) to weight (wt). You need to divide horsepower by weight\nWhat is an average Power to Weight Ratio?\nWhat is a minimum Power to Weight Ratio?\nCreate a histogram of power_to_weight variable",
     "crumbs": [
       "Programming",
       "1. Getting started"
@@ -1068,7 +1068,7 @@
     "href": "r/01_intro.html#loading-data-and-exercises",
     "title": "Introduction to Computational Social Science and R",
     "section": "Loading data and Exercises",
-    "text": "Loading data and Exercises\nData classes become increasingly relevant as you work with public datasets. I suggest you inspect if the variables were treated correctly by R.\nHere are the most common file types to save/load your datasets:\n\ncsv is widely universally in data analysis. A default option for R users\nxslx is Excel’s file type. You can easily use it in R too\ndta is Stata file, you can use it in R too\nrds is R file. Most comfortable to work with in R.\n\nLet’s try the most used one, namely csv. Download Corruption Perception Index dataset from transparency international using this URL.\nYou need to put this dataset to your current working directory, which is\n\ngetwd()\n\nThen, load the dataset. CPI = 0 is a highly corrupt country, whereas CPI = 100 is very clean.\n\ncpi &lt;- read.csv(\"cpi.csv\")\n\n\n\n\n\n\n\nExercise\n\n\n\nWhat are the variables in the dataset?\nHow many observations are there?\nCheck the classes of the variables. Are they correct?\nProvide the descriptive statistics of cpi_2023 variable\nCreate a new variable that provides the difference between CPI of a country in 2023 and 2022. On average, are countries getting cleaner in terms of corruption?\nDraw a histogram of this newly created variable\nCalculate average and median. Are they different - if yes, why?",
+    "text": "Loading data and Exercises\nData classes become increasingly relevant as you work with public datasets. I suggest you inspect if the variables were treated correctly by R.\nHere are the most common file types to save/load your datasets:\n\ncsv is widely universally in data analysis. A default option for R users\nxslx is Excel’s file type. You can easily use it in R too\ndta is Stata file, you can use it in R too\nrds is R file. Most comfortable to work with in R.\n\nLet’s try the most used one, namely csv. Download Corruption Perception Index dataset from transparency international using this URL (and the alternative URL if the first one does not work).\nYou need to put this dataset to your current working directory, which is\n\ngetwd()\n\nThen, load the dataset. CPI = 0 is a highly corrupt country, whereas CPI = 100 is very clean.\n\ncpi &lt;- read.csv(\"cpi.csv\")\n\n\n\n\n\n\n\nExercise\n\n\n\nWhat are the variables in the dataset?\nHow many observations are there?\nCheck the classes of the variables. Are they correct?\nProvide the descriptive statistics of cpi_2023 variable\nCreate a new variable that provides the difference between CPI of a country in 2023 and 2022. On average, are countries getting cleaner in terms of corruption?\nDraw a histogram of this newly created variable\nCalculate average and median. Are they different - if yes, why?",
     "crumbs": [
       "Programming",
       "1. Getting started"
@@ -1090,7 +1090,7 @@
     "href": "r/01_intro.html#check-list",
     "title": "Introduction to Computational Social Science and R",
     "section": "Check List",
-    "text": "Check List\n I know what panes in RStudio used for\n I know what objects, vectors and dataframes are, and I know how to create them\n I know what variables and observations are\n I know what descriptive statistics is and I can easily calculate average, median, etc.\n I know how to create a variable and how to change its class\n I know how to load data to R and how to install new libraries",
+    "text": "Check List\n\nI know what panes in RStudio used for\nI know what objects, vectors and dataframes are, and I know how to create them\nI know what variables and observations are\nI know what descriptive statistics is and I can easily calculate average, median, etc.\nI know how to create a variable and how to change its class\nI know how to load data to R and how to install new libraries",
     "crumbs": [
       "Programming",
       "1. Getting started"
@@ -1658,8 +1658,8 @@
     "objectID": "slides/01_notation.html#getting-ready",
     "href": "slides/01_notation.html#getting-ready",
     "title": "Notations, Sets, Functions",
-    "section": "Getting ready",
-    "text": "Getting ready\n\nSet up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
+    "section": "",
+    "text": "Set up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
   },
   {
     "objectID": "slides/01_notation.html#agenda",
@@ -1673,77 +1673,77 @@
     "href": "slides/01_notation.html#what-is-notation",
     "title": "Notations, Sets, Functions",
     "section": "What is notation?",
-    "text": "What is notation?\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
+    "text": "What is notation?\n\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
   },
   {
     "objectID": "slides/01_notation.html#set-notation",
     "href": "slides/01_notation.html#set-notation",
     "title": "Notations, Sets, Functions",
     "section": "Set Notation",
-    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\) \n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\pi, e\\}\\)\n\\(\\mathbb{R}^2\\): 2-dimensional space\n\\(\\mathbb{R}^3\\): 3-dimensional space"
+    "text": "Set Notation\nSet: A collection of elements\n. . .\nNumerical sets\n\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\) \n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\pi, e\\}\\)\n\\(\\mathbb{R}^2\\): 2-dimensional space\n\\(\\mathbb{R}^3\\): 3-dimensional space"
   },
   {
     "objectID": "slides/01_notation.html#measurement",
     "href": "slides/01_notation.html#measurement",
     "title": "Notations, Sets, Functions",
     "section": "Measurement",
-    "text": "Measurement\n\nSets can also have non-numerical elements\n\n\n\\[\n\\mathbb{A} = \\{\\text{Argentina}, \\text{Nigeria}, \\text{South Korea} \\}\n\\]\n\n\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
+    "text": "Measurement\n. . .\nSets can also have non-numerical elements\n. . .\n\\[\n\\mathbb{A} = \\{\\text{Argentina}, \\text{Nigeria}, \\text{South Korea} \\}\n\\]\n. . .\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-1",
     "href": "slides/01_notation.html#set-notation-1",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\n\nElements of a set\n\nCapital letters denote a set \\(A\\)\nLowercase denotes an arbitrary element of a set \\(a\\)"
+    "text": "Set notation\n. . .\nElements of a set\n\n\nCapital letters denote a set \\(A\\)\nLowercase denotes an arbitrary element of a set \\(a\\)"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-2",
     "href": "slides/01_notation.html#set-notation-2",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\nBracketing\n\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces(curly brackets)\n\n\n\nUses vary, but generally…\n\nBrackets are for continuous sets \\([0, 1]\\)\nParentheses are for exclusive sets \\((0,1)\\)\nCan mix and match like \\([0,1)\\)\nBraces are for discrete sets \\(\\{0,1\\}\\)"
+    "text": "Set notation\nBracketing\n. . .\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces(curly brackets)\n\n\n. . .\nUses vary, but generally…\n\n\nBrackets are for continuous sets \\([0, 1]\\)\nParentheses are for exclusive sets \\((0,1)\\)\nCan mix and match like \\([0,1)\\)\nBraces are for discrete sets \\(\\{0,1\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-3",
     "href": "slides/01_notation.html#set-notation-3",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\n\nOperations within sets\n\n\\(\\exists\\) “exists”; there is something true\n\\(\\forall\\) “for all”; for every element\n\\(\\in\\) “in” or “element of”\n| Such that (specify a condition)\n\\(\\notin\\) “not in”, excluding element(s)\n\\(\\equiv\\) equivalent"
+    "text": "Set notation\n. . .\nOperations within sets\n\n\n\\(\\exists\\) “exists”; there is something true\n\\(\\forall\\) “for all”; for every element\n\\(\\in\\) “in” or “element of”\n| Such that (specify a condition)\n\\(\\notin\\) “not in”, excluding element(s)\n\\(\\equiv\\) equivalent"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-4",
     "href": "slides/01_notation.html#set-notation-4",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\nOperations between sets\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
+    "text": "Set notation\nOperations between sets\n\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
   },
   {
     "objectID": "slides/01_notation.html#practice",
     "href": "slides/01_notation.html#practice",
     "title": "Notations, Sets, Functions",
     "section": "Practice",
-    "text": "Practice\n\n\\(x \\in \\mathbb{Z}\\)\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\) \n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
+    "text": "Practice\n\n\n\\(x \\in \\mathbb{Z}\\)\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\) \n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#greek-notation",
     "href": "slides/01_notation.html#greek-notation",
     "title": "Notations, Sets, Functions",
     "section": "Greek notation",
-    "text": "Greek notation"
+    "text": "Greek notation\n. . ."
   },
   {
     "objectID": "slides/01_notation.html#greek-vs.-latin",
     "href": "slides/01_notation.html#greek-vs.-latin",
     "title": "Notations, Sets, Functions",
     "section": "Greek vs. Latin",
-    "text": "Greek vs. Latin\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
+    "text": "Greek vs. Latin\n\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
   },
   {
     "objectID": "slides/01_notation.html#another-way-to-think-about-it",
     "href": "slides/01_notation.html#another-way-to-think-about-it",
     "title": "Notations, Sets, Functions",
     "section": "Another way to think about it",
-    "text": "Another way to think about it\nVariables are denoted by Latin letters like \\(x, y, z\\)\n\nConstants are denoted by Latin letters \\(a, b, c\\)\n\n\n\nVariables and constants appear in a spreadsheet\n\n \n\n\nParameters are denoted by Greek letters \\(\\alpha, \\beta, \\gamma\\)\n\nParameters are theoretical quantities\nMay map to constants or variables (but need not to)"
+    "text": "Another way to think about it\nVariables are denoted by Latin letters like \\(x, y, z\\)\n. . .\nConstants are denoted by Latin letters \\(a, b, c\\)\n. . .\n\nVariables and constants appear in a spreadsheet\n\n \n. . .\nParameters are denoted by Greek letters \\(\\alpha, \\beta, \\gamma\\)\n\n\nParameters are theoretical quantities\nMay map to constants or variables (but need not to)"
   },
   {
     "objectID": "slides/01_notation.html#arithmetic-operations",
@@ -1757,21 +1757,21 @@
     "href": "slides/01_notation.html#with-many-elements",
     "title": "Notations, Sets, Functions",
     "section": "With many elements",
-    "text": "With many elements\n\nSummation\n\\[\n\\sum_i^n x_i = x_1 + x_2 + x_3 + \\ldots + x_n\n\\]\n\n\nProduct\n\\[\n\\prod_i^n x_i = x_1 \\cdot x_2 \\cdot x_3 \\cdot \\ldots \\cdot x_n\n\\]"
+    "text": "With many elements\n. . .\nSummation\n\\[\n\\sum_i^n x_i = x_1 + x_2 + x_3 + \\ldots + x_n\n\\]\n. . .\nProduct\n\\[\n\\prod_i^n x_i = x_1 \\cdot x_2 \\cdot x_3 \\cdot \\ldots \\cdot x_n\n\\]"
   },
   {
     "objectID": "slides/01_notation.html#order-of-operations",
     "href": "slides/01_notation.html#order-of-operations",
     "title": "Notations, Sets, Functions",
     "section": "Order of operations",
-    "text": "Order of operations\nParentheses\nExponents\nMultiplication\nDivision\nAddition\nSubtraction\n\nThis sounds trivial but it’s very important!"
+    "text": "Order of operations\nParentheses\nExponents\nMultiplication\nDivision\nAddition\nSubtraction\n. . .\nThis sounds trivial but it’s very important!"
   },
   {
     "objectID": "slides/01_notation.html#order-of-operations-1",
     "href": "slides/01_notation.html#order-of-operations-1",
     "title": "Notations, Sets, Functions",
     "section": "Order of operations",
-    "text": "Order of operations\nPEMDAS\n\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n\n\n\\[\n= -93\n\\]"
+    "text": "Order of operations\nPEMDAS\n. . .\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n. . .\n\\[\n= -93\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#what-have-we-learned-so-far",
@@ -2122,5 +2122,41 @@
     "title": "Calculus I",
     "section": "Another one",
     "text": "Another one\nIdentify the global extrema of the function \\(\\displaystyle \\frac{x^3}{3} - \\frac{3}{2}x^2 -10x\\) in the interval \\([-6, 6]\\)"
+  },
+  {
+    "objectID": "r/01_intro.html#resources",
+    "href": "r/01_intro.html#resources",
+    "title": "Introduction to Computational Social Science and R",
+    "section": "Resources",
+    "text": "Resources\n\nPosit, RStudio User Guides, https://docs.posit.co/ide/user/ide/guide/ui/ui-panes.html\nUT Austin, Department of Government, Methods Camp, https://methodscamp.github.io/\nHarvard University Department of Government, Math Prefresher, https://iqss.github.io/prefresher/",
+    "crumbs": [
+      "Programming",
+      "1. Getting started"
+    ]
+  },
+  {
+    "objectID": "r/01_intro.html#references",
+    "href": "r/01_intro.html#references",
+    "title": "Introduction to Computational Social Science and R",
+    "section": "References",
+    "text": "References\n\nHigher School of Economics, Data Science Minor, https://electives.hse.ru/minor_data_spb/\nTransparency International, Corruption Perception Index, https://www.transparency.org/en/cpi/",
+    "crumbs": [
+      "Programming",
+      "1. Getting started"
+    ]
+  },
+  {
+    "objectID": "slides/00_intro.html",
+    "href": "slides/00_intro.html",
+    "title": "Social Science\nMath Camp",
+    "section": "",
+    "text": "Who are we?\nWhat is math camp?\nWho are you?\nWhat are we going to cover?\nGetting in the mindset"
+  },
+  {
+    "objectID": "slides/01_notation.html",
+    "href": "slides/01_notation.html",
+    "title": "Notations, Sets, Functions",
+    "section": "",
+    "text": "Set up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
   }
 ]

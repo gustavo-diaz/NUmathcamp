@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Artur Baranov">
-<meta name="dcterms.date" content="2024-09-16">
+<meta name="dcterms.date" content="2025-09-03">
 
 <title>Introduction to Computational Social Science and R – Math Camp</title>
 <style>
@@ -6671,6 +6671,12 @@ var createPalette = {
  <span class="menu-text">4. Sampling and simulation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r/05_markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Markdown</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -6701,7 +6707,8 @@ var createPalette = {
   <li><a href="#loading-data-and-exercises" id="toc-loading-data-and-exercises" class="nav-link" data-scroll-target="#loading-data-and-exercises">Loading data and Exercises</a></li>
   <li><a href="#prepare-for-the-tomorrows-class" id="toc-prepare-for-the-tomorrows-class" class="nav-link" data-scroll-target="#prepare-for-the-tomorrows-class">Prepare for the tomorrow’s class</a></li>
   <li><a href="#check-list" id="toc-check-list" class="nav-link" data-scroll-target="#check-list">Check List</a></li>
-  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -6728,7 +6735,7 @@ var createPalette = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 16, 2024</p>
+      <p class="date">September 3, 2025</p>
     </div>
   </div>
   
@@ -6996,7 +7003,7 @@ Tip
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">20</span>, <span class="dv">21</span>, <span class="dv">19</span>, <span class="dv">24</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">22</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>You can access the data using indexation. Let’s say you entered the data into your object <code>age</code> as you were receiving the results. You can access the age of your second respondent by indicating <code>[i]</code> to an object.</p>
+<p>You can access the data using indexing. Let’s say you entered the data into your object <code>age</code> as you were receiving the results. You can access the age of your second respondent by indicating <code>[i]</code> to an object.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>age[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -7202,7 +7209,7 @@ Tip
 </div>
 </div>
 </div>
-<p>You can easily combine previously used functions. For example, indexation provides access to any observation.</p>
+<p>You can easily combine previously used functions. For example, indexing provides access to any observation.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>respondents<span class="sc">$</span>major[<span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -7279,8 +7286,8 @@ Exercise
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-2166bc628f6f76b44b42" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-2166bc628f6f76b44b42">{"x":{"diagram":"\ngraph LR\n    D[Data] --> C[Categorical]\n    D --> N[Numerical]\n    C --> no[Nominal]\n    C --> Or[Ordinal]\n    N --> di[Discrete]\n    N --> co[Continuous]\n    no --> f[Factor]\n    no --> c[Character]\n    Or --> f[Factor]\n    Or --> c[Character]\n    di --> i[Integer]\n    co --> n[Numeric]\n"},"evals":[],"jsHooks":[]}</script>
+<div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-323adeb9a10fe0c412ba" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-323adeb9a10fe0c412ba">{"x":{"diagram":"\ngraph LR\n    D[Data] --> C[Categorical]\n    D --> N[Numerical]\n    C --> no[Nominal]\n    C --> Or[Ordinal]\n    N --> di[Discrete]\n    N --> co[Continuous]\n    no --> f[Factor]\n    no --> c[Character]\n    Or --> f[Factor]\n    Or --> c[Character]\n    di --> i[Integer]\n    co --> n[Numeric]\n"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>For each object, vector, or variable, you can check its class</p>
@@ -7323,7 +7330,7 @@ Exercise
 <li><p><code>dta</code> is Stata file, you can use it in R too</p></li>
 <li><p><code>rds</code> is R file. Most comfortable to work with in R.</p></li>
 </ul>
-<p>Let’s try the most used one, namely <code>csv</code>. Download Corruption Perception Index dataset from transparency international using this <a href="https://artur-baranov.github.io/data/cpi.csv">URL</a>.</p>
+<p>Let’s try the most used one, namely <code>csv</code>. Download Corruption Perception Index dataset from transparency international using this <a href="https://artur-baranov.github.io/data/cpi.csv">URL</a> (and the alternative <a href="https://github.com/artur-baranov/artur-baranov.github.io/blob/main/docs/data/cpi.csv">URL</a> if the first one does not work).</p>
 <p>You need to put this dataset to your current working directory, which is</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -7374,21 +7381,28 @@ Exercise
 </section>
 <section id="check-list" class="level2">
 <h2 class="anchored" data-anchor-id="check-list">Check List</h2>
-<p><input type="checkbox"> I know what panes in RStudio used for</p>
-<p><input type="checkbox"> I know what objects, vectors and dataframes are, and I know how to create them</p>
-<p><input type="checkbox"> I know what variables and observations are</p>
-<p><input type="checkbox"> I know what descriptive statistics is and I can easily calculate average, median, etc.</p>
-<p><input type="checkbox"> I know how to create a variable and how to change its class</p>
-<p><input type="checkbox"> I know how to load data to R and how to install new libraries</p>
+<ul class="task-list">
+<li><p><label><input type="checkbox">I know what panes in RStudio used for</label></p></li>
+<li><p><label><input type="checkbox">I know what objects, vectors and dataframes are, and I know how to create them</label></p></li>
+<li><p><label><input type="checkbox">I know what variables and observations are</label></p></li>
+<li><p><label><input type="checkbox">I know what descriptive statistics is and I can easily calculate average, median, etc.</label></p></li>
+<li><p><label><input type="checkbox">I know how to create a variable and how to change its class</label></p></li>
+<li><p><label><input type="checkbox">I know how to load data to R and how to install new libraries</label></p></li>
+</ul>
 </section>
-<section id="sources" class="level2">
-<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
-<li><p>Higher School of Economics, Data Science Minor, https://electives.hse.ru/minor_data_spb/</p></li>
 <li><p>Posit, RStudio User Guides, https://docs.posit.co/ide/user/ide/guide/ui/ui-panes.html</p></li>
-<li><p>Transparency International, Corruption Perception Index, https://www.transparency.org/en/cpi/</p></li>
 <li><p>UT Austin, Department of Government, Methods Camp, https://methodscamp.github.io/</p></li>
 <li><p>Harvard University Department of Government, Math Prefresher, https://iqss.github.io/prefresher/</p></li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><p>Higher School of Economics, Data Science Minor, https://electives.hse.ru/minor_data_spb/</p></li>
+<li><p>Transparency International, Corruption Perception Index, https://www.transparency.org/en/cpi/</p></li>
 </ul>
 
 
