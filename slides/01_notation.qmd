@@ -303,7 +303,7 @@ $$
 
 . . .
 
-This sounds trivial but it's very important!
+This sounds trivial but it's very important when coding!
 
 ## Order of operations
 
@@ -417,16 +417,9 @@ Because "$y$ is a function of $x$" $\Rightarrow$ $y = f(x)$
 
 ![](img/bijective.png){fig-align="center"}
 
-
-
-
-## Practice
-
-Classify each of the following
-
 . . .
 
-![](img/vertical_line_test.png){fig-align="center" width=90%}
+The important part is to remember *different mappings* exist
 
 
 
@@ -460,3 +453,159 @@ We can omit argument names and R will assume they come in order:
 f(5)
 ```
 
+. . .
+
+If the operation works with vectors, the function will too:
+
+```{r}
+f(1:10)
+```
+
+## Practice
+
+The formula for the area of a circle is 
+
+$$
+A = \pi r^2
+$$
+
+Write a custom function that calculates the area based on the radius
+
+. . .
+
+**Answer:**
+
+```{r}
+A = function(r){pi * r^2}
+
+A(3)
+```
+
+## Multiple arguments
+
+```{r}
+product = function(a, b){a*b}
+```
+
+. . .
+
+```{r}
+product(2, 3)
+```
+
+. . .
+
+```{r}
+product(a = 1:5, b = 2)
+```
+
+. . .
+
+Vector recycling:
+
+```{r}
+product(a = 1:5, b = 1:2)
+```
+
+. . .
+
+This may allow some operations that are not admissible in math
+
+## Non-numeric inputs
+
+```{r}
+some_people = function(name){paste("Some people call me", name)}
+```
+
+. . .
+
+```{r}
+call_me = c(
+  "the space cowboy",
+  "the gangster of love",
+  "Maurice"
+)
+```
+
+. . .
+
+```{r}
+some_people(call_me)
+```
+
+::: aside
+[The Joker -- Steve Miller Band (1973)](https://youtu.be/q3mfENm6VJc?si=P7rzxOy_mgVNRjgn)
+:::
+
+## Common functions
+
+::: incremental
+- **Linear:** $y=mx + b$
+- **Quadratic:** $y = ax^2 + bx + c$
+- **Cubic:** $y = ax^3 + bx^2 + cx + d$
+- **$n$th order polynomial:** $y = ax^n + bx^{n-1} +  \ldots + c$
+:::
+
+. . .
+
+These are still **linear combinations** because they are *linear* in *parameters*
+
+## Composite functions
+
+Functions that take other functions as inputs
+
+. . .
+
+Exterior function:
+
+$$
+f(x) = x^2
+$$
+
+. . .
+
+Interior function:
+
+$$
+g(x) = x-3
+$$
+
+. . .
+
+Composite:
+
+$$
+f(g(x)) = (x-3)^2
+$$
+
+## Composite functions in R
+
+```{r}
+f = function(x){x^2}
+g = function(x){x-3}
+```
+
+. . .
+
+```{r}
+f(g(5))
+```
+
+. . .
+
+We can write this in `tidyverse` form:
+
+```{r}
+5 %>% g() %>% f()
+```
+
+. . .
+
+Which recently got its own base R version:
+
+```{r}
+5 |> g() |> f()
+```
+. . .
+
+**Practice:** Do $g(f(5))$ by hand and then in R

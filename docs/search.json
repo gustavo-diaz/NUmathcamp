@@ -2199,7 +2199,7 @@
     "href": "slides/01_notation.html#types-of-functions-1",
     "title": "Notations, Sets, Functions",
     "section": "Types of functions",
-    "text": "Types of functions\n\nBijective: Both injective and surjective"
+    "text": "Types of functions\n\nBijective: Both injective and surjective\n\n\n\n\n\n\n\n\n\nThe important part is to remember different mappings exist"
   },
   {
     "objectID": "slides/01_notation.html#why",
@@ -2213,13 +2213,55 @@
     "href": "slides/01_notation.html#practice-1",
     "title": "Notations, Sets, Functions",
     "section": "Practice",
-    "text": "Practice\nClassify each of the following"
+    "text": "Practice\nThe formula for the area of a circle is\n\\[\nA = \\pi r^2\n\\]\nWrite a custom function that calculates the area based on the radius\n\nAnswer:\n\nA = function(r){pi * r^2}\n\nA(3)\n\n[1] 28.27433"
   },
   {
     "objectID": "slides/01_notation.html#functions-in-r",
     "href": "slides/01_notation.html#functions-in-r",
     "title": "Notations, Sets, Functions",
     "section": "Functions in R",
-    "text": "Functions in R\n\nfunction(arguments){operation}\n\n\n\nf = function(x){x * 2}\n\n\n\n\nf(x = 5)\n\n[1] 10\n\n\n\n\nWe can omit argument names and R will assume they come in order:\n\nf(5)\n\n[1] 10"
+    "text": "Functions in R\n\nfunction(arguments){operation}\n\n\n\nf = function(x){x * 2}\n\n\n\n\nf(x = 5)\n\n[1] 10\n\n\n\n\nWe can omit argument names and R will assume they come in order:\n\nf(5)\n\n[1] 10\n\n\n\n\nIf the operation works with vectors, the function will too:\n\nf(1:10)\n\n [1]  2  4  6  8 10 12 14 16 18 20"
+  },
+  {
+    "objectID": "slides/01_notation.html#multiple-arguments",
+    "href": "slides/01_notation.html#multiple-arguments",
+    "title": "Notations, Sets, Functions",
+    "section": "Multiple arguments",
+    "text": "Multiple arguments\n\nproduct = function(a, b){a*b}\n\n\n\nproduct(2, 3)\n\n[1] 6\n\n\n\n\n\nproduct(a = 1:5, b = 2)\n\n[1]  2  4  6  8 10\n\n\n\n\nVector recycling:\n\nproduct(a = 1:5, b = 1:2)\n\n[1] 1 4 3 8 5\n\n\n\n\nThis may allow some operations that are not admissible in math"
+  },
+  {
+    "objectID": "slides/01_notation.html#non-numeric-inputs",
+    "href": "slides/01_notation.html#non-numeric-inputs",
+    "title": "Notations, Sets, Functions",
+    "section": "Non-numeric inputs",
+    "text": "Non-numeric inputs\n\nsome_people = function(name){paste(\"Some people call me\", name)}\n\n\n\ncall_me = c(\n  \"the space cowboy\",\n  \"the gangster of love\",\n  \"Maurice\"\n)\n\n\n\n\nsome_people(call_me)\n\n[1] \"Some people call me the space cowboy\"    \n[2] \"Some people call me the gangster of love\"\n[3] \"Some people call me Maurice\"             \n\n\n\n\n\nThe Joker – Steve Miller Band (1973)"
+  },
+  {
+    "objectID": "slides/01_notation.html#common-types-of-functions",
+    "href": "slides/01_notation.html#common-types-of-functions",
+    "title": "Notations, Sets, Functions",
+    "section": "Common types of functions",
+    "text": "Common types of functions\n\nLinear: \\(y=mx + b\\)\nQuadratic: \\(y = ax^2 + bx + c\\)\nCubic: \\(y = ax^3 + bx^2 + cx + d\\)\nPolynomial: \\(y = ax^n + bx^{n-1} +  \\ldots + c\\)\n\n\nThese are still linear combinations because they are linear in parameters"
+  },
+  {
+    "objectID": "slides/01_notation.html#common-functions",
+    "href": "slides/01_notation.html#common-functions",
+    "title": "Notations, Sets, Functions",
+    "section": "Common functions",
+    "text": "Common functions\n\nLinear: \\(y=mx + b\\)\nQuadratic: \\(y = ax^2 + bx + c\\)\nCubic: \\(y = ax^3 + bx^2 + cx + d\\)\n\\(n\\)th order polynomial: \\(y = ax^n + bx^{n-1} +  \\ldots + c\\)\n\n\nThese are still linear combinations because they are linear in parameters"
+  },
+  {
+    "objectID": "slides/01_notation.html#composite-functions",
+    "href": "slides/01_notation.html#composite-functions",
+    "title": "Notations, Sets, Functions",
+    "section": "Composite functions",
+    "text": "Composite functions\nFunctions that take other functions as inputs\n\nExterior function:\n\\[\nf(x) = x^2\n\\]\n\n\nInterior function:\n\\[\ng(x) = x-3\n\\]\n\n\nComposite:\n\\[\nf(g(x)) = (x-3)^2\n\\]"
+  },
+  {
+    "objectID": "slides/01_notation.html#composite-functions-in-r",
+    "href": "slides/01_notation.html#composite-functions-in-r",
+    "title": "Notations, Sets, Functions",
+    "section": "Composite functions in R",
+    "text": "Composite functions in R\n\nf = function(x){x^2}\ng = function(x){x-3}\n\n\n\nf(g(5))\n\n[1] 4\n\n\n\n\nWe can write this in tidyverse form:\n\n5 %&gt;% g() %&gt;% f()\n\n[1] 4\n\n\n\n\nWhich recently got its own base R version:\n\n5 |&gt; g() |&gt; f()\n\n[1] 4\n\n\n\n\nPractice: Do \\(g(f(5))\\) by hand and then in R"
   }
 ]
