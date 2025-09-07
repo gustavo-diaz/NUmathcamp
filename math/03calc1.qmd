@@ -224,3 +224,4 @@ There's also something called the **Second Derivative Test** that helps us figur
 ## Conclusion
 
 Today, we've learned about one branch of calculus, **differentiation.** Tomorrow we will focus on another branch, **integration,** which was actually developed first. Differentiation is all about finding the instantaneous rate of change of a function, which turns out to be extremely useful. Integration will focus on something conceptually different--the accumulation of change by a function over an interval. The connection between differentiation and integration may not be obvious yet (and if you already know it, try not to spoil it for everyone else!). By the end of tomorrow, you should have a good grasp of what differentiation and integration are, why you might want to do them, and how they're related.
+
