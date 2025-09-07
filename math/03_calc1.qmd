@@ -161,6 +161,8 @@ Finding the derivative using the limit definition every time would be very cumbe
 
 * For any $a \in \mathbb{R}$, if $f(x) = a*g(x),$ then $f'(x) = a*g'(x).$
 
+* If $f(x) = a$ for some constant $a \in \mathbb{R}$, $f'(x) = 0.$
+
 * **Power Rule**: If $f(x) = x^n,$ where $n \in \mathbb{R},$ then $f'(x) = nx^{n - 1}.$
 
 * **Product Rule**: If $h(x) = f(h)*g(x),$ then $h'(x) = f'(x)*g(x) + f(x)*g'(x).$
@@ -173,7 +175,37 @@ Finding the derivative using the limit definition every time would be very cumbe
 
 * If $f(x) = ln(x),$ then $f'(x) = \frac{1}{x}.$
 
-It's possible to find the derivative of most functions you come across using one or more of these rules and a little creativity. If you'd like to practice applying these rules, it's fairly easy to find practice problems online or in textbooks. If you're feeling a bit more adventurous, you could try to prove a few of these rules using the limit definition of the derivative--all but the last three are pretty easy to prove.
+It's possible to find the derivative of most functions you come across using one or more of these rules and a little creativity. If you'd like to practice applying these rules, we'll have a chance later on. If you're feeling a bit more adventurous, you could try to prove a few of these rules using the limit definition of the derivative--all but the last three are pretty easy to prove.
+
+Let's use these rules to find the derivative of our function from earlier, $f(x) = 0.01*(x - 5)^3 + 1.5.$
+
+First, we can separate the two pieces using the first rule:
+
+$$f'(x) = \frac{d}{dx}[0.01*(x - 5)^3] + \frac{d}{dx}[1.5].$$
+The second part, $\frac{d}{dx}[1.5]$, is zero because it is a constant. We can also factor out the $0.01$ because it's a constant multiplied by a function, so we have
+
+$$ f'(x) = 0.01*\frac{d}{dx}[(x-5)^3].$$
+Now let's use the chain rule. We can write $(x - 5)^3$ as $f(g(x))$ for $f(x) = x^3$ and $g(x) = x - 5.$ $g'(x)$ is just $1$ using the power rule, while $f'(x) = 3x^2.$ When we put these together, we get
+
+$$ f'(x) = 0.01*f'(g(x))*g'(x) = 0.01*3(x-5)^2*1 = 0.03(x-5)^2.$$
+
+At $x = 6,$ we have $f'(6) = 0.03*(6 - 5)^2 = 0.03*1^2 = 0.03,$ which is the answer we got from the limit definition of the derivative and the numerical approximation.
+
+## Practice
+
+1. Find the derivative of the following functions:
+
+a. $f(x) = 5x^2 - 3x + 1.$
+
+b. $g(x) = 2ln(x - 3).$
+
+c. $h(x) = x^2*e^{-x}$.
+
+d. $f(x) = \frac{1}{x^7}.$
+
+e. $g(x) = \frac{2-x}{x+3}.$
+
+2. Derive one or more of the derivative rules using the limit definition and/or the other rules.
 
 ## Differentiability
 
