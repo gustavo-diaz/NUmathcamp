@@ -4,6 +4,8 @@ author: "Aven Peters"
 format: 
   html:
     embed-resources: true
+execute:
+  freeze: false
 ---
 
 ## What is calculus all about?
