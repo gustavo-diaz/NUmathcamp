@@ -1,6 +1,9 @@
 ---
 title: "Calculus I"
 author: "Aven Peters"
+format: 
+  html:
+    embed-resources: true
 ---
 
 ## What is calculus all about?
