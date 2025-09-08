@@ -1,7 +1,7 @@
 ---
 title: "Sampling and simulation"
 author: "[Artur Baranov](https://artur-baranov.github.io)"
-date: 2024-09-20
+date: 2024-09-09
 format: 
   html:
     embed-resources: true
@@ -10,9 +10,9 @@ toc: true
 
 ## Before we start
 
--   What is `%>%`?
-
 -   A clear environment = a clear mind!
+
+-   What is `%>%`?
 
 -   How to create a chunk?
 
@@ -23,6 +23,85 @@ toc: true
 <a href="https://artur-baranov.github.io/data/04_sampling.qmd" class="btn btn-primary" role="button" download="04_sampling.qmd" style="width:200px" target="_blank">Download script</a>
 </center>
 
+## Exploratory Analysis
+
+### Data Documentation
+
+First of all, let's load the library for data wrangling and visualizations: `tidyverse`.
+
+```{r}
+#| message: false
+
+library(tidyverse)
+```
+
+The same way we did it previously, let's load the embedded into R data. 
+
+```{r}
+cars_information <- mtcars
+```
+
+To remind ourselves what the data is about, let's do a couple of things. First, explore the variable names.
+
+```{r}
+names(cars_information)
+```
+
+Now, let's explore the dimensions (i.e., number of observations and variables).
+
+```{r}
+dim(cars_information)
+```
+
+To tackle it a bit more, explore the first couple of rows using `head()` function.
+
+```{r}
+head(cars_information)
+```
+
+And now, check the documentation. 
+
+```{r}
+#| eval: false
+
+?mtcars
+```
+
+### Data Exploration
+
+Now, when we know the variables in the dataset, we can visualize it to get the sense of the trends and patterns in the data!
+
+Take a moment to get through the function. Make sure you spot the syntax differences!
+
+-   First of all, adding new elements to the graph is done by adding (`+`) new layers
+
+-   Change the `bins` argument to **5** in `geom_histogram()`
+
+-   Add `theme_bw()` as a new layer. Don't forget about `+`
+
+```{r}
+ggplot(data = cars_information) +
+  geom_histogram(aes(x = mpg), bins = 15) +
+  labs(x = "Miles per Gallon",
+       y = "Count",
+       title = "Miles per Gallon Distribution",
+       subtitle = "In the mtcars dataset")
+```
+
+There a lot of different graphs! For example, we can plot one variables against another. Try it out!
+
+-   Add `facet_grid(~ cyl)` as a new layer
+
+-   Compare the syntax in the previous graph, spot the difference
+
+-   Add `color = cyl` in aesthetics (`aes()`) function! Does it look right?
+
+```{r}
+ggplot(cars_information, aes(x = mpg, y = hp)) +
+  geom_point() 
+```
+
+There are different `geoms` available! Take a look on it in the [CheatSheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf). Throughout today we'll be using `ggplot()` a lot!
 
 ## Random sampling from distributions
 
@@ -46,7 +125,7 @@ If you'd like to control the random generation process, you can use `set.seed()`
 set.seed(123)
 runif(10)
 
-set.seed(123)
+set.seed(12345)
 runif(10)
 ```
 
@@ -61,12 +140,12 @@ Now, visualize what we got. It looks like a rectangle! In other words, every num
 
 ```{r}
 #| message: false
-library(tidyverse)
 
 ggplot(data.frame(uniform_data), aes(x = uniform_data)) +
-  geom_histogram(binwidth = 0.25, boundary = 0, closed = "right") +
+  geom_histogram(binwidth = 0.25, boundary = 0) +
   scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-5, 5))
 ```
+
 Let's consider a less theoretical example. You'd like to assign a student for next week's presentation. 
 
 ```{r}
@@ -110,6 +189,7 @@ normal_plot <- ggplot(data.frame(normal_data), aes(x = normal_data)) +
   geom_histogram(color = "white") 
 normal_plot
 ```
+
 Now, let's calculate and plot the average of our data. It's centered at 0! This is the first **parameter** of the normal distribution.
 
 ```{r}
@@ -136,6 +216,7 @@ normal_plot +
   geom_vline(xintercept = mean(normal_data) + 2*sd(normal_data), color = "blue") +
   geom_vline(xintercept = mean(normal_data) - 2*sd(normal_data), color = "blue") 
 ```
+
 #### Probability Density Function
 
 Mathematicians - as usual - came up with formula to represent this kind of distribution abstractly. I don't want to scare you, so we won't consider the formula here. However, this formula allows us to draw the graph below. This is a generalized version of the normal distribution, it's called **Probability Density Function (PDF)**. 
@@ -194,12 +275,13 @@ Slightly harder is to calculate more precise values. For example, how many obser
 ```{r}
 pnorm(1, mean = 0, sd = 1)
 ```
+
 On the graph, it would look like this:
 
 ```{r}
 ggplot(NULL, aes(c(-5,5))) +
   geom_area(stat = "function", fun = dnorm,  xlim = c(-1.35, 5)) +
-  geom_area(stat = "function", fun = dnorm, fill="sky blue", xlim = c(-5, 1)) +
+  geom_area(stat = "function", fun = dnorm, fill = "sky blue", xlim = c(-5, 1)) +
   labs(title = "Normal Distribution (mean = 0, sd = 1)",
        x = "",
        y = "Probability") +
@@ -255,7 +337,7 @@ Each distribution can do more than generate random numbers (the prefix r). We ca
 Let's work with the real data a bit. Download results of World Happiness Report 2024 from the following [URL](https://github.com/gustavo-diaz/NUmathcamp/blob/main/r/data/happiness_report_2024.csv). Load it to R!
 
 ```{r}
-h_report <- read.csv("data/happiness_report_2024.csv")
+h_report <- read.csv("happiness_report_2024.csv")
 ```
 
 Visualize the `happiness_score` variable.
@@ -308,6 +390,7 @@ dnorm(x = 6,
       mean = mean(h_report_sample$happiness_score),
       sd = sd(h_report_sample$happiness_score))
 ```
+
 Now, let's calculate the real data. To make things easier, we add a count of countries in each bin.
 
 ```{r}
@@ -342,7 +425,7 @@ Using `ggplot()`, draw a histogram of the variable `depth`. Diamond depth descri
 ```{r}
 #| eval: false
 
-ggplot(diamonds, aes(x=...))+
+ggplot(diamonds, aes(x=...)) +
   geom_histogram() 
 ```
 
@@ -354,7 +437,7 @@ mean(diamonds$depth)
 sd(diamonds$depth)
 ```
 
-Draw a probability density function (`dnorm()`). 
+Draw a probability density function (`dnorm()`) for the `depth` variable. Don't forget normal PDF has two parameters: the average and the standard deviation.
 
 ```{r}
 #| eval: false
@@ -384,7 +467,7 @@ In your free time, feel free to experiment how few observations you need to get 
 :::
 
 
-### Bootstrapping
+### Bootstrapping*
 
 To get a better measure of $\hat{\mu}$ we can apply bootstrapping. To put it simple, we are going to repeat sampling process several times, and each time we draw random sample from the dataset we record its average. First, we create a dataset which we'll be using to store those averages.
 
@@ -481,7 +564,7 @@ Repeat the comparison, but change the number of iterations to 100. Did the resul
 :::
 
 
-## Automation and Custom functions
+## Automation and Custom functions*
 
 It is a frequent issue that when you work with data you would want to perform same several actions with a given dataset. For example, you would want to calculate average for specific set of variables, and then store it in a different dataframe to describe those selected. In this case, custom functions are incredibly helpful.
 
@@ -695,15 +778,19 @@ sample_statistics
 
 -   Your peers
 
+-   *(ChatGPT)*
+
 -   The team of this math camp
 
 ## Check List
 
-<input type="checkbox"/> Standard deviation, PDF and CDF do not scare me
+- [] I know how to visualize datasets with `ggplot()`! 
 
-<input type="checkbox"/> I know what sampling is, and on top of this I can use bootstrapping
+- [] Standard deviation, PDF and CDF do not scare me
 
-<input type="checkbox"/> I can understand custom functions and loops
+- [] I know what sampling is, and on top of this I can use bootstrapping
+
+- [] I can understand custom functions and loops
 
 
 ## What did we learn over this week in the programming part?
