@@ -67,7 +67,7 @@ You can use the link above to see some of the formatting and syntax options for 
 
 ## Posters
 
-Another common form of academic writing are conference posters. Unlike papers and presentations, RStudio does not have a built-in functionality for posters.
+Another common form of academic writing are conference posters. Unlike papers and presentations, RStudio does not have built-in functionality for posters.
 
 If you wish to create a poster in RStudio, you can use the [`posterdown`](https://github.com/brentthorne/posterdown) package.
 

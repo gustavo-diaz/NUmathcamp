@@ -1637,7 +1637,7 @@
     "href": "r/05_markdown.html#posters",
     "title": "Markdown",
     "section": "Posters",
-    "text": "Posters\nAnother common form of academic writing are conference posters. Unlike papers and presentations, RStudio does not have a built-in functionality for posters.\nIf you wish to create a poster in RStudio, you can use the posterdown package.",
+    "text": "Posters\nAnother common form of academic writing are conference posters. Unlike papers and presentations, RStudio does not have built-in functionality for posters.\nIf you wish to create a poster in RStudio, you can use the posterdown package.",
     "crumbs": [
       "Programming",
       "5. Markdown"
