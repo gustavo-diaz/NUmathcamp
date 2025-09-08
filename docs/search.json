@@ -1144,8 +1144,8 @@
     "objectID": "math/03_calc1.html#derivatives",
     "href": "math/03_calc1.html#derivatives",
     "title": "Calculus I",
-    "section": "2 Derivatives",
-    "text": "2 Derivatives\nDerivatives are about (instantaneous) rate of change.\nA helpful way to think about a derivatives is as a slope. Let’s consider a linear function of the form \\(y = 2 x\\):\n\nlibrary(tidyverse) # could also just do library(ggplot2)\nggplot() +\n  stat_function(fun = function(x){2 * x}, \n                xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nWe can imagine any political variables in the x- and y-axes. What is the rate of change? In other words, what is the derivative? Remember that we can calculate the slope with\n\\[\nm = \\frac{f(x_2) - f(x_1)}{x_2-x_1}\n\\]\nwhich you can remember with the mnemonic “rise over run.”\nNow consider another slightly more complicated function, a quadratic one, \\(y = x^2\\):\n\nggplot() +\n  stat_function(fun = function(x){x ^ 2}, \n                xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nWhat happens when we apply our slope function?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nHere the derivative depends on the value of \\(x\\). It is actually \\(2x\\).\n\n\n\nDifferential calculus is about finding these derivatives in a more straightforward manner. We can generalize our slope formula as\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]\nThe point is that when \\(\\Delta x\\) is arbitrarily small, we’ll get our rate of change. Formalizing this:\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = \\frac{dy}{dx} = f'(x)\n\\]\nA few points on notation:\n\\(\\frac{d}{dx} f(x)\\) is read “The derivative of \\(f\\) of \\(x\\) with respect to \\(x\\).” One would be tempted to read \\(\\frac{d}{dx}\\) as a fraction, but it is just here for notation.\nThe variable with respect to which we’re differentiating is the one that appears in the bottom (in the case above, this is \\(x\\)).\n\\(f'(x)\\) (\\(f\\) prime \\(x\\)) is the derivative of \\(f(x)\\). This is a more compact form to refer to derivatives when you have defined \\(f(x)\\) elsewhere.\n\n2.1 Rules of differentiation\nHow to compute derivatives? Sometimes you can try a bunch of numbers and get at the answer. Sometimes you can use the limit-based formula above, if you know a few properties of limits. But in most cases you will either use software (more on this later) or the rules of differentiation, which we will cover now.\nConstant rule: \\((c)' = 0\\).\nThere is no change in a constant:\n\nggplot() +\n  stat_function(fun = function(x){2}, xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\).\n\nggplot() +\n  stat_function(fun = function(x){2 * x}, xlim = c(-10, 10), aes(color = \"y = 2x\")) +\n  stat_function(fun = function(x){4 * x}, xlim = c(-10, 10), aes(color = \"y = 4x\")) +\n  scale_color_manual(\"Function\", values = c(\"red\", \"blue\"))\n\n\n\n\n\n\n\n\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\nThe two rules above give us that the derivative is a linear operator.\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\nRemember when we wanted to calculate the derivative of \\(y=x^2\\) above? We can use the power rule, with \\(n=2\\)\n\\[\nnx^{(n-1)} = 2x^{(2-1)}=2x\n\\]\n\\(\\;nx^{(n-1)} = 2x^{(2-1)}=2x\\).\nLet’s try out \\(\\frac{d}{dx}4x^3\\) and \\(\\frac{d}{dx}(x^2 + 2x)\\) on the board.\nHere are a few functions to practice the differentiation rules:\n\n\n\n\n\n\nExercise\n\n\n\nUse the differentiation rules we have covered so far to calculate the derivatives of \\(y\\) with respect to \\(x\\) of the following functions:\n\n\\(y= 4x^3\\)\n\\(y= x^2 + 2x\\)\n\\(y = 2x^2 + 10\\)\n\\(y = 5x^4 - \\frac{2}{3}x^3\\)\n\\(y = 9 \\sqrt x\\)\n\\(y = \\frac{4}{x^2}\\)\n\\(y = ax^3 + b\\), where \\(a\\) and \\(b\\) are constants.\n\\(y = \\frac{2w}{5}\\)\n\n\n\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n(c^x)' &= c^x \\cdot ln(c), & \\forall x&gt;0 \\\\\n\\\\\n(log_a(x))' &= \\frac{1}{x \\cdot ln(a)}, & \\forall x&gt;0  \\\\\n\\end{aligned}\n\\]\nEuler’s number (\\(e\\)) has interesting properties when it comes to derivatives.\n\\[\n\\begin{aligned}\n(e^x)' &= e^x \\\\\n\\\\\n(ln(x))' &= \\frac{1}{x}, & \\forall x&gt;0\n\\end{aligned}\n\\]\n\n\n\n\nNow we’ll get to a couple of more advanced (and powerful) rules.\n\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n2.2 Higher-order derivatives\nWe saw call \\(f'(x)\\) the first derivative, but we can also calculate higher-order derivatives. These are not common in social science data analysis, but they appear in game theory, complex systems, and agent-based modeling.\n\nFor example, the second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point \\(x\\) on the function’s domain. For example, when driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\nTo calculate higher-order derivatives, you just calculate the derivative using the usual differentiation rules, then calculate the derivative of the output, and so on for however many orders you have. In a college-level calculus course, these can get very crazy during your midterm. In practice, you will rarely lead anything beyond a second derivative.\nFor example, we can calculate the following second derivative:\n\\[f''(x) = \\frac{d^2(x^4)}{dx^2}\\]\nFirst, we take the first derivative \\[f'(x)=4x^3\\]\nThen we use that output to take the second derivative \\[f''(x)=f'(4x^3)=12x^2\\]\nWe can keep going… for example, the third derivative is \\[f'''(x) = f'(12x^2) = 24x\\]\n\n\n\n\n\n\n\n\n\n2.3 Partial derivatives\nSo far, we have worked with derivatives of functions with only one variable. What happens when we have more than one variable that is changing?\nSuppose we have a function \\(f\\) of two (or more) variables and we want to determine the rate of change relative to one of the variables. For a function \\(f(x,z)\\), we call this a partial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\nTo obtain a partial derivative, we treat all other variables as constants and take the derivative with respect to the variable of interest (here \\(x\\)). For example:\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\nYou can try to do the same for \\(\\displaystyle\\frac{\\partial_y}{\\partial_z}?\\) on your own\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\nTake the partial derivative with respect to \\(x\\) and with respect to \\(z\\) of the following functions. What would the notation for each look like?\n\n\\(y = 3xz - x\\)\n\\(x^3+z^3+x^4z^4\\)\n\\(e^{xz}\\)\n\n\n\n\n\n2.4 Differentiability of functions\nNot all functions are differentiable at every point of their domains!\nAn important concept here is whether functions are continuous at a point:\n\nInformally: A function is continuous at a point if its graph has no holes or breaks at that point\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\n\nWhen is a function differentiable at a point?\n\nIf a function is differentiable at a point, it is also continuous at that point.\nIf a function is continuous at a point, it is not necessarily differentiable at that point.\n\nImpossible to calculate derivative at sharp turns, cusps, or vertical tangents.\n\n\n\nggplot() +\n  stat_function(fun = function(x){abs(x) + 2}, xlim = c(-4, 4), \n                aes(color = \"y = |x| + 2\")) +\n  stat_function(fun = function(x){sqrt(abs(x)) + 1}, xlim = c(-4, 4), \n                aes(color = \"y = √(|x|) + 1\")) +\n  stat_function(fun = function(x){sign(x) * abs(x)^(1 / 3)}, xlim = c(-4, 4), \n                aes(color = \"y = x^(1/3)\")) +\n  scale_colour_manual(\"Function\", values = c(\"red\", \"blue\", \"black\")) +\n  labs(title = \"Examples of functions that are not differentiable at x=0\")\n\n\n\n\n\n\n\n\n\nInformally, functions need to be continuous and reasonably smooth to be differentiable.",
+    "section": "Derivatives",
+    "text": "Derivatives\nDerivatives are about (instantaneous) rate of change.\nA helpful way to think about a derivatives is as a slope. Let’s consider a linear function of the form \\(y = 2 x\\):\n\nlibrary(tidyverse) # could also just do library(ggplot2)\nggplot() +\n  stat_function(fun = function(x){2 * x}, \n                xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nWe can imagine any political variables in the x- and y-axes. What is the rate of change? In other words, what is the derivative? Remember that we can calculate the slope with\n\\[\nm = \\frac{f(x_2) - f(x_1)}{x_2-x_1}\n\\]\nwhich you can remember with the mnemonic “rise over run.”\nNow consider another slightly more complicated function, a quadratic one, \\(y = x^2\\):\n\nggplot() +\n  stat_function(fun = function(x){x ^ 2}, \n                xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nWhat happens when we apply our slope function?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nHere the derivative depends on the value of \\(x\\). It is actually \\(2x\\).\n\n\n\nDifferential calculus is about finding these derivatives in a more straightforward manner. We can generalize our slope formula as\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]\nThe point is that when \\(\\Delta x\\) is arbitrarily small, we’ll get our rate of change. Formalizing this:\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = \\frac{dy}{dx} = f'(x)\n\\]\nA few points on notation:\n\\(\\frac{d}{dx} f(x)\\) is read “The derivative of \\(f\\) of \\(x\\) with respect to \\(x\\).” One would be tempted to read \\(\\frac{d}{dx}\\) as a fraction, but it is just here for notation.\nThe variable with respect to which we’re differentiating is the one that appears in the bottom (in the case above, this is \\(x\\)).\n\\(f'(x)\\) (\\(f\\) prime \\(x\\)) is the derivative of \\(f(x)\\). This is a more compact form to refer to derivatives when you have defined \\(f(x)\\) elsewhere.\n\nRules of differentiation\nHow to compute derivatives? Sometimes you can try a bunch of numbers and get at the answer. Sometimes you can use the limit-based formula above, if you know a few properties of limits. But in most cases you will either use software (more on this later) or the rules of differentiation, which we will cover now.\nConstant rule: \\((c)' = 0\\).\nThere is no change in a constant:\n\nggplot() +\n  stat_function(fun = function(x){2}, xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\).\n\nggplot() +\n  stat_function(fun = function(x){2 * x}, xlim = c(-10, 10), aes(color = \"y = 2x\")) +\n  stat_function(fun = function(x){4 * x}, xlim = c(-10, 10), aes(color = \"y = 4x\")) +\n  scale_color_manual(\"Function\", values = c(\"red\", \"blue\"))\n\n\n\n\n\n\n\n\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\nThe two rules above give us that the derivative is a linear operator.\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\nRemember when we wanted to calculate the derivative of \\(y=x^2\\) above? We can use the power rule, with \\(n=2\\)\n\\[\nnx^{(n-1)} = 2x^{(2-1)}=2x\n\\]\n\\(\\;nx^{(n-1)} = 2x^{(2-1)}=2x\\).\nLet’s try out \\(\\frac{d}{dx}4x^3\\) and \\(\\frac{d}{dx}(x^2 + 2x)\\) on the board.\nHere are a few functions to practice the differentiation rules:\n\n\n\n\n\n\nExercise\n\n\n\nUse the differentiation rules we have covered so far to calculate the derivatives of \\(y\\) with respect to \\(x\\) of the following functions:\n\n\\(y= 4x^3\\)\n\\(y= x^2 + 2x\\)\n\\(y = 2x^2 + 10\\)\n\\(y = 5x^4 - \\frac{2}{3}x^3\\)\n\\(y = 9 \\sqrt x\\)\n\\(y = \\frac{4}{x^2}\\)\n\\(y = ax^3 + b\\), where \\(a\\) and \\(b\\) are constants.\n\\(y = \\frac{2w}{5}\\)\n\n\n\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n(c^x)' &= c^x \\cdot ln(c), & \\forall x&gt;0 \\\\\n\\\\\n(log_a(x))' &= \\frac{1}{x \\cdot ln(a)}, & \\forall x&gt;0  \\\\\n\\end{aligned}\n\\]\nEuler’s number (\\(e\\)) has interesting properties when it comes to derivatives.\n\\[\n\\begin{aligned}\n(e^x)' &= e^x \\\\\n\\\\\n(ln(x))' &= \\frac{1}{x}, & \\forall x&gt;0\n\\end{aligned}\n\\]\n\n\n\n\nNow we’ll get to a couple of more advanced (and powerful) rules.\n\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nHigher-order derivatives\nWe saw call \\(f'(x)\\) the first derivative, but we can also calculate higher-order derivatives. These are not common in social science data analysis, but they appear in game theory, complex systems, and agent-based modeling.\n\nFor example, the second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point \\(x\\) on the function’s domain. For example, when driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\nTo calculate higher-order derivatives, you just calculate the derivative using the usual differentiation rules, then calculate the derivative of the output, and so on for however many orders you have. In a college-level calculus course, these can get very crazy during your midterm. In practice, you will rarely lead anything beyond a second derivative.\nFor example, we can calculate the following second derivative:\n\\[f''(x) = \\frac{d^2(x^4)}{dx^2}\\]\nFirst, we take the first derivative \\[f'(x)=4x^3\\]\nThen we use that output to take the second derivative \\[f''(x)=f'(4x^3)=12x^2\\]\nWe can keep going… for example, the third derivative is \\[f'''(x) = f'(12x^2) = 24x\\]\n\n\n\n\n\n\n\n\n\nPartial derivatives\nSo far, we have worked with derivatives of functions with only one variable. What happens when we have more than one variable that is changing?\nSuppose we have a function \\(f\\) of two (or more) variables and we want to determine the rate of change relative to one of the variables. For a function \\(f(x,z)\\), we call this a partial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\nTo obtain a partial derivative, we treat all other variables as constants and take the derivative with respect to the variable of interest (here \\(x\\)). For example:\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\nYou can try to do the same for \\(\\displaystyle\\frac{\\partial_y}{\\partial_z}?\\) on your own\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\nTake the partial derivative with respect to \\(x\\) and with respect to \\(z\\) of the following functions. What would the notation for each look like?\n\n\\(y = 3xz - x\\)\n\\(x^3+z^3+x^4z^4\\)\n\\(e^{xz}\\)\n\n\n\n\n\nDifferentiability of functions\nNot all functions are differentiable at every point of their domains!\nAn important concept here is whether functions are continuous at a point:\n\nInformally: A function is continuous at a point if its graph has no holes or breaks at that point\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\n\nWhen is a function differentiable at a point?\n\nIf a function is differentiable at a point, it is also continuous at that point.\nIf a function is continuous at a point, it is not necessarily differentiable at that point.\n\nImpossible to calculate derivative at sharp turns, cusps, or vertical tangents.\n\n\n\nggplot() +\n  stat_function(fun = function(x){abs(x) + 2}, xlim = c(-4, 4), \n                aes(color = \"y = |x| + 2\")) +\n  stat_function(fun = function(x){sqrt(abs(x)) + 1}, xlim = c(-4, 4), \n                aes(color = \"y = √(|x|) + 1\")) +\n  stat_function(fun = function(x){sign(x) * abs(x)^(1 / 3)}, xlim = c(-4, 4), \n                aes(color = \"y = x^(1/3)\")) +\n  scale_colour_manual(\"Function\", values = c(\"red\", \"blue\", \"black\")) +\n  labs(title = \"Examples of functions that are not differentiable at x=0\")\n\n\n\n\n\n\n\n\n\nInformally, functions need to be continuous and reasonably smooth to be differentiable.",
     "crumbs": [
       "Math",
       "3. Calculus I"
@@ -1582,7 +1582,7 @@
     "href": "r/05_markdown.html",
     "title": "Markdown",
     "section": "",
-    "text": "You may have wondered why we have insisted so much on working with RStudio. Everything we have done so far, including the tidyverse stuff, can be done in base R or any other user interface that supports R.\nThe main reason to use RStudio is that it serves as a hub for the entire academic production enterprise. From data cleaning and analysis to the presentations of results in presentations and writing papers, the main advantage of RStudio is that you can do everything here.\nRecently, the RStudio company rebranded as Posit. With this change, they released Quarto as an open-source scientific and technical publishing system, expanding to incorporate Python and Julia to their workflow.\nFor our purposes, that means we can use Quarto through RStudio to write professional looking documents like papers, presentations, and posters.\nThe idea is that you work on your data analyses and writing on RStudio/Quarto using Markdown. Markdown is (confusingly) a markup language creating for formatting text using a plain text editor.\nUnlike writing documents in Microsoft Word or Google Docs, every aspect of document formatting is encoded as a default parameter, or defined by user. This facilitates reduces time wasted on pointing and clicking to get the format right. The downside is having to learn a specific syntax.\nWe will focus on the functionality to write PDF documents by connecting Markdown with LaTeX, which is another markup language popular in academic production. However, unlike LaTeX, Markdown focuses on readibility. Under the hood, an engine called pandoc converts Markdown to LaTeX, and then renders a pdf.\nThe figure below illustrates the process:\n\nWe will not discuss the Typst today since it is a markup language relatively new to the social sciences, but I suggest you keep an eye on it as it compiles documents considerably faster.\nWe will also focus exclusively on making PDF documents today, since it is the disciplinary norm. You can also create HTML documents with Quarto Markdown, which gives you more flexibility. For example, this website was made entirely in HTML from RStudio.",
+    "text": "You may have wondered why we have insisted so much on working with RStudio. Everything we have done so far, including the tidyverse stuff, can be done in base R or any other user interface that supports R.\nThe main reason to use RStudio is that it serves as a hub for the entire academic production enterprise. From data cleaning and analysis to the presentations of results in presentations and writing papers, the main advantage of RStudio is that you can do everything here.\nRecently, the RStudio company rebranded as Posit. With this change, they released Quarto as an open-source scientific and technical publishing system, expanding to incorporate Python and Julia to their workflow.\nFor our purposes, that means we can use Quarto through RStudio to write professional looking documents like papers, presentations, and posters.\nThe idea is that you work on your data analyses and writing on RStudio/Quarto using Markdown. Markdown is (confusingly) a markup language for creating and formatting documents using a plain text editor like the RStudio source pane.\nUnlike writing documents in Microsoft Word or Google Docs, every aspect of document formatting is encoded as a default parameter, or defined by user. This facilitates reduces time wasted on pointing and clicking to get the format right. The downside is having to learn a specific syntax.\nWe will focus on the functionality to write PDF documents by connecting Markdown with LaTeX, which is another popular markup language popular in academic writing. However, unlike LaTeX, Markdown focuses on readibility. Under the hood, an engine called pandoc converts Markdown to LaTeX, and then renders a pdf.\nThe figure below illustrates the process:\n\nWe will not discuss the Typst today since it is a markup language relatively new to the social sciences, but I suggest you keep an eye on it as it compiles documents considerably faster.\nWe will also focus exclusively on making PDF documents today, since it is the disciplinary norm. You can also create HTML documents with Quarto Markdown, which gives you more flexibility. For example, this website was made entirely in HTML from RStudio.",
     "crumbs": [
       "Programming",
       "5. Markdown"
@@ -1593,7 +1593,7 @@
     "href": "r/05_markdown.html#what-is-markdown",
     "title": "Markdown",
     "section": "",
-    "text": "You may have wondered why we have insisted so much on working with RStudio. Everything we have done so far, including the tidyverse stuff, can be done in base R or any other user interface that supports R.\nThe main reason to use RStudio is that it serves as a hub for the entire academic production enterprise. From data cleaning and analysis to the presentations of results in presentations and writing papers, the main advantage of RStudio is that you can do everything here.\nRecently, the RStudio company rebranded as Posit. With this change, they released Quarto as an open-source scientific and technical publishing system, expanding to incorporate Python and Julia to their workflow.\nFor our purposes, that means we can use Quarto through RStudio to write professional looking documents like papers, presentations, and posters.\nThe idea is that you work on your data analyses and writing on RStudio/Quarto using Markdown. Markdown is (confusingly) a markup language creating for formatting text using a plain text editor.\nUnlike writing documents in Microsoft Word or Google Docs, every aspect of document formatting is encoded as a default parameter, or defined by user. This facilitates reduces time wasted on pointing and clicking to get the format right. The downside is having to learn a specific syntax.\nWe will focus on the functionality to write PDF documents by connecting Markdown with LaTeX, which is another markup language popular in academic production. However, unlike LaTeX, Markdown focuses on readibility. Under the hood, an engine called pandoc converts Markdown to LaTeX, and then renders a pdf.\nThe figure below illustrates the process:\n\nWe will not discuss the Typst today since it is a markup language relatively new to the social sciences, but I suggest you keep an eye on it as it compiles documents considerably faster.\nWe will also focus exclusively on making PDF documents today, since it is the disciplinary norm. You can also create HTML documents with Quarto Markdown, which gives you more flexibility. For example, this website was made entirely in HTML from RStudio.",
+    "text": "You may have wondered why we have insisted so much on working with RStudio. Everything we have done so far, including the tidyverse stuff, can be done in base R or any other user interface that supports R.\nThe main reason to use RStudio is that it serves as a hub for the entire academic production enterprise. From data cleaning and analysis to the presentations of results in presentations and writing papers, the main advantage of RStudio is that you can do everything here.\nRecently, the RStudio company rebranded as Posit. With this change, they released Quarto as an open-source scientific and technical publishing system, expanding to incorporate Python and Julia to their workflow.\nFor our purposes, that means we can use Quarto through RStudio to write professional looking documents like papers, presentations, and posters.\nThe idea is that you work on your data analyses and writing on RStudio/Quarto using Markdown. Markdown is (confusingly) a markup language for creating and formatting documents using a plain text editor like the RStudio source pane.\nUnlike writing documents in Microsoft Word or Google Docs, every aspect of document formatting is encoded as a default parameter, or defined by user. This facilitates reduces time wasted on pointing and clicking to get the format right. The downside is having to learn a specific syntax.\nWe will focus on the functionality to write PDF documents by connecting Markdown with LaTeX, which is another popular markup language popular in academic writing. However, unlike LaTeX, Markdown focuses on readibility. Under the hood, an engine called pandoc converts Markdown to LaTeX, and then renders a pdf.\nThe figure below illustrates the process:\n\nWe will not discuss the Typst today since it is a markup language relatively new to the social sciences, but I suggest you keep an eye on it as it compiles documents considerably faster.\nWe will also focus exclusively on making PDF documents today, since it is the disciplinary norm. You can also create HTML documents with Quarto Markdown, which gives you more flexibility. For example, this website was made entirely in HTML from RStudio.",
     "crumbs": [
       "Programming",
       "5. Markdown"
@@ -1658,8 +1658,8 @@
     "objectID": "slides/01_notation.html#getting-ready",
     "href": "slides/01_notation.html#getting-ready",
     "title": "Notations, Sets, Functions",
-    "section": "Getting ready",
-    "text": "Getting ready\n\nSet up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
+    "section": "",
+    "text": "Set up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
   },
   {
     "objectID": "slides/01_notation.html#agenda",
@@ -1673,77 +1673,77 @@
     "href": "slides/01_notation.html#what-is-notation",
     "title": "Notations, Sets, Functions",
     "section": "What is notation?",
-    "text": "What is notation?\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
+    "text": "What is notation?\n\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
   },
   {
     "objectID": "slides/01_notation.html#set-notation",
     "href": "slides/01_notation.html#set-notation",
     "title": "Notations, Sets, Functions",
     "section": "Set Notation",
-    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\) \n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\pi, e\\}\\)\n\\(\\mathbb{R}^2\\): 2-dimensional space\n\\(\\mathbb{R}^3\\): 3-dimensional space"
+    "text": "Set Notation\nSet: A collection of elements\n. . .\nNumerical sets\n\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\) \n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\pi, e\\}\\)\n\\(\\mathbb{R}^2\\): 2-dimensional space\n\\(\\mathbb{R}^3\\): 3-dimensional space"
   },
   {
     "objectID": "slides/01_notation.html#measurement",
     "href": "slides/01_notation.html#measurement",
     "title": "Notations, Sets, Functions",
     "section": "Measurement",
-    "text": "Measurement\n\nSets can also have non-numerical elements\n\n\n\\[\n\\mathbb{A} = \\{\\text{Argentina}, \\text{Nigeria}, \\text{South Korea} \\}\n\\]\n\n\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
+    "text": "Measurement\n. . .\nSets can also have non-numerical elements\n. . .\n\\[\n\\mathbb{A} = \\{\\text{Argentina}, \\text{Nigeria}, \\text{South Korea} \\}\n\\]\n. . .\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-1",
     "href": "slides/01_notation.html#set-notation-1",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\n\nElements of a set\n\nCapital letters denote a set \\(A\\)\nLowercase denotes an arbitrary element of a set \\(a\\)"
+    "text": "Set notation\n. . .\nElements of a set\n\n\nCapital letters denote a set \\(A\\)\nLowercase denotes an arbitrary element of a set \\(a\\)"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-2",
     "href": "slides/01_notation.html#set-notation-2",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\nBracketing\n\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces(curly brackets)\n\n\n\nUses vary, but generally…\n\nBrackets are for continuous sets \\([0, 1]\\)\nParentheses are for exclusive sets \\((0,1)\\)\nCan mix and match like \\([0,1)\\)\nBraces are for discrete sets \\(\\{0,1\\}\\)"
+    "text": "Set notation\nBracketing\n. . .\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces(curly brackets)\n\n\n. . .\nUses vary, but generally…\n\n\nBrackets are for continuous sets \\([0, 1]\\)\nParentheses are for exclusive sets \\((0,1)\\)\nCan mix and match like \\([0,1)\\)\nBraces are for discrete sets \\(\\{0,1\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-3",
     "href": "slides/01_notation.html#set-notation-3",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\n\nOperations within sets\n\n\\(\\exists\\) “exists”; there is something true\n\\(\\forall\\) “for all”; for every element\n\\(\\in\\) “in” or “element of”\n| Such that (specify a condition)\n\\(\\notin\\) “not in”, excluding element(s)\n\\(\\equiv\\) equivalent"
+    "text": "Set notation\n. . .\nOperations within sets\n\n\n\\(\\exists\\) “exists”; there is something true\n\\(\\forall\\) “for all”; for every element\n\\(\\in\\) “in” or “element of”\n| Such that (specify a condition)\n\\(\\notin\\) “not in”, excluding element(s)\n\\(\\equiv\\) equivalent"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-4",
     "href": "slides/01_notation.html#set-notation-4",
     "title": "Notations, Sets, Functions",
     "section": "Set notation",
-    "text": "Set notation\nOperations between sets\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
+    "text": "Set notation\nOperations between sets\n\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
   },
   {
     "objectID": "slides/01_notation.html#practice",
     "href": "slides/01_notation.html#practice",
     "title": "Notations, Sets, Functions",
     "section": "Practice",
-    "text": "Practice\n\n\\(x \\in \\mathbb{Z}\\)\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\) \n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
+    "text": "Practice\n\n\n\\(x \\in \\mathbb{Z}\\)\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\) \n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#greek-notation",
     "href": "slides/01_notation.html#greek-notation",
     "title": "Notations, Sets, Functions",
     "section": "Greek notation",
-    "text": "Greek notation"
+    "text": "Greek notation\n. . ."
   },
   {
     "objectID": "slides/01_notation.html#greek-vs.-latin",
     "href": "slides/01_notation.html#greek-vs.-latin",
     "title": "Notations, Sets, Functions",
     "section": "Greek vs. Latin",
-    "text": "Greek vs. Latin\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
+    "text": "Greek vs. Latin\n\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
   },
   {
     "objectID": "slides/01_notation.html#another-way-to-think-about-it",
     "href": "slides/01_notation.html#another-way-to-think-about-it",
     "title": "Notations, Sets, Functions",
     "section": "Another way to think about it",
-    "text": "Another way to think about it\nVariables are denoted by Latin letters like \\(x, y, z\\)\n\nConstants are denoted by Latin letters \\(a, b, c\\)\n\n\n\nVariables and constants appear in a spreadsheet\n\n \n\n\nParameters are denoted by Greek letters \\(\\alpha, \\beta, \\gamma\\)\n\nParameters are theoretical quantities\nMay map to constants or variables (but need not to)"
+    "text": "Another way to think about it\nVariables are denoted by Latin letters like \\(x, y, z\\)\n. . .\nConstants are denoted by Latin letters \\(a, b, c\\)\n. . .\n\nVariables and constants appear in a spreadsheet\n\n \n. . .\nParameters are denoted by Greek letters \\(\\alpha, \\beta, \\gamma\\)\n\n\nParameters are theoretical quantities\nMay map to constants or variables (but need not to)"
   },
   {
     "objectID": "slides/01_notation.html#arithmetic-operations",
@@ -1757,21 +1757,21 @@
     "href": "slides/01_notation.html#with-many-elements",
     "title": "Notations, Sets, Functions",
     "section": "With many elements",
-    "text": "With many elements\n\nSummation\n\\[\n\\sum_i^n x_i = x_1 + x_2 + x_3 + \\ldots + x_n\n\\]\n\n\nProduct\n\\[\n\\prod_i^n x_i = x_1 \\cdot x_2 \\cdot x_3 \\cdot \\ldots \\cdot x_n\n\\]"
+    "text": "With many elements\n. . .\nSummation\n\\[\n\\sum_i^n x_i = x_1 + x_2 + x_3 + \\ldots + x_n\n\\]\n. . .\nProduct\n\\[\n\\prod_i^n x_i = x_1 \\cdot x_2 \\cdot x_3 \\cdot \\ldots \\cdot x_n\n\\]"
   },
   {
     "objectID": "slides/01_notation.html#order-of-operations",
     "href": "slides/01_notation.html#order-of-operations",
     "title": "Notations, Sets, Functions",
     "section": "Order of operations",
-    "text": "Order of operations\nParentheses\nExponents\nMultiplication\nDivision\nAddition\nSubtraction\n\nThis sounds trivial but it’s very important!"
+    "text": "Order of operations\nParentheses\nExponents\nMultiplication\nDivision\nAddition\nSubtraction\n. . .\nThis sounds trivial but it’s very important when coding!"
   },
   {
     "objectID": "slides/01_notation.html#order-of-operations-1",
     "href": "slides/01_notation.html#order-of-operations-1",
     "title": "Notations, Sets, Functions",
     "section": "Order of operations",
-    "text": "Order of operations\nPEMDAS\n\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n\n\n\\[\n= -93\n\\]"
+    "text": "Order of operations\nPEMDAS\n. . .\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n. . .\n\\[\n= -93\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#what-have-we-learned-so-far",
@@ -2164,14 +2164,14 @@
     "href": "slides/01_notation.html#what-is-a-function",
     "title": "Notations, Sets, Functions",
     "section": "What is a function?",
-    "text": "What is a function?\nInformally: Anything that takes an input and produces an output\n\nThree main parts:\n\nInput\nRelationship of interest (operations)\nOutput"
+    "text": "What is a function?\nInformally: Anything that takes an input and produces an output\n. . .\nThree main parts:\n\n\nInput\nRelationship of interest (operations)\nOutput"
   },
   {
     "objectID": "slides/01_notation.html#example",
     "href": "slides/01_notation.html#example",
     "title": "Notations, Sets, Functions",
     "section": "Example",
-    "text": "Example\n\\[\nf(x) = 3x + 4\n\\]\n\n\\(x\\) is the input (value or domain)\n\\(3x + 4\\) is the relationship\n\\(f(x)\\) is the output (range)\n\n\nCan also write\n\\[\ny = 3x + 4\n\\]\nBecause “\\(y\\) is a function of \\(x\\)”"
+    "text": "Example\n\\[\nf(x) = 3x + 4\n\\]\n\n\n\\(x\\) is the input (value or domain)\n\\(3x + 4\\) is the relationship\n\\(f(x)\\) is the output (range)\n\n\n. . .\nCan also write\n\\[\ny = 3x + 4\n\\]\nBecause “\\(y\\) is a function of \\(x\\)”"
   },
   {
     "objectID": "slides/01_notation.html#example-1",
@@ -2185,7 +2185,7 @@
     "href": "slides/01_notation.html#types-of-functions",
     "title": "Notations, Sets, Functions",
     "section": "Types of functions",
-    "text": "Types of functions\n\n\n\nInjective: Every value of domain maps to a different value in codomain\n\n\n\n\nSurjective: Every in value in codomain maps to a different value in domain"
+    "text": "Types of functions\n\n. . .\n\nInjective: Every value of domain maps to a different value in codomain\n\n. . .\n\nSurjective: Every in value in codomain maps to a different value in domain\n\n. . ."
   },
   {
     "objectID": "slides/01_notation.html#parts-of-a-function",
@@ -2199,7 +2199,7 @@
     "href": "slides/01_notation.html#types-of-functions-1",
     "title": "Notations, Sets, Functions",
     "section": "Types of functions",
-    "text": "Types of functions\n\nBijective: Both injective and surjective\n\n\n\n\n\n\n\n\n\nThe important part is to remember different mappings exist"
+    "text": "Types of functions\n\nBijective: Both injective and surjective\n\n. . .\n\n\n\n\n\n. . .\nThe important part is to remember different mappings exist"
   },
   {
     "objectID": "slides/01_notation.html#why",
@@ -2213,28 +2213,28 @@
     "href": "slides/01_notation.html#practice-1",
     "title": "Notations, Sets, Functions",
     "section": "Practice",
-    "text": "Practice\nThe formula for the area of a circle is\n\\[\nA = \\pi r^2\n\\]\nWrite a custom function that calculates the area based on the radius\n\nAnswer:\n\nA = function(r){pi * r^2}\n\nA(3)\n\n[1] 28.27433"
+    "text": "Practice\nThe formula for the area of a circle is\n\\[\nA = \\pi r^2\n\\]\nWrite a custom function that calculates the area based on the radius\n. . .\nAnswer:\n\nA = function(r){pi * r^2}\n\nA(3)\n\n[1] 28.27433"
   },
   {
     "objectID": "slides/01_notation.html#functions-in-r",
     "href": "slides/01_notation.html#functions-in-r",
     "title": "Notations, Sets, Functions",
     "section": "Functions in R",
-    "text": "Functions in R\n\nfunction(arguments){operation}\n\n\n\nf = function(x){x * 2}\n\n\n\n\nf(x = 5)\n\n[1] 10\n\n\n\n\nWe can omit argument names and R will assume they come in order:\n\nf(5)\n\n[1] 10\n\n\n\n\nIf the operation works with vectors, the function will too:\n\nf(1:10)\n\n [1]  2  4  6  8 10 12 14 16 18 20"
+    "text": "Functions in R\n\nfunction(arguments){operation}\n\n. . .\n\nf = function(x){x * 2}\n\n. . .\n\nf(x = 5)\n\n[1] 10\n\n\n. . .\nWe can omit argument names and R will assume they come in order:\n\nf(5)\n\n[1] 10\n\n\n. . .\nIf the operation works with vectors, the function will too:\n\nf(1:10)\n\n [1]  2  4  6  8 10 12 14 16 18 20"
   },
   {
     "objectID": "slides/01_notation.html#multiple-arguments",
     "href": "slides/01_notation.html#multiple-arguments",
     "title": "Notations, Sets, Functions",
     "section": "Multiple arguments",
-    "text": "Multiple arguments\n\nproduct = function(a, b){a*b}\n\n\n\nproduct(2, 3)\n\n[1] 6\n\n\n\n\n\nproduct(a = 1:5, b = 2)\n\n[1]  2  4  6  8 10\n\n\n\n\nVector recycling:\n\nproduct(a = 1:5, b = 1:2)\n\n[1] 1 4 3 8 5\n\n\n\n\nThis may allow some operations that are not admissible in math"
+    "text": "Multiple arguments\n\nproduct = function(a, b){a*b}\n\n. . .\n\nproduct(2, 3)\n\n[1] 6\n\n\n. . .\n\nproduct(a = 1:5, b = 2)\n\n[1]  2  4  6  8 10\n\n\n. . .\nVector recycling:\n\nproduct(a = 1:5, b = 1:2)\n\n[1] 1 4 3 8 5\n\n\n. . .\nThis may allow some operations that are not admissible in math"
   },
   {
     "objectID": "slides/01_notation.html#non-numeric-inputs",
     "href": "slides/01_notation.html#non-numeric-inputs",
     "title": "Notations, Sets, Functions",
     "section": "Non-numeric inputs",
-    "text": "Non-numeric inputs\n\nsome_people = function(name){paste(\"Some people call me\", name)}\n\n\n\ncall_me = c(\n  \"the space cowboy\",\n  \"the gangster of love\",\n  \"Maurice\"\n)\n\n\n\n\nsome_people(call_me)\n\n[1] \"Some people call me the space cowboy\"    \n[2] \"Some people call me the gangster of love\"\n[3] \"Some people call me Maurice\"             \n\n\n\n\n\nThe Joker – Steve Miller Band (1973)"
+    "text": "Non-numeric inputs\n\nsome_people = function(name){paste(\"Some people call me\", name)}\n\n. . .\n\ncall_me = c(\n  \"the space cowboy\",\n  \"the gangster of love\",\n  \"Maurice\"\n)\n\n. . .\n\nsome_people(call_me)\n\n[1] \"Some people call me the space cowboy\"    \n[2] \"Some people call me the gangster of love\"\n[3] \"Some people call me Maurice\"             \n\n\n\n\nThe Joker – Steve Miller Band (1973)"
   },
   {
     "objectID": "slides/01_notation.html#common-types-of-functions",
@@ -2248,20 +2248,20 @@
     "href": "slides/01_notation.html#common-functions",
     "title": "Notations, Sets, Functions",
     "section": "Common functions",
-    "text": "Common functions\n\nLinear: \\(y=mx + b\\)\nQuadratic: \\(y = ax^2 + bx + c\\)\nCubic: \\(y = ax^3 + bx^2 + cx + d\\)\n\\(n\\)th order polynomial: \\(y = ax^n + bx^{n-1} +  \\ldots + c\\)\n\n\nThese are still linear combinations because they are linear in parameters"
+    "text": "Common functions\n\n\nLinear: \\(y=mx + b\\)\nQuadratic: \\(y = ax^2 + bx + c\\)\nCubic: \\(y = ax^3 + bx^2 + cx + d\\)\n\\(n\\)th order polynomial: \\(y = ax^n + bx^{n-1} +  \\ldots + c\\)\n\n\n. . .\nThese are still linear combinations because they are linear in parameters"
   },
   {
     "objectID": "slides/01_notation.html#composite-functions",
     "href": "slides/01_notation.html#composite-functions",
     "title": "Notations, Sets, Functions",
     "section": "Composite functions",
-    "text": "Composite functions\nFunctions that take other functions as inputs\n\nExterior function:\n\\[\nf(x) = x^2\n\\]\n\n\nInterior function:\n\\[\ng(x) = x-3\n\\]\n\n\nComposite:\n\\[\nf(g(x)) = (x-3)^2\n\\]"
+    "text": "Composite functions\nFunctions that take other functions as inputs\n. . .\nExterior function:\n\\[\nf(x) = x^2\n\\]\n. . .\nInterior function:\n\\[\ng(x) = x-3\n\\]\n. . .\nComposite:\n\\[\nf(g(x)) = (x-3)^2\n\\]"
   },
   {
     "objectID": "slides/01_notation.html#composite-functions-in-r",
     "href": "slides/01_notation.html#composite-functions-in-r",
     "title": "Notations, Sets, Functions",
     "section": "Composite functions in R",
-    "text": "Composite functions in R\n\nf = function(x){x^2}\ng = function(x){x-3}\n\n\n\nf(g(5))\n\n[1] 4\n\n\n\n\nWe can write this in tidyverse form:\n\n5 %&gt;% g() %&gt;% f()\n\n[1] 4\n\n\n\n\nWhich recently got its own base R version:\n\n5 |&gt; g() |&gt; f()\n\n[1] 4\n\n\n\n\nPractice: Do \\(g(f(5))\\) by hand and then in R"
+    "text": "Composite functions in R\n\nf = function(x){x^2}\ng = function(x){x-3}\n\n. . .\n\nf(g(5))\n\n[1] 4\n\n\n. . .\nWe can write this in tidyverse form:\n\n5 %&gt;% g() %&gt;% f()\n\n[1] 4\n\n\n. . .\nWhich recently got its own base R version:\n\n5 |&gt; g() |&gt; f()\n\n[1] 4\n\n\n. . .\nPractice: Do \\(g(f(5))\\) by hand and then in R"
   }
 ]

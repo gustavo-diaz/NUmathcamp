@@ -16,11 +16,11 @@ Recently, the RStudio company rebranded as [Posit](https://posit.co). With this 
 
 For our purposes, that means we can use Quarto through RStudio to write professional looking documents like papers, presentations, and posters.
 
-The idea is that you work on your data analyses and writing on RStudio/Quarto using [Markdown](https://markdown.land). Markdown is (confusingly) a markup language creating for formatting text using a plain text editor. 
+The idea is that you work on your data analyses and writing on RStudio/Quarto using [Markdown](https://markdown.land). Markdown is (confusingly) a markup language for creating and formatting documents using a plain text editor like the RStudio source pane. 
 
 Unlike writing documents in Microsoft Word or Google Docs, every aspect of document formatting is encoded as a default parameter, or defined by user. This facilitates reduces time wasted on pointing and clicking to get the format right. The downside is having to learn a specific syntax.
 
-We will focus on the functionality to write PDF documents by connecting Markdown with LaTeX, which is another markup language popular in academic production. However, unlike LaTeX, Markdown focuses on readibility. Under the hood, an engine called [pandoc](https://pandoc.org) converts Markdown to LaTeX, and then renders a pdf.
+We will focus on the functionality to write PDF documents by connecting Markdown with LaTeX, which is another popular markup language popular in academic writing. However, unlike LaTeX, Markdown focuses on readibility. Under the hood, an engine called [pandoc](https://pandoc.org) converts Markdown to LaTeX, and then renders a pdf.
 
 The figure below illustrates the process:
 
