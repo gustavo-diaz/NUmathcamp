@@ -1428,7 +1428,7 @@
     "href": "math/04_calc2.html",
     "title": "Calculus II",
     "section": "",
-    "text": "Last time, we learned about calculus as a way to deal with continuity usefully and discussed derivatives as one of the primary operations in calculus.\nToday, we review two remaining topics. First, we revisit derivatives to understand how computers calculate them. Second, we discuss integrals, or “anti-derivatives,” as the other important operation in calculus.",
+    "text": "Yesterday we learned the basic idea behind differentiation, one of the two main topics in calculus. Today, we’re going to focus on the other major topic, which is called integration. As before, go to this link and enter the following code.\najrzbz",
     "crumbs": [
       "Math",
       "4. Calculus II"
@@ -2361,6 +2361,94 @@
     "crumbs": [
       "Math",
       "3. Calculus I"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#riemann-sums",
+    "href": "math/04_calc2.html#riemann-sums",
+    "title": "Calculus II",
+    "section": "Riemann sums",
+    "text": "Riemann sums\nA Riemann sum is a series of rectangles used to approximate the area under a curve. For example, suppose we wanted to find the area of the region bounded by the function \\(f(x) = 3x^2\\), the \\(x-axis\\), and the line \\(x = 4.\\) How might we do this?\nFirst, we should decide how many rectangles we want to use. For now, let’s use \\(8\\) rectangles that are each \\(0.5\\) units wide. Then the formula for the area of rectangle \\(i\\) is \\(f(x_i)*0.5\\) for some value of \\(x_i.\\)\nSince we know the formula for each rectangle, we can write the sum of all \\(8\\) rectangles like this:\n\\[\\sum_{i = 1}^{8} f(x_i)*0.5.\\]\nWhich value of \\(x_i\\) should we choose? There are three common options:\n\nThe left endpoint of the rectangle\nThe right endpoint of the rectangle\nThe midpoint of the rectangle.\n\nIn the first case, we would set \\(x_1 = 0, x_2 = 0.5, x_3 = 1, ..., x_8 = 3.5.\\)\nIn the second case, we would start with \\(x_1 = 0.5\\) and go up to \\(x_8 = 4.\\)\nFinally, we could use the midpoint, which would mean \\(x_1 = 0.25, x_2 = 0.75, ..., x_8 = 3.75.\\)\nLet’s use the right endpoint for now. Then we can approximate the area under the curve as\n\\[ \\sum_{i = 1}^{8} f(x_i)*0.5 = \\sum_{i = 1}^{8} 3*x_i^2*0.5.\\] Rather than computing this by hand, let’s use R as a calculator:\n\ni &lt;- c(1:8) # create a vector of i's\n\nx_i &lt;- i/2 # create a vector of x_i's\n\nf_x_i &lt;- 3*(x_i)^2 # compute the value of f at each x_i\n\narea_i &lt;- f_x_i*0.5 # compute the area of rectangle i\n\nsum(area_i) # add them up\n\n[1] 76.5\n\n\nWe can easily adjust this code to use the left endpoint or the midpoint. Try it!\nWhat if we wanted to make this a little more abstract? How would we adjust this formula to use \\(n\\) rectangles for any \\(n \\in \\mathbb{N}\\)?\nTo do this, we could define \\(x_i\\) as \\(4i/n\\). We’d also have to multiply \\(f(x_i)\\) by \\(4/n\\) rather than \\(0.5\\) to get the area of each rectangle. If we make these changes, our formula looks like this:\n\\[\\sum_{i=1}^{n} f(x_i)*(4/n).\\] Computationally, we can create an R function that adds this up for us given any value of \\(n.\\)\n\nriemann_sum &lt;- function(n) {\n  i &lt;- c(1:n) # create a vector of i's\n\n  x_i &lt;- 4*i/n # create a vector of x_i's\n\n  f_x_i &lt;- 3*(x_i)^2 # compute the value of f at each x_i\n\n  area_i &lt;- f_x_i*4/n # compute the area of rectangle i\n\n  sum &lt;- sum(area_i) # add them up\n  \n  return(sum)\n  \n}\n\nriemann_sum(10)\n\n[1] 73.92\n\nriemann_sum(20)\n\n[1] 68.88\n\nriemann_sum(100)\n\n[1] 64.9632\n\nriemann_sum(1000)\n\n[1] 64.09603\n\nriemann_sum(5000)\n\n[1] 64.0192\n\n\nAs the number of rectangles increases, it seems like our estimate gets closer and closer to \\(64.\\)",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#definite-integrals",
+    "href": "math/04_calc2.html#definite-integrals",
+    "title": "Calculus II",
+    "section": "Definite Integrals",
+    "text": "Definite Integrals\nNow let’s formalize our work using some of the notation we developed yesterday. If we let the number of rectangles approach infinity, our estimate of the area under the curve \\(f\\) between \\(x = 0\\) and \\(x = 4\\) is\n\\[ \\lim_{h \\rightarrow \\infty} \\sum_{i=1}^{n} f(x_i)*\\frac{4}{n}.\\]\nWhat if we wanted to generalize this formula to intervals other than \\([0,4]\\)? The only thing that changes is the width of the rectangles. We can write \\[\\lim_{h \\rightarrow \\infty} \\sum_{i=1}^{n} f(x_i)*\\frac{b-a}{n},\\] where \\(x = a\\) is the lower limit of the function and \\(x = b\\) is the upper limit (i.e., the interval is \\([a,b]\\) instead of \\([0,4]\\)).\nBecause this formula allows us to find the area under the curve of an arbitrary function, we have special notation for it. Specifically, we can write \\[\\int_{a}^{b} f(x)dx,\\] which is referred to as the definite interval of \\(f(x)\\) from \\(a\\) to \\(b.\\)\nHow do we compute this?\nHistorically, mathematicians around the world found ways of computing definite integrals for specific functions of interest, without developing a systematic theory that works for any function. After the development of differential calculus in the early 17th Century, mathematicians discovered a shortcut known as the Fundamental Theorem of Calculus.",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#the-fundamental-theorem-of-calculus",
+    "href": "math/04_calc2.html#the-fundamental-theorem-of-calculus",
+    "title": "Calculus II",
+    "section": "The Fundamental Theorem of Calculus",
+    "text": "The Fundamental Theorem of Calculus\nFormally, the fundamental theorem of calculus states that if a function \\(f(x)\\) has a derivative, \\(f'(x)\\), then\n\\[ \\int_{a}^{b} f'(t) dt = f(b) - f(a).\\]\nThat is, if we can find some function \\(f\\) whose derivative is the function inside the integral (\\(f'(x)\\)), we can easily compute the definite integral for any values of \\(a\\) and \\(b.\\) Conceptually, differentiation is the inverse of integration.\nExample: Let \\(f(x) = x^3\\). Using the Power Rule for differentiation, \\(f'(x) = 3x^2.\\) By the fundamental theorem of calculus,\n\\[\\int_a^b f'(t) dt = \\int_a^b 3t^2 dt =  x^3\\biggr|^b_a = b^3 - a^3.\\] Earlier, our estimates of \\(\\int_0^4 3t^2 dt\\) were a little larger than, but gradually approaching, \\(64.\\) When we compute the exact value of the definite integral from \\(0\\) to \\(4\\), we get \\(4^3 - 0^3 = 64.\\)\n\nProperties of Definite Integrals\nDefinite integrals have the following nice properties:\n\n\\(\\int_a^b f(x)dx + \\int_b^c f(x)dx = \\int_a^c f(x)dx\\)\n\nIf we integrate a function from \\(a\\) to \\(b\\) and add it to the integral from \\(b\\) to \\(c\\), we get the same result as if we integrated from \\(a\\) all the way to \\(c\\) for any real numbers \\(a,\\) \\(b,\\) and \\(c.\\)\n\n\\(\\int_a^b f(x)dx = -\\int_b^a f(x)dx.\\)\n\nThis one is a bit harder to wrap your mind around. Usually, we talk about definite integrals as expressing the area under a curve. While this is a good shorthand, it doesn’t perfectly correspond to how we think about area. I prefer to think about integration as the accumulation of change over an interval. Change can be negative, and when the function we’re integrating has negative values, the integral decreases. Put differently, if we’re finding the area under a curve, any places where the function dips below the x-axis count as negative area. We also get negative area when we go backwards (i.e., integrate from \\(b\\) to \\(a\\) when \\(a &lt; b\\).)",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#indefinite-integrals",
+    "href": "math/04_calc2.html#indefinite-integrals",
+    "title": "Calculus II",
+    "section": "Indefinite Integrals",
+    "text": "Indefinite Integrals\nSuppose we want to calculate \\(\\int_1^2 g(x)dx,\\) where \\(g(x) = 4x.\\) In order to use the fundamental theorem of calculus, we need to find a function \\(G(x)\\) for which \\(G'(x) = g(x).\\) This function is called the antiderivative or the indefinite integral. How could we find such a function?\nOne option is to guess and check. For a simple polynomial function, this might be a viable solution, but for more complicated functions, this could get difficult.\nAnother option is to invert some of the derivative rules we discussed yesterday. For example, let’s use the power rule from yesterday. In order to find the derivative of \\(x^n,\\), we decreased the degree of the function by one and multiplied it by \\(n.\\) To go the other direction, then, we could try increasing the degree of the function by one and dividing by the degree of the new function. For example, if we start with \\(4x,\\) we could increase the degree to get \\(4x^2\\) and then divide by \\(2\\) to get \\(2x^2.\\) To check our work, we can compute \\(\\frac{d}{dx}[2x^2] = 2*2*x = 4x.\\) Our method worked!\nTo indicate that a function \\(G(x)\\) is the antiderivative of \\(g(x),\\) we write \\(\\int g(x) dx = G(x).\\) In this case, we can say that \\(\\int 4x dx = 2x^2.\\)\nBut wait. Can we think of any other functions whose derivatives are \\(4x\\)?\nSince the derivative of a constant function is always zero, \\(2x^2 + 1\\) should also work, as will \\(2x^2 + 100\\) and \\(2x^2 - 31.\\) That is, antiderivatives are not unique; there’s a whole family of functions whose derivatives are \\(4x\\), and all of these functions are of the form \\(2x^2 + C\\) for some constant value of \\(C.\\)\nThis turns out not to be a problem when we compute definite intervals, since we end up adding and subtracting the constant in the last step. However, when we talk about antiderivatives abstractly, we often add \\(+C\\) to the end to represent all of the related functions that have the same derivative, e.g., \\(\\int 4x dx = 2x^2 + C.\\)\n\nIntegration Rules\nUsing the same strategy we just used to find the indefinite integral of \\(4x,\\) we can derive a few more rules for finding the indefinite integral.\n\nAs with derivatives, \\(\\int f(x) + g(x) dx = \\int f(x)dx + \\int g(x)dx.\\)\nThe rule for constant multiples is also the same as for derivatives: \\(\\int a*f(x) dx = a*\\int f(x) dx.\\)\nPower Rule: \\(\\int x^n dx = \\frac{x^{n+1}}{n+1} + C\\) for \\(n \\neq -1.\\)\n\\(\\int \\frac{1}{x}dx = ln(x) + C.\\)\n\\(\\int e^x dx = e^x + C.\\)\nU-substitution: If we can find a way to write \\(h(x)\\) as \\(f'(u)*\\frac{du}{dx}\\) where \\(u\\) is a function of \\(x,\\) then \\(\\int h(x)dx = f(u) + C.\\)\nIntegration by parts: \\(\\int u dv = u*v - \\int v du\\), where \\(u\\) and \\(v\\) are functions of \\(x.\\)\n\nThe last two techniques require a lot of practice, so don’t worry if you can’t find the right way to rewrite each function. I’ll show you one example of each just so that you get a sense of the logic.\n\n\nU-Substitution Example\nLet’s find \\(\\int 3*e^{3x + 1} dx.\\)\nAs with the chain rule, I’m going to replace part of this expression with something I already know how to integrate. Here, I’m going to set \\(u = 3x + 1.\\) Using the power rule for derivatives, we know that \\(\\frac{du}{dx} = 3.\\)\nNow let’s rewrite our integral in terms of \\(u.\\) We have\n\\[\\int \\frac{du}{dx}*e^u dx.\\] Intuitively, we can think of the \\(\\frac{du}{dx}*dx\\) turning into \\(du\\) by multiplication (that’s not actually always true, but pretending it’s true will get you fairly far in calculus.)\nThen the integral simplifies to \\(\\int e^u du = e^u + C.\\) In order to get an answer in terms of \\(x,\\) we can substitute \\(3x + 1\\) back in for \\(u\\), so \\(\\int 3*e^{3x + 1} dx = e^{3x + 1} + C.\\)\n\n\nIntegration by Parts Example\nLet’s find \\(\\int e^x*x^2 dx.\\) Let’s set \\(u = x^2\\) and \\(dv = e^x dx.\\) Then \\(\\frac{du}{dx} = 2x,\\) so we can write \\(du = 2xdx.\\)\nWe can also integrate \\(dv\\) to get \\(v = \\int dv = \\int e^x dx = e^x.\\)\nUsing the formula for integration by parts, we get\n\\[ \\int e^x*x^2 dx = u*v - \\int v du = x^2*e^x - \\int e^x*2xdx.\\] This gets us a little closer to the answer, but there’s still something we don’t know how to integrate. To get the final answer, we’ll have to do integration by parts again.\nThis time, \\(dv = e^xdx\\) again, but we’ll set \\(u = 2x.\\) Then \\(v = e^x,\\) as before, and \\(du = 2dx.\\) Let’s substitute these into the last piece of the previous expression:\n\\[\\int e^x*2xdx = (2x)*e^x - \\int e^x * 2dx = 2xe^x - 2e^x.\\] Putting it all together, we get\n\\[\\int e^x*x^2dx = x^2*e^x - (2x*e^x - 2e^x) = x^2*e^x - 2x*e^x + 2e^x + C.\\]\nIt’s ugly, but we did it!",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#improper-integrals",
+    "href": "math/04_calc2.html#improper-integrals",
+    "title": "Calculus II",
+    "section": "Improper Integrals",
+    "text": "Improper Integrals\nSometimes, you might see definite integrals with odd limits, such as from \\(-\\infty\\) to \\(\\infty\\).\nThis is called an improper integral, and it’s actually a form of shorthand. In general,\n\\[ \\int_{a}^{\\infty} f(x) dx = \\lim_{b \\rightarrow \\infty} \\int_a^b f(x) dx,\\] and\n\\[ \\int_{-\\infty}^b f(x) dx = \\lim_{a \\rightarrow -\\infty} \\int_a^b f(x) dx.\\]\nIntegrals are also considered improper when the function we’re interested in is not defined at a limit of the integral; for example, \\(\\int_0^{1} \\frac{1}{x} dx\\) is improper because \\(1/x\\) is undefined when \\(x = 0.\\) We do the same thing in this case:\n\\[ \\int_0^{1} \\frac{1}{x^2} dx = \\lim_{a \\rightarrow 0} \\int_a^1 \\frac{1}{x^2} dx.\\]\nInterestingly, improper integrals often have finite values.",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#applications-of-integration",
+    "href": "math/04_calc2.html#applications-of-integration",
+    "title": "Calculus II",
+    "section": "Applications of Integration",
+    "text": "Applications of Integration\nIntegration allows us to quantify the accumulation of change over time (or space, or some other input). This has lots of practical applications–here’s a non-exhaustive list:\n\nConverting from rates of change to total amounts of change (e.g, from speed to distance or from acceleration to speed).\nFinding areas and volumes of irregular shapes.\nCalculating the average value of a function on an interval.\nDefining functions of particular interest to scientists and social scientists (e.g., the Gini coefficient ).\nConverting between probability density functions and cumulative distribution functions (we’ll discuss this tomorrow–don’t worry if it’s unfamiliar.)",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#integrability-continuity-and-differentiability",
+    "href": "math/04_calc2.html#integrability-continuity-and-differentiability",
+    "title": "Calculus II",
+    "section": "Integrability, Continuity, and Differentiability",
+    "text": "Integrability, Continuity, and Differentiability\nJust as differentiability refers to whether a function has a well-defined derivative, integrability refers to whether a function has a well-defined integral. In general, differentiability implies continuity, and continuity implies integrability. The converses of these statements are not necessarily true; that is, some functions are integrable but not continuous or continuous but not integrable.",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#conclusion",
+    "href": "math/04_calc2.html#conclusion",
+    "title": "Calculus II",
+    "section": "Conclusion",
+    "text": "Conclusion\nCalculus gives us two excellent tools for thinking about the way functions change over time/space. Derivatives express the instantaneous rate of change, while integrals express the accumulation of change over an interval. These concepts are very important for developing new statistical tools and concepts. While you might not need to compute them by hand very often (or ever), understanding how differentiation and integration work will help you be a more thoughtful consumer of these tools.",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
     ]
   }
 ]
