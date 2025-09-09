@@ -1277,7 +1277,7 @@
     "href": "index.html",
     "title": "Math Camp",
     "section": "",
-    "text": "This is the website for the 2025 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n\n   September 3 – 12\n   9:00 AM – 4:00 PM\n   Scott Hall 212",
+    "text": "This is the website for the 2025 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\nHere are the slides from the information session on Research Computing and Data Services resources.\n\n\n\n   September 3 – 12\n   9:00 AM – 4:00 PM\n   Scott Hall 212",
     "crumbs": [
       "Home"
     ]
@@ -1287,7 +1287,7 @@
     "href": "index.html#welcome",
     "title": "Math Camp",
     "section": "",
-    "text": "This is the website for the 2025 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n\n   September 3 – 12\n   9:00 AM – 4:00 PM\n   Scott Hall 212",
+    "text": "This is the website for the 2025 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\nHere are the slides from the information session on Research Computing and Data Services resources.\n\n\n\n   September 3 – 12\n   9:00 AM – 4:00 PM\n   Scott Hall 212",
     "crumbs": [
       "Home"
     ]
@@ -1297,7 +1297,7 @@
     "href": "index.html#schedule",
     "title": "Math Camp",
     "section": "Schedule",
-    "text": "Schedule\n\n\n    \n\n    \n    \n      \n        \n        \n              \n                Day\n                Date\n                Morning\n                Afternoon\n              \n        \n        \n        \n                \n                  1\n                  Wednesday, September 3 \n                  Introduction             \n                  R and RStudio          \n                \n                \n                  2\n                  Thursday, September 4  \n                  Notation, sets, functions\n                  Tidyverse I            \n                \n                \n                  3\n                  Friday, September 5    \n                  Matrices                 \n                  Tidyverse II           \n                \n                \n                  4\n                  Monday, September 8    \n                  Calculus I               \n                  NO MEETING             \n                \n                \n                  5\n                  Tuesday, September 9   \n                  Calculus II              \n                  Sampling and simulation\n                \n                \n                  6\n                  Wednesday, September 10\n                  Probability              \n                  NO MEETING             \n                \n                \n                  7\n                  Thursday, September 11 \n                  NO MEETING               \n                  NO MEETING             \n                \n                \n                  8\n                  Friday, September 12   \n                  Review                   \n                  Markdown",
+    "text": "Schedule\n\n\n    \n\n    \n    \n      \n        \n        \n              \n                Day\n                Date\n                Morning\n                Afternoon\n              \n        \n        \n        \n                \n                  1\n                  Wednesday, September 3\n                  Introduction\n                  R and RStudio\n                \n                \n                  2\n                  Thursday, September 4\n                  Notation, sets, functions\n                  Tidyverse I\n                \n                \n                  3\n                  Friday, September 5\n                  Matrices\n                  Tidyverse II\n                \n                \n                  4\n                  Monday, September 8\n                  Calculus I\n                  NO MEETING\n                \n                \n                  5\n                  Tuesday, September 9\n                  Calculus II\n                  Sampling and simulation\n                \n                \n                  6\n                  Wednesday, September 10\n                  Probability\n                  NO MEETING\n                \n                \n                  7\n                  Thursday, September 11\n                  NO MEETING\n                  NO MEETING\n                \n                \n                  8\n                  Friday, September 12\n                  Review\n                  Markdown",
     "crumbs": [
       "Home"
     ]
@@ -2538,5 +2538,26 @@
       "Programming",
       "4. Sampling and simulation"
     ]
+  },
+  {
+    "objectID": "slides/05_review.html#textbooks",
+    "href": "slides/05_review.html#textbooks",
+    "title": "Review",
+    "section": "Textbooks",
+    "text": "Textbooks"
+  },
+  {
+    "objectID": "slides/05_review.html#textbooks-1",
+    "href": "slides/05_review.html#textbooks-1",
+    "title": "Review",
+    "section": "Textbooks",
+    "text": "Textbooks"
+  },
+  {
+    "objectID": "slides/05_review.html#textbooks-2",
+    "href": "slides/05_review.html#textbooks-2",
+    "title": "Review",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\n\n\n\n\n\n\nstatistical-modeling.netlify.app"
   }
 ]

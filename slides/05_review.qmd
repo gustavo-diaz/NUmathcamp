@@ -54,13 +54,24 @@ knitr::opts_chunk$set(fig.pos = "center", echo = TRUE,
 
 **Cheatsheets:** [posit.co/resources/cheatsheets/](https://posit.co/resources/cheatsheets/)
 
-## Statistics textbooks
+## Textbooks
 
-Freedman Statistics
+![](img/freedman_stats.jpeg){fig-align="center"}
 
-MOSAIC free book
+## Textbooks
 
-Imai and Webb Williams
+<!-- Imai WW -->
+
+![](img/imai_book.avif){fig-align="center"}
+
+## Textbooks
+
+<!-- MOSAIC -->
+![](img/mosaic_book.png){fig-align="center" width="70%"}
+
+::: aside
+[statistical-modeling.netlify.app](https://statistical-modeling.netlify.app)
+:::
 
 ## Courses in Political Science
 
@@ -133,4 +144,6 @@ Imai and Webb Williams
 
 - Easy to learn Python later if you need to
 :::
+
+# Review
 
