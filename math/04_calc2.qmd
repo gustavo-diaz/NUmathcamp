@@ -1,7 +1,8 @@
 ---
 title: "Calculus II"
-author: "Aven Peters"
-author: "Gustavo Diaz"
+author:
+- "Aven Peters"
+- "Gustavo Diaz"
 format: html
 embed-resources: true
 editor: 
