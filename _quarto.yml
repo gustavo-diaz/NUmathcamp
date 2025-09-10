@@ -41,6 +41,8 @@ website:
               file: math/03_calc1.qmd
             - text: "4. Calculus II"
               file: math/04_calc2.qmd
+            - text: "5. Probability"
+              file: math/05_prob.qmd
       - section: "Programming"
         contents:
             - text: "1. Getting started"
