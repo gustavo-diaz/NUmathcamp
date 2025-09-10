@@ -86,7 +86,7 @@ To solve this problem, we counted the number of ways two six-sided dice can sum 
 
 We can also represent $f(x)$ graphically:
 
-```{r echo = FALSE}
+```{r message = FALSE}
 library(tidyverse)
 
 df <- data.frame(x = c(2:12), f_x = c(1:6, 5, 4, 3, 2, 1)/36)
