@@ -1,0 +1,329 @@
+---
+title: "Probability"
+author: "Aven Peters"
+format: html
+embed-resources: true
+---
+
+
+
+
+
+
+## Introduction to Probability
+
+Probability expresses the chance of a particular outcome as a value between 0 and 1. Formally, we can write $P(A)$ to represent the probability that an event A will occur. Here are a few properties of probabilities:
+
+-   $0 \leq P(A) \leq 1$ for all events A.
+
+-   $P(A) + P(\neg A) = 1.$ The probability of A occurring plus the probability of A not occurring is always 1.
+
+-   $P(A \cap B) = P(A) * P(B)$ *if and only if* A and B are **independent events.** What does "independent events" mean? Essentially, whether A occurs tells us absolutely nothing about whether B will occur (and vice versa). Can you think of an example of two independent events?
+
+-   $P(A \cup B) = P(A) + P(B)$ *if and only if* A and B are **mutually exclusive events.** That is, if A occurs, B will not occur, and vice versa.
+
+We can also talk about the probability of A occurring *given* that B occurs. We write this as $P(A | B)$. For any events A and B, $$P(A \cap B) = P(A | B)*P(B) = P(B | A)*P(A).$$ This is called **Bayes' Theorem**, and it's the basis for an entire framework thinking about probability and statistics (although we will primarily rely on the other major framework, *frequentist statistics*). If A and B are independent events, $P(A | B) = P(A).$
+
+## Basic Probability Problems
+
+If there are $n$ mutually exclusive, equally likely outcomes, then the probability of each outcome is $1/n$. The classic example of this is a fair die. By breaking problems down into equally likely outcomes and independent events, we can solve a variety of probability problems. Here are a few practice problems.
+
+1.  If I flip three fair coins, what is the probability that they are all heads or all tails?
+
+2.  If I roll two fair six-sided dice, what is the probability that the sum of their faces is at least 7?
+
+3.  Every day, there is a 5% chance I miss my train. Assuming each day's outcome is independent, what is the probability that I make my train for four days in a row? For ten days in a row? What is the probability that I miss my train more than once in eight days?
+
+4.  Suppose you need to walk three blocks north and 4 blocks east in a perfect grid system. Assuming you don't walk any further than necessary, how many distinct routes can you take? If you randomly select one of these routes, what is the probability that you turn right at least once?
+
+## Combinations and permutations
+
+As you may have noticed, a lot of probability problems involve counting the number of ways to choose a subset of items from a larger population. For example, suppose three members of your eight-person PhD cohort will be chosen for a committee. How many distinct committees are there?
+
+To solve this problem, we could think about it as three separate choices, one for each spot. There are eight people who could be chosen for the first spot on the committee. Once you've chosen one, there are only seven people left that can be selected for the second spot. Similarly, once the first two spots are set, there are six people left who could be chosen for the third spot. That means there are $8*7*6 = 336$ possible committees, right?
+
+Well, it depends. If each member of the committee has a distinct role (e.g., a president, secretary, and treasurer), this is correct. On the other hand, if the roles are interchangeable, we've actually counted the same committee more than once. To see this, suppose person A, person B, and person C are chosen for the committee. There are six different orders we could select them in:
+
+-   ABC
+-   ACB
+-   BAC
+-   BCA
+-   CAB
+-   CBA
+
+Our previous method counted all of these as different possibilities, but they're not actually meaningfully different for our purposes. We therefore need to divide our previous answer by 6. When we do this, it turns out there are only 56 possible committees.
+
+Formally, we refer to the number of possible committees where each member has a distinct role as **permutations** and the number of possible committees with interchangeable roles as **combinations.** There are actually formulas for calculating the number of permutations and combinations, although they look a little scary.
+
+If we are choosing $k$ interchangeable committee members from a pool of $n$ eligible people, we write $\binom{n}{k}$, which is usually read as "n choose k." The formula for combinations is as follows: $$\binom{n}{k} = \frac{n!}{(n-k)!*k!},$$ where the exclamation point represents the factorial function (e.g., $5! = 5*4*3*2*1$). Note that $\binom{n}{k} = \binom{n}{n-k}$ for all possible values of $n$ and $k$. This makes sense conceptually--choosing 3/8 people to serve on a committee is equivalent to choosing 5/8 people *not* to serve on that committee.
+
+For permutations, the formula is the same, except we multiply it by $k!$:
+
+$$\binom{n}{k}*k! = \frac{n!}{(n-k)!}.$$
+
+$\binom{n}{k}$ is known as the binomial coefficient, and it has a few other applications that we'll come across soon.
+
+::: {.callout-note collapse="true"}
+$n! = n*(n-1)*(n-2)...*2*1$ for all integers $n$. The factorial function is only defined for integers, but a closely related function, the Gamma function, is defined for all real numbers. The formula for the Gamma function is $$ \Gamma(x) = \int_0^\infty{t^{x-1}}{e^{-t}}dt,$$ and for integer values of $x$, $\Gamma(x) = (x - 1)!.$ I mention this because (1) I think it's cool, and (2) the Gamma function often shows up in advanced statistics courses.
+:::
+
+**Exercise 5:** Revisit Exercise 4 shown above, using what you know about combinations and permutations.
+
+## Discrete Probability Distributions
+
+Recall Exercise 2 from earlier: If I roll two fair six-sided dice, what is the probability that the sum of their faces is at least 7?
+
+To solve this problem, we counted the number of ways two six-sided dice can sum to 7, 8, 9, 10, 11, or 12. We can define a function, $f(x)$, which represents the probability of rolling the value $x$. Here's a tabular representation:
+
+| x   | Number of ways to get x          | f(x)        |
+|-----|----------------------------------|-------------|
+| 2   | 1 (1 on each die)                | 1/36        |
+| 3   | 2 (1 and 2 or 2 and 1)           | 2/36 = 1/18 |
+| 4   | 3 (1 and 3, 2 and 2, or 3 and 1) | 3/36 = 1/12 |
+| 5   | 4                                | 4/36 = 1/9  |
+| 6   | 5                                | 5/36        |
+| 7   | 6                                | 6/36 = 1/6  |
+| 8   | 5                                | 5/36        |
+| 9   | 4                                | 4/36 = 1/9  |
+| 10  | 3                                | 3/36 = 1/12 |
+| 11  | 2                                | 2/36 = 1/18 |
+| 12  | 1                                | 1/36        |
+
+We can also represent $f(x)$ graphically:
+
+
+
+
+
+
+::: {.cell}
+::: {.cell-output .cell-output-stderr}
+
+```
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.1.0     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+```
+
+
+:::
+
+::: {.cell-output-display}
+![](05_prob_files/figure-html/unnamed-chunk-1-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+$f(x)$ is called a **probability mass function.** If we wanted to find the probability of rolling a value between 2 and 5, we could simply add up the probabilities: $(1+2+3+4)/36 = 10/36 = 5/18$, which is about 28%.
+
+Formally, we might write $$P(2 \leq x \leq 5) = \sum_{x=2}^{5}f(x).$$
+
+### Binomial Distribution
+
+Another common discrete probability distribution is called the **Binomial Distribution.** Conceptually, it represents the probability of getting exactly $k$ "successes" in $n$ trials, where the probability of success in each trial is $/theta$ and the trials are independent events. The probability mass function for the binomial distribution is as follows: $$f(k) = \binom{n}{k}\theta^k(1-\theta)^{n-k}.$$ $k$ is called a **random variable**--a quantity that depends on the outcome of a random process. $n$ and $\theta$ are called **parameters**--that is, $n$ and $\theta$ are not random and determine the shape of the probability distribution.
+
+**Exercise 6:** Recall Exercise 3: "Every day, there is a 5% chance I miss my train. Assuming each day's outcome is independent, what is the probability that I make my train for four days in a row? For ten days in a row? What is the probability that I miss my train more than once in eight days?"
+
+Represent the answers to these questions using the probability mass function of the binomial distribution and summation notation as needed. Does it matter whether "missing the train" is treated as a success or a failure? Why or why not?
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+n <- 10
+theta <- 0.2
+k <- c(1:n)
+prob_k <- factorial(n)/(factorial(k)*factorial(n - k))*theta^k*(1 - theta)^(n - k)
+
+df_bin <- data.frame(k, prob_k)
+df_bin %>%
+  ggplot(aes(x = k, y = prob_k)) +
+  geom_bar(stat = "identity")
+```
+
+::: {.cell-output-display}
+![](05_prob_files/figure-html/unnamed-chunk-2-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+### Poisson Distribution
+
+The **Poisson distribution** is used for modeling the number of events that take place in a specified amount of time or space. In social science, this might be the number of crimes reported in a city each month or the number of calls from constituents a senator's office receives in a day. The Poisson distribution has one parameter, $\lambda$, which is the average number of events in one unit of time or space. It's probability density function is the following: $$ f(k) = \frac{\lambda^k}{k!}e^{-\lambda},$$ where $k$, the observed number of events in a unit of time or space, is the random variable.
+
+**Side Note:** The Binomial distribution converges to the Poisson distribution as $n \rightarrow \infty$ and $n\theta \rightarrow \lambda.$ You can prove it with a little creativity and a lot of algebra.
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+lambda <- 2
+k <- c(0:20)
+prob_k <- lambda^(k)*exp(-lambda)/factorial(k)
+
+df_poisson <- data.frame(k, prob_k)
+
+df_poisson %>%
+  ggplot(aes(x = k, y = prob_k)) +
+  geom_bar(stat = "identity")
+```
+
+::: {.cell-output-display}
+![](05_prob_files/figure-html/unnamed-chunk-3-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+## Continuous Probability Distributions
+
+What if we had a random variable that could take on *any* value between $0$ and $1$, not just integer values? In that case, we couldn't create a probability mass function by calculating the probability of each possible outcome, because there are infinitely many possible outcomes. However, we'd still like to be able to use a function to describe the shape of the probability distribution, and ideally we'd be able to compute the probability of an outcome in a given range (e.g., between $0.2$ and $0.3$). How might we create such a function?
+
+### Cumulative Density Functions
+
+One approach would be to focus on the probability that a random variable $X$ falls into a particular range of values. This is called a **cumulative density function (CDF).** For example, suppose we knew the following: $$ P(X \leq x) = \begin{cases} 0, & x \leq 0 \\
+x, & 0 \leq x \leq 1 \\
+0, & x \gt 1.
+\end{cases}$$ That is, the probability that $X$ is less than a particular value between $0$ and $1$ is simply that value. This probability distribution is called the **uniform distribution.** Graphically, the CDF looks like this:
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+ggplot(data.frame(x = c(0, 0.2, 0.4, 0.6, 0.8, 1)), aes(x=x)) +
+  stat_function(fun = punif)
+```
+
+::: {.cell-output-display}
+![](05_prob_files/figure-html/unnamed-chunk-4-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+Then to find the probability that $X$ is between $0.25$ and $0.5$, we could do the following: $$ P(0.25 \leq X \leq 0.5) = P(X \leq 0.5) - P(X \leq 0.25) = 0.5 - 0.25 = 0.25.$$
+
+The cumulative distribution function uniquely determines a probability distribution, but it's not exactly analogous to the probability mass functions we use to describe discrete distributions. In particular, the CDF makes it difficult to see which values are most and least likely. To do that, we can compute something called the **probability density function (PDF).** The PDF is simply the first derivative of the CDF. For the uniform distribution, it looks like this:
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+ggplot(data.frame(x = c(0, 0.2, 0.4, 0.6, 0.8, 1)),
+       aes(x=x)) +
+  stat_function(fun = dunif)
+```
+
+::: {.cell-output-display}
+![](05_prob_files/figure-html/unnamed-chunk-5-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+That is, the probability of $X$ falling within a given range is proportional to the length of that range. Put differently, $X$ has an equal probability of falling within each possible $0.1$ unit interval between $0$ and $1$.
+
+For simplicity, I've used the uniform distribution with endpoints $0$ and $1$ for this example. However, it's possible to define other uniform distributions with different endpoints and lengths. In general, the probability density function of the uniform distribution is as follows: $$ f(x) = \begin{cases}
+x \lt a & 0 \\
+a \leq x \leq b & \frac{1}{b-a} \\
+x \gt b & 0
+\end{cases}$$ for any values of $a$ and $b$ such that $a \leq b$.
+
+**Exercise 7:** a. How would you find the probability that $X$ is between $0.3$ and $0.6$ using only the PDF? b. Show that $\int_a^b f(x) = 1$, where $f(x)$ is the PDF of the uniform distribution, for all values of $a$ and $b$. Why does this make sense conceptually?
+
+### Normal Distribution
+
+The **normal distribution** (sometimes called the Gaussian distribution) is another common continuous probability distribution. Its parameters are $\mu$ (the mean) and $\sigma^2$ (the variance, or the standard deviation squared). If a random variable $X$ is normally distributed, we write $X \sim N(\mu,\sigma^2)$. When $\mu = 0$ and $\sigma^2 = 1$, the distribution is called the **standard normal distribution.**
+
+The PDF of the normal distribution is somewhat mathematically ugly: $$ f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(x-\mu)^2}{\sigma^2}}$$ Graphically, the standard normal PDF looks like this:
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+ggplot(data.frame(x = c(-4:4)), aes(x=x)) +
+  stat_function(fun = dnorm)
+```
+
+::: {.cell-output-display}
+![](05_prob_files/figure-html/unnamed-chunk-6-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+The CDF doesn't have a closed form, so we just write $$ \Phi(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \int_{-\infty}^{x} e^{-\frac{(t-\mu)^2}{\sigma^2}} dt$$ And graphically, it looks like this:
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+ggplot(data.frame(x = c(-4:4)), aes(x=x)) +
+  stat_function(fun = pnorm)
+```
+
+::: {.cell-output-display}
+![](05_prob_files/figure-html/unnamed-chunk-7-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+Computing values of the CDF by hand is very difficult, but R can do it easily with the pnorm() function. It's also fairly easy to look up a table of normal CDF values or find one in the back of any introductory statistics textbook. As with the uniform distribution, we can use the CDF to compute the probability that $X$ falls between any two values. For example, if $X \sim N(0,1)$, then $\Phi(1) - \Phi(-1) = 0.68$, $\Phi(2) - \Phi(-2) = 0.95$, and $\Phi(3) - \Phi(-3) = 0.997$.
+
+**Exercise 8:** Interpret each of these statements conceptually.
+
