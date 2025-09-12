@@ -87,8 +87,8 @@
     "objectID": "slides/05_review.html#agenda",
     "href": "slides/05_review.html#agenda",
     "title": "Review",
-    "section": "",
-    "text": "Morning: Further learning and review\nLunch: Meet grad students on the market\nAfternoon: Markdown"
+    "section": "Agenda",
+    "text": "Agenda\n\nMorning: Further learning and review\nLunch: Meet grad students on the market\nAfternoon: Markdown"
   },
   {
     "objectID": "slides/05_review.html#math-camp-reference",
@@ -102,7 +102,7 @@
     "href": "slides/05_review.html#math-camp-reference-1",
     "title": "Review",
     "section": "Math camp reference",
-    "text": "Math camp reference\n\n\n\n\n\nWebsite: www.daveasiegel.com/teaching/math-course/\nYoutube: www.youtube.com/c/DavidSiegelmath/playlists"
+    "text": "Math camp reference\n\nWebsite: www.daveasiegel.com/teaching/math-course/\nYoutube: www.youtube.com/c/DavidSiegelmath/playlists"
   },
   {
     "objectID": "slides/05_review.html#tidyverse",
@@ -165,7 +165,7 @@
     "href": "slides/05_review.html#how-much-of-math-camp-will-matter",
     "title": "Review",
     "section": "How much of math camp will matter?",
-    "text": "How much of math camp will matter?\nMath\n\n\nMostly at a conceptual level (unless you do formal theory)\nConfidence in soft skills\n\n\n. . .\nR\n\n\nSolid foundation to stay up to date with both coding and methods\nEasy to learn Python later if you need to"
+    "text": "How much of math camp will matter?\nMath\n\nMostly at a conceptual level (unless you do formal theory)\nConfidence in soft skills\n\n\nR\n\nSolid foundation to stay up to date with both coding and methods\nEasy to learn Python later if you need to"
   },
   {
     "objectID": "slides/03_calc1.html",
