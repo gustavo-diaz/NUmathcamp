@@ -1,10 +1,10 @@
 ---
 title: "Math Camp"
-subtitle: "Northwestern University -- Social Science -- Summer 2025"
+subtitle: "Northwestern University -- Social Science -- Summer 2026"
 authors:
   - "[Artur Baranov](https://artur-baranov.github.io)"
   - "[Gustavo Diaz](https://gustavodiaz.org/)"
-  - "[Aven Peters](https://sociology.northwestern.edu/people/graduate-students/profiles/aven-peters.html)"
+  - "TBD"
 format: 
   html:
     page-layout: full
@@ -25,13 +25,13 @@ This is the website for the 2025 Social Science Math Camp, hosted by the Departm
 
 Our schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.
 
-Here are the slides from the information session on [Research Computing and Data Services resources](rcds.pptx).
+<!-- Here are the slides from the information session on [Research Computing and Data Services resources](rcds.pptx). -->
 
 ### Details
 
-- {{< fa calendar >}} &nbsp; September 3 -- 12
-- {{< fa clock >}} &nbsp; 9:00 AM -- 4:00 PM
-- {{< fa location-dot >}} &nbsp; Scott Hall 212
+- {{< fa calendar >}} &nbsp; September 9 -- 18
+- {{< fa clock >}} &nbsp; 9:30 AM -- 4:00 PM
+- {{< fa location-dot >}} &nbsp; TBD
 
 ## Schedule
 
@@ -40,21 +40,22 @@ Here are the slides from the information session on [Research Computing and Data
 schedule =
   tribble(
     ~Day, ~Date, ~Morning, ~Afternoon,
-    1, "Wednesday, September 3", "Introduction", "R and RStudio",
-    2, "Thursday, September 4", "Notation, sets, functions", "Tidyverse I",
-    3, "Friday, September 5", "Matrices", "Tidyverse II",
-    4, "Monday, September 8", "Calculus I", "NO MEETING",
-    5, "Tuesday, September 9", "Calculus II", "Sampling and simulation",
-    6, "Wednesday, September 10", "Probability", "NO MEETING",
-    7, "Thursday, September 11", "NO MEETING", "NO MEETING ",
-    8, "Friday, September 12", "Review", "Markdown"
+    1, "Wednesday, September 9", "Introduction", "R and RStudio",
+    2, "Thursday, September 10", "Notation, sets, functions", "Tidyverse I",
+    3, "Friday, September 11", "Matrices", "Tidyverse II",
+    4, "Monday, September 14", "Calculus I", "Sampling and simulation",
+    5, "Tuesday, September 15", "Calculus II", "Markdown",
+    6, "Wednesday, September 16", "Probability", "NO MEETING",
+    7, "Thursday, September 17", "*Large language models*", "NO MEETING ",
+    8, "Friday, September 18", "Review", "NO MEETING"
 )
 ```
 
 
 ```{r show-schedule, echo = FALSE, results = "asis"}
-schedule %>% 
-  tt()
+schedule |>  
+  tt() |> 
+  format_tt(markdown = TRUE)
 ```
 
 
