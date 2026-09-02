@@ -1,7 +1,6 @@
 ---
-title: "Notations, Sets, Functions"
-author: "NU Social Science Math Camp"
-format: 
+pagetitle: "Notations, Sets, Functions"
+format:
   revealjs:
     embed-resources: true
     slide-number: false
@@ -23,11 +22,21 @@ knitr::opts_chunk$set(fig.pos = "center", echo = TRUE,
 
 - Go back and make sure you have the MOST RECENT version of R and RStudio
 
+    - **R:** 4.6.1 (Happy Hop)
+    - **RStudio:** 2026.08.2 
+
 ::: aside
 See [gustavodiaz.org/NUmathcamp](https://gustavodiaz.org/NUmathcamp/) for materials
 ::::
 
 ![](img/website.png){.absolute bottom=0 right=0 width="250" height="250"}
+
+::: {style="text-align: center"}
+##  Notation, Sets, Functions {.center}
+
+NU Social Science Math Camp
+
+:::
 
 ## Agenda
 
@@ -79,7 +88,7 @@ Sets can also have non-numerical elements
 . . .
 
 $$
-\mathbb{A} = \{\text{Argentina}, \text{Nigeria}, \text{South Korea} \} 
+\mathbb{A} = \{\text{Spain}, \text{Argentina}, \text{England}, \text{France} \} 
 $$
 
 . . .

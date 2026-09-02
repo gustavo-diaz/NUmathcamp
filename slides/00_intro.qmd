@@ -45,9 +45,9 @@ Assistant Professor of Instruction in Political Science
 :::
 
 ::: {.callout-tip}
-## Aven Peters
+## Ronaldo Monasterio
 PhD Student in Sociology  
-<aven.peters@u.northwestern.edu>
+<RonaldoMonasterio2028@u.northwestern.edu>
 :::
 
 # What is math camp?
@@ -93,14 +93,14 @@ Why a *math camp*?
 schedule =
   tribble(
     ~Week, ~Date, ~Morning, ~Afternoon,
-    1, "Wednesday, September 3", "Introduction", "R and RStudio",
-    1, "Thursday, September 4", "Notation, sets, functions", "Tidyverse I",
-    1, "Friday, September 5", "Matrices", "Tidyverse II",
-    2, "Monday, September 8", "Calculus I", "NO MEETING",
-    2, "Tuesday, September 9", "Calculus II", "Sampling and simulation",
-    2, "Wednesday, September 10", "Probability", "NO MEETING",
-    2, "Thursday, September 11", "NO MEETING", "NO MEETING ",
-    2, "Friday, September 12", "Review", "Markdown"
+    1, "Wednesday, September 9", "Introduction", "R and RStudio",
+    1, "Thursday, September 10", "Notation, sets, functions", "Tidyverse I",
+    1, "Friday, September 11", "Matrices", "Tidyverse II",
+    2, "Monday, September 14", "Calculus I", "Sampling and simulation",
+    2, "Tuesday, September 15", "Calculus II", "Markdown",
+    2, "Wednesday, September 16", "Probability", "NO MEETING",
+    2, "Thursday, September 17", "GitHub", "NO MEETING ",
+    2, "Friday, September 18", "Review", "NO MEETING"
 )
 ```
 
@@ -109,20 +109,18 @@ schedule =
 schedule %>% 
   tt() %>% 
   style_tt(
-    i = c(4, 6),
+    i = 6:8,
     j = 4,
     background = "lightgray"
-  ) %>% 
-  style_tt(i = 7,
-           background = "lightgray")
+  )
 ```
 
 
 ## Daily schedule
 
-- **Breakfast** (8:30 - 9:00AM)
+- **Breakfast** (9:00 - 9:30AM)
 
-- **Morning:** Math (9:00AM - noon) 
+- **Morning:** Math (9:30AM - noon) 
 
 - **Lunch:** Meet faculty, students (noon - 1PM)
 

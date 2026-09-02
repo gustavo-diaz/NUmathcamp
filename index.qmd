@@ -46,7 +46,7 @@ schedule =
     4, "Monday, September 14", "Calculus I", "Sampling and simulation",
     5, "Tuesday, September 15", "Calculus II", "Markdown",
     6, "Wednesday, September 16", "Probability", "NO MEETING",
-    7, "Thursday, September 17", "*Large language models*", "NO MEETING ",
+    7, "Thursday, September 17", "GitHub", "NO MEETING ",
     8, "Friday, September 18", "Review", "NO MEETING"
 )
 ```

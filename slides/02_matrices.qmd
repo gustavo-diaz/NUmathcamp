@@ -25,7 +25,7 @@ knitr::opts_chunk$set(fig.pos = "center", echo = TRUE,
 ## Agenda
 
 - **Morning:** Matrices and matrix algebra
-- **Lunch:** Meet junior faculty
+- **Lunch:** Meet faculty
 - **Afternoon:** Tidyverse II
 
 
@@ -1134,3 +1134,13 @@ More: <https://youtu.be/f429BxWNwfs>
 ## Transpose and inverse are very important!
 
 $$\widehat{\beta} = \underbrace{(X'X)^{-1}X'Y}_\text{"X prime X inverse, X prime Y"}$$
+
+## Homework {.center}
+
+**Set up GitHub Education account**
+
+<https://github.com/education>
+
+<https://docs.github.com/en/education/guides>
+
+Need this by next Thursday!
