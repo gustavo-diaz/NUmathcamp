@@ -73,11 +73,11 @@ If you wish to create a poster in RStudio, you can use the [`posterdown`](https:
 
 ## Practice
 
-During our meeting, we will have a small [~~PowerPoint~~ *Beamer* party](https://youtube.com/shorts/A4sqdmFZjLE?si=jNqcURRYTPtRvWBs)!
+In our next meeting, we will have a small [~~PowerPoint~~ *Beamer* party](https://youtube.com/shorts/A4sqdmFZjLE?si=jNqcURRYTPtRvWBs)!
 
 You can work alone or in groups to create a 5-minute presentation on literally any topic you like. The only requirement is that you make it using Beamer and RStudio.
 
-Once you are done, you can use this link to upload your slides: <https://forms.office.com/r/q92h5mCYPC> (Northwestern login required).
+Once you are done, you can use this link to upload your slides: <https://forms.cloud.microsoft/r/q92h5mCYPC> (Northwestern login required).
 
 We may not get to see everyone's presentation, and you can opt-out from presenting altogether, but we would still like to see your slides!
 

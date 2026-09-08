@@ -137,21 +137,21 @@
     "href": "slides/05_review.html#courses-in-political-science",
     "title": "Review",
     "section": "Courses in Political Science",
-    "text": "Courses in Political Science\nCore sequence: Prob & Stats, Linear Models, Causal Inference\n2025-26 Electives\n\nSmall N (F)\nExperiments (F)\nMachine Learning (W)\nReplication (S)"
+    "text": "Courses in Political Science\nCore sequence: Prob & Stats, Linear Models, Causal Inference\n2026-27 Electives\n\nSmall N (F)\nExperiments (S)"
   },
   {
     "objectID": "slides/05_review.html#courses-in-sociology",
     "href": "slides/05_review.html#courses-in-sociology",
     "title": "Review",
     "section": "Courses in Sociology",
-    "text": "Courses in Sociology\nCore sequence: Stats & Software, Linear Regression, Categorical Regression\n2025-26 Electives\n\nSmall N (F)\nComputational Methods (F)\nContent Analysis (W)\nQualitative Data Collection (S)"
+    "text": "Courses in Sociology\nCore sequence: Stats & Software, Linear Regression, Categorical Regression\n2026-27 Electives\n\nSmall N (F)\nContent Analysis (W)\nQualitative Data Collection (S)\nSurvey Design and Analysis (S)"
   },
   {
     "objectID": "slides/05_review.html#year-long-workshops",
     "href": "slides/05_review.html#year-long-workshops",
     "title": "Review",
     "section": "Year-long workshops",
-    "text": "Year-long workshops\nSOCIOL 576: Quantitative and Computational Methods Workshop\nPOLI_SCI 490: Statistical Computing Workshop (fka R Workshop)\n\n.33 credit each quarter\nCan participate in both without getting credit"
+    "text": "Year-long workshops\nSOCIOL 576: Quantitative and Computational Methods Workshop\nPOLI_SCI 490: Statistical Computing Workshop\n\n.33 credit each quarter\nCan participate in both without getting credit"
   },
   {
     "objectID": "slides/05_review.html#ad-hoc-ms-in-applied-statistics",
@@ -812,7 +812,7 @@
     "href": "r/05_markdown.html#practice",
     "title": "Markdown",
     "section": "Practice",
-    "text": "Practice\nDuring our meeting, we will have a small PowerPoint Beamer party!\nYou can work alone or in groups to create a 5-minute presentation on literally any topic you like. The only requirement is that you make it using Beamer and RStudio.\nOnce you are done, you can use this link to upload your slides: https://forms.office.com/r/q92h5mCYPC (Northwestern login required).\nWe may not get to see everyone’s presentation, and you can opt-out from presenting altogether, but we would still like to see your slides!",
+    "text": "Practice\nIn our next meeting, we will have a small PowerPoint Beamer party!\nYou can work alone or in groups to create a 5-minute presentation on literally any topic you like. The only requirement is that you make it using Beamer and RStudio.\nOnce you are done, you can use this link to upload your slides: https://forms.cloud.microsoft/r/q92h5mCYPC (Northwestern login required).\nWe may not get to see everyone’s presentation, and you can opt-out from presenting altogether, but we would still like to see your slides!",
     "crumbs": [
       "Programming",
       "5. Markdown"
@@ -2112,7 +2112,7 @@
     "href": "index.html",
     "title": "Math Camp",
     "section": "",
-    "text": "This is the website for the 2026 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n\n   September 9 – 18\n   9:30 AM – 4:00 PM\n   TBD",
+    "text": "This is the website for the 2026 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n\n   September 9 – 18\n   9:30 AM – 4:00 PM\n   2001 Sheridan Rd, Suite 3111",
     "crumbs": [
       "Home"
     ]
@@ -2122,7 +2122,7 @@
     "href": "index.html#welcome",
     "title": "Math Camp",
     "section": "",
-    "text": "This is the website for the 2026 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n\n   September 9 – 18\n   9:30 AM – 4:00 PM\n   TBD",
+    "text": "This is the website for the 2026 Social Science Math Camp, hosted by the Departments of Political Science and Sociology at Northwestern University. The purpose of Math Camp is to give you a chance to brush up on concepts and skills that underlie the practice of quantitative data analysis in the social sciences.\nOur schedule features math in the morning and statistical programming in the afternoon. During lunch, we will also have a chance to meet faculty and graduate students and have more informal conversations about the role of methods training in graduate school.\n\n\n\n\n   September 9 – 18\n   9:30 AM – 4:00 PM\n   2001 Sheridan Rd, Suite 3111",
     "crumbs": [
       "Home"
     ]
@@ -2132,7 +2132,7 @@
     "href": "index.html#schedule",
     "title": "Math Camp",
     "section": "Schedule",
-    "text": "Schedule\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                Day\n                Date\n                Morning\n                Afternoon\n              \n        \n        \n        \n                \n                  1\n                  Wednesday, September 9\n                  Introduction\n                  R and RStudio\n                \n                \n                  2\n                  Thursday, September 10\n                  Notation, sets, functions\n                  Tidyverse I\n                \n                \n                  3\n                  Friday, September 11\n                  Matrices\n                  Tidyverse II\n                \n                \n                  4\n                  Monday, September 14\n                  Calculus I\n                  Sampling and simulation\n                \n                \n                  5\n                  Tuesday, September 15\n                  Calculus II\n                  Markdown\n                \n                \n                  6\n                  Wednesday, September 16\n                  Probability\n                  NO MEETING\n                \n                \n                  7\n                  Thursday, September 17\n                  GitHub\n                  NO MEETING\n                \n                \n                  8\n                  Friday, September 18\n                  Review\n                  NO MEETING",
+    "text": "Schedule\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                Day\n                Date\n                Morning\n                Afternoon\n              \n        \n        \n        \n                \n                  1\n                  Wednesday, September 9\n                  Introduction\n                  R and RStudio\n                \n                \n                  2\n                  Thursday, September 10\n                  Notation, sets, functions\n                  Tidyverse I\n                \n                \n                  3\n                  Friday, September 11\n                  Matrices\n                  Tidyverse II\n                \n                \n                  4\n                  Monday, September 14\n                  Calculus I\n                  Sampling and simulation\n                \n                \n                  5\n                  Tuesday, September 15\n                  Calculus II\n                  Markdown I\n                \n                \n                  6\n                  Wednesday, September 16\n                  Markdown II\n                  NO MEETING\n                \n                \n                  7\n                  Thursday, September 17\n                  GitHub\n                  NO MEETING\n                \n                \n                  8\n                  Friday, September 18\n                  Review\n                  NO MEETING",
     "crumbs": [
       "Home"
     ]

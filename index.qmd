@@ -31,7 +31,7 @@ Our schedule features math in the morning and statistical programming in the aft
 
 - {{< fa calendar >}} &nbsp; September 9 -- 18
 - {{< fa clock >}} &nbsp; 9:30 AM -- 4:00 PM
-- {{< fa location-dot >}} &nbsp; TBD
+- {{< fa location-dot >}} &nbsp; 2001 Sheridan Rd, Suite 3111
 
 ## Schedule
 
@@ -44,8 +44,8 @@ schedule =
     2, "Thursday, September 10", "Notation, sets, functions", "Tidyverse I",
     3, "Friday, September 11", "Matrices", "Tidyverse II",
     4, "Monday, September 14", "Calculus I", "Sampling and simulation",
-    5, "Tuesday, September 15", "Calculus II", "Markdown",
-    6, "Wednesday, September 16", "Probability", "NO MEETING",
+    5, "Tuesday, September 15", "Calculus II", "Markdown I",
+    6, "Wednesday, September 16", "Markdown II", "NO MEETING",
     7, "Thursday, September 17", "GitHub", "NO MEETING ",
     8, "Friday, September 18", "Review", "NO MEETING"
 )
