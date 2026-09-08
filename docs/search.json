@@ -2574,5 +2574,89 @@
       "Math",
       "4. Calculus II"
     ]
+  },
+  {
+    "objectID": "slides/06_review.html#agenda",
+    "href": "slides/06_review.html#agenda",
+    "title": "Review",
+    "section": "Agenda",
+    "text": "Agenda\n\nMorning: Further learning and review\nLunch: Meet grad students on the market\nAfternoon: Markdown"
+  },
+  {
+    "objectID": "slides/06_review.html#math-camp-reference",
+    "href": "slides/06_review.html#math-camp-reference",
+    "title": "Review",
+    "section": "Math camp reference",
+    "text": "Math camp reference\n\n\n\n\n\n\n\ndoi.org/10.1017/CBO9780511606656 (free via NU Library)"
+  },
+  {
+    "objectID": "slides/06_review.html#math-camp-reference-1",
+    "href": "slides/06_review.html#math-camp-reference-1",
+    "title": "Review",
+    "section": "Math camp reference",
+    "text": "Math camp reference\n\nWebsite: www.daveasiegel.com/teaching/math-course/\nYoutube: www.youtube.com/c/DavidSiegelmath/playlists"
+  },
+  {
+    "objectID": "slides/06_review.html#tidyverse",
+    "href": "slides/06_review.html#tidyverse",
+    "title": "Review",
+    "section": "Tidyverse",
+    "text": "Tidyverse\nBook: r4ds.hadley.nz\nShort guides: posit.cloud/learn/recipes\nCheatsheets: posit.co/resources/cheatsheets/"
+  },
+  {
+    "objectID": "slides/06_review.html#textbooks",
+    "href": "slides/06_review.html#textbooks",
+    "title": "Review",
+    "section": "Textbooks",
+    "text": "Textbooks"
+  },
+  {
+    "objectID": "slides/06_review.html#textbooks-1",
+    "href": "slides/06_review.html#textbooks-1",
+    "title": "Review",
+    "section": "Textbooks",
+    "text": "Textbooks"
+  },
+  {
+    "objectID": "slides/06_review.html#textbooks-2",
+    "href": "slides/06_review.html#textbooks-2",
+    "title": "Review",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\n\n\n\n\n\n\nstatistical-modeling.netlify.app"
+  },
+  {
+    "objectID": "slides/06_review.html#courses-in-political-science",
+    "href": "slides/06_review.html#courses-in-political-science",
+    "title": "Review",
+    "section": "Courses in Political Science",
+    "text": "Courses in Political Science\nCore sequence: Prob & Stats, Linear Models, Causal Inference\n2026-27 Electives\n\nSmall N (F)\nExperiments (S)"
+  },
+  {
+    "objectID": "slides/06_review.html#courses-in-sociology",
+    "href": "slides/06_review.html#courses-in-sociology",
+    "title": "Review",
+    "section": "Courses in Sociology",
+    "text": "Courses in Sociology\nCore sequence: Stats & Software, Linear Regression, Categorical Regression\n2026-27 Electives\n\nSmall N (F)\nContent Analysis (W)\nQualitative Data Collection (S)\nSurvey Design and Analysis (S)"
+  },
+  {
+    "objectID": "slides/06_review.html#year-long-workshops",
+    "href": "slides/06_review.html#year-long-workshops",
+    "title": "Review",
+    "section": "Year-long workshops",
+    "text": "Year-long workshops\nSOCIOL 576: Quantitative and Computational Methods Workshop\nPOLI_SCI 490: Statistical Computing Workshop\n\n.33 credit each quarter\nCan participate in both without getting credit"
+  },
+  {
+    "objectID": "slides/06_review.html#ad-hoc-ms-in-applied-statistics",
+    "href": "slides/06_review.html#ad-hoc-ms-in-applied-statistics",
+    "title": "Review",
+    "section": "Ad-hoc MS in Applied Statistics",
+    "text": "Ad-hoc MS in Applied Statistics\n\n9 courses + culminating project\nStatistical Theory and Methods sequence required (STAT 320-1 and -2)\nConcentration: Stats only, data science, outside course\nApply before or shortly after taking courses\nAwarded simultaneously with PhD\n\n\n\nstatistics.northwestern.edu/graduate/ad-hoc-ms-degree/"
+  },
+  {
+    "objectID": "slides/06_review.html#how-much-of-math-camp-will-matter",
+    "href": "slides/06_review.html#how-much-of-math-camp-will-matter",
+    "title": "Review",
+    "section": "How much of math camp will matter?",
+    "text": "How much of math camp will matter?\nMath\n\nMostly at a conceptual level (unless you do formal theory)\nConfidence in soft skills\n\n\nR\n\nSolid foundation to stay up to date with both coding and methods\nEasy to learn Python later if you need to"
   }
 ]

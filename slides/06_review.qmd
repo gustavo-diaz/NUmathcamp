@@ -77,30 +77,28 @@ knitr::opts_chunk$set(fig.pos = "center", echo = TRUE,
 
 **Core sequence:** Prob & Stats, Linear Models, Causal Inference
 
-**2025-26 Electives**
+**2026-27 Electives**
 
 - Small N (F)
-- Experiments (F)
-- Machine Learning (W)
-- Replication (S)
+- Experiments (S)
 
 
 ## Courses in Sociology
 
 **Core sequence:** Stats & Software, Linear Regression, Categorical Regression
 
-**2025-26 Electives**
+**2026-27 Electives**
 
 - Small N (F) 
-- Computational Methods (F)
 - Content Analysis (W)
 - Qualitative Data Collection (S)
+- Survey Design and Analysis (S)
 
 ## Year-long workshops
 
 **SOCIOL 576:** Quantitative and Computational Methods Workshop
 
-**POLI_SCI 490:** Statistical Computing Workshop (fka R Workshop)
+**POLI_SCI 490:** Statistical Computing Workshop
 
 - .33 credit each quarter
 - Can participate in both without getting credit
