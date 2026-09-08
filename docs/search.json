@@ -178,36 +178,36 @@
     "objectID": "slides/03_calc1.html#what-have-we-learned-so-far",
     "href": "slides/03_calc1.html#what-have-we-learned-so-far",
     "title": "Calculus I",
-    "section": "",
-    "text": "Foundational ideas behind what you will have to deal with during your graduate program:\n\n\nReading about methods \\(\\rightarrow\\) Notation, sets, functions\nWorking with data frames \\(\\rightarrow\\) Matrix operations"
+    "section": "What have we learned so far?",
+    "text": "What have we learned so far?\nFoundational ideas behind what you will have to deal with during your graduate program:\n\nReading about methods \\(\\rightarrow\\) Notation, sets, functions\nWorking with data frames \\(\\rightarrow\\) Matrix operations"
   },
   {
     "objectID": "slides/03_calc1.html#up-next",
     "href": "slides/03_calc1.html#up-next",
     "title": "Calculus I",
     "section": "Up next",
-    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n. . .\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
+    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
   },
   {
     "objectID": "slides/03_calc1.html#calculus",
     "href": "slides/03_calc1.html#calculus",
     "title": "Calculus I",
     "section": "Calculus",
-    "text": "Calculus\n\n\nThis is often where people experience the most difficulty\nWe are now operating with whole functions!\nNew operators have new, different rules\nWe will stick together!"
+    "text": "Calculus\n\nThis is often where people experience the most difficulty\nWe are now operating with whole functions!\nNew operators have new, different rules\nWe will stick together!"
   },
   {
     "objectID": "slides/03_calc1.html#derivatives-as-a-slope",
     "href": "slides/03_calc1.html#derivatives-as-a-slope",
     "title": "Calculus I",
     "section": "Derivatives as a slope",
-    "text": "Derivatives as a slope\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do we find the slope of this line?\n\\(m = \\frac{f(x_2) - f(x_1)}{x_2-x_1} = \\frac{rise}{run}\\)\nLet’s try it out!"
+    "text": "Derivatives as a slope\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do we find the slope of this line?\n\\(m = \\frac{f(x_2) - f(x_1)}{x_2-x_1} = \\frac{rise}{run}\\)\nLet’s try it out!"
   },
   {
     "objectID": "slides/03_calc1.html#derivatives-as-rate-of-change",
     "href": "slides/03_calc1.html#derivatives-as-rate-of-change",
     "title": "Calculus I",
     "section": "Derivatives as rate of change",
-    "text": "Derivatives as rate of change\n\n\nPositive derivative \\(\\rightarrow\\) Function is increasing\nNegative derivative \\(\\rightarrow\\) Function is decreasing\nZeroes \\(\\rightarrow\\) Max or min (more soon!)"
+    "text": "Derivatives as rate of change\n\nPositive derivative \\(\\rightarrow\\) Function is increasing\nNegative derivative \\(\\rightarrow\\) Function is decreasing\nZeroes \\(\\rightarrow\\) Max or min (more soon!)"
   },
   {
     "objectID": "slides/03_calc1.html#now-try-this-one",
@@ -221,21 +221,21 @@
     "href": "slides/03_calc1.html#why-doesnt-it-work",
     "title": "Calculus I",
     "section": "Why doesn’t it work?",
-    "text": "Why doesn’t it work?\n\n\nWe need an operation to calculate the slope or rate of change for (almost) any kind of continuous function\nEnter derivatives\n\n\n. . .\nGeneralize slope formula\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]"
+    "text": "Why doesn’t it work?\n\nWe need an operation to calculate the slope or rate of change for (almost) any kind of continuous function\nEnter derivatives\n\n\nGeneralize slope formula\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#derivatives",
     "href": "slides/03_calc1.html#derivatives",
     "title": "Calculus I",
     "section": "Derivatives",
-    "text": "Derivatives\nWhen \\(\\Delta x\\) is small enough\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = f'(x)\n\\]\n\n\nRead \\(\\frac{d}{dx} f(x)\\) as “the derivative of \\(f\\) of \\(x\\) with respect to \\(x\\)”\nRead \\(f'(x)\\) as “\\(f\\) prime \\(x\\)” for a shorthand"
+    "text": "Derivatives\nWhen \\(\\Delta x\\) is small enough\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = f'(x)\n\\]\n\nRead \\(\\frac{d}{dx} f(x)\\) as “the derivative of \\(f\\) of \\(x\\) with respect to \\(x\\)”\nRead \\(f'(x)\\) as “\\(f\\) prime \\(x\\)” for a shorthand"
   },
   {
     "objectID": "slides/03_calc1.html#how-to-compute-a-derivative",
     "href": "slides/03_calc1.html#how-to-compute-a-derivative",
     "title": "Calculus I",
     "section": "How to compute a derivative?",
-    "text": "How to compute a derivative?\n\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+    "text": "How to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
   },
   {
     "objectID": "slides/03_calc1.html#how-to-compute-a-derivative-1",
@@ -256,7 +256,7 @@
     "href": "slides/03_calc1.html#using-limits-1",
     "title": "Calculus I",
     "section": "Using limits",
-    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\n. . .\nBack to \\(x^2\\)\n. . .\n\\[\n\\lim_{h \\to0} \\frac{f(x+ h)^2 - x^2}{h}\n\\]"
+    "text": "Using limits\n\\[\n\\lim_{h\\to0} \\frac{f(x_1+ h) - f(x_1)}{h}\n\\]\n\nBack to \\(x^2\\)\n\n\n\\[\n\\lim_{h \\to0} \\frac{f(x+ h)^2 - x^2}{h}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#using-limits-2",
@@ -319,35 +319,35 @@
     "href": "slides/03_calc1.html#rules-of-differentiation",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\n. . .\nDifferentation: “Taking the derivative”"
+    "text": "Rules of differentiation\n\nDifferentation: “Taking the derivative”"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-1",
     "href": "slides/03_calc1.html#rules-of-differentiation-1",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nConstant rule: \\((c)' = 0\\).\n. . .\n\\(y = 2\\)"
+    "text": "Rules of differentiation\nConstant rule: \\((c)' = 0\\).\n\n\\(y = 2\\)"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-2",
     "href": "slides/03_calc1.html#rules-of-differentiation-2",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)\n. . ."
+    "text": "Rules of differentiation\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\)"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-3",
     "href": "slides/03_calc1.html#rules-of-differentiation-3",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\n. . .\nExample: \\(f(x) = 3x + 7\\)\n. . .\n\\[\nf'(x) = (3x + 7)'\n\\]\n. . .\n\\[\n= (3x)' + (7)'\n\\]\n. . .\n\\[\n= 3 + 0\n\\]\n. . .\n\\[\n= 3\n\\]"
+    "text": "Rules of differentiation\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\n\nExample: \\(f(x) = 3x + 7\\)\n\n\n\\[\nf'(x) = (3x + 7)'\n\\]\n\n\n\\[\n= (3x)' + (7)'\n\\]\n\n\n\\[\n= 3 + 0\n\\]\n\n\n\\[\n= 3\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#rules-of-differentiation-4",
     "href": "slides/03_calc1.html#rules-of-differentiation-4",
     "title": "Calculus I",
     "section": "Rules of differentiation",
-    "text": "Rules of differentiation\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\n. . .\n\\[\nf(x) = x^2\n\\]\n. . .\n\\[\nf'(x) = nx^{(n-1)}\n\\]\n. . .\n\\[\n= 2x^{(2-1)}\n\\]\n. . .\n\\[\n= 2x\n\\]\n\n\nRate of change depends on values of \\(x\\)\n“… at a given point”"
+    "text": "Rules of differentiation\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\n\n\\[\nf(x) = x^2\n\\]\n\n\n\\[\nf'(x) = nx^{(n-1)}\n\\]\n\n\n\\[\n= 2x^{(2-1)}\n\\]\n\n\n\\[\n= 2x\n\\]\n\nRate of change depends on values of \\(x\\)\n“… at a given point”"
   },
   {
     "objectID": "slides/03_calc1.html#practice",
@@ -389,35 +389,35 @@
     "href": "slides/03_calc1.html#advanced-rules",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\n. . .\n\\[\n[(3x+4)(x+2)]'\n\\]\n. . .\n\\[\nf(x) = (3x+4), g(x) = (x+2); f'(x) = 3, g'(x) = 1\n\\]\n. . .\n\\[\n\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}\n\\]\n. . .\n\\[\n= \\color{blue}3 \\color{yellow}{(x+2)} + \\color{purple}{1} \\color{green}{(3x+4)}\n\\]\n. . .\n\\[\n= 3x + 6 + 3x+ 4\n\\]\n. . .\n\\[\n= 6x + 10\n\\]"
+    "text": "Advanced rules\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\n\n\\[\n[(3x+4)(x+2)]'\n\\]\n\n\n\\[\nf(x) = (3x+4), g(x) = (x+2); f'(x) = 3, g'(x) = 1\n\\]\n\n\n\\[\n\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}\n\\]\n\n\n\\[\n= \\color{blue}3 \\color{yellow}{(x+2)} + \\color{purple}{1} \\color{green}{(3x+4)}\n\\]\n\n\n\\[\n= 3x + 6 + 3x+ 4\n\\]\n\n\n\\[\n= 6x + 10\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-1",
     "href": "slides/03_calc1.html#advanced-rules-1",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n. . .\n\\[\n\\frac{3x^2}{x+2}\n\\]"
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\n\\[\n\\frac{3x^2}{x+2}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-2",
     "href": "slides/03_calc1.html#advanced-rules-2",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\\[\n\\frac{3x^2}{x+2} \\Rightarrow f(x) = 3x^2, g(x) = x + 2; f'(x) = 6x, g'(x) = 1\n\\]\n. . .\n\\[\n\\frac{\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}}{[\\color{yellow}{g(x)}]^2} =\n\\frac{\\color{blue}{6x}\\color{yellow}{(x+2)} - \\color{purple}1 \\color{green}{(3x^2)}}{\\color{yellow}{(x+2)}^2}\n\\]\n. . .\n\\[\n= \\frac{6x^2 + 12x - 3x2}{(x+2)^2} = \\frac{3x^2+12x}{(x+2)^2}\n\\]"
+    "text": "Advanced rules\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\n\\[\n\\frac{3x^2}{x+2} \\Rightarrow f(x) = 3x^2, g(x) = x + 2; f'(x) = 6x, g'(x) = 1\n\\]\n\n\\[\n\\frac{\\color{blue}{f'(x)}\\color{yellow}{g(x)} + \\color{purple}{g'(x)}\\color{green}{f(x)}}{[\\color{yellow}{g(x)}]^2} =\n\\frac{\\color{blue}{6x}\\color{yellow}{(x+2)} - \\color{purple}1 \\color{green}{(3x^2)}}{\\color{yellow}{(x+2)}^2}\n\\]\n\n\n\\[\n= \\frac{6x^2 + 12x - 3x2}{(x+2)^2} = \\frac{3x^2+12x}{(x+2)^2}\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-3",
     "href": "slides/03_calc1.html#advanced-rules-3",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n. . .\n\\[\nf(g(x)) = (x+3)^3\n\\]"
+    "text": "Advanced rules\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n\n\\[\nf(g(x)) = (x+3)^3\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#advanced-rules-4",
     "href": "slides/03_calc1.html#advanced-rules-4",
     "title": "Calculus I",
     "section": "Advanced rules",
-    "text": "Advanced rules\nChain rule: \\([f(g(x))]' = f'(g(x)) \\cdot g'(x)\\)\n\\[\nf(g(x)) = (x+3)^3 \\Rightarrow f(g(x)) = g(x)^3, g(x) = (x+3)\n\\]\n. . .\n\\[\nf'(x) = 3x^2 \\Rightarrow f'(g(x)) = 3 (x+3)^2, g'(x) = 1\n\\]\n. . .\nSubstitute\n\\[\n[f(g(x))]' = 3(x+3)^2 \\cdot 1\n\\]"
+    "text": "Advanced rules\nChain rule: \\([f(g(x))]' = f'(g(x)) \\cdot g'(x)\\)\n\\[\nf(g(x)) = (x+3)^3 \\Rightarrow f(g(x)) = g(x)^3, g(x) = (x+3)\n\\]\n\n\\[\nf'(x) = 3x^2 \\Rightarrow f'(g(x)) = 3 (x+3)^2, g'(x) = 1\n\\]\n\n\nSubstitute\n\\[\n[f(g(x))]' = 3(x+3)^2 \\cdot 1\n\\]"
   },
   {
     "objectID": "slides/03_calc1.html#more-more-more-practice",
@@ -431,28 +431,28 @@
     "href": "slides/03_calc1.html#higher-order-derivatives",
     "title": "Calculus I",
     "section": "Higher-order derivatives",
-    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n. . .\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n. . .\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
+    "text": "Higher-order derivatives\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n\n\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
   },
   {
     "objectID": "slides/03_calc1.html#partial-derivative",
     "href": "slides/03_calc1.html#partial-derivative",
     "title": "Calculus I",
     "section": "Partial derivative",
-    "text": "Partial derivative\n. . .\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n. . .\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n. . .\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
+    "text": "Partial derivative\n\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n\n\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n\n\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
   },
   {
     "objectID": "slides/03_calc1.html#example",
     "href": "slides/03_calc1.html#example",
     "title": "Calculus I",
     "section": "Example",
-    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n. . .\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
+    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
   },
   {
     "objectID": "slides/03_calc1.html#differentiability-of-functions",
     "href": "slides/03_calc1.html#differentiability-of-functions",
     "title": "Calculus I",
     "section": "Differentiability of functions",
-    "text": "Differentiability of functions\n\n\nNot all functions are differentiable\nWe need continuous and reasonably smooth functions\nInformally: Can draw them without lifting the pen\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\nDifferentiable \\(\\to\\) continuous\nContinuous \\(\\not\\to\\) differentiable"
+    "text": "Differentiability of functions\n\nNot all functions are differentiable\nWe need continuous and reasonably smooth functions\nInformally: Can draw them without lifting the pen\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\nDifferentiable \\(\\to\\) continuous\nContinuous \\(\\not\\to\\) differentiable"
   },
   {
     "objectID": "slides/03_calc1.html#how-to-compute-a-derivative-4",
@@ -473,28 +473,28 @@
     "href": "slides/03_calc1.html#using-computers",
     "title": "Calculus I",
     "section": "Using computers",
-    "text": "Using computers\n\n\nSymbolic differentiation: Do the math for you (WolframAlpha or Mathematica)\nNumerical differentiation: Evaluate the function at many values (optim() in R)\nAutomatic differentiation: Break up functions into elementary operations and use chain rule (torch package in R, various packages in Python)"
+    "text": "Using computers\n\nSymbolic differentiation: Do the math for you (WolframAlpha or Mathematica)\nNumerical differentiation: Evaluate the function at many values (optim() in R)\nAutomatic differentiation: Break up functions into elementary operations and use chain rule (torch package in R, various packages in Python)"
   },
   {
     "objectID": "slides/03_calc1.html#optimization",
     "href": "slides/03_calc1.html#optimization",
     "title": "Calculus I",
     "section": "Optimization",
-    "text": "Optimization\n\n\nFind minimum or maximum values\nValleys are minima\nPeaks are maxima\nBoth are extrema\nExtrama can be local or global"
+    "text": "Optimization\n\nFind minimum or maximum values\nValleys are minima\nPeaks are maxima\nBoth are extrema\nExtrama can be local or global"
   },
   {
     "objectID": "slides/03_calc1.html#first-order-condition",
     "href": "slides/03_calc1.html#first-order-condition",
     "title": "Calculus I",
     "section": "First order condition",
-    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n. . .\n\\[FOC: f'(x)=0\\]"
+    "text": "First order condition\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n\\[FOC: f'(x)=0\\]"
   },
   {
     "objectID": "slides/03_calc1.html#second-order-condition",
     "href": "slides/03_calc1.html#second-order-condition",
     "title": "Calculus I",
     "section": "Second order condition",
-    "text": "Second order condition\n. . .\nFOC finds critical points, but can’t tell if minimum or maximum\n. . .\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
+    "text": "Second order condition\n\nFOC finds critical points, but can’t tell if minimum or maximum\n\n\nSecond derivative test\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
   },
   {
     "objectID": "slides/03_calc1.html#more-more-more-more-practice",
@@ -508,7 +508,7 @@
     "href": "slides/03_calc1.html#local-vs.-global-extrema",
     "title": "Calculus I",
     "section": "Local vs. global extrema",
-    "text": "Local vs. global extrema\nExtreme value theorem:\n\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nFind by comparing local min/max to the value of the function at the endpoints\nCould be limits as function approaches \\(-\\infty\\) and \\(+\\infty\\)"
+    "text": "Local vs. global extrema\nExtreme value theorem:\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nFind by comparing local min/max to the value of the function at the endpoints\nCould be limits as function approaches \\(-\\infty\\) and \\(+\\infty\\)"
   },
   {
     "objectID": "slides/03_calc1.html#practice-again",
@@ -1222,29 +1222,29 @@
     "objectID": "slides/00_intro.html#agenda",
     "href": "slides/00_intro.html#agenda",
     "title": "Social Science\nMath Camp",
-    "section": "",
-    "text": "Who are we?\nWhat is math camp?\nWho are you?\nWhat are we going to cover?\nGetting in the mindset"
+    "section": "Agenda",
+    "text": "Agenda\n\nWho are we?\nWhat is math camp?\nWho are you?\nWhat are we going to cover?\nGetting in the mindset"
   },
   {
     "objectID": "slides/00_intro.html#co-instructors",
     "href": "slides/00_intro.html#co-instructors",
     "title": "Social Science\nMath Camp",
     "section": "Co-instructors",
-    "text": "Co-instructors\n\n\n\n\n\n\nTipArtur Baranov\n\n\n\nPhD Student in Political Science\nartur.baranov@u.northwestern.edu\n\n\n\n\n\n\n\n\nTipGustavo Diaz\n\n\n\nAssistant Professor of Instruction in Political Science\ngustavo.diaz@northwestern.edu\n\n\n\n\n\n\n\n\nTipRonaldo Monasterio\n\n\n\nPhD Student in Sociology\nRonaldoMonasterio2028@u.northwestern.edu"
+    "text": "Co-instructors\n\n\n\n\n\n\nArtur Baranov\n\n\nPhD Student in Political Science\nartur.baranov@u.northwestern.edu\n\n\n\n\n\n\n\n\n\nGustavo Diaz\n\n\nAssistant Professor of Instruction in Political Science\ngustavo.diaz@northwestern.edu\n\n\n\n\n\n\n\n\n\nRonaldo Monasterio\n\n\nPhD Student in Sociology\nRonaldoMonasterio2028@u.northwestern.edu"
   },
   {
     "objectID": "slides/00_intro.html#math-camp",
     "href": "slides/00_intro.html#math-camp",
     "title": "Social Science\nMath Camp",
     "section": "Math camp",
-    "text": "Math camp\n. . .\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nGoals:\n\n\nGet to know you and meet your methods training needs/goals\nGet to know your colleagues"
+    "text": "Math camp\n\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nGoals:\n\nGet to know you and meet your methods training needs/goals\nGet to know your colleagues"
   },
   {
     "objectID": "slides/00_intro.html#math-camp-1",
     "href": "slides/00_intro.html#math-camp-1",
     "title": "Social Science\nMath Camp",
     "section": "Math camp",
-    "text": "Math camp\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nWhy a math camp?\n\n\nCan always use more methods training\nMore of a methods camp"
+    "text": "Math camp\n\nA (re)introduction to math topics necessary for the quantitative methods sequence\n\nWhy a math camp?\n\nCan always use more methods training\nMore of a methods camp"
   },
   {
     "objectID": "slides/00_intro.html#who-are-you",
@@ -1265,49 +1265,49 @@
     "href": "slides/00_intro.html#daily-schedule",
     "title": "Social Science\nMath Camp",
     "section": "Daily schedule",
-    "text": "Daily schedule\n\nBreakfast (9:00 - 9:30AM)\nMorning: Math (9:30AM - noon)\nLunch: Meet faculty, students (noon - 1PM)\nBreak (1 - 1:30PM)\nAfternoon: R programming (1:30 - 4PM)\n\n\n\nSee gustavodiaz.org/NUmathcamp for content"
+    "text": "Daily schedule\n\nBreakfast (9:00 - 9:30AM)\nMorning: Math (9:30AM - noon)\nLunch: Meet faculty, students (noon - 1PM)\nBreak (1 - 1:30PM)\nAfternoon: R programming (1:30 - 4PM)\n\n\n\n\nSee gustavodiaz.org/NUmathcamp for content"
   },
   {
     "objectID": "slides/00_intro.html#learning-goals",
     "href": "slides/00_intro.html#learning-goals",
     "title": "Social Science\nMath Camp",
     "section": "Learning goals",
-    "text": "Learning goals\n\n\nMake you feel very stressed about things you are supposed to already know\nMe saying “I told you this was important” in five years\nConfront your fears about math early on\nSo that you can do the cool things with confidence\n(The fear never goes away, but you learn to live with it)"
+    "text": "Learning goals\n\nMake you feel very stressed about things you are supposed to already know\nMe saying “I told you this was important” in five years\nConfront your fears about math early on\nSo that you can do the cool things with confidence\n(The fear never goes away, but you learn to live with it)"
   },
   {
     "objectID": "slides/00_intro.html#expectations",
     "href": "slides/00_intro.html#expectations",
     "title": "Social Science\nMath Camp",
     "section": "Expectations",
-    "text": "Expectations\n\n\nYou are not being evaluated\nNo need to take extensive notes\nBring a laptop\nEngage\nGet things wrong\nAsk\nInterrupt if you need to"
+    "text": "Expectations\n\nYou are not being evaluated\nNo need to take extensive notes\nBring a laptop\nEngage\nGet things wrong\nAsk\nInterrupt if you need to"
   },
   {
     "objectID": "slides/00_intro.html#some-notes",
     "href": "slides/00_intro.html#some-notes",
     "title": "Social Science\nMath Camp",
     "section": "Some notes",
-    "text": "Some notes\n\n\nClass is not graded, but you can get credit for attending (POLI_SCI 490)\nContent is cumulative (now and forever)\nEveryone comes in with different experiences and background. This is a feature, not a bug"
+    "text": "Some notes\n\nClass is not graded, but you can get credit for attending (POLI_SCI 490)\nContent is cumulative (now and forever)\nEveryone comes in with different experiences and background. This is a feature, not a bug"
   },
   {
     "objectID": "slides/00_intro.html#expectations-beyond-math-camp",
     "href": "slides/00_intro.html#expectations-beyond-math-camp",
     "title": "Social Science\nMath Camp",
     "section": "Expectations beyond math camp",
-    "text": "Expectations beyond math camp\n\n\nRead the material, learn to be strategic about it, come up with things to discuss\nPeople around you are colleagues, not competition. Treat everyone with respect (including yourself)\nNobody knows what is going on, most people will help you figure things out\nThere is life beyond grad school"
+    "text": "Expectations beyond math camp\n\nRead the material, learn to be strategic about it, come up with things to discuss\nPeople around you are colleagues, not competition. Treat everyone with respect (including yourself)\nNobody knows what is going on, most people will help you figure things out\nThere is life beyond grad school"
   },
   {
     "objectID": "slides/00_intro.html#why-do-i-need-mathcamp",
     "href": "slides/00_intro.html#why-do-i-need-mathcamp",
     "title": "Social Science\nMath Camp",
     "section": "Why do I need mathcamp?",
-    "text": "Why do I need mathcamp?\nYou are being trained to become a producer of scientific knowledge\n. . .\nScience: Knowledge generation through falsification\n. . .\nFalsification: Trying to prove ourselves wrong"
+    "text": "Why do I need mathcamp?\nYou are being trained to become a producer of scientific knowledge\n\nScience: Knowledge generation through falsification\n\n\nFalsification: Trying to prove ourselves wrong"
   },
   {
     "objectID": "slides/00_intro.html#scientific-method",
     "href": "slides/00_intro.html#scientific-method",
     "title": "Social Science\nMath Camp",
     "section": "Scientific method",
-    "text": "Scientific method\n\nPuzzle/question\nTheory/model\nHypothesis/implications\nObservation/testing\nConclusion/evaluation\n\n. . .\nYour job will be to become good at proposing and testing theories"
+    "text": "Scientific method\n\nPuzzle/question\nTheory/model\nHypothesis/implications\nObservation/testing\nConclusion/evaluation\n\n\nYour job will be to become good at proposing and testing theories"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory",
@@ -1321,49 +1321,49 @@
     "href": "slides/00_intro.html#what-is-a-theory-1",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n\n¯\\(ツ)/¯"
+    "text": "What is a theory?\n¯\\(ツ)/¯"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-2",
     "href": "slides/00_intro.html#what-is-a-theory-2",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea"
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-3",
     "href": "slides/00_intro.html#what-is-a-theory-3",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows"
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-4",
     "href": "slides/00_intro.html#what-is-a-theory-4",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated"
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated"
   },
   {
     "objectID": "slides/00_intro.html#what-is-a-theory-5",
     "href": "slides/00_intro.html#what-is-a-theory-5",
     "title": "Social Science\nMath Camp",
     "section": "What is a theory?",
-    "text": "What is a theory?\n\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated\n\n\nand that’s why you need a PhD to do it well"
+    "text": "What is a theory?\n¯\\(ツ)/¯\nI have no idea\n\nMy theory is that no one really knows\n\n\nso they make it complicated\n\n\nand that’s why you need a PhD to do it well"
   },
   {
     "objectID": "slides/00_intro.html#but-it-sure-is-important",
     "href": "slides/00_intro.html#but-it-sure-is-important",
     "title": "Social Science\nMath Camp",
     "section": "But it sure is important!",
-    "text": "But it sure is important!\n. . .\nMost common reasons why a peer-reviewed journal rejects an article:\n\n\nHaving no theory\nWeak theory\nInsufficient theoretical innovation\n\n\n. . .\nIf you ask me, theory is logical explanation or informed speculation\n. . .\n\n(but I am not the right person to ask)"
+    "text": "But it sure is important!\n\nMost common reasons why a peer-reviewed journal rejects an article:\n\nHaving no theory\nWeak theory\nInsufficient theoretical innovation\n\n\n\nIf you ask me, theory is logical explanation or informed speculation\n\n\n\n(but I am not the right person to ask)"
   },
   {
     "objectID": "slides/00_intro.html#the-important-part",
     "href": "slides/00_intro.html#the-important-part",
     "title": "Social Science\nMath Camp",
     "section": "The important part",
-    "text": "The important part\n\n\nCannot test theories because they unambiguously true or false\nNeed to believe a theory is true to engage with it scientifically\nInstead, test arguments that follow from a theory (hypotheses/implications)\n\n\n. . .\nSounds like splitting hairs, but there is a good reason for this"
+    "text": "The important part\n\nCannot test theories because they unambiguously true or false\nNeed to believe a theory is true to engage with it scientifically\nInstead, test arguments that follow from a theory (hypotheses/implications)\n\n\nSounds like splitting hairs, but there is a good reason for this"
   },
   {
     "objectID": "slides/00_intro.html#example",
@@ -1384,42 +1384,42 @@
     "href": "slides/00_intro.html#findings",
     "title": "Social Science\nMath Camp",
     "section": "Findings",
-    "text": "Findings\n\nParticipants in the group choir during the pandemic consistently described the activity as providing a sense of normalcy amid widespread disruption — a theme that emerged prominently and merits further investigation.\n\n. . .\n\nThis suggests that such interventions may help restore a feeling of normalcy, supporting psychological well-being and offering a means of reconnecting with a stable sense of self.\n\n\n\nhttps://doi.org/10.1177/13872877251333155"
+    "text": "Findings\n\nParticipants in the group choir during the pandemic consistently described the activity as providing a sense of normalcy amid widespread disruption — a theme that emerged prominently and merits further investigation.\n\n\n\nThis suggests that such interventions may help restore a feeling of normalcy, supporting psychological well-being and offering a means of reconnecting with a stable sense of self.\n\n\n\n\nhttps://doi.org/10.1177/13872877251333155"
   },
   {
     "objectID": "slides/00_intro.html#breaking-it-apart",
     "href": "slides/00_intro.html#breaking-it-apart",
     "title": "Social Science\nMath Camp",
     "section": "Breaking it apart",
-    "text": "Breaking it apart\n. . .\nQuestion: Can singing help overcome isolation?\n. . .\nTheory: Choral singing is a therapeutic activity for individuals with neurological disorders\n. . .\nHypothesis: Individuals who sing in a choir will report higher levels of well-being than those who do not\n. . .\nTest: Organize virtual group choir, ask survey questions in the end\n. . .\nConclusion: “Isolated older adults find joy and connection through virtual singing”\n. . ."
+    "text": "Breaking it apart\n\nQuestion: Can singing help overcome isolation?\n\n\nTheory: Choral singing is a therapeutic activity for individuals with neurological disorders\n\n\nHypothesis: Individuals who sing in a choir will report higher levels of well-being than those who do not\n\n\nTest: Organize virtual group choir, ask survey questions in the end\n\n\nConclusion: “Isolated older adults find joy and connection through virtual singing”"
   },
   {
     "objectID": "slides/00_intro.html#limitations",
     "href": "slides/00_intro.html#limitations",
     "title": "Social Science\nMath Camp",
     "section": "Limitations?",
-    "text": "Limitations?\n. . .\nIdeal study\n. . .\nObserve person \\(i\\)’s well-being with and without singing, everything else constant\n. . .\nActual study\n\nAdults 55 an older in Chicago\nElected to participate\nTwo teleconferencing programs\n176 survey responses out of 695 participants"
+    "text": "Limitations?\n\nIdeal study\n\n\nObserve person \\(i\\)’s well-being with and without singing, everything else constant\n\n\nActual study\n\nAdults 55 an older in Chicago\nElected to participate\nTwo teleconferencing programs\n176 survey responses out of 695 participants"
   },
   {
     "objectID": "slides/00_intro.html#problem",
     "href": "slides/00_intro.html#problem",
     "title": "Social Science\nMath Camp",
     "section": "Problem",
-    "text": "Problem\n. . .\nCannot observe the ideal counterfactual\n. . .\nAny test/evidence can only be suggestive\n. . .\n\nWhen evidence supports hypothesis, your theory is accepted not rejected\nWhen evidence does not support hypothesis, your theory is rejected not accepted\n\n. . .\nConnecting from narrow findings to broad theories requires assumptions"
+    "text": "Problem\n\nCannot observe the ideal counterfactual\n\n\nAny test/evidence can only be suggestive\n\n\n\nWhen evidence supports hypothesis, your theory is accepted not rejected\nWhen evidence does not support hypothesis, your theory is rejected not accepted\n\n\n\nConnecting from narrow findings to broad theories requires assumptions"
   },
   {
     "objectID": "slides/00_intro.html#statistics",
     "href": "slides/00_intro.html#statistics",
     "title": "Social Science\nMath Camp",
     "section": "Statistics",
-    "text": "Statistics\nIs all about acknowledging this gap and making assumptions explicit, systematic, and credible\n\n\nMath is a tool that helps us translate across domains\nThe difficulty lies mostly in embracing the abstraction\nLess so on notation, symbols, operations"
+    "text": "Statistics\nIs all about acknowledging this gap and making assumptions explicit, systematic, and credible\n\nMath is a tool that helps us translate across domains\nThe difficulty lies mostly in embracing the abstraction\nLess so on notation, symbols, operations"
   },
   {
     "objectID": "slides/00_intro.html#frequently-asked-questions",
     "href": "slides/00_intro.html#frequently-asked-questions",
     "title": "Social Science\nMath Camp",
     "section": "Frequently asked questions",
-    "text": "Frequently asked questions\n. . .\nDo I need mathcamp if…\n\n\nI already have training in quantitative methods?\nI plan to use qualitative methods only?\nI am in political theory?\nI want a teaching job?\nI am considering non-academic jobs?"
+    "text": "Frequently asked questions\n\nDo I need mathcamp if…\n\nI already have training in quantitative methods?\nI plan to use qualitative methods only?\nI am in political theory?\nI want a teaching job?\nI am considering non-academic jobs?"
   },
   {
     "objectID": "slides/02_matrices.html#agenda-1",
@@ -1831,15 +1831,15 @@
     "objectID": "slides/04_calc2.html#last-time",
     "href": "slides/04_calc2.html#last-time",
     "title": "Calculus II",
-    "section": "",
-    "text": "Plug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+    "section": "Last time",
+    "text": "Last time\nHow to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
   },
   {
     "objectID": "slides/04_calc2.html#last-time-1",
     "href": "slides/04_calc2.html#last-time-1",
     "title": "Calculus II",
     "section": "Last time",
-    "text": "Last time\n\nHow to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
+    "text": "Last time\nHow to compute a derivative?\n\nPlug in many values into \\(\\frac{rise}{run}\\)\nUse properties of limits\nSolve analytically\nSoftware"
   },
   {
     "objectID": "slides/04_calc2.html#today",
@@ -1853,28 +1853,28 @@
     "href": "slides/04_calc2.html#higher-order-derivatives",
     "title": "Calculus II",
     "section": "Higher-order derivatives",
-    "text": "Higher-order derivatives\n\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\n. . .\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n. . .\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
+    "text": "Higher-order derivatives\n\n\\(f'(x)\\): First derivative\n\\(f''(x)\\): Second derivative\n\\(f'''(x)\\)?\n\n\nIf we were driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\n\n\nTo get \\(f''(x)\\) just take the derivative of the output of \\(f'(x)\\)"
   },
   {
     "objectID": "slides/04_calc2.html#partial-derivative",
     "href": "slides/04_calc2.html#partial-derivative",
     "title": "Calculus II",
     "section": "Partial derivative",
-    "text": "Partial derivative\n. . .\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n. . .\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n. . .\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
+    "text": "Partial derivative\n\nWhat happens when we have more than one variable? \\(f(x,z)\\)\n\n\nPartial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\n\n\nJust treat other variables as constants and calculate the derivative of the target variable (usually \\(x\\))"
   },
   {
     "objectID": "slides/04_calc2.html#example",
     "href": "slides/04_calc2.html#example",
     "title": "Calculus II",
     "section": "Example",
-    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n. . .\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
+    "text": "Example\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\n\nLet’s try \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial x}\\) and \\(\\displaystyle\\frac{\\partial (x^2y+xy^2-x)}{\\partial y}\\) together"
   },
   {
     "objectID": "slides/04_calc2.html#differentiability-of-functions",
     "href": "slides/04_calc2.html#differentiability-of-functions",
     "title": "Calculus II",
     "section": "Differentiability of functions",
-    "text": "Differentiability of functions\n\n\nNot all functions are differentiable\nWe need continuous and reasonably smooth functions\nInformally: Can draw them without lifting the pen\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\nDifferentiable \\(\\to\\) continuous\nContinuous \\(\\not\\to\\) differentiable"
+    "text": "Differentiability of functions\n\nNot all functions are differentiable\nWe need continuous and reasonably smooth functions\nInformally: Can draw them without lifting the pen\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\nDifferentiable \\(\\to\\) continuous\nContinuous \\(\\not\\to\\) differentiable"
   },
   {
     "objectID": "slides/04_calc2.html#how-to-compute-a-derivative-2",
@@ -1895,28 +1895,28 @@
     "href": "slides/04_calc2.html#using-computers",
     "title": "Calculus II",
     "section": "Using computers",
-    "text": "Using computers\n\n\nSymbolic differentiation: Do the math for you (WolframAlpha or Mathematica)\nNumerical differentiation: Evaluate the function at many values (optim() in R)\nAutomatic differentiation: Break up functions into elementary operations and use chain rule (torch package in R, various packages in Python)"
+    "text": "Using computers\n\nSymbolic differentiation: Do the math for you (WolframAlpha or Mathematica)\nNumerical differentiation: Evaluate the function at many values (optim() in R)\nAutomatic differentiation: Break up functions into elementary operations and use chain rule (torch package in R, various packages in Python)"
   },
   {
     "objectID": "slides/04_calc2.html#optimization",
     "href": "slides/04_calc2.html#optimization",
     "title": "Calculus II",
     "section": "Optimization",
-    "text": "Optimization\n\n\nFind minimum or maximum values\nValleys are minima\nPeaks are maxima\nBoth are extrema\nExtrama can be local or global"
+    "text": "Optimization\n\nFind minimum or maximum values\nValleys are minima\nPeaks are maxima\nBoth are extrema\nExtrama can be local or global"
   },
   {
     "objectID": "slides/04_calc2.html#first-order-condition",
     "href": "slides/04_calc2.html#first-order-condition",
     "title": "Calculus II",
     "section": "First order condition",
-    "text": "First order condition\n\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n. . .\n\\[FOC: f'(x)=0\\]"
+    "text": "First order condition\n\nMinimum: Derivative is negative before and positive after\nMaximum: Derivative is positive before and negative after\nExtrema are critical points\nFirst order condition helps us find them\n\n\n\\[FOC: f'(x)=0\\]"
   },
   {
     "objectID": "slides/04_calc2.html#second-order-condition",
     "href": "slides/04_calc2.html#second-order-condition",
     "title": "Calculus II",
     "section": "Second order condition",
-    "text": "Second order condition\n. . .\nFOC finds critical points, but can’t tell if minimum or maximum\n. . .\nSecond derivative test\n\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
+    "text": "Second order condition\n\nFOC finds critical points, but can’t tell if minimum or maximum\n\n\nSecond derivative test\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives"
   },
   {
     "objectID": "slides/04_calc2.html#practice",
@@ -1930,7 +1930,7 @@
     "href": "slides/04_calc2.html#local-vs.-global-extrema",
     "title": "Calculus II",
     "section": "Local vs. global extrema",
-    "text": "Local vs. global extrema\nExtreme value theorem:\n\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nFind by comparing local min/max to the value of the function at the endpoints\nCould be limits as function approaches \\(-\\infty\\) and \\(+\\infty\\)"
+    "text": "Local vs. global extrema\nExtreme value theorem:\n\nIf a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once\nEither at the boundaries or at one of the local extrema\nFind by comparing local min/max to the value of the function at the endpoints\nCould be limits as function approaches \\(-\\infty\\) and \\(+\\infty\\)"
   },
   {
     "objectID": "slides/04_calc2.html#practice-again",
@@ -1951,14 +1951,14 @@
     "href": "slides/04_calc2.html#area-under-a-curve",
     "title": "Calculus II",
     "section": "Area under a curve",
-    "text": "Area under a curve\n. . .\nCalculate the area under\n\\[\nf(x) =\n\\begin{cases}\n\\frac{1}{3} & \\text{for } x \\in [0, 3] \\\\\n0 & \\text{otherwise}\n\\end{cases}\n\\]"
+    "text": "Area under a curve\n\nCalculate the area under\n\\[\nf(x) =\n\\begin{cases}\n\\frac{1}{3} & \\text{for } x \\in [0, 3] \\\\\n0 & \\text{otherwise}\n\\end{cases}\n\\]"
   },
   {
     "objectID": "slides/04_calc2.html#a-more-complicated-example",
     "href": "slides/04_calc2.html#a-more-complicated-example",
     "title": "Calculus II",
     "section": "A more complicated example",
-    "text": "A more complicated example\n\\(y=x^2\\)\n. . ."
+    "text": "A more complicated example\n\\(y=x^2\\)"
   },
   {
     "objectID": "slides/04_calc2.html#a-more-complicated-example-1",
@@ -1979,14 +1979,14 @@
     "href": "slides/04_calc2.html#indefinite-integral",
     "title": "Calculus II",
     "section": "Indefinite integral",
-    "text": "Indefinite integral\n\\[F(x)= \\displaystyle\\int f(x) \\text{ } dx\\]\n\n\n\\(\\int\\) is the anti-derivative with respect to \\(dx\\)\n\\(F(x)\\) is the inverse of \\(f'(x)\\)\n\n\n. . .\n\\[\\displaystyle\\frac{dF(x)}{dx} = f(x)\\]\n. . .\n\\[F' = f\\]"
+    "text": "Indefinite integral\n\\[F(x)= \\displaystyle\\int f(x) \\text{ } dx\\]\n\n\\(\\int\\) is the anti-derivative with respect to \\(dx\\)\n\\(F(x)\\) is the inverse of \\(f'(x)\\)\n\n\n\\[\\displaystyle\\frac{dF(x)}{dx} = f(x)\\]\n\n\n\\[F' = f\\]"
   },
   {
     "objectID": "slides/04_calc2.html#toy-example",
     "href": "slides/04_calc2.html#toy-example",
     "title": "Calculus II",
     "section": "Toy example",
-    "text": "Toy example\n\\[f(x) = 1\\]\n. . .\n\\[F'(x) = 1\\]\n. . .\n\\[F(x) = x\\]\n. . .\n\\[F(x) = x + 10\\]\n. . .\n\\[F(x) = x + 100\\]"
+    "text": "Toy example\n\\[f(x) = 1\\]\n\n\\[F'(x) = 1\\]\n\n\n\\[F(x) = x\\]\n\n\n\\[F(x) = x + 10\\]\n\n\n\\[F(x) = x + 100\\]"
   },
   {
     "objectID": "slides/04_calc2.html#toy-example-1",
@@ -2000,70 +2000,70 @@
     "href": "slides/04_calc2.html#generalizing",
     "title": "Calculus II",
     "section": "Generalizing",
-    "text": "Generalizing\n\n\nFor \\(f(x) = F'(x) = 1\\) we can write \\(F(x) = x + C\\)\n\\(C\\) is the constant of integration\nFinding the inverse of a derivative is called anti-differentiation"
+    "text": "Generalizing\n\nFor \\(f(x) = F'(x) = 1\\) we can write \\(F(x) = x + C\\)\n\\(C\\) is the constant of integration\nFinding the inverse of a derivative is called anti-differentiation"
   },
   {
     "objectID": "slides/04_calc2.html#definite-integral",
     "href": "slides/04_calc2.html#definite-integral",
     "title": "Calculus II",
     "section": "Definite integral",
-    "text": "Definite integral\nIndefinite integral:\n\\[\\displaystyle\\int f(x)dx\\]\n. . .\nDefinite integral:\n\\[\\displaystyle\\int_{a}^{b} f(x)dx\\]"
+    "text": "Definite integral\nIndefinite integral:\n\\[\\displaystyle\\int f(x)dx\\]\n\nDefinite integral:\n\\[\\displaystyle\\int_{a}^{b} f(x)dx\\]"
   },
   {
     "objectID": "slides/04_calc2.html#calculating-definite-integrals",
     "href": "slides/04_calc2.html#calculating-definite-integrals",
     "title": "Calculus II",
     "section": "Calculating definite integrals",
-    "text": "Calculating definite integrals\n. . .\nThe first FUNDAMENTAL THEOREM OF CALCULUS\n\\[\\displaystyle\\int_{a}^{b} f(x) \\text{ } dx = F(b)-F(a) = F(x)\\bigg|_{a}^{b}\\]\n\n\nDetermine \\(F(x)\\)\nSubstitute in \\(F(b)\\) and \\(F(a)\\)\nCalculate difference"
+    "text": "Calculating definite integrals\n\nThe first FUNDAMENTAL THEOREM OF CALCULUS\n\\[\\displaystyle\\int_{a}^{b} f(x) \\text{ } dx = F(b)-F(a) = F(x)\\bigg|_{a}^{b}\\]\n\nDetermine \\(F(x)\\)\nSubstitute in \\(F(b)\\) and \\(F(a)\\)\nCalculate difference"
   },
   {
     "objectID": "slides/04_calc2.html#rules-of-integration",
     "href": "slides/04_calc2.html#rules-of-integration",
     "title": "Calculus II",
     "section": "Rules of integration",
-    "text": "Rules of integration\nCoefficient rule: \\(\\displaystyle \\color{gray}\\int c f(x)\\, \\color{gray}{dx} \\color{gray}= c \\color{gray}\\int f(x)\\,\\color{gray}{dx}\\)\n. . .\nSum/difference rule: \\(\\displaystyle\\color{gray}\\int (f(x) \\pm g(x))\\,\\color{gray}{dx} \\color{gray}= \\color{gray}\\int f(x)\\,\\color{gray}{dx} \\pm \\color{gray}\\int g(x)\\,\\color{gray}{dx}\\)\n. . .\nConstant rule: \\(\\displaystyle\\color{gray}\\int c\\,\\color{gray}{dx} \\color{gray}= cx \\color{gray}{+ C}\\)\n. . .\nPower rule: \\(\\displaystyle\\color{gray}\\int x^n\\,\\color{gray}{dx} \\color{gray}= \\frac{x^{n+1}}{n+1} \\color{gray}{+ C} \\qquad \\forall n \\neq -1\\)\n. . .\nReciprocal rule:\\(\\displaystyle\\color{gray}\\int \\frac{1}{x}\\,\\color{gray}{dx} \\color{gray}= \\ln(x) \\color{gray}{+ C}\\)"
+    "text": "Rules of integration\nCoefficient rule: \\(\\displaystyle \\color{gray}\\int c f(x)\\, \\color{gray}{dx} \\color{gray}= c \\color{gray}\\int f(x)\\,\\color{gray}{dx}\\)\n\nSum/difference rule: \\(\\displaystyle\\color{gray}\\int (f(x) \\pm g(x))\\,\\color{gray}{dx} \\color{gray}= \\color{gray}\\int f(x)\\,\\color{gray}{dx} \\pm \\color{gray}\\int g(x)\\,\\color{gray}{dx}\\)\n\n\nConstant rule: \\(\\displaystyle\\color{gray}\\int c\\,\\color{gray}{dx} \\color{gray}= cx \\color{gray}{+ C}\\)\n\n\nPower rule: \\(\\displaystyle\\color{gray}\\int x^n\\,\\color{gray}{dx} \\color{gray}= \\frac{x^{n+1}}{n+1} \\color{gray}{+ C} \\qquad \\forall n \\neq -1\\)\n\n\nReciprocal rule:\\(\\displaystyle\\color{gray}\\int \\frac{1}{x}\\,\\color{gray}{dx} \\color{gray}= \\ln(x) \\color{gray}{+ C}\\)"
   },
   {
     "objectID": "slides/04_calc2.html#rules-of-integration-1",
     "href": "slides/04_calc2.html#rules-of-integration-1",
     "title": "Calculus II",
     "section": "Rules of integration",
-    "text": "Rules of integration\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n\\displaystyle \\color{gray}\\int e^x \\,\\color{gray}{dx} &\\color{gray}= e^x\\color{gray}{+C} \\\\\n\\displaystyle \\color{gray}\\int c^x \\,\\color{gray}{dx} &\\color{gray}= \\frac{c^x}{ln(c)}\\color{gray}{+C}\n\\end{aligned}\n\\]\n. . .\n\\[\n\\begin{aligned}\n\\displaystyle \\color{gray}\\int ln(x) \\,\\color{gray}{dx} &\\color{gray}= x \\cdot ln(x) - x\\color{gray}{+C} \\\\\n\\displaystyle \\color{gray}\\int log_c(x) \\,\\color{gray}{dx} &\\color{gray}= \\frac{x \\cdot log_c(x) - x}{log_c(x)}\\color{gray}{+C}\n\\end{aligned}\n\\]"
+    "text": "Rules of integration\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n\\displaystyle \\color{gray}\\int e^x \\,\\color{gray}{dx} &\\color{gray}= e^x\\color{gray}{+C} \\\\\n\\displaystyle \\color{gray}\\int c^x \\,\\color{gray}{dx} &\\color{gray}= \\frac{c^x}{ln(c)}\\color{gray}{+C}\n\\end{aligned}\n\\]\n\n\\[\n\\begin{aligned}\n\\displaystyle \\color{gray}\\int ln(x) \\,\\color{gray}{dx} &\\color{gray}= x \\cdot ln(x) - x\\color{gray}{+C} \\\\\n\\displaystyle \\color{gray}\\int log_c(x) \\,\\color{gray}{dx} &\\color{gray}= \\frac{x \\cdot log_c(x) - x}{log_c(x)}\\color{gray}{+C}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "slides/04_calc2.html#integration-by-parts",
     "href": "slides/04_calc2.html#integration-by-parts",
     "title": "Calculus II",
     "section": "Integration by parts",
-    "text": "Integration by parts\n\n\nAnalog to the product rule.\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n. . .\n\\[\n\\int u dv = uv - \\int vdu\n\\]"
+    "text": "Integration by parts\n\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\n\\[\n\\int u dv = uv - \\int vdu\n\\]\n\n\nAnalog to the product rule."
   },
   {
     "objectID": "slides/04_calc2.html#integration-by-parts-1",
     "href": "slides/04_calc2.html#integration-by-parts-1",
     "title": "Calculus II",
     "section": "Integration by parts",
-    "text": "Integration by parts\n\n\nAnalog to the product rule.\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\\[\n\\int u dv = \\underbrace{uv - \\int vdu}_\\text{\"ultraviolet voodoo\"}\n\\]"
+    "text": "Integration by parts\n\n\\[\n\\displaystyle \\color{gray}\\int f(x)g'(x)\\,\\color{gray}{dx} = f(x)g(x) - \\color{gray}\\int f'(x)g(x)\\,\\color{gray}{dx}\n\\]\n\\[\n\\int u dv = \\underbrace{uv - \\int vdu}_\\text{\"ultraviolet voodoo\"}\n\\]\n\nAnalog to the product rule."
   },
   {
     "objectID": "slides/04_calc2.html#example-1",
     "href": "slides/04_calc2.html#example-1",
     "title": "Calculus II",
     "section": "Example",
-    "text": "Example\n\\[ \\int x e^x dx\\]\n. . .\n\\[ \\int udv = uv - \\int vdu \\]\n. . .\n\\[\n\\color{purple}{u = x}; \\text{ } \\color{green}{du = 1dx}; \\text{ } \\color{yellow}{dv = e^xdx} ;  \\text{ } \\color{blue}{v = e^x}\n\\]\n. . .\n\\[\n\\int \\color{purple}x \\color{yellow}{e^xdx}= \\color{purple}x \\color{blue}{e^x} - \\int \\color{blue}{e^x} \\color{green}{(1dx)}\n\\]\n. . .\n\\[\n= xe^x - e^x + C\n\\]"
+    "text": "Example\n\\[ \\int x e^x dx\\]\n\n\\[ \\int udv = uv - \\int vdu \\]\n\n\n\\[\n\\color{purple}{u = x}; \\text{ } \\color{green}{du = 1dx}; \\text{ } \\color{yellow}{dv = e^xdx} ;  \\text{ } \\color{blue}{v = e^x}\n\\]\n\n\n\\[\n\\int \\color{purple}x \\color{yellow}{e^xdx}= \\color{purple}x \\color{blue}{e^x} - \\int \\color{blue}{e^x} \\color{green}{(1dx)}\n\\]\n\n\n\\[\n= xe^x - e^x + C\n\\]"
   },
   {
     "objectID": "slides/04_calc2.html#integration-by-u-substitution",
     "href": "slides/04_calc2.html#integration-by-u-substitution",
     "title": "Calculus II",
     "section": "Integration by (U-)substitution",
-    "text": "Integration by (U-)substitution\n\n\nHave \\(\\displaystyle \\int f(g(x))g'(x)\\,dx\\)\nSet \\(u=g(x)\\)\nCompute \\(\\int f(u)\\,du\\)\nReplace \\(u\\) for \\(g(x)\\)\n\n\n\n\nAnalog to the chain rule."
+    "text": "Integration by (U-)substitution\n\nHave \\(\\displaystyle \\int f(g(x))g'(x)\\,dx\\)\nSet \\(u=g(x)\\)\nCompute \\(\\int f(u)\\,du\\)\nReplace \\(u\\) for \\(g(x)\\)\n\n\n\nAnalog to the chain rule."
   },
   {
     "objectID": "slides/04_calc2.html#example-2",
     "href": "slides/04_calc2.html#example-2",
     "title": "Calculus II",
     "section": "Example",
-    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n. . .\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n. . .\n\\[\n\\text{} \\color{green}{du = 2x dx}\n\\]"
+    "text": "Example\n\\[\n\\int 4x (x^2 + 5)^3 dx\n\\]\n\n\\[\n\\color{purple}{u = x2 + 5}\n\\]\n\n\n\\[\n\\text{} \\color{green}{du = 2x dx}\n\\]"
   },
   {
     "objectID": "slides/04_calc2.html#example-3",
@@ -2084,14 +2084,14 @@
     "href": "slides/04_calc2.html#replacing",
     "title": "Calculus II",
     "section": "Replacing",
-    "text": "Replacing\n\\[\n\\int 4x \\color{purple}{(x^2 + 5)}^3 \\color{green}{dx}\n\\]\n. . .\n\\[\n\\int 4x \\color{purple}u^3 \\color{green}{\\frac{du}{2x}}\n\\]\n. . .\n\\[\n= 2 \\int \\color{purple}{u}^3 \\color{green}{du}\n\\]\n. . .\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]"
+    "text": "Replacing\n\\[\n\\int 4x \\color{purple}{(x^2 + 5)}^3 \\color{green}{dx}\n\\]\n\n\\[\n\\int 4x \\color{purple}u^3 \\color{green}{\\frac{du}{2x}}\n\\]\n\n\n\\[\n= 2 \\int \\color{purple}{u}^3 \\color{green}{du}\n\\]\n\n\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]"
   },
   {
     "objectID": "slides/04_calc2.html#clean-up-and-bring-back-u",
     "href": "slides/04_calc2.html#clean-up-and-bring-back-u",
     "title": "Calculus II",
     "section": "Clean up and bring back \\(u\\)",
-    "text": "Clean up and bring back \\(u\\)\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]\n. . .\n\\[\n= \\frac{1}{2} \\color{purple}u^4 + C\n\\]\n. . .\n\\[\n\\frac{1}{2} \\color{purple}{(x2 + 5)}^4 + C\n\\]"
+    "text": "Clean up and bring back \\(u\\)\n\\[\n= 2 \\cdot \\frac{\\color{purple}u}{4}^4 + C\n\\]\n\n\\[\n= \\frac{1}{2} \\color{purple}u^4 + C\n\\]\n\n\n\\[\n\\frac{1}{2} \\color{purple}{(x2 + 5)}^4 + C\n\\]"
   },
   {
     "objectID": "slides/04_calc2.html#dont-worry",
@@ -2142,7 +2142,7 @@
     "href": "math/04_calc2.html",
     "title": "Calculus II",
     "section": "",
-    "text": "Yesterday we learned the basic idea behind differentiation, one of the two main topics in calculus. Today, we’re going to focus on the other major topic, which is called integration. As before, go to this link and enter the following code.\najrzbz",
+    "text": "Last time, we learned about calculus as a way to deal with continuity usefully and discussed derivatives as one of the primary operations in calculus.\nToday, we review two remaining topics. First, we revisit derivatives to understand how computers calculate them. Second, we discuss integrals, or “anti-derivatives,” as the other important operation in calculus.",
     "crumbs": [
       "Math",
       "4. Calculus II"
@@ -2152,8 +2152,8 @@
     "objectID": "math/04_calc2.html#riemann-sums",
     "href": "math/04_calc2.html#riemann-sums",
     "title": "Calculus II",
-    "section": "Riemann sums",
-    "text": "Riemann sums\nA Riemann sum is a series of rectangles used to approximate the area under a curve. For example, suppose we wanted to find the area of the region bounded by the function \\(f(x) = 3x^2\\), the \\(x-axis\\), and the line \\(x = 4.\\) How might we do this?\nFirst, we should decide how many rectangles we want to use. For now, let’s use \\(8\\) rectangles that are each \\(0.5\\) units wide. Then the formula for the area of rectangle \\(i\\) is \\(f(x_i)*0.5\\) for some value of \\(x_i.\\)\nSince we know the formula for each rectangle, we can write the sum of all \\(8\\) rectangles like this:\n\\[\\sum_{i = 1}^{8} f(x_i)*0.5.\\]\nWhich value of \\(x_i\\) should we choose? There are three common options:\n\nThe left endpoint of the rectangle\nThe right endpoint of the rectangle\nThe midpoint of the rectangle.\n\nIn the first case, we would set \\(x_1 = 0, x_2 = 0.5, x_3 = 1, ..., x_8 = 3.5.\\)\nIn the second case, we would start with \\(x_1 = 0.5\\) and go up to \\(x_8 = 4.\\)\nFinally, we could use the midpoint, which would mean \\(x_1 = 0.25, x_2 = 0.75, ..., x_8 = 3.75.\\)\nLet’s use the right endpoint for now. Then we can approximate the area under the curve as\n\\[ \\sum_{i = 1}^{8} f(x_i)*0.5 = \\sum_{i = 1}^{8} 3*x_i^2*0.5.\\] Rather than computing this by hand, let’s use R as a calculator:\n\ni &lt;- c(1:8) # create a vector of i's\n\nx_i &lt;- i/2 # create a vector of x_i's\n\nf_x_i &lt;- 3*(x_i)^2 # compute the value of f at each x_i\n\narea_i &lt;- f_x_i*0.5 # compute the area of rectangle i\n\nsum(area_i) # add them up\n\n[1] 76.5\n\n\nWe can easily adjust this code to use the left endpoint or the midpoint. Try it!\nWhat if we wanted to make this a little more abstract? How would we adjust this formula to use \\(n\\) rectangles for any \\(n \\in \\mathbb{N}\\)?\nTo do this, we could define \\(x_i\\) as \\(4i/n\\). We’d also have to multiply \\(f(x_i)\\) by \\(4/n\\) rather than \\(0.5\\) to get the area of each rectangle. If we make these changes, our formula looks like this:\n\\[\\sum_{i=1}^{n} f(x_i)*(4/n).\\] Computationally, we can create an R function that adds this up for us given any value of \\(n.\\)\n\nriemann_sum &lt;- function(n) {\n  i &lt;- c(1:n) # create a vector of i's\n\n  x_i &lt;- 4*i/n # create a vector of x_i's\n\n  f_x_i &lt;- 3*(x_i)^2 # compute the value of f at each x_i\n\n  area_i &lt;- f_x_i*4/n # compute the area of rectangle i\n\n  sum &lt;- sum(area_i) # add them up\n  \n  return(sum)\n  \n}\n\nriemann_sum(10)\n\n[1] 73.92\n\nriemann_sum(20)\n\n[1] 68.88\n\nriemann_sum(100)\n\n[1] 64.9632\n\nriemann_sum(1000)\n\n[1] 64.09603\n\nriemann_sum(5000)\n\n[1] 64.0192\n\n\nAs the number of rectangles increases, it seems like our estimate gets closer and closer to \\(64.\\)",
+    "section": "",
+    "text": "A Riemann sum is a series of rectangles used to approximate the area under a curve. For example, suppose we wanted to find the area of the region bounded by the function \\(f(x) = 3x^2\\), the \\(x-axis\\), and the line \\(x = 4.\\) How might we do this?\nFirst, we should decide how many rectangles we want to use. For now, let’s use \\(8\\) rectangles that are each \\(0.5\\) units wide. Then the formula for the area of rectangle \\(i\\) is \\(f(x_i)*0.5\\) for some value of \\(x_i.\\)\nSince we know the formula for each rectangle, we can write the sum of all \\(8\\) rectangles like this:\n\\[\\sum_{i = 1}^{8} f(x_i)*0.5.\\]\nWhich value of \\(x_i\\) should we choose? There are three common options:\n\nThe left endpoint of the rectangle\nThe right endpoint of the rectangle\nThe midpoint of the rectangle.\n\nIn the first case, we would set \\(x_1 = 0, x_2 = 0.5, x_3 = 1, ..., x_8 = 3.5.\\)\nIn the second case, we would start with \\(x_1 = 0.5\\) and go up to \\(x_8 = 4.\\)\nFinally, we could use the midpoint, which would mean \\(x_1 = 0.25, x_2 = 0.75, ..., x_8 = 3.75.\\)\nLet’s use the right endpoint for now. Then we can approximate the area under the curve as\n\\[ \\sum_{i = 1}^{8} f(x_i)*0.5 = \\sum_{i = 1}^{8} 3*x_i^2*0.5.\\] Rather than computing this by hand, let’s use R as a calculator:\n\ni &lt;- c(1:8) # create a vector of i's\n\nx_i &lt;- i/2 # create a vector of x_i's\n\nf_x_i &lt;- 3*(x_i)^2 # compute the value of f at each x_i\n\narea_i &lt;- f_x_i*0.5 # compute the area of rectangle i\n\nsum(area_i) # add them up\n\n[1] 76.5\n\n\nWe can easily adjust this code to use the left endpoint or the midpoint. Try it!\nWhat if we wanted to make this a little more abstract? How would we adjust this formula to use \\(n\\) rectangles for any \\(n \\in \\mathbb{N}\\)?\nTo do this, we could define \\(x_i\\) as \\(4i/n\\). We’d also have to multiply \\(f(x_i)\\) by \\(4/n\\) rather than \\(0.5\\) to get the area of each rectangle. If we make these changes, our formula looks like this:\n\\[\\sum_{i=1}^{n} f(x_i)*(4/n).\\] Computationally, we can create an R function that adds this up for us given any value of \\(n.\\)\n\nriemann_sum &lt;- function(n) {\n  i &lt;- c(1:n) # create a vector of i's\n\n  x_i &lt;- 4*i/n # create a vector of x_i's\n\n  f_x_i &lt;- 3*(x_i)^2 # compute the value of f at each x_i\n\n  area_i &lt;- f_x_i*4/n # compute the area of rectangle i\n\n  sum &lt;- sum(area_i) # add them up\n  \n  return(sum)\n  \n}\n\nriemann_sum(10)\n\n[1] 73.92\n\nriemann_sum(20)\n\n[1] 68.88\n\nriemann_sum(100)\n\n[1] 64.9632\n\nriemann_sum(1000)\n\n[1] 64.09603\n\nriemann_sum(5000)\n\n[1] 64.0192\n\n\nAs the number of rectangles increases, it seems like our estimate gets closer and closer to \\(64.\\)",
     "crumbs": [
       "Math",
       "4. Calculus II"
@@ -2241,7 +2241,7 @@
     "href": "math/03_calc1.html",
     "title": "Calculus I",
     "section": "",
-    "text": "First, let’s do an interactive activity to explore what calculus is about and why it works. Go to www.student.amplify.com, click the key icon in the upper right of your screen, and enter the following code:\n73m9tt",
+    "text": "Calculus may be a foreign subject compared to what we have covered so far. Many of us have made career choices to deliberately avoid having to deal with calculus. Still, calculus is important because for computational social science because, at its core, it is about dealing with continuity in a consistent manner.\nMore often than not we will deal with variables and distributions that are (at least assumed) continuous. Moreover, many single-number quantities of interest in data analysis, like p-values or standard errors, are calculated from continuous distributions (more about this in POLI SCI 403).\nDealing with continuity also means introducing new operations beyond the usual addition, subtraction, multiplication, and division, hence the difficulty. We will take it slow and focus on one at a time. Today is all about derivatives.",
     "crumbs": [
       "Math",
       "3. Calculus I"
@@ -2295,8 +2295,8 @@
     "objectID": "math/03_calc1.html#derivatives",
     "href": "math/03_calc1.html#derivatives",
     "title": "Calculus I",
-    "section": "Derivatives",
-    "text": "Derivatives\nRecall that in the first section, we wanted to know what speed my train was going exactly at 6 minutes. To estimate this value, we computed the average rate of change of my distance from home, \\(f\\), for smaller and smaller intervals around 6 minutes. That is, we found \\(\\frac{f(6.1) - f(6)}{6.1 - 6},\\) \\(\\frac{f(6.01) - f(6)}{6.01 - 6},\\) and so on. Using this approach, we can define a function \\(f'(x)\\) as follows:\n\\[f'(x) = \\lim_{h \\rightarrow 0} \\frac{f(x+h) - f(x)}{h}.\\]\nThis formula looks scary, but it’s actually a pretty simple idea: to find the instantaneous rate of change of \\(f\\) at a point \\(x,\\) we find the average slope of \\(f(x)\\) on the interval from \\(x\\) to \\(x+h.\\) Then we make \\(h\\) closer and closer to \\(0\\), so that our slope gets closer and closer to the slope right at \\(x.\\)\n\\(f'(x)\\) is called the derivative of \\(f\\) at \\(x,\\) and it is also sometimes written in these other ways:\n\n\\(\\frac{dy}{dx}\\)\n\\(\\frac{d}{dx}f(x)\\)\n\\(D_x f\\)\n\nExample:\nRecall our example from earlier, \\(f(x) = 0.01*(x - 5)^3 + 1.5.\\) We can use the limit definition of the derivative to find the instantaneous rate of change at \\(6\\) like this:\n\\[ f'(6) = \\lim_{h \\rightarrow 0} \\frac{f(6+h) - f(6)}{h} = \\frac{0.01*(6+h - 5)^3 + 1.5 - 0.01*(6-5)^3 - 1.5}{h}.\\]\n\\[ f'(6) = \\lim_{h \\rightarrow 0} \\frac{0.01*(1^3 + 3*1^2*h + 3*1*h^2 + h^3) - 0.01*1^3}{h}.\\]\n\\[ f'(6) = \\lim_{h \\rightarrow 0} \\frac{0.01(3*1^2*h + 3*1*h^2 + h^3)}{h}.\\]\n\\[ f'(6) = \\lim_{h \\rightarrow 0} 0.01(3*1^2 + 3*1*h + h^2).\\]\nBut remember, \\(h\\) is approaching 0, so the only nonzero term will be the first one:\n\\[ f'(6) = 0.01*3*1^2 = 0.03.\\]\nThis is exactly what we expected \\(f'(6)\\) to be when we estimated it numerically.",
+    "section": "2 Derivatives",
+    "text": "2 Derivatives\nDerivatives are about (instantaneous) rate of change.\nA helpful way to think about a derivatives is as a slope. Let’s consider a linear function of the form \\(y = 2 x\\):\n\nlibrary(tidyverse) # could also just do library(ggplot2)\nggplot() +\n  stat_function(fun = function(x){2 * x}, \n                xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nWe can imagine any political variables in the x- and y-axes. What is the rate of change? In other words, what is the derivative? Remember that we can calculate the slope with\n\\[\nm = \\frac{f(x_2) - f(x_1)}{x_2-x_1}\n\\]\nwhich you can remember with the mnemonic “rise over run.”\nNow consider another slightly more complicated function, a quadratic one, \\(y = x^2\\):\n\nggplot() +\n  stat_function(fun = function(x){x ^ 2}, \n                xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nWhat happens when we apply our slope function?\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nHere the derivative depends on the value of \\(x\\). It is actually \\(2x\\).\n\n\n\nDifferential calculus is about finding these derivatives in a more straightforward manner. We can generalize our slope formula as\n\\[\nm = \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x}\n\\]\nThe point is that when \\(\\Delta x\\) is arbitrarily small, we’ll get our rate of change. Formalizing this:\n\\[\n\\lim_{\\Delta x\\to0} \\frac{f(x_1+ \\Delta x) - f(x_1)}{\\Delta x} = \\frac{d}{dx} f(x) = \\frac{dy}{dx} = f'(x)\n\\]\nA few points on notation:\n\\(\\frac{d}{dx} f(x)\\) is read “The derivative of \\(f\\) of \\(x\\) with respect to \\(x\\).” One would be tempted to read \\(\\frac{d}{dx}\\) as a fraction, but it is just here for notation.\nThe variable with respect to which we’re differentiating is the one that appears in the bottom (in the case above, this is \\(x\\)).\n\\(f'(x)\\) (\\(f\\) prime \\(x\\)) is the derivative of \\(f(x)\\). This is a more compact form to refer to derivatives when you have defined \\(f(x)\\) elsewhere.\n\n2.1 Rules of differentiation\nHow to compute derivatives? Sometimes you can try a bunch of numbers and get at the answer. Sometimes you can use the limit-based formula above, if you know a few properties of limits. But in most cases you will either use software (more on this later) or the rules of differentiation, which we will cover now.\nConstant rule: \\((c)' = 0\\).\nThere is no change in a constant:\n\nggplot() +\n  stat_function(fun = function(x){2}, xlim = c(-10, 10))\n\n\n\n\n\n\n\n\nCoefficient rule: \\((c \\cdot f(x))' = c \\cdot f'(x)\\).\n\nggplot() +\n  stat_function(fun = function(x){2 * x}, xlim = c(-10, 10), aes(color = \"y = 2x\")) +\n  stat_function(fun = function(x){4 * x}, xlim = c(-10, 10), aes(color = \"y = 4x\")) +\n  scale_color_manual(\"Function\", values = c(\"red\", \"blue\"))\n\n\n\n\n\n\n\n\nSum/difference rule: \\((f(x) \\pm g(x))' = f'(x) \\pm g'(x)\\).\nThe two rules above give us that the derivative is a linear operator.\nPower rule: \\((x^n)'=nx^{(n-1)}\\)\nRemember when we wanted to calculate the derivative of \\(y=x^2\\) above? We can use the power rule, with \\(n=2\\)\n\\[\nnx^{(n-1)} = 2x^{(2-1)}=2x\n\\]\n\\(\\;nx^{(n-1)} = 2x^{(2-1)}=2x\\).\nLet’s try out \\(\\frac{d}{dx}4x^3\\) and \\(\\frac{d}{dx}(x^2 + 2x)\\) on the board.\nHere are a few functions to practice the differentiation rules:\n\n\n\n\n\n\nNoteExercise\n\n\n\nUse the differentiation rules we have covered so far to calculate the derivatives of \\(y\\) with respect to \\(x\\) of the following functions:\n\n\\(y= 4x^3\\)\n\\(y= x^2 + 2x\\)\n\\(y = 2x^2 + 10\\)\n\\(y = 5x^4 - \\frac{2}{3}x^3\\)\n\\(y = 9 \\sqrt x\\)\n\\(y = \\frac{4}{x^2}\\)\n\\(y = ax^3 + b\\), where \\(a\\) and \\(b\\) are constants.\n\\(y = \\frac{2w}{5}\\)\n\n\n\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n(c^x)' &= c^x \\cdot ln(c), & \\forall x&gt;0 \\\\\n\\\\\n(log_a(x))' &= \\frac{1}{x \\cdot ln(a)}, & \\forall x&gt;0  \\\\\n\\end{aligned}\n\\]\nEuler’s number (\\(e\\)) has interesting properties when it comes to derivatives.\n\\[\n\\begin{aligned}\n(e^x)' &= e^x \\\\\n\\\\\n(ln(x))' &= \\frac{1}{x}, & \\forall x&gt;0\n\\end{aligned}\n\\]\n\n\n\n\nNow we’ll get to a couple of more advanced (and powerful) rules.\n\nProduct rule: \\((f(x)g(x))'=f'(x)g(x) + g'(x)f(x)\\)\nQuotient rule: \\(\\displaystyle(\\frac{f(x)}{g(x)})' = \\frac{f'(x)g(x) + g'(x)f(x)}{[g(x)]^2}\\)\nChain rule: \\((f(g(x))' = f'(g(x)) \\cdot g'(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n2.2 Higher-order derivatives\nWe saw call \\(f'(x)\\) the first derivative, but we can also calculate higher-order derivatives. These are not common in social science data analysis, but they appear in game theory, complex systems, and agent-based modeling.\n\nFor example, the second derivative tells us whether the slope of a function is increasing, decreasing, or staying the same at any point \\(x\\) on the function’s domain. For example, when driving a car:\n\n\\(f(x)\\) = distance traveled at time \\(x\\)\n\\(f'(x)\\) = speed at time \\(x\\)\n\\(f''(x)\\) = acceleration at time \\(x\\)\n\nTo calculate higher-order derivatives, you just calculate the derivative using the usual differentiation rules, then calculate the derivative of the output, and so on for however many orders you have. In a college-level calculus course, these can get very crazy during your midterm. In practice, you will rarely lead anything beyond a second derivative.\nFor example, we can calculate the following second derivative:\n\\[f''(x) = \\frac{d^2(x^4)}{dx^2}\\]\nFirst, we take the first derivative \\[f'(x)=4x^3\\]\nThen we use that output to take the second derivative \\[f''(x)=f'(4x^3)=12x^2\\]\nWe can keep going… for example, the third derivative is \\[f'''(x) = f'(12x^2) = 24x\\]\n\n\n\n\n\n\n\n\n\n2.3 Partial derivatives\nSo far, we have worked with derivatives of functions with only one variable. What happens when we have more than one variable that is changing?\nSuppose we have a function \\(f\\) of two (or more) variables and we want to determine the rate of change relative to one of the variables. For a function \\(f(x,z)\\), we call this a partial derivative\n\\[\n\\frac{\\partial}{\\partial_x}f(x,z) = \\frac{\\partial_y}{\\partial_x} = \\partial_x f\n\\]\nTo obtain a partial derivative, we treat all other variables as constants and take the derivative with respect to the variable of interest (here \\(x\\)). For example:\n\\[\n\\begin{aligned}\ny = f(x,z) &= xz \\\\\n\\frac{\\partial_y}{\\partial_x} &= z\n\\end{aligned}\n\\]\nYou can try to do the same for \\(\\displaystyle\\frac{\\partial_y}{\\partial_z}?\\) on your own\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotePractice\n\n\n\nTake the partial derivative with respect to \\(x\\) and with respect to \\(z\\) of the following functions. What would the notation for each look like?\n\n\\(y = 3xz - x\\)\n\\(x^3+z^3+x^4z^4\\)\n\\(e^{xz}\\)\n\n\n\n\n\n2.4 Differentiability of functions\nNot all functions are differentiable at every point of their domains!\nAn important concept here is whether functions are continuous at a point:\n\nInformally: A function is continuous at a point if its graph has no holes or breaks at that point\nFormally: A function is continuous at a point \\(a\\) if: \\(\\lim_{x \\to a} f(x)=f(a)\\)\n\nWhen is a function differentiable at a point?\n\nIf a function is differentiable at a point, it is also continuous at that point.\nIf a function is continuous at a point, it is not necessarily differentiable at that point.\n\nImpossible to calculate derivative at sharp turns, cusps, or vertical tangents.\n\n\n\nggplot() +\n  stat_function(fun = function(x){abs(x) + 2}, xlim = c(-4, 4), \n                aes(color = \"y = |x| + 2\")) +\n  stat_function(fun = function(x){sqrt(abs(x)) + 1}, xlim = c(-4, 4), \n                aes(color = \"y = √(|x|) + 1\")) +\n  stat_function(fun = function(x){sign(x) * abs(x)^(1 / 3)}, xlim = c(-4, 4), \n                aes(color = \"y = x^(1/3)\")) +\n  scale_colour_manual(\"Function\", values = c(\"red\", \"blue\", \"black\")) +\n  labs(title = \"Examples of functions that are not differentiable at x=0\")\n\n\n\n\n\n\n\n\n\nInformally, functions need to be continuous and reasonably smooth to be differentiable.",
     "crumbs": [
       "Math",
       "3. Calculus I"
@@ -2518,6 +2518,61 @@
     "crumbs": [
       "Math",
       "2. Matrices"
+    ]
+  },
+  {
+    "objectID": "math/03_calc1.html#calculus",
+    "href": "math/03_calc1.html#calculus",
+    "title": "Calculus I",
+    "section": "",
+    "text": "Calculus may be a foreign subject compared to what we have covered so far. Many of us have made career choices to deliberately avoid having to deal with calculus. Still, calculus is important because for computational social science because, at its core, it is about dealing with continuity in a consistent manner.\nMore often than not we will deal with variables and distributions that are (at least assumed) continuous. Moreover, many single-number quantities of interest in data analysis, like p-values or standard errors, are calculated from continuous distributions (more about this in POLI SCI 403).\nDealing with continuity also means introducing new operations beyond the usual addition, subtraction, multiplication, and division, hence the difficulty. We will take it slow and focus on one at a time. Today is all about derivatives.",
+    "crumbs": [
+      "Math",
+      "3. Calculus I"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#overview",
+    "href": "math/04_calc2.html#overview",
+    "title": "Calculus II",
+    "section": "",
+    "text": "Last time, we learned about calculus as a way to deal with continuity usefully and discussed derivatives as one of the primary operations in calculus.\nToday, we review two remaining topics. First, we revisit derivatives to understand how computers calculate them. Second, we discuss integrals, or “anti-derivatives,” as the other important operation in calculus.",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#how-do-computers-calculate-derivatives",
+    "href": "math/04_calc2.html#how-do-computers-calculate-derivatives",
+    "title": "Calculus II",
+    "section": "2 How do computers calculate derivatives?",
+    "text": "2 How do computers calculate derivatives?\nIn quite a few statistics and machine learning problems, computers need to compute derivatives of arbitrarily complex functions, perhaps millions of times. How do they do it? (see Baydin et al. 2018 for discussion of these three approaches)\n\nSymbolic differentiation: automatically combine the rules of differentiation (power rule, product rule, etc.). Math solvers like WolframAlpha or Mathematica do\nNumerical differentiation: infer the derivative by computing the function at different sample values (like we did with \\(y=x^2\\) before. For example, this is what the R function optim() does behind the scenes.\n\n\n# minimize the x^2 + 5 function:\noptim(par = 0, fn = function(x){x ^ 2 + 5}, method = \"L-BFGS-B\")\n\n$par\n[1] 0\n\n$value\n[1] 5\n\n$counts\nfunction gradient \n       1        1 \n\n$convergence\n[1] 0\n\n$message\n[1] \"CONVERGENCE: NORM OF PROJECTED GRADIENT &lt;= PGTOL\"\n\n\n\n\nAutomatic differentiation: track how every function is constructed from (differentiable) elementary computer operations (e.g., binary arithmetic), and get the result using the chain rule. Implemented in the torch R package, the TensorFlow, PyTorch, and JAX Python libraries, and the ReverseDiff.jl and Zygote.jl Julia packages.",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#optimization",
+    "href": "math/04_calc2.html#optimization",
+    "title": "Calculus II",
+    "section": "3 Optimization",
+    "text": "3 Optimization\nOptimization allows us to find the minimum or maximum values (or extrema) a function takes. It has many applications in the social sciences:\n\nFormal theory: utility maximization, continuous choices\nOrdinary Least Squares (OLS): Focuses on minimizing the squared errors between observed data and model-estimated values\nMaximum Likelihood Estimation (MLE): Focuses on maximizing a likelihood function, given observed values.\n\n\n3.1 Extrema\nInformally, a maximum is just the highest value a function takes, and a minimum is the lowest value. We use the term “extrema” to define a general family of extreme values of a function.\nIn some situations, it can be easy to identify extrema intuitively by looking at a graph of the function.\n\nMaxima are high points (“peaks”)\nMinima are low points (“valleys”)\n\nWe can use derivatives (rates of change!) to get at extrema.\n\n\n3.2 Critical points and the First-Order Condition\nAt critical points (or stationary points), the derivative is zero or fails to exist. At these, the function has usually reached a (local) maximum or minimum.\n\nAt a maximum, the function must be increasing before the point and decreasing after it.\nAt a minimum, the function must be decreasing before the point and increasing after it.\n\nLocal extrema occur at critical points, but not all critical points are global extrema. For instance, sometimes the graph is changing between concave and convex (“inflection points”). Or sometimes the function is not differentiable at that point for other reasons.\nWe can find the local maxima and/or minima of a function by taking the derivative, setting it equal to zero, and solving for \\(x\\) (or whatever variable). This gives us the First-Order Condition (FOC).\n\\[FOC: f'(x)=0\\]\n\n\n3.3 Second-Order Condition\nNotice that after this we only know that there is a critical point. BUT we don’t know if we’ve found a maximum or minimum, or even if we’ve found an extremum.\nTo determine whether a we are seeing a (local) maximum or minimum, we can use the Second Derivative Test:\n\nStart by identifying \\(f''(x)\\)\nSubstitute in the stationary points \\((x^*)\\) identified from the FOC.\n\n\\(f''(x^*) &gt; 0\\) we have a local minimum\n\\(f''(x^*) &lt; 0\\) we have a local maximum\n\\(f''(x^*) = 0\\) we (may) have an inflection point - need to calculate higher-order derivatives (don’t worry about this for now)\n\n\nCollectively these give us the Second-Order Condition (SOC).\n\n\n\n3.4 Local or global extrema?\nNow when it comes to knowing whether extrema are local or global:\n\nHere we use the Extreme value theorem, which states that if a real-valued function is continuous on a closed and bounded (finite) interval, the function must have a global minimum and a global maximum on that interval at least once. Importantly, in this situation the global extrema exist, and they are either at the local extrema or at the boundaries (where we cannot even find critical points).\nSo to find the minimum/maximum on some interval, compare the local min/max to the value of the function at the interval’s endpoints. So, if the interval is \\((-\\infty, +\\infty)\\), check the function’s limits as it approaches \\(-\\infty\\) and \\(+\\infty\\).",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
+    ]
+  },
+  {
+    "objectID": "math/04_calc2.html#integrals",
+    "href": "math/04_calc2.html#integrals",
+    "title": "Calculus II",
+    "section": "4 Integrals",
+    "text": "4 Integrals\nDerivatives allow us to calculate the instantaneous change (slope) in a continuous function at a given point. What if, instead of describing change at specific points, we wanted to characterize the net effect of change of a function. With what we know so far, we would start by calculating slopes at different parts of the function and then summing them all up together, but we have a continuous function, so simply adding up at discrete values would not work.\nThat is where integration comes in. Informally, we can think of integrals as the flip side of derivatives.\nWe can motivate integrals as a way of finding the area under a curve. Sometimes finding the area is easy. What’s the area under the curve between \\(x=-1\\) and \\(x=1\\) for this function?\n\\[\nf(x) =\n\\begin{cases}\n\\frac{1}{3} & \\text{for } x \\in [0, 3] \\\\\n0 & \\text{otherwise}\n\\end{cases}\n\\]\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nThe area is 1/3, we will do this together when we meet, but the essence of the answer is drawing the function and then calculating the area of a rectangle.\n\n\n\nNormally, finding the area under a curve is much harder. But this is basically the question behind integration.\n\n4.1 Integrals are about infinitesimals too\nLet’s say we have a function \\(y = x^2\\) And we want to find the area under the curve from \\(x=0\\) to \\(x=1\\). How would we do this?\n\nlibrary(tidyverse) # could also just do library(ggplot2)\nggplot() +\n  # draw main function\n  stat_function(fun = function(x){x ^ 2}, xlim = c(-2, 2)) +\n  # fill area under the curve between x = 0 and x = 1\n  geom_area(mapping = aes(x = 0), stat = \"function\",\n            fun = function(x){x ^ 2}, xlim = c(0, 1), fill = \"red\")\n\n\n\n\n\n\n\n\nOne way to approximate this area is by drawing narrow rectangles that cover the area in red.\n\nThat would be a rough approximation, but it gets better and better the narrower the rectangles are\n\\[\nArea = lim_{\\Delta x \\to 0}\\sum_i^n{f(x) \\cdot \\Delta x}\n\\]\n, where \\(\\Delta x\\) is the width of the rectangles and \\(n\\) is their number. In words, this says that the are is equal to the sum of all the rectangles when the limit of the rectangle with approximates zero.\nThis is actually one way to define the definite integral, \\(\\displaystyle\\int_a^bf(x)dx\\) (also known as the Riemann integral). We’ll learn how to compute these in a few moments.\n\n\n4.2 Indefinite integrals as antiderivatives\nThe indefinite integral, also known as the antiderivative, \\(F(x)\\) is the inverse of the function \\(f'(x)\\).\n\\[F(x)= \\displaystyle\\int f(x) \\text{ } dx\\]\nBeing inverse operations means that if you apply them in sequence you are back to the original place, so if you take the derivative of \\(F(x)\\), you wind up back at \\(f(x)\\).\n\\[F' = f \\text{ or } \\displaystyle\\frac{dF(x)}{dx} = f(x)\\]\nThis definition is annoyingly recursive, but useful enough to characterize the inverse operation of a derivative.\nTo illustrate, what is the antiderivative for a constant function \\(f(x) = 1\\)? Is there just one? (this example comes from Moore and Siegel, 2013, p. 137).\nBy power rule, we know the derivative of x is 1. So \\(F(x) = x\\) is one anti-derivative. But it is not the only one! The derivatives of \\(F(x) = x + 10\\) and \\(F(x) = x + 100\\) are also 1. We can anticipate this and just say that the anti-derivative of \\(f(x) = 1\\) is just \\(F(x) = x + C\\) where \\(C\\) is any constant number. We call \\(C\\) the “constant of integration.”\nWhat we just did is a process called anti-differentiation. We can use this concept to help us solve definite integrals!\n\n\n4.3 Solving definite integrals\nThere are two kinds of integrals, an indefinite integral is just the anti-derivative as defined above, we which express as \\(\\displaystyle\\int f(x)dx = F(x)\\), meaning that the output is a function.\nDefinite integrals instead return a value that represents the area under a curve, which means we need to specify a range to evaluate the area in question.\nOne way to calculate definite integrals, known as THE FUNDAMENTAL THEOREM OF CALCULUS is shown below:\n\\[\\displaystyle\\int_{a}^{b} f(x) \\text{ } dx = F(b)-F(a) = F(x)\\bigg|_{a}^{b}\\]\nIn words, the definite integral from point \\(a\\) to \\(b\\) of \\(f(x)\\) with respect to \\(dx\\) is the difference of the anti-derivatives evaluated at the upper and lower limit.\nThis implies that to calculate a definite integral, we first determine the antiderivative (indefinite integral) of \\(f(x)\\) (and represent it \\(F(x)\\)), substitute the upper limit first and then the lower limit one by one, and subtract the results in order.\n\n\n4.4 Rules of integration\nMany of the rules of integration have counterparts in differentiation.\nCoefficient rule: \\(\\displaystyle\\int c f(x)\\,dx = c \\int f(x)\\,dx\\)\nSum/difference rule: \\(\\displaystyle\\int (f(x) \\pm g(x))\\,dx = \\int f(x)\\,dx \\pm \\int g(x)\\,dx\\)\nConstant rule: \\(\\displaystyle\\int c\\,dx = cx + C\\)\nPower rule: \\(\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C \\qquad \\forall n \\neq -1\\)\nReciprocal rule:\\(\\displaystyle\\int \\frac{1}{x}\\,dx = \\ln(x) + C\\)\nExponent and logarithm rules:\n\\[\n\\begin{aligned}\n\\displaystyle \\int e^x \\,dx &= e^x+C \\\\\n\\displaystyle \\int c^x \\,dx &= \\frac{c^x}{ln(c)}+C\\\\\n\\\\\n\\displaystyle \\int ln(x) \\,dx &= x \\cdot ln(x) - x+C \\\\\n\\displaystyle \\int log_c(x) \\,dx &= \\frac{x \\cdot log_c(x) - x}{log_c(x)}+C\n\\end{aligned}\n\\]\nThe final two rules are analog to the product rule and the chain rule:\nIntegration by parts: \\(\\displaystyle \\int f(x)g'(x)\\,dx = f(x)g(x) - \\int f'(x)g(x)\\,dx\\)\nThis rule allows you to change around your functions. If you cannot integrate \\(f(x)g'(x)\\) but you can integrate \\(g'(x)\\) and \\(f'(x)g(x)\\) then it is useful. This applicable when \\(g'(x)\\) is something like \\(e^x\\) that does not get more complex when you integrate, while \\(f(x)\\) is something like \\(x\\) that simplifies when you differentiate it.\nIntegration by substitution:\n\\[\n\\begin{aligned}\n1.& \\text{ Have }\\displaystyle \\int f(g(x))g'(x)\\,dx \\\\\n2.& \\text{ Set u=g(x)} \\\\\n3.& \\text{ Compute } \\int f(u)\\,du \\\\\n4.& \\text{ Replace u for g(x)}\n\\end{aligned}\n\\]\nIn words, we can change variables to an entirely different function if it helps us to compute the integral. We do this when the integral contains a composite function that one cannot integrate easily, like \\(f(x) = \\displaystyle \\frac{1}{2\\pi} x e^{-\\frac{x2}{2}}\\), which happens to be the probability distribution function of a standard normal distribution multiplied by x.\n\nIf this was a Calculus I course, we would spend a whole midterm practicing tricky problems involving integration by parts or by substitution. We will not bothers with this at math camp.\n\n\n\n4.5 An example\nRemember our function \\(y=x^2\\) and our goal of finding the area under the curve from \\(x=0\\) to \\(x=1\\). We can describe this problem as \\(\\displaystyle \\int_0^1 x^2 dx\\)\nFind the indefinite integral, \\(F(x)\\)\n\\[\n\\displaystyle\\int x^2 \\text{ } dx = \\displaystyle\\frac{x^3}{3}+C\n\\]\nNow we’ll use the fundamental theory of calculus. Evaluate at our lowest and highest points, \\(F(0)\\) and \\(F(1)\\):\n\n\\(F(0) = 0 + C\\)\n\\(F(1) = \\displaystyle\\frac{1}{3} + C\\)\n\nCalculate \\(F(1) - F(0)\\)\n\\[\\displaystyle\\frac{1}{3} + C - (0 + C)= \\displaystyle\\frac{1}{3} - 0 = \\displaystyle\\frac{1}{3}\\]\nNote how the constants of integration cancel out. One way to think about this is that the area under a curve would not change if you shift that curve’s position along the horizontal axis.",
+    "crumbs": [
+      "Math",
+      "4. Calculus II"
     ]
   }
 ]
