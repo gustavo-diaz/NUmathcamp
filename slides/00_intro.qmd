@@ -97,8 +97,8 @@ schedule =
     1, "Thursday, September 10", "Notation, sets, functions", "Tidyverse I",
     1, "Friday, September 11", "Matrices", "Tidyverse II",
     2, "Monday, September 14", "Calculus I", "Sampling and simulation",
-    2, "Tuesday, September 15", "Calculus II", "Markdown",
-    2, "Wednesday, September 16", "Probability", "NO MEETING",
+    2, "Tuesday, September 15", "Calculus II", "Markdown I",
+    2, "Wednesday, September 16", "Markdown II", "NO MEETING",
     2, "Thursday, September 17", "GitHub", "NO MEETING ",
     2, "Friday, September 18", "Review", "NO MEETING"
 )
