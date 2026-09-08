@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Computational Social Science and R"
 author: "[Artur Baranov](https://artur-baranov.github.io)"
-date: 2025-09-03
+date: 2026-09-09
 format: 
   html:
     embed-resources: true
@@ -49,7 +49,7 @@ New social science methods and thus packages are usually either developed in R o
 
 <details>
   <summary>Step two</summary>
-  <center>![](https://raw.githubusercontent.com/gustavo-diaz/NUmathcamp/main/r/images/install_rstudio_posit.png)</center>
+  <center>![](https://raw.githubusercontent.com/gustavo-diaz/NUmathcamp/main/r/images/install_rstudio_ide.png)</center>
 </details>
 
 ### Navigating RStudio
@@ -79,7 +79,7 @@ In RStudio, you can use Markdown language to format text.
 
 For example, **this is bold text** and *this is italic text*. And, of course, you can insert images. It's pretty easy, and after the class you can take a look at some [tutorials](https://www.markdownguide.org/basic-syntax/).
 
-![Northwestern Logo](https://www.northwestern.edu/brand/images/wordmark/wordmark-vert.jpg)
+![Northwestern Logo](https://www.northwestern.edu/brand/images/vertical-workmark.png)
 
 You can do many-many more different things. In this regard, visual editor in RStudio might be helpful. Markdown is also used in several note taking apps, e.g. [Obsidian](https://obsidian.md) or [Notion](https://www.notion.so). Feel free to utilize your Markdown knowledge for your graduate studies.
 
