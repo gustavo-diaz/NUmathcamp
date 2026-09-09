@@ -534,212 +534,212 @@
   {
     "objectID": "slides/01_notation.html#getting-ready",
     "href": "slides/01_notation.html#getting-ready",
-    "title": "Questions?",
-    "section": "",
-    "text": "Set up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\nR: 4.6.1 (Happy Hop)\nRStudio: 2026.08.2\n\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
+    "title": "Math Camp",
+    "section": "Getting ready",
+    "text": "Getting ready\n\nSet up eduroam\nGo back and make sure you have the MOST RECENT version of R and RStudio\n\nR: 4.6.1 (Happy Hop)\nRStudio: 2026.08.2\n\n\n\n\n\nSee gustavodiaz.org/NUmathcamp for materials"
   },
   {
     "objectID": "slides/01_notation.html#agenda",
     "href": "slides/01_notation.html#agenda",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Agenda",
     "text": "Agenda\n\nMorning: Notations, sets, functions\nLunch: Meet new faculty\nAfternoon: Tidyverse I"
   },
   {
     "objectID": "slides/01_notation.html#what-is-notation",
     "href": "slides/01_notation.html#what-is-notation",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "What is notation?",
-    "text": "What is notation?\n\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
+    "text": "What is notation?\n\nSymbols, letters, formulae used over plain language\nGoal: Talk about stuff in general terms\nDownside: Harder to follow\nConjecture: Math is not hard, its language is\nSolution: Practice"
   },
   {
     "objectID": "slides/01_notation.html#set-notation",
     "href": "slides/01_notation.html#set-notation",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Set Notation",
-    "text": "Set Notation\nSet: A collection of elements\n. . .\nNumerical sets\n\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\) \n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\pi, e\\}\\)\n\\(\\mathbb{R}^2\\): 2-dimensional space\n\\(\\mathbb{R}^3\\): 3-dimensional space"
+    "text": "Set Notation\nSet: A collection of elements\n\nNumerical sets\n\n\\(\\mathbb{N}\\): Natural numbers   \\(\\{(0), 1, 2, 3\\}\\)\n\\(\\mathbb{Z}\\): Integers   \\(\\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}\\)\n\\(\\mathbb{Q}\\): Rational numbers   \\(\\{1/2, 3/2, 4\\}\\) \n\\(\\mathbb{R}\\): Real numbers   \\(\\{-899.8, 22, 4.5, \\pi, e\\}\\)\n\\(\\mathbb{R}^2\\): 2-dimensional space\n\\(\\mathbb{R}^3\\): 3-dimensional space"
   },
   {
     "objectID": "slides/01_notation.html#measurement",
     "href": "slides/01_notation.html#measurement",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Measurement",
-    "text": "Measurement\n. . .\nSets can also have non-numerical elements\n. . .\n\\[\n\\mathbb{A} = \\{\\text{Spain}, \\text{Argentina}, \\text{England}, \\text{France} \\}\n\\]\n. . .\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
+    "text": "Measurement\n\nSets can also have non-numerical elements\n\n\n\\[\n\\mathbb{A} = \\{\\text{Spain}, \\text{Argentina}, \\text{England}, \\text{France} \\}\n\\]\n\n\nWe can treat these as numbers or not, what matters is what we assume about the elements\n\nNominal: No mathematical relationship between elements\nOrdinal: Order is meaningful\nInterval: Elements equidistant, but no meaningful zero\nRatio (interval-ratio): There is a meaningful zero"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-1",
     "href": "slides/01_notation.html#set-notation-1",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Set notation",
-    "text": "Set notation\n. . .\nElements of a set\n\n\nCapital letters denote a set \\(A\\)\nLowercase denotes an arbitrary element of a set \\(a\\)"
+    "text": "Set notation\n\nElements of a set\n\nCapital letters denote a set \\(A\\)\nLowercase denotes an arbitrary element of a set \\(a\\)"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-2",
     "href": "slides/01_notation.html#set-notation-2",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Set notation",
-    "text": "Set notation\nBracketing\n. . .\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces(curly brackets)\n\n\n. . .\nUses vary, but generally…\n\n\nBrackets are for continuous sets \\([0, 1]\\)\nParentheses are for exclusive sets \\((0,1)\\)\nCan mix and match like \\([0,1)\\)\nBraces are for discrete sets \\(\\{0,1\\}\\)"
+    "text": "Set notation\nBracketing\n\n\n\n\\([ \\text{ }]\\): Brackets\n\n\\(( \\text{ } )\\): Parentheses (round brackets)\n\n\\(\\{\\}\\): Braces(curly brackets)\n\n\n\nUses vary, but generally…\n\nBrackets are for continuous sets \\([0, 1]\\)\nParentheses are for exclusive sets \\((0,1)\\)\nCan mix and match like \\([0,1)\\)\nBraces are for discrete sets \\(\\{0,1\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-3",
     "href": "slides/01_notation.html#set-notation-3",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Set notation",
-    "text": "Set notation\n. . .\nOperations within sets\n\n\n\\(\\exists\\) “exists”; there is something true\n\\(\\forall\\) “for all”; for every element\n\\(\\in\\) “in” or “element of”\n| Such that (specify a condition)\n\\(\\notin\\) “not in”, excluding element(s)\n\\(\\equiv\\) equivalent"
+    "text": "Set notation\n\nOperations within sets\n\n\\(\\exists\\) “exists”; there is something true\n\\(\\forall\\) “for all”; for every element\n\\(\\in\\) “in” or “element of”\n| Such that (specify a condition)\n\\(\\notin\\) “not in”, excluding element(s)\n\\(\\equiv\\) equivalent"
   },
   {
     "objectID": "slides/01_notation.html#set-notation-4",
     "href": "slides/01_notation.html#set-notation-4",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Set notation",
-    "text": "Set notation\nOperations between sets\n\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
+    "text": "Set notation\nOperations between sets\n\n\\(\\subset\\); \\(\\subseteq\\) Subset\n\\(\\varnothing\\) Empty set\n\\(\\cap\\) Intersection; AND\n\\(\\cup\\) Union; OR\n\\(\\setminus\\) Difference"
   },
   {
     "objectID": "slides/01_notation.html#practice",
     "href": "slides/01_notation.html#practice",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Practice",
-    "text": "Practice\n\n\n\\(x \\in \\mathbb{Z}\\)\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\) \n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
+    "text": "Practice\n\n\\(x \\in \\mathbb{Z}\\)\n\\(\\{x|x \\in \\mathbb{N}, x &lt; 4\\}\\)\n\\(\\{x|x \\in \\mathbb{R}, x &lt; 200\\}\\)\n\\(\\{ai | a \\in \\mathbb{R}, i= \\sqrt{-1}\\}\\) \n\\(A \\cap B\\)\n\\(A \\cup B\\)\n\\(\\{4n \\in \\mathbb{N} | n \\in \\mathbb{N}\\}\\)"
   },
   {
     "objectID": "slides/01_notation.html#greek-notation",
     "href": "slides/01_notation.html#greek-notation",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Greek notation",
-    "text": "Greek notation\n. . ."
+    "text": "Greek notation"
   },
   {
     "objectID": "slides/01_notation.html#greek-vs.-latin",
     "href": "slides/01_notation.html#greek-vs.-latin",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Greek vs. Latin",
-    "text": "Greek vs. Latin\n\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
+    "text": "Greek vs. Latin\n\n\nGreek\n\nLetters like \\(\\mu\\) denote parameters or quantities of interest\nMarkings like \\(\\widehat{\\mu}\\) denotes our estimate of such parameters/quantities\n\n\nLatin\n\nLetters like \\(X\\) denote variables in our data\nMarkings like \\(\\bar{X}\\) denotes calculations from our data\n\n\n\n\\(X \\rightarrow \\bar{X} \\rightarrow \\widehat{\\mu} \\xrightarrow{\\text{hopefully!}} \\mu\\)"
   },
   {
     "objectID": "slides/01_notation.html#another-way-to-think-about-it",
     "href": "slides/01_notation.html#another-way-to-think-about-it",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Another way to think about it",
-    "text": "Another way to think about it\nVariables are denoted by Latin letters like \\(x, y, z\\)\n. . .\nConstants are denoted by Latin letters \\(a, b, c\\)\n. . .\n\nVariables and constants appear in a spreadsheet\n\n \n. . .\nParameters are denoted by Greek letters \\(\\alpha, \\beta, \\gamma\\)\n\n\nParameters are theoretical quantities\nMay map to constants or variables (but need not to)"
+    "text": "Another way to think about it\nVariables are denoted by Latin letters like \\(x, y, z\\)\n\nConstants are denoted by Latin letters \\(a, b, c\\)\n\n\n\nVariables and constants appear in a spreadsheet\n\n \n\n\nParameters are denoted by Greek letters \\(\\alpha, \\beta, \\gamma\\)\n\nParameters are theoretical quantities\nMay map to constants or variables (but need not to)"
   },
   {
     "objectID": "slides/01_notation.html#arithmetic-operations",
     "href": "slides/01_notation.html#arithmetic-operations",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Arithmetic operations",
     "text": "Arithmetic operations\nAddition: \\(2+3 = 5\\)\nSubtraction: \\(2-3 = -1\\)\nMultiplication: \\(2 \\times 3 = 2 \\ast 3 = 2 \\cdot 3 = 6\\)\nDivision: \\(2 \\div 3 = 2/3 = \\frac{2}{3} = 0.\\bar{6}\\)\nExponentiation: \\(2^3 = 2 \\hat{} 3 = 8\\)\nSquare root: \\(\\sqrt{x}\\)\nLogarithm: \\(\\log_a(x)\\)\nNatural logarithm: \\(log_e(x) = ln(x) \\approx log(x)\\)"
   },
   {
     "objectID": "slides/01_notation.html#with-many-elements",
     "href": "slides/01_notation.html#with-many-elements",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "With many elements",
-    "text": "With many elements\n. . .\nSummation\n\\[\n\\sum_i^n x_i = x_1 + x_2 + x_3 + \\ldots + x_n\n\\]\n. . .\nProduct\n\\[\n\\prod_i^n x_i = x_1 \\cdot x_2 \\cdot x_3 \\cdot \\ldots \\cdot x_n\n\\]"
+    "text": "With many elements\n\nSummation\n\\[\n\\sum_i^n x_i = x_1 + x_2 + x_3 + \\ldots + x_n\n\\]\n\n\nProduct\n\\[\n\\prod_i^n x_i = x_1 \\cdot x_2 \\cdot x_3 \\cdot \\ldots \\cdot x_n\n\\]"
   },
   {
     "objectID": "slides/01_notation.html#order-of-operations",
     "href": "slides/01_notation.html#order-of-operations",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Order of operations",
-    "text": "Order of operations\nParentheses\nExponents\nMultiplication\nDivision\nAddition\nSubtraction\n. . .\nThis sounds trivial but it’s very important when coding!"
+    "text": "Order of operations\nParentheses\nExponents\nMultiplication\nDivision\nAddition\nSubtraction\n\nThis sounds trivial but it’s very important when coding!"
   },
   {
     "objectID": "slides/01_notation.html#order-of-operations-1",
     "href": "slides/01_notation.html#order-of-operations-1",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Order of operations",
-    "text": "Order of operations\nPEMDAS\n. . .\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n. . .\n\\[\n= -93\n\\]"
+    "text": "Order of operations\nPEMDAS\n\n\n\\[\n(3+7)^2 (2+3) / (1-6)\n\\]\n\n\n\\[\n= -93\n\\]"
   },
   {
     "objectID": "slides/01_notation.html#what-is-a-function",
     "href": "slides/01_notation.html#what-is-a-function",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "What is a function?",
-    "text": "What is a function?\nInformally: Anything that takes an input and produces an output\n. . .\nThree main parts:\n\n\nInput\nRelationship of interest (operations)\nOutput"
+    "text": "What is a function?\nInformally: Anything that takes an input and produces an output\n\nThree main parts:\n\nInput\nRelationship of interest (operations)\nOutput"
   },
   {
     "objectID": "slides/01_notation.html#example",
     "href": "slides/01_notation.html#example",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Example",
-    "text": "Example\n\\[\nf(x) = 3x + 4\n\\]\n\n\n\\(x\\) is the input (value or domain)\n\\(3x + 4\\) is the relationship\n\\(f(x)\\) is the output (range)\n\n\n. . .\nCan also write\n\\[\ny = 3x + 4\n\\]\nBecause “\\(y\\) is a function of \\(x\\)”"
+    "text": "Example\n\\[\nf(x) = 3x + 4\n\\]\n\n\\(x\\) is the input (value or domain)\n\\(3x + 4\\) is the relationship\n\\(f(x)\\) is the output (range)\n\n\nCan also write\n\\[\ny = 3x + 4\n\\]\nBecause “\\(y\\) is a function of \\(x\\)”"
   },
   {
     "objectID": "slides/01_notation.html#example-1",
     "href": "slides/01_notation.html#example-1",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Example",
     "text": "Example\n\\[\nf(x) = 3x + 4\n\\]\n\n\\(x\\) is the input (value or domain)\n\\(3x + 4\\) is the relationship\n\\(f(x)\\) is the output (range)\n\nCan also write\n\\[\ny = 3x + 4\n\\]\nBecause “\\(y\\) is a function of \\(x\\)” \\(\\Rightarrow\\) \\(y = f(x)\\)"
   },
   {
     "objectID": "slides/01_notation.html#parts-of-a-function",
     "href": "slides/01_notation.html#parts-of-a-function",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Parts of a function",
     "text": "Parts of a function"
   },
   {
     "objectID": "slides/01_notation.html#types-of-functions",
     "href": "slides/01_notation.html#types-of-functions",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Types of functions",
-    "text": "Types of functions\n\n. . .\n\nInjective: Every value of domain maps to a different value in codomain\n\n. . .\n\nSurjective: Every in value in codomain maps to a different value in domain\n\n. . ."
+    "text": "Types of functions\n\n\n\nInjective: Every value of domain maps to a different value in codomain\n\n\n\n\nSurjective: Every in value in codomain maps to a different value in domain"
   },
   {
     "objectID": "slides/01_notation.html#types-of-functions-1",
     "href": "slides/01_notation.html#types-of-functions-1",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Types of functions",
-    "text": "Types of functions\n\nBijective: Both injective and surjective\n\n. . .\n\n\n\n\n\n. . .\nThe important part is to remember different mappings exist"
+    "text": "Types of functions\n\nBijective: Both injective and surjective\n\n\n\n\n\n\n\n\n\nThe important part is to remember different mappings exist"
   },
   {
     "objectID": "slides/01_notation.html#functions-in-r",
     "href": "slides/01_notation.html#functions-in-r",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Functions in R",
-    "text": "Functions in R\n\nfunction(arguments){operation}\n\n. . .\n\nf = function(x){x * 2}\n\n. . .\n\nf(x = 5)\n\n[1] 10\n\n\n. . .\nWe can omit argument names and R will assume they come in order:\n\nf(5)\n\n[1] 10\n\n\n. . .\nIf the operation works with vectors, the function will too:\n\nf(1:10)\n\n [1]  2  4  6  8 10 12 14 16 18 20"
+    "text": "Functions in R\n\nfunction(arguments){operation}\n\n\n\nf = function(x){x * 2}\n\n\n\n\nf(x = 5)\n\n[1] 10\n\n\n\n\nWe can omit argument names and R will assume they come in order:\n\nf(5)\n\n[1] 10\n\n\n\n\nIf the operation works with vectors, the function will too:\n\nf(1:10)\n\n [1]  2  4  6  8 10 12 14 16 18 20"
   },
   {
     "objectID": "slides/01_notation.html#practice-1",
     "href": "slides/01_notation.html#practice-1",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Practice",
-    "text": "Practice\nThe formula for the area of a circle is\n\\[\nA = \\pi r^2\n\\]\nWrite a custom function that calculates the area based on the radius\n. . .\nAnswer:\n\nA = function(r){pi * r^2}\n\nA(3)\n\n[1] 28.27433"
+    "text": "Practice\nThe formula for the area of a circle is\n\\[\nA = \\pi r^2\n\\]\nWrite a custom function that calculates the area based on the radius\n\nAnswer:\n\nA = function(r){pi * r^2}\n\nA(3)\n\n[1] 28.27433"
   },
   {
     "objectID": "slides/01_notation.html#multiple-arguments",
     "href": "slides/01_notation.html#multiple-arguments",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Multiple arguments",
-    "text": "Multiple arguments\n\nproduct = function(a, b){a*b}\n\n. . .\n\nproduct(2, 3)\n\n[1] 6\n\n\n. . .\n\nproduct(a = 1:5, b = 2)\n\n[1]  2  4  6  8 10\n\n\n. . .\nVector recycling:\n\nproduct(a = 1:5, b = 1:2)\n\n[1] 1 4 3 8 5\n\n\n. . .\nThis may allow some operations that are not admissible in math"
+    "text": "Multiple arguments\n\nproduct = function(a, b){a*b}\n\n\n\nproduct(2, 3)\n\n[1] 6\n\n\n\n\n\nproduct(a = 1:5, b = 2)\n\n[1]  2  4  6  8 10\n\n\n\n\nVector recycling:\n\nproduct(a = 1:5, b = 1:2)\n\n[1] 1 4 3 8 5\n\n\n\n\nThis may allow some operations that are not admissible in math"
   },
   {
     "objectID": "slides/01_notation.html#non-numeric-inputs",
     "href": "slides/01_notation.html#non-numeric-inputs",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Non-numeric inputs",
-    "text": "Non-numeric inputs\n\nsome_people = function(name){paste(\"Some people call me\", name)}\n\n. . .\n\ncall_me = c(\n  \"the space cowboy\",\n  \"the gangster of love\",\n  \"Maurice\"\n)\n\n. . .\n\nsome_people(call_me)\n\n[1] \"Some people call me the space cowboy\"    \n[2] \"Some people call me the gangster of love\"\n[3] \"Some people call me Maurice\"             \n\n\n\n\nThe Joker – Steve Miller Band (1973)"
+    "text": "Non-numeric inputs\n\nsome_people = function(name){paste(\"Some people call me\", name)}\n\n\n\ncall_me = c(\n  \"the space cowboy\",\n  \"the gangster of love\",\n  \"Maurice\"\n)\n\n\n\n\nsome_people(call_me)\n\n[1] \"Some people call me the space cowboy\"    \n[2] \"Some people call me the gangster of love\"\n[3] \"Some people call me Maurice\"             \n\n\n\n\n\nThe Joker – Steve Miller Band (1973)"
   },
   {
     "objectID": "slides/01_notation.html#common-functions",
     "href": "slides/01_notation.html#common-functions",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Common functions",
-    "text": "Common functions\n\n\nLinear: \\(y=mx + b\\)\nQuadratic: \\(y = ax^2 + bx + c\\)\nCubic: \\(y = ax^3 + bx^2 + cx + d\\)\n\\(n\\)th order polynomial: \\(y = ax^n + bx^{n-1} +  \\ldots + c\\)\n\n\n. . .\nThese are still linear combinations because they are linear in parameters"
+    "text": "Common functions\n\nLinear: \\(y=mx + b\\)\nQuadratic: \\(y = ax^2 + bx + c\\)\nCubic: \\(y = ax^3 + bx^2 + cx + d\\)\n\\(n\\)th order polynomial: \\(y = ax^n + bx^{n-1} +  \\ldots + c\\)\n\n\nThese are still linear combinations because they are linear in parameters"
   },
   {
     "objectID": "slides/01_notation.html#composite-functions",
     "href": "slides/01_notation.html#composite-functions",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Composite functions",
-    "text": "Composite functions\nFunctions that take other functions as inputs\n. . .\nExterior function:\n\\[\nf(x) = x^2\n\\]\n. . .\nInterior function:\n\\[\ng(x) = x-3\n\\]\n. . .\nComposite:\n\\[\nf(g(x)) = (x-3)^2\n\\]"
+    "text": "Composite functions\nFunctions that take other functions as inputs\n\nExterior function:\n\\[\nf(x) = x^2\n\\]\n\n\nInterior function:\n\\[\ng(x) = x-3\n\\]\n\n\nComposite:\n\\[\nf(g(x)) = (x-3)^2\n\\]"
   },
   {
     "objectID": "slides/01_notation.html#composite-functions-in-r",
     "href": "slides/01_notation.html#composite-functions-in-r",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Composite functions in R",
-    "text": "Composite functions in R\n\nf = function(x){x^2}\ng = function(x){x-3}\n\n. . .\n\nf(g(5))\n\n[1] 4\n\n\n. . .\nWe can write this in tidyverse form:\n\n5 %&gt;% g() %&gt;% f()\n\n[1] 4\n\n\n. . .\nWhich recently got its own base R version:\n\n5 |&gt; g() |&gt; f()\n\n[1] 4\n\n\n. . .\nPractice: Do \\(g(f(5))\\) by hand and then in R"
+    "text": "Composite functions in R\n\nf = function(x){x^2}\ng = function(x){x-3}\n\n\n\nf(g(5))\n\n[1] 4\n\n\n\n\nWe can write this in tidyverse form:\n\n5 %&gt;% g() %&gt;% f()\n\n[1] 4\n\n\n\n\nWhich recently got its own base R version:\n\n5 |&gt; g() |&gt; f()\n\n[1] 4\n\n\n\n\nPractice: Do \\(g(f(5))\\) by hand and then in R"
   },
   {
     "objectID": "r/05_markdown.html",
@@ -2374,7 +2374,7 @@
   {
     "objectID": "slides/01_notation.html#notation-sets-functions",
     "href": "slides/01_notation.html#notation-sets-functions",
-    "title": "Questions?",
+    "title": "Math Camp",
     "section": "Notation, Sets, Functions",
     "text": "Notation, Sets, Functions\nNU Social Science Math Camp"
   },
