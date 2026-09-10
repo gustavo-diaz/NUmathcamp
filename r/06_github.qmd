@@ -1,0 +1,113 @@
+---
+title: "GitHub and Copilot"
+author: "Gustavo Diaz"
+format: 
+  html:
+    embed-resources: true
+---
+
+## Version Control
+
+```{r setup, include = FALSE}
+#Global options
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+
+So far, we have learned how to use R and RStudio to ingest and analyze data. We also covered how to present our findings in different outputs (papers, slides, posters). 
+
+The next step is to ensure that our work is accessible across multiple devices. For this, we will use [GitHub](https://github.com). The main advantage of GitHub is **version control**, which keeps track of every version of every file saved on a project repository. For our purposes, this will be helpful when coding gets very messy and wish to revert to a previous working version of a file, to streamline collaboration, and to enable AI integration.
+
+### Create GitHub account
+
+To use GitHub, you will need first need to create an account on <https://github.com>. We completed this step a few days ago and also applied for the [education benefits](https://github.com/education).
+
+### Install Git
+
+Git is the engine underneath GitHub. If you do not have Git already installed, follow the instructions for your operating system at <https://git-scm.com/install/>. Accept the default options.
+
+### Setup GitHub in Rstudio
+
+If you haven't already, install the `usethis` package.
+
+```{r}
+install.packages("usethis")
+```
+
+Next, check that Git is enabled in RStudio. Go to `Tools > Global Options > Git/SVN`. Check the box "Enable version control interface..." if not already checked.
+
+Restart RStudio to make sure changes take place.
+
+### Confirm that Git is configured in RStudio
+
+Pass the following command to the console.
+
+```{r}
+usethis::git_sitrep()
+```
+
+If the response says "Git is not found", try restarting RStudio again. If you are sure you installed Git but you still get the not found message, start again from the beginning.
+
+### Configure Git with your GitHub user name and email
+
+Pass the following to your console with the user name and email that matches your GitHub account.
+
+```{r}
+use_git_config(user.name = "YourUserName", user.email = "you@u.northwestern.edu")
+```
+
+
+### Create and save a GitHub Personal Access Token (PAT)
+
+Execute the code below in the RStudio console.
+
+```{r}
+usethis::create_github_token(description = "mathcamp26")
+```
+
+
+This will open a form in your browser. You may be prompted to log in with your credentials before seeing the form. 
+
+Choose your desired expiration date. I would recommend either one year or no expiration. GitHub warns against the latter but for our purposes there is not much risk.
+
+Keep all the check boxes in their default setting and scroll down to press "Generate token."
+
+To save the token, go back to RStudio and pass the following to the console.
+
+```{r}
+gitcreds::gitcreds_set()
+```
+
+If you have never set up GitHub on RStudio before, you will be prompted to copy and paste your PAT. If you have completed these steps already, R will ask you whether you want to change or update your token.
+
+If you work on multiple devices, save your PAT as a text file so that you can set it up in your other device. You can also assign each device its own PAT.
+
+### Check that the PAT works
+
+```{r}
+gitcreds::gitcreds_get(use_cache = FALSE)
+```
+
+See [here](https://usethis.r-lib.org/reference/github-token.html) for more information about PATs.
+
+### Create a GitHub repository and associate with RStudio
+
+The next step is to create a repository tied to a project that lives both locally and in the cloud.
+
+1. Go to your [GitHub](https://github.com) account and click the green button on the upper left-hand side to create a new repository. Choose whether to make it public or private (I recommend private if this is your first time)
+
+2. **DO NOT** choose a template, nor add a `README` file, `.gitignore`, or license. You can include those later if you wish
+
+3. After the repository is created, copy the HTTPS URL that appears in the **Quick setup** section
+
+4. In RStudio, navigate to `File > New Project > Version Control > Git` and paste the URL. Choose a name and destination directory
+
+You now have an RStudio project tied to a GitHub repository! We will discuss a bit more about workflow in our meeting.
+
+## Optional: Enable GitHub Copilot in RStudio
+
+Navigate to `Tools > Global Options > Assistant`
+
+Under **Code suggestions**, select GitHub Copilot. Sign in with your credentials if required. Choose the options that fit your preference. I recommend trying manual code suggestions.
+
+During the lab meeting, we will highlight uses of Copilot for inline code completion, as well as working with the [Copilot Assistant](https://github.com/copilot/) directly on Github repositories.
