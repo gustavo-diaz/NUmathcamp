@@ -186,7 +186,7 @@
     "href": "slides/03_calc1.html#up-next",
     "title": "Calculus I",
     "section": "Up next",
-    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Friday)"
+    "text": "Up next\nDealing with continuity (which implies infinity) \\(\\rightarrow\\) Calculus\n\nTwo new operators:\n\nDerivatives (Today)\nIntegrals (Tuesday)"
   },
   {
     "objectID": "slides/03_calc1.html#calculus",
@@ -1426,7 +1426,7 @@
     "href": "slides/02_matrices.html#agenda-1",
     "title": "Matrices",
     "section": "Agenda",
-    "text": "Agenda\n\nMorning: Matrices and matrix algebra\nLunch: Meet faculty\nAfternoon: Tidyverse II"
+    "text": "Agenda\n\nMorning: Matrices and matrix algebra\nLunch: Meet students\nAfternoon: Tidyverse II"
   },
   {
     "objectID": "slides/02_matrices.html#scalars",
@@ -1643,14 +1643,14 @@
     "href": "slides/02_matrices.html#in-r-1",
     "title": "Matrices",
     "section": "In R",
-    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    0    3\n[2,]    2    9    4\n\n\n\n\n\nmatrix1 + matrix2"
+    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), \n                 nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 9, 2, 3, 0, 4), \n                 nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    2    0\n[2,]    9    3    4\n\n\n\n\n\nmatrix1 + matrix2"
   },
   {
     "objectID": "slides/02_matrices.html#in-r-2",
     "href": "slides/02_matrices.html#in-r-2",
     "title": "Matrices",
     "section": "In R",
-    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    0    3\n[2,]    2    9    4\n\n\n\n\nmatrix1 + matrix2\n\n     [,1] [,2] [,3]\n[1,]    8   -1    5\n[2,]   11   13   10\n\n\n\n\nmatrix1 - matrix2\n\n     [,1] [,2] [,3]\n[1,]   -2   -1   -1\n[2,]    7   -5    2"
+    "text": "In R\n\n\n\\[A= \\begin{bmatrix}\n3 & -1 & 2  \\\\\n9 & 4 & 6\n\\end{bmatrix}\\]\n\nmatrix1 = matrix(c(3, 9, -1, 4, 2, 6), \n                 nrow = 2)\nmatrix1\n\n     [,1] [,2] [,3]\n[1,]    3   -1    2\n[2,]    9    4    6\n\n\n\n\\[B= \\begin{bmatrix}\n5 & 2 & 0  \\\\\n9 & 3 & 4\n\\end{bmatrix}\\]\n\nmatrix2 = matrix(c(5, 2, 0, 9, 3, 4), \n                 nrow = 2)\nmatrix2\n\n     [,1] [,2] [,3]\n[1,]    5    0    3\n[2,]    2    9    4\n\n\n\n\nmatrix1 + matrix2\n\n     [,1] [,2] [,3]\n[1,]    8   -1    5\n[2,]   11   13   10\n\n\n\n\nmatrix1 - matrix2\n\n     [,1] [,2] [,3]\n[1,]   -2   -1   -1\n[2,]    7   -5    2"
   },
   {
     "objectID": "slides/02_matrices.html#exercise",

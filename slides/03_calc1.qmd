@@ -39,7 +39,7 @@ Two new operators:
 
 1. Derivatives **(Today)**
 
-2. Integrals **(Friday)**
+2. Integrals **(Tuesday)**
 
 ## Calculus
 
