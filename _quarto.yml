@@ -55,6 +55,8 @@ website:
               file: r/04_sampling.qmd
             - text: "5. Markdown"
               file: r/05_markdown.qmd
+            - text: "6. GitHub"
+              file: r/06_github.qmd
 
 format:
   html:
