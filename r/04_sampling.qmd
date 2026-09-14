@@ -1,7 +1,7 @@
 ---
 title: "Sampling and simulation"
 author: "[Artur Baranov](https://artur-baranov.github.io)"
-date: 2025-09-09
+date: 2026-09-14
 format: 
   html:
     embed-resources: true
@@ -12,7 +12,7 @@ toc: true
 
 -   A clear environment = a clear mind!
 
--   What is `%>%`?
+-   What is `%>%` or `|>`?
 
 -   How to create a chunk?
 
@@ -98,10 +98,10 @@ There a lot of different graphs! For example, we can plot one variables against 
 
 ```{r}
 ggplot(cars_information, aes(x = mpg, y = hp)) +
-  geom_point() 
+  geom_point()
 ```
 
-There are different `geoms` available! Take a look on it in the [CheatSheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf). Throughout today we'll be using `ggplot()` a lot!
+There are different `geoms` available! Take a look on it in the [CheatSheet](https://opensource.posit.co/resources/cheatsheets/data-visualization/). Throughout today we'll be using `ggplot()` a lot!
 
 ## Random sampling from distributions
 
@@ -142,7 +142,8 @@ Now, visualize what we got. It looks like a rectangle! In other words, every num
 #| message: false
 
 ggplot(data.frame(uniform_data), aes(x = uniform_data)) +
-  geom_histogram(binwidth = 0.25, boundary = 0) +
+  geom_histogram(binwidth = 0.25,
+                 boundary = 0) +
   scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-5, 5))
 ```
 
@@ -330,6 +331,45 @@ ggplot(fake_elections, aes(x = winner)) +
 ### Other distribution functions
 
 Each distribution can do more than generate random numbers (the prefix r). We can compute the cumulative probability by the function `pbinom()`, `punif()`, and `pnorm()`. Also the density – the value of the PDF – by `dbinom()`, `dunif()` and `dnorm()`.
+
+::: callout-note
+## Exercise
+
+Let's practice with the binomial distribution using our fake election example.
+
+Simulate 20 elections where a candidate has a 65% chance of winning each one. Use `rbinom()` to count the number of wins out of 20 elections, and repeat this simulation 50 times (i.e., `n = 50`).
+
+```{r}
+#| eval: false
+
+rbinom(n = ..., size = ..., prob = ...)
+```
+
+What is the average number of wins you'd *expect* out of 20 elections, given a 65% win probability? Calculate it by hand (hint: it's just `size * prob`), then check it against the average of your simulated results.
+
+```{r}
+#| eval: false
+
+mean(...)
+```
+
+Now, let's connect this to `sample()`. Simulate a single set of 20 elections directly using `sample()`, where the candidate wins with 65% probability and loses with 35% probability. Store this in a dataframe called `mock_elections`, then visualize the results with a histogram.
+
+```{r}
+#| eval: false
+
+mock_elections = data.frame(winner = sample(c("Win", "Lose"),
+                                            size = ...,
+                                            prob = c(..., ...),
+                                            replace = ...))
+
+ggplot(mock_elections, aes(x = ...)) +
+  geom_histogram(stat = "count")
+```
+
+*Bonus:* What happens to the shape of the distribution if you increase `size` from 20 to 1000 in your `rbinom()` simulation? Try it and see if the results get closer to or further from the theoretical expectation.
+
+:::
 
 
 ## Random Sampling from Data
@@ -772,25 +812,15 @@ sample_statistics
 :::
 
 
-## What should you do if you have questions about programming
-
--   Stack overflow
-
--   Your peers
-
--   *(ChatGPT)*
-
--   The team of this math camp
-
 ## Check List
 
-- [] I know how to visualize datasets with `ggplot()`! 
+- [ ] I know how to visualize datasets with `ggplot()`! 
 
-- [] Standard deviation, PDF and CDF do not scare me
+- [ ] Standard deviation, PDF and CDF do not scare me
 
-- [] I know what sampling is, and on top of this I can use bootstrapping
+- [ ] I know what sampling is, and on top of this I can use bootstrapping
 
-- [] I can understand custom functions and loops
+- [ ] I can understand custom functions and loops
 
 
 ## What did we learn over this week in the programming part?
